@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/dural-dentist/ (existing URL kept). Copy: existing live page copy. -->
+  <title>Dentist Near Dural | Your Trusted Family Dental Practice | Beyond 32 Dental</title>
+  <meta name="description" content="Can’t find a Dural dentist that meets your dental needs and/or budget? We can help. Just a 10-minute drive away, we provide quality family dental care.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/dural-dentist/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334", "foundingDate": "2013",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" },
+        "openingHoursSpecification": [ { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" }, { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" } ],
+        "areaServed": [ { "@type": "Place", "name": "Dural, NSW" }, "Pennant Hills", "Hills District" ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "360" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/dural-dentist/", "name": "Need a Dural Dentist You Can Count On?", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Dural Dentist" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       Location page system (identical block on all five suburb pages).
+       Candidate for a shared css/location.css once the batch is merged.
+       ========================================================================== */
+    /* ---- Hero: text left, photo with a route "ticket" right ---- */
+    .lp-hero { padding-bottom: clamp(64px, 7vw, 104px); }
+    .lp-hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(36px, 5vw, 88px); align-items: center; }
+    .lp-hero .h1 { max-width: 9.6em; }
+    .lp-hero .lead { margin-top: 22px; max-width: 30em; color: var(--ink); }
+    .lp-hero .btn-row { margin-top: 32px; }
+    .lp-proof { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; font-size: 15px; color: var(--teal); }
+    .lp-proof li { display: inline-flex; align-items: center; gap: 8px; }
+    .lp-proof img, .lp-proof svg { width: 18px; height: 18px; flex: none; }
+    .lp-proof b { color: var(--ink); font-weight: 600; }
+    .lp-visual { position: relative; margin: 0; padding: 0 0 64px 0; }
+    .lp-visual__photo { border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 5 / 5.1; background: var(--mint); box-shadow: 0 30px 60px -32px rgba(20,64,62,.5); }
+    .lp-visual__photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .lp-ticket { position: absolute; left: clamp(-48px, -3vw, -16px); bottom: 0; width: min(372px, 88%); background: var(--cream); border-radius: var(--r-lg); padding: 20px 22px 18px; box-shadow: 0 24px 48px -24px rgba(20,64,62,.55), 0 1px 0 rgba(20,64,62,.04); }
+    .lp-ticket__ends { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--teal); }
+    .lp-ticket__ends b { display: block; font-size: 16px; color: var(--ink); font-weight: 600; }
+    .lp-ticket__ends span:last-child { text-align: right; }
+    .lp-line { position: relative; display: flex; align-items: center; gap: 0; margin: 14px 0 12px; height: 28px; }
+    .lp-line::before { content: ""; position: absolute; left: 6px; right: 6px; top: 50%; border-top: 2px dashed rgba(20,64,62,.3); }
+    .lp-line i { position: relative; width: 12px; height: 12px; border-radius: 50%; flex: none; border: 2px solid var(--ink); background: var(--cream); }
+    .lp-line i:last-child { margin-left: auto; background-image: var(--gold); border-color: var(--gold-line); width: 14px; height: 14px; }
+    .lp-line svg { position: relative; width: 28px; height: 28px; margin-left: calc(50% - 26px); padding: 4px; border-radius: 50%; background: var(--mint); color: var(--ink); }
+    .lp-ticket__time { display: flex; align-items: baseline; gap: 8px; color: var(--ink); font-size: 16px; font-weight: 500; }
+    .lp-ticket__time .it { font-size: 56px; line-height: .85; }
+    .lp-ticket__meta { margin-top: 8px; font-size: 14px; line-height: 1.45; color: var(--teal); }
+    @media (max-width: 960px) {
+      .lp-hero__grid { grid-template-columns: minmax(0, 1fr); }
+      .lp-visual { padding: 0; }
+      .lp-visual__photo { aspect-ratio: 4 / 3; }
+      .lp-ticket { position: relative; left: auto; bottom: auto; width: calc(100% - 32px); margin: -28px auto 0; }
+    }
+
+    /* ---- Getting here: journey + map ---- */
+    .lp-way { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 5vw, 80px); align-items: start; }
+    .lp-way .lede { margin-top: 22px; }
+    .lp-journey { position: relative; display: grid; gap: 0; margin-top: 36px; }
+    .lp-journey::before { content: ""; position: absolute; left: 11px; top: 14px; bottom: 44px; border-left: 2px dashed rgba(20,64,62,.28); }
+    .lp-journey li { position: relative; display: grid; grid-template-columns: 24px 1fr; gap: 18px; padding: 0 0 22px; }
+    .lp-journey li::before { content: ""; width: 14px; height: 14px; margin: 5px 0 0 5px; border-radius: 50%; background: var(--white); border: 2px solid var(--teal); position: relative; z-index: 1; }
+    .lp-journey .is-start::before { width: 20px; height: 20px; margin: 2px 0 0 2px; border: 2px solid var(--ink); }
+    .lp-journey .is-end::before { width: 22px; height: 22px; margin: 1px 0 0 1px; background-image: var(--gold); border-color: var(--gold-line); }
+    .lp-journey li:last-child { padding-bottom: 0; }
+    .lp-journey b { display: block; font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .lp-journey span { display: block; margin-top: 2px; font-size: 15px; color: var(--teal); }
+    .lp-trip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 32px; }
+    .lp-trip li { background: var(--white); border-radius: var(--r); padding: 16px 16px 14px; }
+    .band--white .lp-trip li { background: var(--cream); }
+    .lp-trip b { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 34px; line-height: 1; color: var(--ink); }
+    .lp-trip span { display: block; margin-top: 6px; font-size: 13px; line-height: 1.35; color: var(--teal); }
+    .lp-relo { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; margin-top: 28px; padding: 18px 20px; border-radius: var(--r); background: rgba(255,255,255,.6); border: 1px solid var(--mint-line); }
+    .band--white .lp-relo { background: var(--cream); }
+    .lp-relo__icon { width: 40px; height: 40px; border-radius: 12px; background: var(--ink); color: #f0dbb0; display: grid; place-items: center; }
+    .lp-relo__icon svg { width: 20px; height: 20px; }
+    .lp-relo b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); }
+    .lp-relo p { margin-top: 4px; font-size: 15px; line-height: 1.5; color: var(--teal); }
+    .lp-way .btn-row { margin-top: 28px; }
+
+    .lp-way__aside { position: sticky; top: calc(var(--hh) + 88px); }
+    .lp-map { margin: 0; }
+    .js .lp-map[data-reveal] { opacity: 1; transform: none; }
+    .lp-map__canvas { position: relative; aspect-ratio: 1086 / 809; border-radius: var(--r-lg); overflow: hidden; background: #f2f2f2; box-shadow: 0 30px 60px -36px rgba(20,64,62,.5); }
+    .lp-map__canvas > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .lp-map__canvas svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .lp-map__casing { fill: none; stroke: #fff; stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; opacity: .9; }
+    .lp-map__route { fill: none; stroke: var(--ink); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .lp-map__arrow { fill: none; stroke: var(--ink); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 2 16; }
+    .lp-map__head { fill: var(--ink); }
+    .lp-map__ring { fill: rgba(240,219,176,.35); stroke: var(--gold-line); stroke-width: 3; }
+    .lp-map__tag { position: absolute; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 9px; border-radius: 99px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 700; white-space: nowrap; box-shadow: 0 10px 20px -10px rgba(0,0,0,.45); }
+    .lp-map__tag i { width: 10px; height: 10px; border-radius: 50%; border: 2px solid #fff; }
+    .lp-map__tag--end { background: var(--cream); color: var(--ink); }
+    .lp-map__tag--end i { border: 0; background-image: var(--gold); }
+    .lp-map figcaption { margin-top: 12px; font-size: 13px; color: var(--teal); }
+    @media (prefers-reduced-motion: no-preference) {
+      .js .lp-map[data-reveal] .lp-map__route, .js .lp-map[data-reveal] .lp-map__casing { stroke-dasharray: 1600; stroke-dashoffset: 1600; }
+      .js .lp-map[data-reveal].is-in .lp-map__route, .js .lp-map[data-reveal].is-in .lp-map__casing { transition: stroke-dashoffset 2.2s .3s var(--ease-out); stroke-dashoffset: 0; }
+      .lp-map__ring { animation: lpRing 2.6s var(--ease-out) infinite; transform-origin: 510px 360px; transform-box: view-box; }
+    }
+    @keyframes lpRing { 0% { transform: scale(.55); opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
+    @media (max-width: 960px) {
+      .lp-way { grid-template-columns: minmax(0, 1fr); }
+      .lp-way__aside { position: static; }
+    }
+    @media (max-width: 520px) {
+      .lp-trip b { font-size: 28px; }
+      .lp-trip li { padding: 14px 12px 12px; }
+      .lp-map__tag { font-size: 11px; padding: 5px 10px 5px 7px; }
+    }
+
+    /* ---- Services ---- */
+    .lp-svc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .lp-svc article { background: var(--cream); border-radius: var(--r-lg); overflow: hidden; display: flex; flex-direction: column; }
+    .band--cream .lp-svc article, .band--mint .lp-svc article { background: var(--white); }
+    .lp-svc figure { aspect-ratio: 16 / 10; overflow: hidden; background: var(--mint); }
+    .lp-svc figure img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
+    .lp-svc article:hover figure img { transform: scale(1.03); }
+    .lp-svc__body { padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; flex: 1; }
+    .lp-svc h3 { font-size: clamp(22px, 2vw, 27px); font-weight: 500; letter-spacing: -0.01em; color: var(--ink); }
+    .lp-svc .p { margin-top: 12px; font-size: 16px; }
+    .lp-svc a.more { margin-top: auto; padding-top: 20px; font-weight: 600; font-size: 15px; color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    .lp-also { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 28px; }
+    .lp-also p { font-size: 15px; font-weight: 600; color: var(--teal); margin-right: 6px; }
+    .lp-also a { font-size: 15px; padding: 9px 16px; border-radius: 99px; border: 1px solid rgba(20,64,62,.2); color: var(--ink); text-decoration: none; transition: background .2s, border-color .2s; }
+    .lp-also a:hover { background: var(--white); border-color: var(--ink); }
+    @media (max-width: 900px) { .lp-svc { grid-template-columns: minmax(0, 1fr); } }
+
+    /* ---- Feature rows (comfort, technology) ---- */
+    .lp-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 104px); align-items: center; }
+    .lp-feature + .lp-feature { margin-top: clamp(72px, 8vw, 120px); }
+    .lp-feature--rev > :first-child { order: 2; }
+    .lp-feature .photo { aspect-ratio: 4 / 4.2; }
+    .lp-feature .prose { margin-top: 18px; }
+    .lp-kit { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+    .lp-kit li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: center; padding: 12px 14px; border-radius: var(--r); background: var(--white); font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+    .band--white .lp-kit li { background: var(--cream); }
+    .lp-kit i { width: 40px; height: 40px; border-radius: 10px; background: var(--mint); display: grid; place-items: center; }
+    .lp-kit svg { width: 20px; height: 20px; }
+    @media (max-width: 900px) { .lp-feature { grid-template-columns: minmax(0, 1fr); } .lp-feature--rev > :first-child { order: 0; } .lp-feature .photo { aspect-ratio: 4 / 3; } }
+    @media (max-width: 420px) { .lp-kit { grid-template-columns: 1fr; } }
+
+    /* ---- Values (ink) with tooth stats ---- */
+    .lp-values { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 104px); align-items: center; }
+    .lp-values .pull-quote { max-width: 16ch; }
+    .lp-values .prose { margin-top: 28px; }
+    .lp-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+    .lp-stats .stat { color: #fff; }
+    .lp-stats .stat__tooth img { filter: brightness(0) invert(1); opacity: .55; }
+    .lp-stats .stat__num { color: #fff; }
+    .lp-stats .stat__label { color: var(--foot-text); max-width: 10em; line-height: 1.25; }
+    .lp-values .photo { aspect-ratio: 4 / 3; margin-bottom: 36px; }
+    @media (max-width: 900px) { .lp-values { grid-template-columns: minmax(0, 1fr); } }
+    .lp-statrow { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .lp-statrow .stat { color: var(--ink); }
+    .lp-statrow .stat__num { color: var(--ink); }
+    .lp-statrow .stat__label { color: var(--teal); max-width: 10em; line-height: 1.25; }
+    @media (max-width: 720px) { .lp-statrow { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 12px; } }
+
+    /* ---- Team ---- */
+    .lp-team { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .lp-team article { background: var(--cream); border-radius: var(--r-lg); padding: 14px 14px 22px; display: flex; flex-direction: column; }
+    .lp-portrait { position: relative; height: 280px; border-radius: var(--r); overflow: hidden; background: linear-gradient(to bottom, #fff, var(--cream-2) 73%); }
+    .lp-portrait img { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); height: 94%; width: auto; max-width: none; transition: transform .7s var(--ease-out); transform-origin: bottom; }
+    .lp-portrait--photo img { height: 100%; width: 100%; object-fit: cover; object-position: 50% 15%; left: 0; transform: none; }
+    .lp-team article:hover .lp-portrait img { transform: translateX(-50%) scale(1.03); }
+    .lp-team article:hover .lp-portrait--photo img { transform: scale(1.03); }
+    .lp-team h3 { margin: 18px 6px 0; font-size: 21px; font-weight: 500; color: var(--ink); }
+    .lp-team .quals { margin: 4px 6px 0; font-size: 13px; font-weight: 600; color: var(--teal); line-height: 1.4; }
+    .lp-team .p { margin: 12px 6px 0; font-size: 15px; line-height: 1.6; }
+    .lp-team .reg { margin: auto 6px 0; padding-top: 16px; font-size: 12px; color: var(--teal); line-height: 1.4; }
+    .lp-team .more { margin: 10px 6px 0; font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    @media (max-width: 1080px) { .lp-team { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .lp-team { grid-template-columns: minmax(0, 1fr); } .lp-portrait { height: 300px; } }
+
+    /* ---- Needs / occasions cards (short pages) ---- */
+    .lp-needs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: nd; }
+    .lp-needs li { counter-increment: nd; position: relative; display: flex; flex-direction: column; background: var(--white); border-radius: var(--r-lg); padding: clamp(24px, 2.6vw, 34px); min-height: 250px; }
+    .band--white .lp-needs li { background: var(--cream); }
+    .lp-needs .ico { width: 52px; height: 52px; border-radius: 14px; background: var(--mint); display: grid; place-items: center; color: var(--ink); }
+    .band--mint .lp-needs .ico { background: var(--cream); }
+    .lp-needs .ico svg { width: 26px; height: 26px; }
+    .lp-needs li::after { content: counter(nd); position: absolute; right: 26px; top: 18px; font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: rgba(20,64,62,.14); }
+    .lp-needs b { display: block; margin-top: 22px; font-size: clamp(20px, 1.7vw, 23px); font-weight: 500; line-height: 1.3; color: var(--ink); text-wrap: balance; }
+    .lp-needs a { margin-top: auto; padding-top: 18px; font-size: 15px; font-weight: 600; color: var(--teal); text-decoration: none; }
+    .lp-needs a:hover { color: var(--ink); }
+    .lp-needs-end { margin-top: 28px; font-family: var(--serif); font-style: italic; font-size: clamp(28px, 2.6vw, 38px); color: var(--ink); line-height: 1.1; }
+    @media (max-width: 900px) { .lp-needs { grid-template-columns: minmax(0, 1fr); } .lp-needs li { min-height: 0; } }
+
+    /* ---- Reasons (numbered list with an optional wide item) ---- */
+    .lp-reasons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; counter-reset: rs; }
+    .lp-reasons > li { counter-increment: rs; background: var(--cream); border-radius: var(--r-lg); padding: clamp(26px, 3vw, 40px); }
+    .band--cream .lp-reasons > li, .band--mint .lp-reasons > li { background: var(--white); }
+    .lp-reasons > li::before { content: counter(rs, decimal-leading-zero); display: block; font-family: var(--serif); font-style: italic; font-size: 36px; line-height: 1; color: var(--gold-line); }
+    .lp-reasons h3 { margin-top: 16px; font-size: clamp(22px, 2vw, 28px); font-weight: 500; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+    .lp-reasons .p { margin-top: 12px; font-size: 16px; }
+    .lp-reasons .p + .p { margin-top: .8em; }
+    .lp-reasons .wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px clamp(32px, 5vw, 72px); align-items: center; }
+    .lp-reasons .wide::before { grid-column: 1 / -1; }
+    @media (max-width: 860px) { .lp-reasons { grid-template-columns: minmax(0, 1fr); } .lp-reasons .wide { grid-template-columns: minmax(0, 1fr); } }
+
+    .lp-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .lp-brands li { display: inline-flex; flex-direction: column; padding: 10px 16px 9px; border-radius: 10px; background: var(--white); border: 1px solid var(--mint-line); }
+    .band--white .lp-brands li { background: var(--cream); }
+    .lp-brands b { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.2; }
+    .lp-brands small { font-size: 12px; color: var(--teal); }
+
+    /* ---- Week strip (opening hours) ---- */
+    .lp-week { --h: 168px; display: grid; grid-template-columns: 34px repeat(7, minmax(0, 1fr)); gap: 6px; padding: 20px 18px 16px; border-radius: var(--r-lg); background: var(--white); }
+    .band--white .lp-week, .lp-reasons .lp-week { background: var(--white); border: 1px solid var(--hairline); }
+    .lp-week__axis { position: relative; height: var(--h); font-size: 11px; color: var(--teal); }
+    .lp-week__axis span { position: absolute; right: 2px; transform: translateY(-50%); }
+    .lp-week__day { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .lp-week__col { position: relative; width: 100%; max-width: 46px; height: var(--h); border-radius: 8px; background: repeating-linear-gradient(180deg, rgba(20,64,62,.05) 0 1px, transparent 1px 28px); }
+    .lp-week__bar { position: absolute; left: 0; right: 0; border-radius: 8px; background: linear-gradient(180deg, var(--mint-2), var(--mint)); border: 1px solid var(--mint-line); }
+    .lp-week__late { position: absolute; left: 0; right: 0; border-radius: 0 0 8px 8px; border: 1.5px dashed var(--gold-line); border-top: 0; background: rgba(240,219,176,.25); }
+    .lp-week__day b { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .lp-week__day.is-today .lp-week__bar { background-image: var(--gold); border-color: var(--gold-line); }
+    .lp-week__day.is-today b { text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    .lp-week__off { position: absolute; inset: 0; display: grid; place-items: center; font-size: 11px; color: var(--teal); writing-mode: vertical-rl; transform: rotate(180deg); }
+    .lp-week-key { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 13px; color: var(--teal); }
+    .lp-week-key span { display: inline-flex; align-items: center; gap: 6px; }
+    .lp-week-key i { width: 14px; height: 10px; border-radius: 3px; background: var(--mint-2); }
+    .lp-week-key i.late { background: rgba(240,219,176,.4); border: 1.5px dashed var(--gold-line); }
+
+    /* ---- Closing moment spacing before the footer ---- */
+    .lp-end { height: calc(var(--section) + 20px); background: var(--cream); }
+    .lp-note { padding: 28px 0 calc(60px + 36px); background: var(--cream); }
+    .lp-note .final-note { margin-top: 0; max-width: 80ch; }
+
+    /* ---- Dural only: all ages, tiny tots to seniors ---- */
+    .du-ages { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; gap: 12px; padding: 32px clamp(20px, 3vw, 40px) 0; border-radius: var(--r-lg); background: var(--white); overflow: hidden; }
+    .du-ages::after { content: ""; position: absolute; left: 0; right: 0; bottom: 58px; border-top: 1px dashed var(--mint-line); }
+    .du-age { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+    .du-age img { width: var(--s); height: auto; opacity: .9; }
+    .du-age b { display: block; margin: 14px 0 22px; font-size: 16px; font-weight: 600; color: var(--ink); text-align: center; }
+    .du-age:nth-child(1) { --s: 44px; } .du-age:nth-child(2) { --s: 66px; } .du-age:nth-child(3) { --s: 88px; } .du-age:nth-child(4) { --s: 96px; }
+    .du-cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+    .du-cases li { background: var(--white); border-radius: var(--r-lg); padding: 24px 26px; display: flex; flex-direction: column; }
+    .du-cases small { font-size: 13px; font-weight: 600; color: var(--teal); }
+    .du-cases b { display: block; margin-top: 10px; font-size: 20px; font-weight: 500; line-height: 1.3; color: var(--ink); }
+    .du-cases a { margin-top: auto; padding-top: 16px; font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    @media (max-width: 860px) { .du-cases { grid-template-columns: minmax(0, 1fr); } .du-age b { font-size: 14px; } }
+    .du-welcome { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(36px, 6vw, 104px); align-items: center; }
+    .du-welcome .photo { aspect-ratio: 4 / 4.6; }
+    .du-welcome .statement { font-size: clamp(28px, 2.8vw, 40px); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); text-wrap: balance; }
+    .du-welcome .statement em { font-family: var(--serif); font-style: italic; font-size: 1.07em; }
+    .du-welcome .prose { margin-top: 26px; }
+    @media (max-width: 900px) { .du-welcome { grid-template-columns: minmax(0, 1fr); } .du-welcome .photo { aspect-ratio: 4 / 3; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ihero lp-hero" aria-labelledby="h1" data-hero>
+      <div class="container lp-hero__grid">
+        <div>
+          <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Dural dentist</li></ol></nav>
+          <p class="subtitle">Try Beyond 32 Dental, located nearby</p>
+          <h1 class="h1" id="h1">Need a Dural dentist <span class="it">you can count on?</span></h1>
+          <p class="lead">Are you looking for a Dural dentist that matches the requirements you’re looking for in family dental care? That being the case, we’d like to welcome you to Beyond 32 Dental.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold btn--lg" href="contact.html#enquire">Book Online Today</a>
+            <a class="btn btn--outline btn--lg" href="tel:+61291586334"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11.5 11.5 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg>(02) 9158 6334</a>
+          </div>
+          <ul class="lp-proof">
+            <li><img src="assets/google.svg" alt=""><span><b>5.0</b> from 360+ Google reviews</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>Open <b>6 days</b> a week</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.5h14M6.5 16.5V19M17.5 16.5V19M4 16.5v-3.2l1.8-4.6A2 2 0 0 1 7.7 7.5h8.6a2 2 0 0 1 1.9 1.2l1.8 4.6v3.2"/><path d="M4.5 13h15"/><circle cx="7.5" cy="14.8" r=".6"/><circle cx="16.5" cy="14.8" r=".6"/></svg><span><b>3-hour</b> free parking</span></li>
+          </ul>
+        </div>
+        <figure class="lp-visual">
+          <div class="lp-visual__photo"><img src="assets/kid-mirror-opt.jpg" alt="Young patient checking her smile in a hand mirror after her appointment" style="object-position:55% 40%"></div>
+          <figcaption class="lp-ticket">
+            <span class="lp-ticket__ends"><span>From<b>Dural</b></span><span>To<b>Pennant Hills</b></span></span>
+            <span class="lp-line" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.5h14M6.5 16.5V19M17.5 16.5V19M4 16.5v-3.2l1.8-4.6A2 2 0 0 1 7.7 7.5h8.6a2 2 0 0 1 1.9 1.2l1.8 4.6v3.2"/><path d="M4.5 13h15"/><circle cx="7.5" cy="14.8" r=".6"/><circle cx="16.5" cy="14.8" r=".6"/></svg><i></i></span>
+            <span class="lp-ticket__time"><span class="it">10</span> minute drive</span>
+            <span class="lp-ticket__meta" style="display:block">Open 6 days, with easy 3-hour free parking</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ GETTING HERE ============ -->
+    <section class="band band--white" id="getting-here" aria-labelledby="h-way">
+      <div class="container lp-way">
+        <div>
+          <h2 class="h2" id="h-way">Located nearby, <span class="it">10 minutes from Dural</span></h2>
+          <p class="lede lede--wide">We’re a well-established dental practice situated just a 10-minute drive from Dural. Open 6 days a week, patients have access to easy, 3-hour free parking.</p>
+          <ol class="lp-journey" aria-label="Trip from Dural">
+            <li class="is-start"><div><b>Dural</b><span>Start</span></div></li>
+            <li><div><b>About a 10-minute drive</b></div></li>
+            <li class="is-end"><div><b>Beyond 32 Dental</b><span>1st Floor, 114 Yarrara Rd, Pennant Hills NSW 2120</span></div></li>
+          </ol>
+          <ul class="lp-trip">
+            <li><b>10 min</b><span>drive from Dural</span></li>
+            <li><b>6 days</b><span>open a week</span></li>
+            <li><b>3 hrs</b><span>easy free parking</span></li>
+          </ul>
+          <p class="p" style="margin-top:28px;max-width:46ch">As such, we’re well-positioned and well-equipped to become your go-to family dentist.</p>
+        </div>
+        <div class="lp-way__aside">
+          <figure class="lp-map" data-reveal>
+            <div class="lp-map__canvas">
+              <img src="assets/map-opt.jpg" alt="Street map of Pennant Hills showing Beyond 32 Dental on Yarrara Road" loading="lazy">
+              <svg viewBox="0 0 1086 809" preserveAspectRatio="none" aria-hidden="true">
+                <defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="lp-map__head" d="M0 0 10 5 0 10z"/></marker></defs>
+                <path class="lp-map__arrow" d="M230 40 Q330 190 475 325" marker-end="url(#ah)"/>
+                <circle class="lp-map__ring" cx="510" cy="360" r="38"/>
+              </svg>
+              <span class="lp-map__tag" style="left:21%;top:6%"><i></i>From Dural</span>
+            </div>
+            <figcaption>Dural is about a 10-minute drive from our clinic. Arrow is indicative only.</figcaption>
+          </figure>
+          <div class="lp-relo"><span class="lp-relo__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M9.5 20v-5h5v5"/></svg></span><div><b>Latest news: we’ve relocated!</b><p>We’re excited to announce that Beyond 32 Dental has moved to a new and improved location with enhanced facilities and the same trusted dental care! Find us on the 1st Floor, 114 Yarrara Rd, Pennant Hills.</p></div></div>
+          <div class="btn-row">
+            <a class="btn btn--ink" href="https://www.google.com/maps/dir/?api=1&amp;origin=Dural+NSW&amp;destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9z"/><path d="M9.5 13.5v-2a1.5 1.5 0 0 1 1.5-1.5h4M13 8l2 2-2 2"/></svg>Directions from Dural</a>
+            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WELCOME ============ -->
+    <section class="band band--cream" aria-labelledby="h-welcome">
+      <div class="container du-welcome">
+        <figure class="photo"><img src="assets/founders-opt.jpg" alt="Dr Jennifer Chung and Dr Jeff Lin at the Beyond 32 Dental reception" loading="lazy" style="object-position:50% 30%"><figcaption>Dr Jennifer Chung and Dr Jeff Lin</figcaption></figure>
+        <div>
+          <p class="p" style="font-size:18px;margin-bottom:18px">Visiting any Dural dental practice for the first time can be a little stressful, but don’t let that worry you.</p>
+          <h2 class="statement" id="h-welcome">As you walk through the doors of our clinic, you’ll be given a warm welcome and a friendly smile <em>to help put you at ease.</em></h2>
+          <div class="prose">
+            <p>We’re a husband and wife team who believe in treating our patients in a way that we ourselves would like to be treated, with care, respect, and compassion.</p>
+            <p><strong>Don’t worry if you’re long overdue a check-up. We’re not here to judge.</strong></p>
+            <p>Incidentally, if you’re a nervous or anxious patient, then please be aware that we can also provide <a href="in-house-sedation.html">in-house dental sedation</a> should you require it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ALL AGES ============ -->
+    <section class="band band--mint" aria-labelledby="h-ages">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-ages">From tiny tots <span class="it">to seniors</span></h2>
+          <p class="lede lede--wide">Similar to any Dural dental practice, we provide a wide range of general, restorative, and cosmetic dental treatments for all ages, from tiny tots through to teens and adults to seniors.</p>
+        </div>
+        <div class="du-ages" aria-hidden="true">
+          <div class="du-age"><img src="assets/tooth-outline.svg" alt=""><b>Tiny tots</b></div>
+          <div class="du-age"><img src="assets/tooth-outline.svg" alt=""><b>Teens</b></div>
+          <div class="du-age"><img src="assets/tooth-outline.svg" alt=""><b>Adults</b></div>
+          <div class="du-age"><img src="assets/tooth-outline.svg" alt=""><b>Seniors</b></div>
+        </div>
+        <p class="p" style="margin:40px 0 0">Whether you’re looking for…</p>
+        <ul class="du-cases">
+          <li><small>Tiny tots</small><b>A caring dentist to deliver your child’s first dental visit</b><a href="first-visit.html">Your first visit →</a></li>
+          <li><small>Teens</small><b>The latest aligner orthodontics for your teen</b><a href="invisalign.html">Invisalign →</a></li>
+          <li><small>Adults and seniors</small><b>Dental implants to replace a missing tooth</b><a href="dental-implant.html">Dental implants →</a></li>
+        </ul>
+        <p class="lp-needs-end">…we’ve got you covered.</p>
+        <p class="p" style="margin-top:16px;max-width:62ch">All of this is backed by a team of dentists who are highly experienced in delivering gentle dentistry, just as you’d expect from a good Dural dental practice.</p>
+      </div>
+    </section>
+
+    <!-- ============ THE QUESTION (ink) ============ -->
+    <section class="band band--ink on-ink band--tight" aria-labelledby="h-q">
+      <div class="container pull-wrap">
+        <p class="p" style="align-self:start;font-size:20px;color:#fff;max-width:28ch">These are just some of the reasons you might want to consider us your go-to Dural dentist.</p>
+        <h2 class="pull-quote pull-quote--wide" id="h-q" style="font-size:clamp(28px,2.8vw,42px)">But why else would you consider jumping into your car and driving for 10 minutes, when you could opt for a Dural dental practice that’s virtually on your doorstep?</h2>
+      </div>
+    </section>
+
+    <!-- ============ REASONS ============ -->
+    <section class="band band--white" aria-label="Reasons to choose Beyond 32 Dental">
+      <div class="container">
+        <ol class="lp-reasons">
+          <li>
+            <h3>We use the latest dental techniques and technologies</h3>
+            <p class="p">We’ve invested in the latest state-of-the-art equipment and dental technology to make many of our procedures faster, safer and more comfortable for our patients.</p>
+            <p class="p">If you’re a Dural resident considering <a class="inline" href="dental-implant.html">dental implants</a> to replace one or more missing teeth, then you’ll be pleased to know that our dentists provide the latest digital keyhole implant surgery. This means chair-time is greatly reduced, there’s no need for stitches, and healing time is considerably faster. This advanced type of implant surgery is something that your local Dural dental practice may not provide.</p>
+          </li>
+          <li>
+            <h3>We move with the times</h3>
+            <p class="p">Modern dentistry is evolving all the time, so we make sure that we don’t lag behind by updating our skills on a regular basis.</p>
+            <p class="p">So if you’re looking for the very latest orthodontic treatment, for example, then you may be interested to know that we can provide Powerprox six-month braces which utilise the latest NiTi shape memory wires.</p>
+          </li>
+          <li>
+            <h3>Top name brands</h3>
+            <p class="p">To complement our modern dental skills, we also use top name brands to ensure patients receive the best possible outcome and longevity. This includes:</p>
+            <ul class="lp-brands">
+              <li><b>Dio / Dentium</b><small>Implants</small></li>
+              <li><b>ClearCorrect</b><small>Aligners</small></li>
+              <li><b>Inman Aligner</b><small>Orthodontics</small></li>
+              <li><b>Smile-Design</b><small>Porcelain veneers</small></li>
+              <li><b>Zoom and Pola</b><small>Whitening, in-chair and take-home kits</small></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Payment plans</h3>
+            <p class="p">We believe everyone should have access to high-quality dental care, which is why we offer a variety of <a class="inline" href="https://www.beyond32dental.com.au/payment-plans/">payment plans</a> to help spread the costs of your dental treatment. Please enquire for more information when booking.</p>
+          </li>
+          <li class="wide">
+            <div>
+              <h3>Convenient opening hours</h3>
+              <p class="p">We’re open 6 days a week, from 9am to 6pm Monday to Friday and from 9am to 3pm on Saturdays, with late night appointments available on Thursdays by request. So you can always combine a trip to the dentist with a bit of shopping.</p>
+            </div>
+            <figure class="lp-weekfig" style="margin:0"><div class="lp-week" role="img" aria-label="Opening hours: Monday to Friday 9am to 6pm, Saturday 9am to 3pm, Sunday closed, late appointments on Thursday by request"><div class="lp-week__axis" aria-hidden="true"><span style="top:8.33%">9am</span><span style="top:33.33%">12pm</span><span style="top:58.33%">3pm</span><span style="top:83.33%">6pm</span></div><div class="lp-week__day" data-wday="1"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:75%"></span></div><b>Mon</b></div><div class="lp-week__day" data-wday="2"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:75%"></span></div><b>Tue</b></div><div class="lp-week__day" data-wday="3"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:75%"></span></div><b>Wed</b></div><div class="lp-week__day" data-wday="4"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:75%"></span><span class="lp-week__late" style="top:83.33%;height:13%"></span></div><b>Thu</b></div><div class="lp-week__day" data-wday="5"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:75%"></span></div><b>Fri</b></div><div class="lp-week__day" data-wday="6"><div class="lp-week__col"><span class="lp-week__bar" style="top:8.33%;height:50%"></span></div><b>Sat</b></div><div class="lp-week__day" data-wday="0"><div class="lp-week__col"><span class="lp-week__off">Closed</span></div><b>Sun</b></div></div><figcaption class="lp-week-key"><span><i></i>Open</span><span><i class="late"></i>Late appointments by request</span></figcaption></figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING MOMENT ============ -->
+    <aside class="moment" aria-labelledby="h-close">
+      <img src="assets/girl-smile-opt.jpg" alt="" loading="lazy" style="object-position:50% 68%">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="moment__panel">
+          <h2 class="h2" id="h-close" style="font-size:clamp(30px,2.8vw,40px)">The place where <span class="it">every smile matters</span></h2>
+          <p class="p">So while we may not be a dentist in Dural per se, we aim to provide our patients with high-quality dental care tailored to their individual needs and/or budget.</p>
+          <p class="p">So if you can’t find a Dural dentist that’s good with your kids, or your Dural dental practice doesn’t provide the latest dental techniques and technologies that you require, then we’d love to welcome you to Beyond 32 Dental. Call us now on (02) 9158 6334!</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="tel:+61291586334">Call (02) 9158 6334</a>
+            <a class="btn btn--outline" href="contact.html#enquire">Book Online</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="lp-note"><div class="container"><p class="final-note">Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p></div></div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+  <script>(function(){var d=window.B32&&B32.today?B32.today():new Date().getDay();document.querySelectorAll('[data-wday="'+d+'"]').forEach(function(n){n.classList.add("is-today")});})();</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Raw originals and scraped HTML (large; regenerable). Keep the extracted copy (.txt) and briefs.
+_source/**/*.png
+_source/**/*.jpg
+_source/**/*.jpeg
+_source/**/*.webp
+_source/live/*.html
+# Local tooling / OS
+.claude/m*.html
+.claude/check*.html
+.DS_Store
+Thumbs.db

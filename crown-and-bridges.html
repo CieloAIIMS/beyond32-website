@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/crown-and-bridges/ (existing URL kept). Copy: existing live page copy. -->
+  <title>Crowns and Bridges Pennant Hills | Beyond 32 Dental</title>
+  <meta name="description" content="Restore your smile with custom crowns and bridges in Pennant Hills. Strong, natural-looking solutions for damaged or missing teeth, for confident, lasting results.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/crown-and-bridges/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/crown-and-bridges/", "name": "Crowns and Bridges in Pennant Hills", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" },
+        "about": [
+          { "@type": "MedicalProcedure", "name": "Dental crown", "alternateName": "Porcelain onlay", "description": "A strong ceramic cover that wraps around a weakened tooth like a helmet." },
+          { "@type": "MedicalProcedure", "name": "Dental bridge", "description": "Two crowns on the neighbouring natural teeth with a false crown (pontic) in the middle to replace a missing tooth." } ] },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Services" },
+          { "@type": "ListItem", "position": 3, "name": "Crowns and Bridges" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Hero: photo on the left for variety */
+    .s-hero--flip .s-hero__img img { object-position: 42% 50%; }
+    @media (min-width: 961px) {
+      .s-hero--flip .s-hero__grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr); }
+      .s-hero--flip .s-hero__img { order: -1; aspect-ratio: 5 / 5.4; }
+    }
+
+    /* Why teeth break down */
+    .causes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cause { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; background: var(--cream); border-radius: var(--r-lg); padding: clamp(22px, 2.6vw, 32px); }
+    .cause svg { width: 120px; height: 120px; display: block; }
+    .cause i { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--gold-line); }
+    .cause b { display: block; margin-top: 8px; font-size: clamp(20px, 1.7vw, 24px); font-weight: 500; line-height: 1.25; color: var(--ink); }
+    @media (max-width: 860px) { .causes { grid-template-columns: 1fr; } }
+    @media (max-width: 420px) { .cause { grid-template-columns: 84px 1fr; gap: 16px; } .cause svg { width: 84px; height: 84px; } }
+
+    /* Crown vs bridge explorer (authored moment) */
+    .cb { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); background: var(--white); border-radius: var(--r-lg); overflow: hidden; }
+    .cb__stage { position: relative; background: radial-gradient(120% 90% at 50% 0%, #fff 0%, #f6faf9 55%, #eaf5f4 100%); padding: 24px clamp(16px, 3vw, 40px) 16px; display: flex; flex-direction: column; gap: 18px; }
+    .seg { display: inline-flex; align-self: flex-start; padding: 4px; border-radius: 99px; background: var(--mint); gap: 4px; }
+    .seg button { min-height: 44px; padding: 10px 22px; border-radius: 99px; border: 0; background: transparent; font-weight: 600; font-size: 16px; color: var(--ink); transition: background .25s, color .25s; }
+    .seg button[aria-selected="true"] { background: var(--ink); color: #fff; }
+    .cb__stage svg { display: block; width: 100%; height: auto; }
+    .cb .m { transition: opacity .45s var(--ease-out), transform .7s var(--ease-out); }
+    .cbsvg[data-mode="crown"] .m-bridge, .cbsvg[data-mode="bridge"] .m-crown { opacity: 0; }
+    .cbsvg[data-mode="crown"] .lift { transform: translateY(-34px); }
+    @media (prefers-reduced-motion: no-preference) {
+      .cbsvg[data-mode="crown"] .lift { animation: settle 3.6s 1s var(--ease-out) infinite alternate; }
+    }
+    @keyframes settle { 0%, 30% { transform: translateY(-34px); } 70%, 100% { transform: translateY(0); } }
+    .cb__panel { padding: clamp(26px, 3.4vw, 48px); display: flex; flex-direction: column; }
+    .cb__panel[hidden] { display: none; }
+    .cb__panel h3 { font-size: clamp(28px, 2.6vw, 38px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; color: var(--ink); }
+    .cb__panel .p { margin-top: 16px; }
+    .cb__panel dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--hairline); font-size: 15px; }
+    .cb__panel dt { color: var(--teal); }
+    .cb__panel dd { color: var(--ink); font-weight: 600; }
+    .cb__panel .btn-row { margin-top: auto; padding-top: 28px; }
+    .cb__panel.is-shown { animation: panelIn .5s var(--ease-out); }
+    @keyframes panelIn { from { opacity: 0; transform: translateY(8px); } }
+    @media (max-width: 960px) { .cb { grid-template-columns: 1fr; } }
+
+    /* Materials */
+    .mat { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 104px); align-items: start; }
+    .range { margin-top: 32px; background: var(--white); border-radius: var(--r-lg); padding: 24px; }
+    .range__row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end; }
+    .range__row svg { width: 100%; max-width: 64px; height: auto; margin-inline: auto; display: block; }
+    .range__labels { display: flex; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline); font-size: 14px; font-weight: 600; color: var(--ink); }
+    .factors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+    .factors li { background: var(--white); border-radius: var(--r); padding: 18px; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .factors svg { width: 26px; height: 26px; color: var(--teal); display: block; margin-bottom: 12px; }
+    .ba-card { background: var(--mint); border: 1px solid var(--mint-line); border-radius: var(--r); padding: 14px; }
+    .ba-card img { width: 100%; height: auto; aspect-ratio: 476 / 460; object-fit: cover; object-position: right center; border-radius: 8px; }
+    .ba-card figcaption { margin: 14px 4px 2px; font-size: 16px; font-weight: 500; color: var(--ink); }
+    @media (max-width: 960px) { .mat { grid-template-columns: 1fr; } }
+    @media (max-width: 520px) { .factors { grid-template-columns: 1fr; } .factors li { display: flex; gap: 12px; align-items: center; } .factors svg { margin: 0; } }
+
+    .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .related a { display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: var(--r); background: var(--white); text-decoration: none; color: var(--ink); transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
+    .related a:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -22px rgba(20,64,62,.5); }
+    .related b { font-size: 19px; font-weight: 500; }
+    .related span { font-size: 15px; color: var(--teal); line-height: 1.5; }
+    .related em { margin-top: auto; padding-top: 8px; font-style: normal; font-weight: 600; font-size: 15px; text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    @media (max-width: 860px) { .related { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ihero s-hero s-hero--flip" aria-labelledby="s-h1" data-hero>
+      <div class="container">
+        <div class="s-hero__grid">
+          <figure class="s-hero__img">
+            <img src="assets/live/crown-and-bridges/crowns-consult.webp" alt="Dr Jeff Lin showing a patient a digital scan of her teeth while planning a crown" width="1900" height="1266">
+            <figcaption class="s-hero__badge"><img src="assets/google.svg" alt="">5.0 from 360+ Google reviews</figcaption>
+          </figure>
+          <div>
+            <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="index.html#services">Services</a></li><li aria-current="page">Crowns and Bridges</li></ol></nav>
+            <h1 class="h1" id="s-h1">Crowns and bridges <span class="it">in Pennant Hills</span></h1>
+            <p class="lede">Just like everything else in the world, teeth, after years of service, will start to break down.</p>
+            <div class="btn-row" style="margin-top:36px">
+              <a class="btn btn--gold" href="contact.html#enquire">Book an Assessment</a>
+              <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY TEETH BREAK DOWN ============ -->
+    <section class="band band--white" id="why" aria-labelledby="h-why">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-why">Why teeth <span class="it">break down</span></h2>
+          <p class="lede lede--wide">The most common reasons for a tooth breaking down are:</p>
+        </div>
+        <ol class="causes">
+          <li class="cause">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <rect width="120" height="120" rx="20" fill="#d8eeed"/>
+              <path d="M30 40 C28 18 92 18 90 40 L88 70 C86 86 80 96 76 108 L68 108 L64 84 L56 84 L52 108 L44 108 C40 96 34 86 32 70 Z" fill="#fff" stroke="#14403e" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M62 30 C74 28 80 38 76 48 C72 58 58 56 56 46 C54 38 56 31 62 30 Z" fill="#8a6420" opacity=".85"/>
+              <circle cx="46" cy="40" r="4" fill="#8a6420" opacity=".6"/>
+            </svg>
+            <div><i aria-hidden="true">1</i><b>Tooth decay that causes destruction of tooth structure</b></div>
+          </li>
+          <li class="cause">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <rect width="120" height="120" rx="20" fill="#d8eeed"/>
+              <path d="M30 40 C28 18 92 18 90 40 L88 70 C86 86 80 96 76 108 L68 108 L64 84 L56 84 L52 108 L44 108 C40 96 34 86 32 70 Z" fill="#fff" stroke="#14403e" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M66 22 L58 38 L66 46 L56 62 L62 72" fill="none" stroke="#b3321f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div><i aria-hidden="true">2</i><b>Accidents that cause a tooth to crack or fracture</b></div>
+          </li>
+        </ol>
+
+        <div class="pull-wrap" style="margin-top:clamp(72px,8vw,112px)">
+          <p class="pull-quote pull-quote--wide" style="font-size:clamp(28px,2.8vw,42px)">Once a significant amount of natural tooth structure is missing, the remaining tooth structure is weakened.</p>
+          <div>
+            <p class="p">A dental crown or porcelain onlay will be the ideal treatment option for the long survival of the tooth.</p>
+            <p class="p" style="margin-top:14px">Broken a tooth today? See <a class="inline" href="broken-teeth.html">broken teeth</a> or our <a class="inline" href="emergency-dental-care.html">emergency dental care</a> page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CROWN VS BRIDGE (authored moment) ============ -->
+    <section class="band band--mint" id="compare" aria-labelledby="h-compare">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-compare">A crown or <span class="it">a bridge?</span></h2>
+          <p class="lede lede--wide">A crown protects a tooth you still have. A bridge replaces one that is missing.</p>
+        </div>
+
+        <div class="cb">
+          <div class="cb__stage">
+            <div class="seg" role="tablist" aria-label="Crown or bridge">
+              <button type="button" role="tab" id="t-crown" aria-controls="p-crown" aria-selected="true" data-mode="crown">Crown</button>
+              <button type="button" role="tab" id="t-bridge" aria-controls="p-bridge" aria-selected="false" tabindex="-1" data-mode="bridge">Bridge</button>
+            </div>
+            <svg class="cbsvg" data-mode="crown" viewBox="0 -40 640 360" role="img" aria-labelledby="cb-t">
+              <title id="cb-t" data-svgtitle>Illustration of a crown fitting over a weakened tooth like a helmet</title>
+              <defs>
+                <linearGradient id="en2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f3ede2"/></linearGradient>
+                <pattern id="bn2" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#efe3c9"/><circle cx="4" cy="5" r="1.6" fill="#e0cfa9"/><circle cx="12" cy="12" r="1.2" fill="#e0cfa9"/></pattern>
+                <path id="nat" d="M-56 90 C-58 50 58 50 56 90 L52 170 C50 200 44 230 36 280 C34 292 22 292 20 280 L8 215 L-8 215 L-20 280 C-22 292 -34 292 -36 280 C-44 230 -50 200 -52 170 Z"/>
+                <path id="stump" d="M-36 108 Q-36 94 -22 94 L22 94 Q36 94 36 108 L50 176 C48 205 44 230 36 280 C34 292 22 292 20 280 L8 215 L-8 215 L-20 280 C-22 292 -34 292 -36 280 C-44 230 -48 205 -50 176 Z"/>
+                <path id="cap" d="M-58 92 C-60 50 60 50 58 92 L55 172 Q0 186 -55 172 Z"/>
+                <path id="pon" d="M-58 92 C-60 50 60 50 58 92 L55 160 Q0 190 -55 160 Z"/>
+              </defs>
+              <rect x="0" y="200" width="640" height="120" rx="20" fill="url(#bn2)"/>
+              <!-- Crown mode: natural neighbours, weakened middle tooth -->
+              <g class="m m-crown" stroke="#14403e" stroke-width="2">
+                <use href="#nat" x="140" fill="url(#en2)" opacity=".7"/>
+                <use href="#nat" x="500" fill="url(#en2)" opacity=".7"/>
+                <use href="#stump" x="320" fill="#f6ecd2"/>
+              </g>
+              <!-- Bridge mode: prepared neighbours -->
+              <g class="m m-bridge" stroke="#14403e" stroke-width="2">
+                <use href="#stump" x="140" fill="#f6ecd2"/>
+                <use href="#stump" x="500" fill="#f6ecd2"/>
+              </g>
+              <!-- gum -->
+              <path d="M0 176 Q70 162 140 178 Q230 194 320 178 Q410 162 500 178 Q570 192 640 176 V214 H0 Z" fill="#f2b9b1"/>
+              <path d="M0 176 Q70 162 140 178 Q230 194 320 178 Q410 162 500 178 Q570 192 640 176" fill="none" stroke="#e8897f" stroke-width="2"/>
+              <!-- Crown mode: the crown, lifted like a helmet -->
+              <g class="m m-crown">
+                <g class="lift"><use href="#cap" x="320" fill="url(#en2)" fill-opacity=".92" stroke="#9d781b" stroke-width="2.6"/></g>
+                <g font-family="Host Grotesk, sans-serif" font-size="24" font-weight="600" fill="#14403e" text-anchor="middle">
+                  <text x="320" y="-14">Crown</text>
+                  <text x="320" y="308" fill="#3d7774">Your weakened tooth</text>
+                </g>
+              </g>
+              <!-- Bridge mode: two crowns + pontic, joined -->
+              <g class="m m-bridge">
+                <g fill="#f0dbb0" stroke="#9d781b" stroke-width="2"><rect x="194" y="96" width="70" height="26" rx="10"/><rect x="376" y="96" width="70" height="26" rx="10"/></g>
+                <g stroke="#9d781b" stroke-width="2.6">
+                  <use href="#cap" x="140" fill="url(#en2)"/>
+                  <use href="#cap" x="500" fill="url(#en2)"/>
+                  <use href="#pon" x="320" fill="url(#en2)"/>
+                </g>
+                <g font-family="Host Grotesk, sans-serif" font-size="24" font-weight="600" fill="#14403e" text-anchor="middle">
+                  <text x="140" y="34">Crown</text><text x="320" y="34">Pontic</text><text x="500" y="34">Crown</text>
+                  <text x="320" y="308" fill="#3d7774">The gap, bridged</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <article class="cb__panel" role="tabpanel" id="p-crown" aria-labelledby="t-crown" tabindex="0">
+            <h3>Dental crown</h3>
+            <p class="p">Dental crowns, made of superior strong ceramic material, wrap around the weakened tooth like a helmet.</p>
+            <dl>
+              <dt>For</dt><dd>A tooth weakened by decay, a crack or a fracture</dd>
+              <dt>Also</dt><dd>A porcelain onlay may suit</dd>
+            </dl>
+            <div class="btn-row"><a class="btn btn--gold" href="contact.html#enquire">Book an Assessment</a></div>
+          </article>
+          <article class="cb__panel" role="tabpanel" id="p-bridge" aria-labelledby="t-bridge" tabindex="0" hidden>
+            <h3>Dental bridge</h3>
+            <p class="p">A bridge is an option to replace missing teeth. It consists of two crowns going on top of your natural teeth with a false crown (pontic) in the middle.</p>
+            <p class="p">It literally bridges the gap and maintains the integrity of the two neighbouring teeth, especially when they are heavily filled.</p>
+            <dl>
+              <dt>For</dt><dd>Replacing missing teeth</dd>
+              <dt>Also consider</dt><dd><a class="inline" href="dental-implant.html">Dental implants</a></dd>
+            </dl>
+            <div class="btn-row"><a class="btn btn--gold" href="contact.html#enquire">Book an Assessment</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MATERIALS + RESULT ============ -->
+    <section class="band band--cream" id="materials" aria-labelledby="h-mat">
+      <div class="container mat">
+        <div>
+          <h2 class="h2" id="h-mat">Which crown is <span class="it">right for you?</span></h2>
+          <p class="lede lede--wide" style="margin-top:24px">There are many different types of crown, ranging from gold to many different types of white crowns.</p>
+          <figure class="range" aria-label="Crown materials range from gold to many types of white crown">
+            <div class="range__row" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#decba1"/><stop offset=".5" stop-color="#f0dbb0"/><stop offset="1" stop-color="#a39266"/></linearGradient></defs><path d="M8 28 C6 6 58 6 56 28 L53 52 Q32 60 11 52 Z" fill="url(#gd)" stroke="#9d781b" stroke-width="2"/></svg>
+              <svg viewBox="0 0 64 64"><path d="M8 28 C6 6 58 6 56 28 L53 52 Q32 60 11 52 Z" fill="#f6efe2" stroke="#14403e" stroke-width="1.6"/></svg>
+              <svg viewBox="0 0 64 64"><path d="M8 28 C6 6 58 6 56 28 L53 52 Q32 60 11 52 Z" fill="#faf5ec" stroke="#14403e" stroke-width="1.6"/></svg>
+              <svg viewBox="0 0 64 64"><path d="M8 28 C6 6 58 6 56 28 L53 52 Q32 60 11 52 Z" fill="#fdfaf5" stroke="#14403e" stroke-width="1.6"/></svg>
+              <svg viewBox="0 0 64 64"><path d="M8 28 C6 6 58 6 56 28 L53 52 Q32 60 11 52 Z" fill="#ffffff" stroke="#14403e" stroke-width="1.6"/></svg>
+            </div>
+            <figcaption class="range__labels"><span>Gold</span><span>White crowns</span></figcaption>
+          </figure>
+          <p class="p" style="margin-top:28px">The material chosen is based on:</p>
+          <ul class="factors">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v9M8 8l4 4 4-4M4 16h16M6 20h12"/></svg>The biting forces</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>The location of the tooth</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3ZM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg>And of course, aesthetic considerations!</li>
+          </ul>
+          <p class="p" style="margin-top:28px;max-width:52ch">Your dentist at Beyond 32 Dental can provide a comprehensive assessment and determine the most suitable crown for you.</p>
+        </div>
+        <div>
+          <figure class="ba-card">
+            <img src="assets/live/crown-and-bridges/crown-before-after.webp" alt="Before and after: back teeth with worn, discoloured fillings, then restored with tooth-coloured crowns" loading="lazy" width="500" height="460">
+            <figcaption>Before and after crowns</figcaption>
+          </figure>
+          <p class="disclaimer-sm">Patient images are published with consent and are intended for educational purposes only. Results vary between individuals, and all dental procedures carry risks. Please seek professional advice from your dentist to determine whether a treatment is appropriate for your circumstances.</p>
+          <div class="btn-row" style="margin-top:24px"><a class="btn btn--outline" href="gallery.html">View the Smile Gallery</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING MOMENT ============ -->
+    <aside class="moment" aria-labelledby="h-close">
+      <img src="assets/practice-opt.jpg" alt="" loading="lazy" style="object-position:40% 50%">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="moment__panel">
+          <h2 class="h2" id="h-close" style="font-size:clamp(30px,2.8vw,40px)">Book an assessment <span class="it">in Pennant Hills</span></h2>
+          <p class="p">Contact us on (02) 9158 6334 for an assessment with our reliable dental care experts in Pennant Hills.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="tel:+61291586334">Call (02) 9158 6334</a>
+            <a class="btn btn--outline" href="contact.html#enquire">Book Online</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ RELATED ============ -->
+    <section class="band band--mint band--tight faq-section" aria-labelledby="h-related">
+      <div class="container">
+        <h2 class="h3x" id="h-related" style="margin-bottom:24px">Related treatments</h2>
+        <div class="related">
+          <a href="dental-implant.html"><b>Dental implants</b><span>Stand-alone implants replace a missing tooth without crowning the neighbouring teeth.</span><em>Learn more</em></a>
+          <a href="root-canal-therapy.html"><b>Root canal therapy</b><span>Saving a tooth whose nerve is irritated or infected, often before it is crowned.</span><em>Learn more</em></a>
+          <a href="broken-teeth.html"><b>Broken teeth</b><span>Chipped, cracked or broken? How urgent it is, and how we repair it.</span><em>Learn more</em></a>
+        </div>
+        <p class="final-note">Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+  <script>
+    /* Crown vs bridge: ARIA tabs that also switch the illustration */
+    (function () {
+      const tabs = [...document.querySelectorAll('.seg [role="tab"]')];
+      const svg = document.querySelector(".cbsvg");
+      const title = svg.querySelector("[data-svgtitle]");
+      const titles = { crown: "Illustration of a crown fitting over a weakened tooth like a helmet", bridge: "Illustration of a bridge: two crowns on the neighbouring teeth holding a false tooth in the gap" };
+      function select(tab, focus) {
+        tabs.forEach((t) => {
+          const on = t === tab;
+          t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1;
+          const p = document.getElementById(t.getAttribute("aria-controls"));
+          p.hidden = !on; p.classList.toggle("is-shown", on);
+        });
+        svg.dataset.mode = tab.dataset.mode; title.textContent = titles[tab.dataset.mode];
+        if (focus) tab.focus();
+      }
+      tabs.forEach((t, i) => {
+        t.addEventListener("click", () => select(t));
+        t.addEventListener("keydown", (e) => {
+          const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+          if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length], true); }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

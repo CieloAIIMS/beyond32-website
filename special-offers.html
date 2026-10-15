@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/special-offers/ (existing URL kept). Copy, prices and terms: existing live page only. -->
+  <title>Special Offers &amp; New Patient Package | Beyond 32 Dental Pennant Hills</title>
+  <meta name="description" content="Our new patient package includes a full comprehensive examination, all necessary X-rays, a full mouth scale and clean, and fluoride treatment. See our Invisalign and dental implant offers too.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/special-offers/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/special-offers/", "name": "Special Offers", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" } },
+      { "@type": "OfferCatalog", "name": "New Patient Special Offer", "description": "Full comprehensive examination, all necessary X-rays, a full mouth scale and clean, and fluoride treatment. Only valid for new patients.",
+        "itemListElement": [
+          { "@type": "Offer", "name": "New patient package, under 6 years old", "price": "110", "priceCurrency": "AUD", "eligibleCustomerType": "New patients" },
+          { "@type": "Offer", "name": "New patient package, 6–17 years old", "price": "160", "priceCurrency": "AUD", "eligibleCustomerType": "New patients" },
+          { "@type": "Offer", "name": "New patient package, 18+ years old", "price": "290", "priceCurrency": "AUD", "eligibleCustomerType": "New patients" } ] },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Special Offers" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==================== Statement hero with offer index ==================== */
+    .so-hero .h1 { font-size: clamp(52px, 7vw, 104px); letter-spacing: -0.035em; }
+    .so-hero__top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 88px); align-items: end; }
+    .so-hero .lede { margin: 0; max-width: 40ch; }
+    .so-index { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: clamp(40px, 5vw, 64px); }
+    .so-index a { position: relative; display: flex; flex-direction: column; min-height: 200px; padding: 24px; border-radius: var(--r-lg); background: rgba(255,255,255,.7); border: 1px solid var(--mint-line); color: var(--ink); text-decoration: none; overflow: hidden; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out), background .25s; }
+    .so-index a:hover { transform: translateY(-3px); background: #fff; box-shadow: 0 24px 40px -28px rgba(20,64,62,.55); }
+    .so-index small { font-size: 14px; font-weight: 600; color: var(--teal); }
+    .so-index b { display: block; margin-top: auto; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(30px, 2.8vw, 40px); line-height: 1.02; letter-spacing: -0.01em; }
+    .so-index span { margin-top: 10px; font-size: 15px; color: var(--teal); display: flex; justify-content: space-between; gap: 12px; }
+    .so-index span::after { content: "↓"; color: var(--ink); transition: transform .3s var(--ease-out); }
+    .so-index a:hover span::after { transform: translateY(3px); }
+    .so-index a.is-gold { background-image: var(--gold); border-color: var(--gold-line); }
+    .so-index a.is-gold small, .so-index a.is-gold span, .so-index a.is-gold b, .so-index a.is-gold span::after { color: var(--gold-ink); }
+    @media (max-width: 860px) {
+      .so-hero__top { grid-template-columns: 1fr; }
+      .so-index { grid-template-columns: 1fr; }
+      .so-index a { min-height: 0; }
+      .so-index b { margin-top: 14px; }
+    }
+
+    /* ==================== Offer cards ==================== */
+    .offer { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); background: var(--white); border-radius: var(--r-lg); overflow: hidden; scroll-margin-top: calc(var(--hh) + 24px); }
+    .offer--rev { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+    .offer--rev .offer__art { order: 2; }
+    .offer__art { position: relative; background: var(--mint); min-height: 360px; }
+    .offer__art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .offer__art .cap-pill { position: absolute; }
+    .offer__body { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; }
+    .offer__body h2 { font-size: clamp(32px, 3.2vw, 46px); }
+    .free { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .free li { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px 9px 10px; border-radius: 99px; background: var(--mint); color: var(--ink); font-size: 16px; font-weight: 600; }
+    .free svg { width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--ink); color: #fff; }
+    .bonus-h { margin-top: 32px; font-size: 15px; font-weight: 600; color: var(--teal); }
+    .receipt { margin-top: 10px; }
+    .receipt li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 24px; align-items: baseline; padding: 14px 0; border-bottom: 1px dashed rgba(20,64,62,.22); font-size: 16px; line-height: 1.45; color: var(--ink); }
+    .receipt li:first-child { border-top: 1px dashed rgba(20,64,62,.22); }
+    .receipt em { font-style: normal; font-weight: 600; white-space: nowrap; color: var(--ink); background: #f6efdf; border-radius: 6px; padding: 2px 8px; font-size: 15px; }
+    .terms { margin-top: 20px; padding: 16px 18px; border-radius: var(--r-sm); background: var(--cream); font-size: 15px; line-height: 1.55; color: var(--ink); }
+    .terms p + p { margin-top: 6px; }
+    .terms sup, .receipt sup { font-size: .8em; }
+    .offer__cta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+    @media (max-width: 900px) {
+      .offer, .offer--rev { grid-template-columns: 1fr; }
+      .offer--rev .offer__art { order: 0; }
+      .offer__art { min-height: 0; aspect-ratio: 16 / 10; }
+    }
+    @media (max-width: 520px) {
+      .receipt li { grid-template-columns: 1fr; }
+      .receipt em { justify-self: start; }
+    }
+
+    /* ==================== New patient price table ==================== */
+    .np-wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 88px); align-items: start; scroll-margin-top: calc(var(--hh) + 24px); }
+    .np-photo { position: relative; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 4.6; margin-top: 36px; }
+    .np-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; transform: scale(1.03); }
+    .price-card { background: var(--white); border-radius: var(--r-lg); padding: clamp(24px, 3.4vw, 44px); }
+    .price-card h3 { font-size: 15px; font-weight: 600; color: var(--teal); }
+    .ptable { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    .ptable th, .ptable td { padding: 20px 0; border-top: 1px solid var(--hairline); vertical-align: middle; }
+    .ptable tr:last-child th, .ptable tr:last-child td { border-bottom: 1px solid var(--hairline); }
+    .ptable th { text-align: left; font-weight: 500; font-size: 18px; color: var(--ink); }
+    .ptable th span { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 12px; border-radius: 50%; background: var(--mint); font-size: 14px; font-weight: 700; color: var(--ink); }
+    .ptable td { text-align: right; font-family: var(--serif); font-style: italic; font-size: clamp(36px, 3.4vw, 48px); line-height: 1; color: var(--ink); letter-spacing: -0.01em; }
+    .includes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 28px; }
+    .includes li { display: flex; gap: 10px; align-items: center; padding: 12px 14px; border-radius: var(--r-sm); background: var(--mint); font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .includes svg { width: 20px; height: 20px; flex: none; color: var(--teal); }
+    .tc { margin-top: 28px; }
+    .tc h3 { font-size: 15px; font-weight: 600; color: var(--ink); }
+    .tc ul { margin-top: 10px; display: grid; gap: 8px; }
+    .tc li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 15px; line-height: 1.55; color: var(--ink); }
+    .tc li::before { content: ""; width: 6px; height: 6px; margin: 9px 0 0 4px; border-radius: 50%; background: var(--gold-line); }
+    @media (max-width: 900px) { .np-wrap { grid-template-columns: 1fr; } .np-photo { aspect-ratio: 4 / 3; } }
+    @media (max-width: 480px) { .includes { grid-template-columns: 1fr; } .ptable th { font-size: 16px; } .ptable th span { display: none; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ STATEMENT HERO ============ -->
+    <section class="ihero so-hero" aria-labelledby="s-h1" data-hero>
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Special Offers</li></ol></nav>
+        <div class="so-hero__top">
+          <h1 class="h1" id="s-h1">Special <span class="it">offers</span></h1>
+          <p class="lede">Current offers for Invisalign, dental implants and new patients. The conditions for each offer are listed with it.</p>
+        </div>
+        <div class="so-index">
+          <a href="#invisalign"><small>Invisalign Special Offer</small><b>Free consult</b><span>+ complimentary X-ray and bonuses</span></a>
+          <a href="#implants"><small>Dental Implants Special Offer</small><b>Free CBCT scan</b><span>+ free consultation</span></a>
+          <a class="is-gold" href="#new-patient"><small>New Patient Special Offer</small><b>From $110</b><span>Welcome package for your family</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INVISALIGN ============ -->
+    <section class="band band--cream" aria-label="Invisalign Special Offer" style="padding-bottom:16px">
+      <div class="container">
+        <article class="offer" id="invisalign" aria-labelledby="h-inv">
+          <div class="offer__art">
+            <img src="assets/live/special-offers/invisalign-offer.webp" alt="Dentist holding up a dental model and a clear Invisalign aligner" width="960" height="960" loading="lazy" style="object-position:50% 40%">
+            <span class="cap-pill">Gold+ Invisalign provider</span>
+          </div>
+          <div class="offer__body">
+            <h2 class="h2" id="h-inv">Invisalign <span class="it">special offer</span></h2>
+            <ul class="free">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Free Consult</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Complimentary X-ray</li>
+            </ul>
+            <p class="bonus-h">Bonus at treatment acceptance:</p>
+            <ul class="receipt">
+              <li><span>Complimentary Digital Scan &amp; Treatment Planning</span><em>savings of $250</em></li>
+              <li><span>Teeth cleaning at the start of the treatment</span><em>savings of $395</em></li>
+              <li><span>Custom retainers at the end of the treatment</span><em>savings of $500</em></li>
+              <li><span>2 years of FREE aftercare</span></li>
+              <li><span>Affordable interest-free payment plans starting from</span><em>$65/week<sup>*</sup></em></li>
+              <li><span>Take-home teeth whitening kit<sup>**</sup></span><em>valued at $450</em></li>
+            </ul>
+            <div class="terms">
+              <p><sup>*</sup> based on $5,000 over 18 months</p>
+              <p><sup>**</sup> for eligible patients (over 16yo and teeth in suitable condition)</p>
+            </div>
+            <div class="offer__cta">
+              <a class="btn btn--gold" href="contact.html#enquire">Book Online Today</a>
+              <a class="btn btn--outline" href="invisalign.html">About Invisalign</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ IMPLANTS ============ -->
+    <section class="band band--cream" aria-label="Dental Implants Special Offer" style="padding-top:0">
+      <div class="container">
+        <article class="offer offer--rev" id="implants" aria-labelledby="h-imp">
+          <div class="offer__art">
+            <img src="assets/live/special-offers/implants-offer.webp" alt="Dentist holding a dental implant with its crown attached" width="700" height="466" loading="lazy" style="object-position:40% 50%">
+          </div>
+          <div class="offer__body" style="justify-content:center">
+            <h2 class="h2" id="h-imp">Dental implants <span class="it">special offer</span></h2>
+            <ul class="free">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Free Consultation</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Free CBCT Scan</li>
+            </ul>
+            <div class="offer__cta">
+              <a class="btn btn--gold" href="contact.html#enquire">Book Online Today</a>
+              <a class="btn btn--outline" href="dental-implant.html">About Dental Implants</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ NEW PATIENT ============ -->
+    <section class="band band--mint" aria-labelledby="h-np">
+      <div class="container np-wrap" id="new-patient">
+        <div>
+          <h2 class="h2" id="h-np">New patient <span class="it">special offer</span></h2>
+          <p class="lede lede--wide" style="margin-top:22px">We offer a new patient welcome package that caters to your family.</p>
+          <figure class="np-photo">
+            <img src="assets/live/special-offers/family-welcome.jpg" alt="Three generations of one family smiling together" width="702" height="1024" loading="lazy">
+          </figure>
+        </div>
+        <div class="price-card">
+          <h3 id="price-cap">Welcome package that caters to your family</h3>
+          <table class="ptable" aria-describedby="price-cap">
+            <caption class="sr-only">New patient welcome package price by age</caption>
+            <tbody>
+              <tr><th scope="row"><span aria-hidden="true">a</span>Under 6 years old</th><td>$110</td></tr>
+              <tr><th scope="row"><span aria-hidden="true">b</span>6–17 years old</th><td>$160</td></tr>
+              <tr><th scope="row"><span aria-hidden="true">c</span>18+ years old</th><td>$290</td></tr>
+            </tbody>
+          </table>
+          <ul class="includes" aria-label="The package includes">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>Full comprehensive examination</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>All necessary X-rays</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.6L12 15l-1.8-4.4L5.5 9l4.7-1.4Z"/></svg>Full mouth scale and clean</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s5 5.5 5 9.5a5 5 0 0 1-10 0C7 8.5 12 3 12 3Z"/></svg>Fluoride treatment</li>
+          </ul>
+          <div class="tc">
+            <h3>Terms &amp; Conditions:</h3>
+            <ul>
+              <li>Only valid for NEW patients.</li>
+              <li>For anyone with health funds, we have a HICAPS to claim your rebate on the spot, which means you will only pay a gap after your rebate.</li>
+              <li>The package includes a full comprehensive examination, all necessary X-rays, a full mouth scale and clean, and fluoride treatment.</li>
+            </ul>
+          </div>
+          <div class="offer__cta">
+            <a class="btn btn--gold" href="contact.html#enquire">Book Online Today</a>
+            <a class="btn btn--outline" href="first-visit.html">Your child’s first visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAYMENT PLANS STRIP ============ -->
+    <section class="band band--cream band--tight" aria-label="Payment plans" style="padding-bottom:calc(var(--section) + 40px)">
+      <div class="container">
+        <div class="inline-cta">
+          <p>Prefer to spread the cost of treatment?</p>
+          <a href="https://www.beyond32dental.com.au/payment-plans/">See our payment plans <span>→</span></a>
+        </div>
+        <p class="final-note">Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+</body>
+</html>

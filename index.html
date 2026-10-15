@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inner Pages | Beyond 32 Dental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    .hub { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .hub a { display: flex; flex-direction: column; gap: 14px; text-decoration: none; background: var(--white); border-radius: var(--r); padding: 16px; transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out); }
+    .hub a:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -28px rgba(20,64,62,.6); }
+    .hub .media { aspect-ratio: 4/3; }
+    .hub p { color: var(--teal); font-size: 15px; }
+    @media (max-width: 900px) { .hub { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .hub { grid-template-columns: 1fr; } }
+      .hub-index { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; margin-top: 64px; }
+    .hub-group ul { margin-top: 14px; border-top: 1px solid var(--hairline); }
+    .hub-group a { display: flex; justify-content: space-between; padding: 12px 2px; border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+    .hub-group a:hover { color: var(--teal); }
+    .hub-group a span { transition: transform .3s var(--ease-out); }
+    .hub-group a:hover span { transform: translateX(4px); }
+    @media (max-width: 900px) { .hub-index { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .hub-index { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-page="home" data-footer="compact">
+  <header data-site-header></header>
+  <main class="ihero" style="min-height:70vh">
+    <div class="container">
+      <h1 class="h1">Inner pages, <span class="it">ready for review</span></h1>
+      <p class="lead">The homepage lives in Figma. These 31 pages extend its design system.</p>
+      <div class="hub">
+        <a href="about.html"><div class="media"><img src="assets/founders-opt.jpg" alt="" style="object-position:50% 30%"></div><h2 class="h4">About Us</h2><p>Story, approach, team and trust.</p></a>
+        <a href="gallery.html"><div class="media"><img src="assets/ba-2-after.jpg" alt=""></div><h2 class="h4">Smile Gallery</h2><p>Before &amp; after cases and the practice.</p></a>
+        <a href="contact.html"><div class="media"><img src="assets/practice-opt.jpg" alt=""></div><h2 class="h4">Contact Us</h2><p>Call, book, email, visit.</p></a>
+        <a href="emergency-dental-care.html"><div class="media"><img src="assets/emergency-opt.jpg" alt=""></div><h2 class="h4">Emergency Dental Care</h2><p>Fast, calm, action-first.</p></a>
+        <a href="general-dentistry-check-up-and-clean.html"><div class="media"><img src="assets/kid-mirror-opt.jpg" alt=""></div><h2 class="h4">Check Up &amp; Clean</h2><p>First service page: General Dentistry.</p></a>
+        <a href="cosmetic-dentistry.html"><div class="media"><img src="assets/hero-woman-opt.jpg" alt="" style="object-position:62% 30%"></div><h2 class="h4">Cosmetic Dentistry</h2><p>Whitening, veneers, bonding, makeovers.</p></a>
+        <a href="broken-teeth.html"><div class="media"><img src="assets/ba-4-before.jpg" alt=""></div><h2 class="h4">Broken Teeth</h2><p>What to do now, how urgent, how we fix it.</p></a>
+        <a href="crooked-teeth.html"><div class="media"><img src="assets/hero-woman-opt.jpg" alt="" style="object-position:55% 30%"></div><h2 class="h4">Crooked Teeth</h2><p>Spotlight hero and treatment explorer.</p></a>
+      </div>
+      <div class="hub-index">
+        <section class="hub-group"><h2 class="h4">Core pages</h2><ul><li><a href="about.html">About Us<span aria-hidden="true">→</span></a></li><li><a href="gallery.html">Smile Gallery<span aria-hidden="true">→</span></a></li><li><a href="contact.html">Contact Us<span aria-hidden="true">→</span></a></li><li><a href="emergency-dental-care.html">Emergency Dental Care<span aria-hidden="true">→</span></a></li><li><a href="first-visit.html">New Patients<span aria-hidden="true">→</span></a></li><li><a href="special-offers.html">Special Offers<span aria-hidden="true">→</span></a></li><li><a href="blog.html">Blog<span aria-hidden="true">→</span></a></li><li><a href="blog-post.html">Blog article (template)<span aria-hidden="true">→</span></a></li></ul></section>
+        <section class="hub-group"><h2 class="h4">General & restorative</h2><ul><li><a href="general-dentistry-check-up-and-clean.html">Check Up & Clean<span aria-hidden="true">→</span></a></li><li><a href="dental-implant.html">Dental Implants<span aria-hidden="true">→</span></a></li><li><a href="crown-and-bridges.html">Crowns & Bridges<span aria-hidden="true">→</span></a></li><li><a href="root-canal-therapy.html">Root Canal Therapy<span aria-hidden="true">→</span></a></li><li><a href="in-house-sedation.html">In-House Sedation<span aria-hidden="true">→</span></a></li></ul></section>
+        <section class="hub-group"><h2 class="h4">I need help with</h2><ul><li><a href="toothache.html">Toothache<span aria-hidden="true">→</span></a></li><li><a href="broken-teeth.html">Broken Teeth<span aria-hidden="true">→</span></a></li><li><a href="crooked-teeth.html">Crooked Teeth<span aria-hidden="true">→</span></a></li></ul></section>
+        <section class="hub-group"><h2 class="h4">Cosmetic</h2><ul><li><a href="cosmetic-dentistry.html">Cosmetic Dentistry<span aria-hidden="true">→</span></a></li><li><a href="veneers.html">Veneers<span aria-hidden="true">→</span></a></li><li><a href="teeth-whitening.html">Teeth Whitening<span aria-hidden="true">→</span></a></li><li><a href="zoom-teeth-whitening.html">Zoom Whitening<span aria-hidden="true">→</span></a></li><li><a href="fixing-my-smile.html">Fixing My Smile<span aria-hidden="true">→</span></a></li><li><a href="anti-wrinkle-treatment.html">Anti-Wrinkle Treatment<span aria-hidden="true">→</span></a></li></ul></section>
+        <section class="hub-group"><h2 class="h4">Teeth straightening</h2><ul><li><a href="invisalign.html">Invisalign<span aria-hidden="true">→</span></a></li><li><a href="damon-braces.html">Damon Braces<span aria-hidden="true">→</span></a></li><li><a href="inman-aligner.html">Inman Aligner<span aria-hidden="true">→</span></a></li><li><a href="early-interceptive-orthodontics.html">Early Interceptive Orthodontics<span aria-hidden="true">→</span></a></li></ul></section>
+        <section class="hub-group"><h2 class="h4">Local pages</h2><ul><li><a href="beecroft-dentist.html">Beecroft<span aria-hidden="true">→</span></a></li><li><a href="cherrybrook-dentist.html">Cherrybrook<span aria-hidden="true">→</span></a></li><li><a href="dentist-glenhaven.html">Glenhaven<span aria-hidden="true">→</span></a></li><li><a href="dural-dentist.html">Dural<span aria-hidden="true">→</span></a></li><li><a href="westleigh-dentist.html">Westleigh<span aria-hidden="true">→</span></a></li></ul></section>
+      </div>
+    </div>
+  </main>
+  <div data-site-footer></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

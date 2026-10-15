@@ -1,0 +1,32 @@
+URL: https://www.beyond32dental.com.au/special-offers/
+TITLE: Special Offers - Beyond 32 Dental
+META: Our package includes a full comprehensive examination, all necessary X-rays, a full mouth scale and clean, and fluoride treatment.
+
+--- CONTENT ---
+H1: Special Offers
+H3: Invisalign Special Offer
+P: ✓ Free Consult ✓ Complimentary X-ray
+P: ✓ Bonus at treatment acceptance: • Complimentary Digital Scan & Treatment Planning (savings of $250) • Teeth cleaning at the start of the treatment (savings of $395) • Custom retainers at the end of the treatment (savings of $500) • 2 years of FREE aftercare • Affordable interest-free payment plans starting from $65/week* • Take-home teeth whitening kit** (valued at $450)
+P: *based on $5,000 over 18 months ** for eligible patients (over 16yo and teeth in suitable condition) BOOK ONLINE TODAY Dental Implants Special Offer ✓ Free Consultation ✓ Free CBCT Scan BOOK ONLINE TODAY We Offer A New Patient WELCOME PACKAGE THAT CATERS TO YOUR FAMILY -->
+H3: New Patient Special Offer
+P: ✓ Welcome package that caters to your Family
+TD: a) Under 6 years old
+TD: $110
+TD: b) 6-17 years old
+TD: $160
+TD: c) 18+ years old
+TD: $290
+LI: Only valid for NEW patients
+LI: For anyone with health funds, we have a HICAPS to claim your rebate on the spot, which means you will only pay a gap after your rebate.
+LI: The package includes a full comprehensive examination, all necessary X-rays, a full mouth scale and clean, and fluoride treatment.
+H3: #teeth straightened
+H3: #SMILES CREATED
+H3: #IMPLANTS PLACED
+
+--- IMAGES ---
+https://beyond32dental.com.au/wp-content/uploads/2026/05/Invisalign-Special-Offer.webp
+https://beyond32dental.com.au/wp-content/uploads/2026/05/Dental-Implants-Special-Offer.webp
+https://beyond32dental.com.au/wp-content/uploads/2026/06/Payment-Plans-Beyond-32-Dental-Cherrybrook.webp
+
+--- INTERNAL LINKS ---
+

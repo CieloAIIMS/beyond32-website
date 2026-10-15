@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/in-house-sedation/ (existing URL kept). Copy: existing live page copy. -->
+  <title>In-House Sedation &amp; Happy Gas Pennant Hills | Beyond 32 Dental</title>
+  <meta name="description" content="Are you a nervous or anxious patient? We can help. We are highly experienced in in-house sedation. Patients can rest assured that they are in safe hands.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/in-house-sedation/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/in-house-sedation/", "name": "In-house sedation", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" },
+        "about": { "@type": "MedicalTherapy", "name": "Sedation dentistry",
+          "alternateName": ["In-house sedation", "Happy gas", "Inhalation sedation", "IV sedation"] } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "General Dentistry" },
+          { "@type": "ListItem", "position": 3, "name": "In-House Sedation" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==================== Hero: full-bleed photo with a calm panel ==================== */
+    .sd-hero { position: relative; min-height: clamp(600px, 50vw, 720px); display: flex; align-items: center; overflow: hidden; background: var(--mint); }
+    .sd-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; }
+    .sd-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(216,238,237,.75) 0%, rgba(216,238,237,.25) 45%, rgba(216,238,237,0) 70%); }
+    .sd-hero .container { position: relative; z-index: 1; padding-block: clamp(48px, 5vw, 72px); }
+    .sd-panel { max-width: 580px; background: rgba(255,247,242,.94); backdrop-filter: blur(12px); border-radius: var(--r-lg); padding: clamp(28px, 3.4vw, 52px); box-shadow: 0 40px 80px -48px rgba(20,64,62,.6); }
+    .sd-panel .h1 { font-size: clamp(38px, 4.2vw, 60px); max-width: 10em; }
+    .sd-panel .lede { margin-top: 22px; max-width: 40ch; font-size: clamp(17px, 1.35vw, 19px); }
+    .sd-panel .btn-row { margin-top: 30px; }
+    .sd-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--hairline); }
+    .sd-chips span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--ink); background: var(--white); border: 1px solid var(--mint-line); border-radius: 99px; padding: 7px 14px; }
+    .sd-chips svg { width: 16px; height: 16px; color: var(--teal); }
+    @media (max-width: 760px) {
+      .sd-hero { display: block; min-height: 0; }
+      .sd-hero > img { position: relative; height: 300px; }
+      .sd-hero::after { display: none; }
+      .sd-hero .container { padding-block: 0 48px; margin-top: -56px; }
+      .sd-panel { padding: 26px 22px; }
+    }
+
+    /* ==================== Options ==================== */
+    .sd-opt { background: var(--white); border-radius: var(--r-lg); overflow: hidden; display: flex; flex-direction: column; }
+    .sd-opt__art { position: relative; aspect-ratio: 16 / 9; background: linear-gradient(160deg, #f3faf9, var(--mint)); display: grid; place-items: center; overflow: hidden; }
+    .sd-opt__art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 35%; }
+    .sd-opt__art svg { width: min(78%, 360px); height: auto; }
+    .sd-opt__body { padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; flex: 1; }
+    .sd-opt__body h3 { font-size: clamp(24px, 2.2vw, 30px); font-weight: 500; letter-spacing: -0.01em; color: var(--ink); }
+    .sd-opt__body h3 small { display: block; margin-top: 4px; font-size: 15px; font-weight: 600; color: var(--teal); letter-spacing: 0; }
+    .sd-opt__body .p { margin-top: 12px; font-size: 16px; }
+    .sd-opt dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 22px; margin-top: auto; padding-top: 22px; border-top: 1px solid var(--hairline); font-size: 15px; }
+    .sd-opt__body .p + dl { margin-top: 24px; }
+    .sd-opt dt { color: var(--teal); }
+    .sd-opt dd { color: var(--ink); font-weight: 600; }
+    .sd-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 760px) { .sd-opts { grid-template-columns: 1fr; } .sd-opt dl { grid-template-columns: 1fr; gap: 2px; } .sd-opt dd { margin-bottom: 10px; } }
+
+    /* ==================== Benefits ==================== */
+    .sd-benefits { counter-reset: b; }
+    .sd-benefit { counter-increment: b; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 24px; padding: 36px 0; border-top: 1px solid rgba(20,64,62,.12); }
+    .sd-benefit:last-child { border-bottom: 1px solid rgba(20,64,62,.12); }
+    .sd-benefit::before { content: counter(b); width: 56px; height: 56px; border-radius: 50%; border: 1px solid var(--mint-line); background: var(--cream); display: grid; place-items: center; font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--ink); }
+    .sd-benefit h3 { font-size: clamp(22px, 2vw, 28px); font-weight: 500; color: var(--ink); line-height: 1.2; }
+    .sd-benefit .p { margin-top: 12px; }
+    @media (max-width: 600px) { .sd-benefit { grid-template-columns: 1fr; gap: 14px; } }
+
+    /* Breathing orb: a slow, calm pulse */
+    .orb { position: relative; aspect-ratio: 1; max-width: 420px; display: grid; place-items: center; }
+    .orb svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .orb p { position: relative; max-width: 11ch; text-align: center; font-family: var(--serif); font-style: italic; font-size: clamp(30px, 3vw, 44px); line-height: 1.05; color: var(--ink); }
+    @media (prefers-reduced-motion: no-preference) {
+      .orb .r1 { animation: breathe 8s ease-in-out infinite; transform-origin: 200px 200px; }
+      .orb .r2 { animation: breathe 8s .5s ease-in-out infinite; transform-origin: 200px 200px; }
+      .orb .r3 { animation: breathe 8s 1s ease-in-out infinite; transform-origin: 200px 200px; }
+    }
+    @keyframes breathe { 0%, 100% { transform: scale(.86); } 50% { transform: scale(1); } }
+    @media (max-width: 960px) { .orb { max-width: 320px; margin-inline: auto; } }
+
+    /* ==================== Recovery visual ==================== */
+    .recover { background: var(--white); border-radius: var(--r-lg); padding: clamp(24px, 3vw, 40px); }
+    .recover h3 { font-size: 15px; font-weight: 600; color: var(--teal); }
+    .recover ol { margin-top: 22px; display: grid; gap: 22px; }
+    .recover li { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 18px; align-items: center; }
+    .recover b { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .bar { position: relative; height: 40px; border-radius: 99px; background: var(--cream); overflow: hidden; }
+    .bar i { position: absolute; left: 0; top: 0; bottom: 0; width: var(--w); border-radius: 99px; background: linear-gradient(90deg, var(--mint-2), var(--mint)); }
+    .bar--long i { background: linear-gradient(90deg, #e9c98f, #f3e6c8); }
+    .bar span { position: relative; z-index: 1; display: flex; align-items: center; height: 100%; padding: 0 16px; font-size: 14px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+    .recover .note { margin-top: 24px; }
+    @media (max-width: 600px) { .recover li { grid-template-columns: 1fr; gap: 8px; } }
+
+    .no-ga { font-size: clamp(44px, 5vw, 76px); font-weight: 500; line-height: .98; color: #fff; letter-spacing: -0.03em; }
+    .no-ga span { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.12em; color: #f0dbb0; letter-spacing: -0.01em; }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="sd-hero" aria-labelledby="s-h1" data-hero>
+      <img src="assets/sedation-opt.jpg" alt="Dr Jennifer settling a relaxed young patient with happy gas in the dental chair" width="1024" height="683">
+      <div class="container">
+        <div class="sd-panel">
+          <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>General Dentistry</li><li aria-current="page">In-House Sedation</li></ol></nav>
+          <h1 class="h1" id="s-h1">Looking for in-house sedation? <span class="it">We have it covered</span></h1>
+          <p class="lede">If you are a nervous or anxious patient, then you might be seeking a local dentist who practices in-house sedation in Pennant Hills. Here at Beyond 32 Dental, we’re proud to offer sedation dentistry in Pennant Hills right here at our modern family-focused dental practice.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="contact.html#enquire">Book an Appointment</a>
+            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+          <div class="sd-chips" aria-label="Sedation options">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10c2-2 4-2 6 0s4 2 6 0 3-2 4-1M4 15c2-2 4-2 6 0s4 2 6 0 3-2 4-1"/></svg>Happy gas</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s5 5.5 5 9.5a5 5 0 0 1-10 0C7 8.5 12 3 12 3Z"/></svg>IV sedation</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c.5-4 3-6 6-6s5.5 2 6 6M15 15c2.5 0 4.5 1.5 5 5"/></svg>Adults and children</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTRO ============ -->
+    <section class="band band--white band--tight" aria-label="Introduction">
+      <div class="container intro-grid">
+        <p class="statement">Some patients might need <em>a helping hand.</em></p>
+        <div class="prose">
+          <p>Naturally, we want our patients to have a positive experience when they visit us, but we’re also fully aware that some patients might need a helping hand.</p>
+          <p>As a result, you’ll be pleased to know that our team are highly experienced in the latest in sedation dentistry. <strong>Therefore, patients can rest assured that with us, they are in safe hands.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHAPTERS ============ -->
+    <nav class="chapters" aria-label="On this page">
+      <div class="container chapters__inner" data-chapters>
+        <span class="chapters__label">On this page</span>
+        <a href="#offer">What we offer</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#after">After effects</a>
+        <a href="#not-ga">Not a general anaesthetic</a>
+        <a href="#book">Book</a>
+        <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
+      </div>
+    </nav>
+
+    <!-- ============ WHAT WE OFFER ============ -->
+    <section class="band band--cream" id="offer" aria-labelledby="h-offer">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-offer">In-house sedation: <span class="it">what we offer</span></h2>
+          <p class="lede lede--wide">The two types of sedation available at Beyond 32 Dental are inhalation sedation, commonly known as happy gas, and IV sedation.</p>
+        </div>
+
+        <div class="sd-opts">
+          <article class="sd-opt">
+            <div class="sd-opt__art">
+              <img src="assets/live/in-house-sedation/what-we-offer.webp" alt="Young patient relaxing with a happy gas nose piece while the dentist works" width="496" height="333" loading="lazy">
+            </div>
+            <div class="sd-opt__body">
+              <h3>Inhalation sedation<small>Commonly known as happy gas</small></h3>
+              <p class="p">Nitrous oxide, the gas used for RA treatments, is designed to put you in a happy, relaxed state.</p>
+              <dl>
+                <dt>Back to normal</dt><dd>Pretty quickly</dd>
+                <dt>Driving home</dt><dd>It may be okay to drive home</dd>
+              </dl>
+            </div>
+          </article>
+          <article class="sd-opt">
+            <div class="sd-opt__art">
+              <svg viewBox="0 0 360 200" role="img" aria-labelledby="iv-t">
+                <title id="iv-t">Illustration of a small cannula placed on the back of the hand</title>
+                <path d="M30 150 C70 120 110 108 150 110 L250 112 C276 112 300 104 316 92" fill="none" stroke="#14403e" stroke-width="2"/>
+                <path d="M30 150 C70 120 110 108 150 110 L250 112 C276 112 300 104 316 92 L330 120 C312 140 280 148 250 148 L150 150 C112 152 76 162 44 182 Z" fill="#f6dcc8" stroke="#14403e" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M190 112 C200 80 214 60 232 52" fill="none" stroke="#3d7774" stroke-width="2" stroke-linecap="round"/>
+                <path d="M232 52 C260 40 300 34 340 30" fill="none" stroke="#3d7774" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+                <rect x="172" y="106" width="40" height="22" rx="6" fill="#fff" stroke="#14403e" stroke-width="2"/>
+                <rect x="160" y="100" width="64" height="34" rx="8" fill="rgba(216,238,237,.6)" stroke="#6fb3ad" stroke-width="1.6"/>
+                <circle cx="192" cy="117" r="4" fill="#c8a960"/>
+              </svg>
+            </div>
+            <div class="sd-opt__body">
+              <h3>IV sedation<small>Via a small cannula on the back of the hand</small></h3>
+              <p class="p">IV sedation is administered via a small cannula placed on the back of the hand.</p>
+              <dl>
+                <dt>Back to normal</dt><dd>Within the hour</dd>
+                <dt>Driving home</dt><dd>You will need someone to drive you</dd>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="pull-wrap" style="margin-top:clamp(64px,7vw,96px)">
+          <p class="pull-quote pull-quote--wide" style="font-size:clamp(28px,2.8vw,40px)">Each method delivers good results and allows patients to have the treatment they need while placing them in a relaxed and happy state.</p>
+          <p class="p">Not sure which suits you? Either way, consult with Dr Lin or Dr Chung first.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="band band--white" id="benefits" aria-labelledby="h-benefits">
+      <div class="container split">
+        <div class="sticky-col">
+          <h2 class="h2" id="h-benefits">The benefits of sedation dentistry <span class="it">in Pennant Hills</span></h2>
+          <div class="orb" style="margin-top:40px" aria-hidden="true">
+            <svg viewBox="0 0 400 400">
+              <circle class="r1" cx="200" cy="200" r="196" fill="#eef7f6"/>
+              <circle class="r2" cx="200" cy="200" r="150" fill="#d8eeed"/>
+              <circle class="r3" cx="200" cy="200" r="104" fill="#bfe0df"/>
+            </svg>
+            <p>They don’t call it happy gas for nothing</p>
+          </div>
+        </div>
+        <div class="sd-benefits">
+          <div class="sd-benefit">
+            <div>
+              <h3>Reduction in the number of visits</h3>
+              <p class="p">Some nervous or anxious dental patients find it hard to even sit in the dental chair, let alone have treatment, so even having one treatment can be a real push. With in-house sedation dentistry, however, patients can have several or more treatments while remaining safe under sedation.</p>
+            </div>
+          </div>
+          <div class="sd-benefit">
+            <div>
+              <h3>You’ll be feeling pretty good</h3>
+              <p class="p">They don’t call it happy gas for nothing – it’s true! Nitrous oxide – the gas used for RA treatments – and other sedatives used in IV treatments are designed to put you in a happy, relaxed state.</p>
+              <p class="p">Most people don’t know much about the treatment, but many people do experience feelings of euphoria and a gentle floating sensation.</p>
+            </div>
+          </div>
+          <div class="sd-benefit">
+            <div>
+              <h3>Zero after effects</h3>
+              <p class="p">Some people feel sick after receiving general anaesthetic and it can stay in your system for hours – even days. Happy gas, on the other hand, gives you zero after effects, so patients will be back to normal pretty quickly after the event.</p>
+              <p class="p" style="margin-top:12px"><a class="text-link" href="#after">Compare recovery times <span>↓</span></a></p>
+            </div>
+          </div>
+          <div class="sd-benefit">
+            <div>
+              <h3>It’s not a general anaesthetic</h3>
+              <p class="p">Patients who are coming out of sedation tend to feel very relaxed and generally aware of their surroundings.</p>
+              <p class="p" style="margin-top:12px"><a class="text-link" href="#not-ga">Read more <span>↓</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AFTER EFFECTS ============ -->
+    <section class="band band--mint" id="after" aria-labelledby="h-after">
+      <div class="container split split--center">
+        <div>
+          <h2 class="h2" id="h-after">Back to normal, <span class="it">pretty quickly</span></h2>
+          <div class="prose" style="margin-top:24px">
+            <p>Happy gas gives you zero after effects, so patients will be back to normal pretty quickly after the event.</p>
+            <p>IV sedation doesn’t work quite as instantaneously, but patients should be back to normal within the hour. For this reason, it may be okay to drive home after undergoing happy gas, but you will need someone to drive you if IV sedation is carried out.</p>
+            <p><strong>Either way, consult with Dr Lin or Dr Chung first.</strong></p>
+          </div>
+        </div>
+        <figure class="recover">
+          <h3>How long it stays with you</h3>
+          <ol>
+            <li><b>General anaesthetic</b><span class="bar bar--long" style="--w:100%"><i></i><span>Hours, even days</span></span></li>
+            <li><b>IV sedation</b><span class="bar" style="--w:42%"><i></i><span>Within the hour</span></span></li>
+            <li><b>Happy gas</b><span class="bar" style="--w:22%"><i></i><span>Pretty quickly</span></span></li>
+          </ol>
+          <figcaption class="note"><strong>Driving home:</strong> it may be okay after happy gas. After IV sedation you will need someone to drive you.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ NOT A GENERAL ANAESTHETIC (ink) ============ -->
+    <section class="band band--ink on-ink" id="not-ga" aria-labelledby="h-not-ga">
+      <div class="container split split--center">
+        <h2 class="no-ga" id="h-not-ga">It’s not a <span>general anaesthetic</span></h2>
+        <div>
+          <div class="prose">
+            <p>Sedation is not a general anaesthetic and as a result, any risks are virtually non-existent. Instead, patients who are coming out of sedation tend to feel very relaxed and generally aware of their surroundings.</p>
+            <p><strong>In-house sedation here in Pennant Hills can be safely used on adults and children alike across a wide range of treatments.</strong></p>
+          </div>
+          <div class="inline-cta" style="margin-top:40px">
+            <p>Have a question about sedation?</p>
+            <a href="tel:+61291586334">Call (02) 9158 6334 <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING MOMENT ============ -->
+    <aside class="moment" id="book" aria-labelledby="h-close">
+      <img src="assets/kid-mirror-opt.jpg" alt="" loading="lazy" style="object-position:70% 12%">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="moment__panel">
+          <h2 class="h2" id="h-close" style="font-size:clamp(30px,2.8vw,40px)">For a professional and friendly <span class="it">dental experience</span></h2>
+          <p class="p">If you’re putting off some much-needed dental work because you fear the pain or discomfort more than most, in-house sedation in Pennant Hills might just be the answer. For further information, give our experienced team at Beyond 32 Dental in Pennant Hills a call on (02) 9158 6334 and let us help you get the dental treatment you need.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="contact.html#enquire">Book an Appointment Today</a>
+            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+          <p style="margin-top:20px"><a class="text-link" href="special-offers.html">See our special offers <span>→</span></a></p>
+        </div>
+      </div>
+    </aside>
+    <div style="background:var(--cream);padding:24px 0 calc(var(--section) - 24px)">
+      <div class="container"><p class="final-note" style="margin:0">Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p></div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+</body>
+</html>

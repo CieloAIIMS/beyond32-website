@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Beyond 32 Dental, Pennant Hills</title>
+  <meta name="description" content="Family-owned since 2013. Meet Dr Jeff Lin, Dr Jennifer Chung and the Beyond 32 Dental team caring for Hills District smiles in Pennant Hills.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    /* ---------- Hero ---------- */
+    .about-hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
+    .about-hero .h1 { max-width: 9.5em; }
+    .collage { position: relative; aspect-ratio: 520 / 600; max-width: 540px; justify-self: end; width: 100%; }
+    .collage__main { position: absolute; inset: 0 0 0 14%; border-radius: var(--r); overflow: hidden; box-shadow: 0 30px 60px -30px rgba(20,64,62,.45); }
+    .collage__main img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+    .collage__inset { position: absolute; left: 0; bottom: 8%; width: 44%; aspect-ratio: 4/3; border-radius: var(--r); overflow: hidden; border: 6px solid var(--cream); box-shadow: 0 20px 40px -20px rgba(20,64,62,.5); }
+    .collage__inset img { width: 100%; height: 100%; object-fit: cover; }
+    .collage__note {
+      position: absolute; right: -4%; top: 7%; width: min(250px, 52%);
+      background: rgba(255,247,242,.9); backdrop-filter: blur(8px);
+      border-radius: var(--r); padding: 18px 20px;
+      box-shadow: 0 20px 40px -24px rgba(20,64,62,.5);
+    }
+    .collage__note p { font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.2; color: var(--ink); }
+    .collage__note small { display: block; margin-top: 10px; font-size: 13px; color: var(--teal); }
+    @media (max-width: 900px) {
+      .about-hero__grid { grid-template-columns: 1fr; }
+      .collage { justify-self: start; max-width: 520px; }
+      .collage__note { right: 0; }
+    }
+
+    /* ---------- Story timeline ---------- */
+    .story { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 7vw, 120px); align-items: start; }
+    .story__intro { position: sticky; top: calc(var(--hh) + 40px); }
+    .story__intro .body { margin-top: 20px; max-width: 30em; }
+    .story__intro .body + .body { margin-top: 14px; }
+    .story__sign { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+    .story__sign img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; background: var(--mint); }
+    .story__sign p { font-size: 15px; color: var(--teal); line-height: 1.35; }
+    .story__sign b { color: var(--ink); font-weight: 600; }
+
+    .timeline { position: relative; padding-left: 40px; --p: 0; }
+    .timeline::before, .timeline::after { content: ""; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px; border-radius: 2px; }
+    .timeline::before { background: var(--mint-2); }
+    .timeline::after { background: var(--gold-line); transform-origin: top; transform: scaleY(var(--p)); }
+    .tl-item { position: relative; padding-bottom: clamp(36px, 4vw, 56px); }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ""; position: absolute; left: -40px; top: 10px; width: 16px; height: 16px; border-radius: 50%;
+      background: var(--cream); border: 2px solid var(--mint-2); transition: border-color .4s, background .4s;
+    }
+    .tl-item.is-reached::before { border-color: var(--gold-line); background: #f0dbb0; }
+    .tl-item__when { font-family: var(--serif); font-style: italic; font-size: clamp(34px, 3.4vw, 48px); line-height: 1; color: var(--teal); letter-spacing: -0.01em; }
+    .tl-item h3 { margin-top: 10px; }
+    .tl-item p { margin-top: 8px; max-width: 34em; }
+    .tl-item__img { margin-top: 18px; border-radius: var(--r); overflow: hidden; aspect-ratio: 16/8; max-width: 480px; }
+    .tl-item__img img { width: 100%; height: 100%; object-fit: cover; }
+    @media (max-width: 900px) { .story { grid-template-columns: 1fr; } .story__intro { position: static; } }
+
+    /* ---------- Approach ---------- */
+    .approach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: clamp(32px, 6vw, 96px); align-items: stretch; }
+    .approach__media { position: relative; border-radius: var(--r); overflow: hidden; min-height: 560px; }
+    .approach__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+    .approach__media figcaption {
+      position: absolute; left: 20px; right: 20px; bottom: 20px;
+      background: rgba(255,247,242,.86); backdrop-filter: blur(6px); border-radius: var(--r); padding: 18px 20px;
+      font-size: 15px; color: var(--ink);
+    }
+    .principles { margin-top: 36px; border-top: 1px solid rgba(20,64,62,.15); }
+    .principle { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid rgba(20,64,62,.15); }
+    .principle__icon { width: 56px; height: 56px; }
+    .principle__icon img { width: 100%; height: 100%; object-fit: contain; }
+    .principle p { margin-top: 8px; color: var(--teal); }
+    @media (max-width: 900px) { .approach { grid-template-columns: 1fr; } .approach__media { min-height: 420px; } }
+
+    /* ---------- Reviews / trust ---------- */
+    .trust { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+    .score { position: sticky; top: calc(var(--hh) + 40px); }
+    .score__num { font-family: var(--serif); font-style: italic; font-size: clamp(110px, 12vw, 168px); line-height: .85; letter-spacing: -0.03em; color: var(--ink); }
+    .score__stars { display: flex; gap: 4px; margin-top: 18px; }
+    .score__stars svg { width: 22px; height: 22px; fill: var(--star); }
+    .score__meta { display: flex; align-items: center; gap: 10px; margin-top: 12px; color: var(--teal); }
+    .score__meta img { width: 22px; }
+    .score .btn { margin-top: 28px; }
+    .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .quote { background: var(--mint-2); border-radius: var(--r-sm); padding: 28px; display: flex; flex-direction: column; }
+    .quote--feature { grid-column: 1 / -1; padding: clamp(28px, 3.4vw, 44px); background: var(--mint); }
+    .quote blockquote p { color: var(--ink); }
+    .quote--feature blockquote p { font-size: clamp(22px, 2.2vw, 30px); line-height: 1.25; font-weight: 500; letter-spacing: -0.01em; text-wrap: balance; }
+    .quote footer { margin-top: auto; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .quote footer b { font-weight: 600; }
+    .stars { display: flex; gap: 2px; }
+    .stars svg { width: 14px; height: 14px; fill: var(--star); }
+    .awards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: clamp(48px, 5vw, 72px); padding-top: 32px; border-top: 1px solid var(--hairline); }
+    .award { display: flex; align-items: center; gap: 14px; }
+    .award img { width: 56px; height: 56px; object-fit: contain; flex: none; }
+    .award p { font-size: 14px; line-height: 1.25; color: var(--teal); }
+    .award b { display: block; color: var(--ink); font-size: 15px; letter-spacing: .5px; }
+    @media (max-width: 980px) { .trust { grid-template-columns: 1fr; } .score { position: static; } .awards { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .quotes { grid-template-columns: 1fr; } .awards { grid-template-columns: 1fr; } }
+
+    /* ---------- Team ---------- */
+    .ada { display: flex; align-items: center; gap: 16px; color: var(--ink); font-size: 16px; }
+    .ada span { width: 96px; height: 66px; border-radius: 6px; background: #00529c; display: grid; place-items: center; }
+    .ada img { width: 46px; }
+    .founders { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .founder { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px; background: var(--white); border-radius: var(--r); padding: 20px; }
+    .portrait { position: relative; border-radius: var(--r); overflow: hidden; background: linear-gradient(to bottom, #fff, var(--cream-2) 73%); }
+    .portrait img { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); height: 94%; width: auto; max-width: none; transition: transform .7s var(--ease-out); }
+    .founder .portrait { min-height: 340px; }
+    .founder:hover .portrait img, .member:hover .portrait img { transform: translateX(-50%) scale(1.03); transform-origin: bottom; }
+    .founder__body { display: flex; flex-direction: column; padding: 8px 4px 4px 0; }
+    .role { font-size: 15px; font-weight: 600; color: var(--teal); margin-top: 4px; }
+    .founder__body .body { margin-top: 14px; font-size: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 18px; }
+    .chip { font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 99px; background: var(--mint); color: var(--ink); }
+    .members { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+    .member { background: var(--white); border-radius: var(--r); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .member .portrait { height: 257px; }
+    .member .body { font-size: 16px; }
+    .member--note { background: linear-gradient(124deg, #f8ffff 22%, var(--mint) 86%); padding: 32px; justify-content: space-between; }
+    .member--note .body { margin-top: 14px; }
+    @media (max-width: 1080px) { .founders { grid-template-columns: 1fr; } .members { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .founder { grid-template-columns: 1fr; } .founder .portrait { min-height: 300px; } .members { grid-template-columns: 1fr; } }
+
+    /* ---------- Inside the practice ---------- */
+    .bento { display: grid; grid-template-columns: 1.35fr 1fr; grid-template-rows: auto auto; gap: 16px; }
+    .bento .media { position: relative; min-height: 300px; }
+    .bento .media img { position: absolute; inset: 0; }
+    .bento__a { grid-row: span 2; min-height: 600px !important; }
+    .bento figcaption { position: absolute; left: 16px; bottom: 16px; background: rgba(0,0,0,.28); backdrop-filter: blur(6px); color: #fff; border: 1px solid rgba(255,255,255,.4); font-size: 14px; font-weight: 600; padding: 7px 14px; border-radius: 99px; }
+    .comfort { background: var(--mint-2); border-radius: var(--r); padding: clamp(24px, 2.6vw, 36px); }
+    .comfort ul { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+    .comfort li { display: flex; gap: 10px; align-items: baseline; color: var(--ink); font-size: 16px; line-height: 1.35; }
+    .comfort li::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--gold-line); transform: translateY(-2px); }
+    @media (max-width: 860px) { .bento { grid-template-columns: 1fr; } .bento__a { grid-row: auto; min-height: 380px !important; } }
+    @media (max-width: 480px) { .comfort ul { grid-template-columns: 1fr; } }
+
+    .marquee-title { text-align: center; color: var(--teal); padding-top: var(--section); padding-bottom: 20px; }
+  </style>
+</head>
+<body data-page="about" data-footer="full">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ihero about-hero" aria-labelledby="about-h1">
+      <div class="container about-hero__grid">
+        <div>
+          <p class="subtitle">Locally owned in the Hills District since 2013</p>
+          <h1 class="h1" id="about-h1">The practice we’d want <span class="it">our own family</span> to visit</h1>
+          <p class="lead">We’re Dr Jeff Lin and Dr Jennifer Chung. We started Beyond 32 Dental as a husband-and-wife team, and thirteen years on, it’s still the same idea: unhurried appointments, honest advice, and faces you’ll recognise every time you come in.</p>
+          <div class="btn-row">
+            <a class="btn btn--ink" href="#team">Meet The Team</a>
+            <a class="btn btn--gold" href="contact.html#enquire">Book Online →</a>
+          </div>
+        </div>
+        <div class="collage">
+          <div class="collage__main"><img src="assets/founders-opt.jpg" alt="Dr Jennifer Chung and Dr Jeff Lin standing at the Beyond 32 Dental reception desk" width="683" height="1024"></div>
+          <div class="collage__inset"><img src="assets/practice-opt.jpg" alt="Reception with mint feature wall and brushed-brass desk" width="1024" height="768"></div>
+          <aside class="collage__note">
+            <p>“Would we bring our own kids here? That’s the test, every single day.”</p>
+            <small>Dr Jennifer Chung, co-founder</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS (homepage strip) ============ -->
+    <div class="bg-cream">
+      <div class="container stats" role="list">
+        <div class="stat" role="listitem"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">5<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span></span><span class="stat__label">360+ happy customers</span></div>
+        <div class="stat" role="listitem"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">13+</span></span><span class="stat__label">Years caring for the Hills District</span></div>
+        <div class="stat" role="listitem"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">30+</span></span><span class="stat__label">Years combined clinical experience</span></div>
+        <div class="stat" role="listitem"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">5</span></span><span class="stat__label">Dentists in one dedicated team</span></div>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="section bg-cream" aria-labelledby="story-h">
+      <div class="container story">
+        <div class="story__intro">
+          <h2 class="h2" id="story-h">A small practice, <span class="it">on purpose</span></h2>
+          <p class="body">We’ve had plenty of chances to grow into something bigger. We’ve said no every time, because the thing patients tell us they value most is that we know them.</p>
+          <p class="body">You won’t be passed between a revolving door of dentists. The person who sees you for your check-up is the person who’ll remember your history, your kids’ names, and the fact that you’d rather not hear the drill.</p>
+          <div class="story__sign">
+            <img src="assets/founders-opt.jpg" alt="">
+            <p><b>Dr Jeff Lin &amp; Dr Jennifer Chung</b><br>Co-founders, Beyond 32 Dental</p>
+          </div>
+        </div>
+
+        <ol class="timeline" data-timeline>
+          <li class="tl-item">
+            <p class="tl-item__when">2013</p>
+            <h3 class="h4">Two dentists, one simple rule</h3>
+            <p class="body">Jeff and Jennifer open their first practice in Cherrybrook, promising to treat every patient the way they’d want their own parents treated.</p>
+          </li>
+          <li class="tl-item">
+            <p class="tl-item__when">Growing up together</p>
+            <h3 class="h4">Families, then their families</h3>
+            <p class="body">Toddlers who came in for their first check-up start bringing their own questions about braces. Grandparents follow. The practice grows by word of mouth.</p>
+          </li>
+          <li class="tl-item">
+            <p class="tl-item__when">2022</p>
+            <h3 class="h4">Recognised as a Gold+ Invisalign provider</h3>
+            <p class="body">A milestone for our clear-aligner patients, and a sign of how many Hills District smiles we’ve helped straighten.</p>
+          </li>
+          <li class="tl-item">
+            <p class="tl-item__when">Yarrara Road</p>
+            <h3 class="h4">A new home in Pennant Hills</h3>
+            <p class="body">We move into our light-filled practice near Pennant Hills station. Many of our Cherrybrook patients happily came with us.</p>
+            <div class="tl-item__img"><img src="assets/practice-opt.jpg" alt="The Beyond 32 Dental reception in Pennant Hills" loading="lazy"></div>
+          </li>
+          <li class="tl-item">
+            <p class="tl-item__when">2025 &amp; 2026</p>
+            <h3 class="h4">Award finalists, twice over</h3>
+            <p class="body">Finalists in the Hornsby &amp; Ku-ring-gai Local Business Awards, then the Australian Small Business Champion Awards.</p>
+          </li>
+          <li class="tl-item">
+            <p class="tl-item__when">Today</p>
+            <h3 class="h4">Five dentists, still family-owned</h3>
+            <p class="body">More chairs, more hands, more 5-star reviews. Same unhurried appointments, and Jeff and Jennifer still see patients every week.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="section bg-mint" aria-labelledby="approach-h">
+      <div class="container approach">
+        <figure class="approach__media">
+          <img src="assets/first-visit-opt.jpg" alt="A patient smiling and chatting with her dentist before treatment begins" loading="lazy" width="1400" height="2100">
+          <figcaption>Every first visit starts in the chair <em>upright</em>, with a conversation rather than a mirror and probe.</figcaption>
+        </figure>
+        <div>
+          <h2 class="h2" id="approach-h">How we look after <span class="it">you</span></h2>
+          <p class="lead" style="margin-top:16px">Good dentistry is as much about how you feel walking out as what we did while you were in the chair.</p>
+          <div class="principles">
+            <div class="principle">
+              <span class="principle__icon"><img src="assets/ic-heart.svg" alt=""></span>
+              <div><h3 class="h4">We listen before we look</h3><p>Your history, your worries and what you actually want come first. Then the exam.</p></div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon"><img src="assets/ic-tooth.svg" alt=""></span>
+              <div><h3 class="h4">We save teeth wherever we can</h3><p>We’ll always look at the most conservative option first, and we’ll tell you honestly when something can wait.</p></div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon"><img src="assets/ic-headphones.svg" alt=""></span>
+              <div><h3 class="h4">Comfort isn’t an extra</h3><p>Topical numbing, slow injections, happy gas and in-house sedation, all available because nobody should have to grit their teeth through it.</p></div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon"><img src="assets/ic-chair.svg" alt=""></span>
+              <div><h3 class="h4">Nothing happens without your yes</h3><p>Plain-English options, written quotes and health-fund estimates before we start. Your timeline, your budget.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section bg-cream" id="team" aria-labelledby="team-h">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2" id="team-h">Meet the team<br><span class="it">behind your smile</span></h2>
+          <div class="ada"><p>Proud member of</p><span><img src="assets/ada.svg" alt="Australian Dental Association"></span></div>
+        </div>
+
+        <div class="founders">
+          <article class="founder">
+            <div class="portrait"><img src="assets/dr-jeff.png" alt="Portrait of Dr Jeff Lin" loading="lazy"></div>
+            <div class="founder__body">
+              <h3 class="h4">Dr Jeff Lin</h3>
+              <p class="role">Co-founder · BDSc (Qld) · 16 years’ experience</p>
+              <p class="body">Jeff grew up in Dunedin, New Zealand, before training in dentistry in Queensland. He’s the one patients ask for when they need an implant or a complex restoration, and the one who’ll happily talk you through every step on the screen first.</p>
+              <div class="chips"><span class="chip">Dental implants</span><span class="chip">All-on-X</span><span class="chip">Crowns &amp; bridges</span></div>
+            </div>
+          </article>
+          <article class="founder">
+            <div class="portrait"><img src="assets/dr-jennifer.png" alt="Portrait of Dr Jennifer Chung" loading="lazy"></div>
+            <div class="founder__body">
+              <h3 class="h4">Dr Jennifer Chung</h3>
+              <p class="role">Co-founder · BDSc (Qld) · 16 years’ experience</p>
+              <p class="body">Jennifer moved from Malaysia to study dentistry in Australia, where she met her now-husband and practice partner, Jeff. Parents of nervous kids tend to ask for her by name, and she’s our Invisalign lead.</p>
+              <div class="chips"><span class="chip">Invisalign</span><span class="chip">Children’s dentistry</span><span class="chip">Anxious patients</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="members">
+          <article class="member">
+            <div class="portrait"><img src="assets/dr-ashleigh.png" alt="Portrait of Dr Ashleigh Wong" loading="lazy"></div>
+            <h3 class="h4">Dr Ashleigh Wong</h3>
+            <p class="body">10 years’ experience. Born and raised in the Hills District, and thrilled to be caring for her own community.</p>
+          </article>
+          <article class="member">
+            <div class="portrait"><img src="assets/dr-leazelle.png" alt="Portrait of Dr Leazelle Graham" loading="lazy"></div>
+            <h3 class="h4">Dr Leazelle Graham</h3>
+            <p class="body">6 years’ experience. Trained in Sydney with a background in pharmacology before completing her Doctor of Dental Medicine.</p>
+          </article>
+          <article class="member">
+            <div class="portrait"><img src="assets/dr-kim.png" alt="Portrait of Dr Kim" loading="lazy"></div>
+            <h3 class="h4">Dr Kim</h3>
+            <p class="body">A warm, down-to-earth general dentist who loves helping children and anxious patients feel at ease.</p>
+          </article>
+          <article class="member member--note">
+            <div>
+              <h3 class="h4">And the people who make it feel like home</h3>
+              <p class="body">Our nurses and front-desk team are the first smile you’ll see and the voice on the phone when you call in pain. Most have been with us for years.</p>
+            </div>
+            <a class="text-link" href="contact.html">Say hello <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="section bg-white" aria-labelledby="trust-h">
+      <div class="container">
+        <div class="trust">
+          <div class="score">
+            <h2 class="sr-only" id="trust-h">What our patients say</h2>
+            <p class="score__num" aria-label="5.0 out of 5">5.0</p>
+            <div class="score__stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg>
+            </div>
+            <p class="score__meta"><img src="assets/google.svg" alt="">from 360+ Google reviews</p>
+            <a class="btn btn--outline" href="https://www.google.com/search?q=Beyond+32+Dental+Pennant+Hills+reviews" target="_blank" rel="noopener">Read All Reviews</a>
+          </div>
+
+          <div class="quotes">
+            <figure class="quote quote--feature">
+              <blockquote><p>“My daughter actually enjoys coming to the dentist because they take the time to make her feel safe, happy, and cared for.”</p></blockquote>
+              <footer><b>Ghazal T.</b><span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span></footer>
+            </figure>
+            <figure class="quote">
+              <blockquote><p>“I am so happy to have found a place where I feel heard and supported. Everyone is so kind and actually genuinely cares.”</p></blockquote>
+              <footer><b>Carmen G.</b><span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span></footer>
+            </figure>
+            <figure class="quote">
+              <blockquote><p>“We have been coming here for 10 years and they have looked after our family. Would not look at going anywhere else.”</p></blockquote>
+              <footer><b>Mrs Fishpool</b><span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span></footer>
+            </figure>
+          </div>
+        </div>
+
+        <div class="awards">
+          <div class="award"><img src="assets/award-sbca-crop.png" alt="" style="object-fit:contain"><p><b>2026 Finalist</b>Australian Small Business Champion Awards</p></div>
+          <div class="award"><img src="assets/award-local.png" alt="" style="border-radius:50%"><p><b>2025 Finalist</b>Local Business Awards, Hornsby &amp; Ku-ring-gai</p></div>
+          <div class="award"><img src="assets/invisalign.png" alt=""><p><b>Gold+ Provider</b>Invisalign, 2022</p></div>
+          <div class="award"><img src="assets/ada.svg" alt="" style="background:#00529c;border-radius:8px;padding:10px"><p><b>ADA Member</b>Australian Dental Association</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIDE THE PRACTICE ============ -->
+    <section class="section bg-mint" aria-labelledby="inside-h">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="h2" id="inside-h">Less clinic, <span class="it">more living room</span></h2>
+            <p class="lead">Calm colours, lounge-style chairs with TVs, and a team who’ll ask what would make today easier.</p>
+          </div>
+          <a class="btn btn--outline" href="gallery.html#practice">See More of the Practice</a>
+        </div>
+        <div class="bento">
+          <figure class="media bento__a"><img src="assets/practice-opt.jpg" alt="Reception area with mint wall, brass desk and marble counter" loading="lazy"><figcaption>Reception, Yarrara Rd</figcaption></figure>
+          <figure class="media"><img src="assets/sedation-opt.jpg" alt="Dr Jennifer fitting happy gas for a young patient in heart-shaped sunglasses" loading="lazy" style="object-position:50% 35%"><figcaption>Happy gas, kid-approved</figcaption></figure>
+          <div class="comfort">
+            <h3 class="h4">On the comfort menu</h3>
+            <ul>
+              <li>Noise-cancelling headphones</li>
+              <li>A warm blanket</li>
+              <li>Ceiling TVs &amp; Netflix</li>
+              <li>Lip balm &amp; neck pillow</li>
+              <li>Happy gas</li>
+              <li>A hand-raise “pause” signal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUBURBS ============ -->
+    <section class="bg-cream" aria-label="Suburbs we care for">
+      <p class="marquee-title lead">Looking after families from</p>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Pennant Hills</span><span aria-hidden="true">·</span><span>Cherrybrook</span><span aria-hidden="true">·</span><span>Castle Hill</span><span aria-hidden="true">·</span><span>Glenhaven</span><span aria-hidden="true">·</span><span>Thornleigh</span><span aria-hidden="true">·</span><span>Dural</span><span aria-hidden="true">·</span><span>Westleigh</span><span aria-hidden="true">·</span><span>Beecroft</span><span aria-hidden="true">·</span><span>Hills District</span><span aria-hidden="true">·</span>
+          <span>Pennant Hills</span><span aria-hidden="true">·</span><span>Cherrybrook</span><span aria-hidden="true">·</span><span>Castle Hill</span><span aria-hidden="true">·</span><span>Glenhaven</span><span aria-hidden="true">·</span><span>Thornleigh</span><span aria-hidden="true">·</span><span>Dural</span><span aria-hidden="true">·</span><span>Westleigh</span><span aria-hidden="true">·</span><span>Beecroft</span><span aria-hidden="true">·</span><span>Hills District</span><span aria-hidden="true">·</span>
+        </div>
+      </div>
+      <p class="sr-only">Pennant Hills, Cherrybrook, Castle Hill, Glenhaven, Thornleigh, Dural, Westleigh, Beecroft and across the Hills District.</p>
+      <div style="height:var(--section)"></div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script>
+    /* Authored moment: the timeline rail fills in brass as you read down the story */
+    (function () {
+      const tl = document.querySelector("[data-timeline]");
+      if (!tl) return;
+      const items = [...tl.querySelectorAll(".tl-item")];
+      let raf;
+      function update() {
+        raf = null;
+        const r = tl.getBoundingClientRect();
+        const mark = window.innerHeight * 0.6;
+        const p = Math.min(1, Math.max(0, (mark - r.top) / r.height));
+        tl.style.setProperty("--p", p.toFixed(3));
+        items.forEach((it) => it.classList.toggle("is-reached", it.getBoundingClientRect().top + 18 < mark));
+      }
+      addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+      addEventListener("resize", update);
+      update();
+    })();
+  </script>
+</body>
+</html>

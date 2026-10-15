@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Beyond 32 Dental, Pennant Hills</title>
+  <meta name="description" content="Call (02) 9158 6334, book online or visit us at 1st Floor, 114 Yarrara Rd, Pennant Hills. Open Monday to Saturday with free parking nearby.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    /* ---------- Hero ---------- */
+    .c-hero__grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
+    .status {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+      padding: 10px 18px 10px 14px; border-radius: 99px; background: rgba(255,255,255,.6); border: 1px solid var(--mint-line);
+      font-size: 15px; font-weight: 600; color: var(--ink);
+    }
+    .status i { width: 10px; height: 10px; border-radius: 50%; background: #9aa9a8; position: relative; }
+    .status[data-state="open"] i { background: #2f9b6b; }
+    .status[data-state="open"] i::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #2f9b6b; opacity: .5; animation: ping 2.2s var(--ease-out) infinite; }
+    @keyframes ping { from { transform: scale(.6); opacity: .7; } to { transform: scale(1.8); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .status i::after { animation: none; } }
+
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .action {
+      position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 28px;
+      min-height: 176px; padding: 22px 24px; border-radius: var(--r); text-decoration: none;
+      background: var(--white); color: var(--ink); border: 1px solid transparent;
+      transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out), border-color .3s;
+    }
+    .action:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -26px rgba(20,64,62,.55); border-color: var(--mint-line); }
+    .action__top { display: flex; justify-content: space-between; align-items: center; }
+    .action__icon { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--mint); color: var(--ink); }
+    .action__icon svg { width: 20px; height: 20px; }
+    .action__arrow { width: 20px; height: 20px; transition: transform .4s var(--ease-out); }
+    .action:hover .action__arrow { transform: translate(3px, -3px); }
+    .action__label { font-size: 15px; color: var(--teal); }
+    .action__value { font-size: clamp(20px, 2vw, 25px); font-weight: 500; line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; }
+    .action--call { background: var(--ink); color: #fff; }
+    .action--call .action__icon { background: rgba(255,255,255,.12); color: #fff; }
+    .action--call .action__label { color: var(--foot-text); }
+    .action--call .action__value { font-size: clamp(24px, 2.3vw, 30px); letter-spacing: -0.01em; white-space: nowrap; }
+    .action--book { background-image: var(--gold); border-color: var(--gold-line); color: var(--gold-ink); }
+    .action--book .action__icon { background: rgba(255,255,255,.4); color: var(--gold-ink); }
+    .action--book .action__label { color: var(--gold-ink); opacity: .85; }
+    @media (max-width: 960px) { .c-hero__grid { grid-template-columns: 1fr; align-items: start; } }
+    @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } .action { min-height: 0; flex-direction: row-reverse; align-items: center; justify-content: flex-end; gap: 16px; padding: 18px; } .action__top { flex: none; } .action__arrow { display: none; } }
+
+    /* ---------- Emergency strip ---------- */
+    .urgent {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      margin-top: clamp(28px, 3vw, 40px); padding: 18px 24px; border-radius: var(--r);
+      background: var(--cream); border: 1px solid var(--hairline);
+    }
+    .urgent__dot { width: 40px; height: 40px; border-radius: 50%; background: #fde3df; display: grid; place-items: center; flex: none; }
+    .urgent__dot i { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); }
+    .urgent p { flex: 1; min-width: 240px; color: var(--ink); }
+    .urgent p b { font-weight: 600; }
+
+    /* ---------- Form + visit ---------- */
+    .c-main { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 16px; align-items: start; }
+    .form-card { background: var(--white); border-radius: var(--r-lg); padding: clamp(24px, 3.6vw, 52px); }
+    .form-card .lead { margin-top: 12px; }
+    form { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field--full { grid-column: 1 / -1; }
+    label, legend { font-size: 15px; font-weight: 600; color: var(--ink); }
+    label .opt, legend .opt { font-weight: 400; color: var(--teal); }
+    input[type=text], input[type=tel], input[type=email], select, textarea {
+      width: 100%; font: inherit; font-size: 17px; color: var(--ink);
+      background: var(--cream); border: 1px solid #d9d2cb; border-radius: 12px;
+      padding: 14px 16px; min-height: 52px;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+    textarea { min-height: 128px; resize: vertical; line-height: 1.5; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314403e' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; padding-right: 44px; }
+    input::placeholder, textarea::placeholder { color: #6f8e8c; }
+    input:hover, select:hover, textarea:hover { border-color: #b9c9c7; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--teal); background: #fff; box-shadow: 0 0 0 4px rgba(61,119,116,.14); }
+    .field[data-invalid] input, .field[data-invalid] select, .field[data-invalid] textarea { border-color: #c2412f; background: #fff8f6; }
+    .err { display: none; font-size: 14px; color: #a8351f; }
+    .field[data-invalid] .err { display: block; }
+    fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+    fieldset legend { margin-bottom: 10px; padding: 0; }
+    .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+    .seg input { position: absolute; opacity: 0; pointer-events: none; }
+    .seg label { padding: 10px 18px; border-radius: 99px; border: 1px solid rgba(20,64,62,.25); font-size: 15px; font-weight: 600; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+    .seg label:hover { border-color: var(--ink); }
+    .seg input:checked + label { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .seg input:focus-visible + label { outline: 2px solid var(--gold-line); outline-offset: 3px; }
+    .consent { grid-column: 1 / -1; display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--teal); }
+    .consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--ink); flex: none; }
+    .consent label { font-weight: 400; color: var(--teal); }
+    .form-foot { grid-column: 1 / -1; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+    .form-foot p { font-size: 14px; color: var(--teal); flex: 1; min-width: 220px; }
+    .btn[aria-busy="true"] { pointer-events: none; opacity: .8; }
+    .btn[aria-busy="true"]::before { content: ""; width: 16px; height: 16px; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(1turn); } }
+    .success { display: none; margin-top: 32px; padding: 32px; border-radius: var(--r); background: var(--mint); }
+    .success svg { width: 48px; height: 48px; color: var(--teal); }
+    .success h3 { margin-top: 16px; }
+    .success p { margin-top: 8px; color: var(--teal); }
+    .form-card[data-sent] form { display: none; }
+    .form-card[data-sent] .success { display: block; animation: rise .6s var(--ease-out); }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+    @media (max-width: 600px) { form { grid-template-columns: 1fr; } }
+
+    .visit { display: flex; flex-direction: column; gap: 16px; position: sticky; top: calc(var(--hh) + 24px); }
+    .visit .map { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: var(--r-lg); overflow: hidden; background: #fff; }
+    .visit .map img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease-out); }
+    .visit .map:hover img { transform: scale(1.03); }
+    .visit .map .btn { position: absolute; right: 14px; bottom: 14px; }
+    .visit-card { background: var(--white); border-radius: var(--r-lg); padding: 28px; }
+    .visit-card address { font-style: normal; font-size: 20px; line-height: 1.35; margin-top: 4px; }
+    .visit-card hr { border: 0; border-top: 1px solid var(--hairline); margin: 22px 0; }
+    .visit-card .hours { color: var(--teal); font-size: 16px; }
+    .visit-card .hours .is-today { color: var(--ink); }
+    .visit-card .hours .is-today:is(dt)::after { content: " (today)"; font-weight: 400; color: var(--teal); }
+    .getting { display: grid; gap: 16px; }
+    .getting li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+    .getting .ico { width: 40px; height: 40px; border-radius: 50%; background: var(--mint); display: grid; place-items: center; color: var(--ink); }
+    .getting .ico svg { width: 18px; height: 18px; }
+    .getting b { display: block; font-weight: 600; font-size: 16px; }
+    .getting span { font-size: 15px; color: var(--teal); }
+    .kicker-sm { font-size: 14px; font-weight: 700; color: var(--teal); }
+    @media (max-width: 980px) { .c-main { grid-template-columns: 1fr; } .visit { position: static; } }
+
+    /* ---------- Before you visit ---------- */
+    .know { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 64px); margin-top: 40px; }
+    .know > div { padding-top: 22px; border-top: 1px solid rgba(20,64,62,.2); }
+    .know p { margin-top: 10px; color: var(--teal); }
+    @media (max-width: 800px) { .know { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-page="contact" data-footer="compact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO + PRIMARY ACTIONS ============ -->
+    <section class="ihero c-hero" aria-labelledby="c-h1">
+      <div class="container">
+        <div class="c-hero__grid">
+          <div>
+            <h1 class="h1" id="c-h1">Let’s get you <span class="it">booked in</span></h1>
+            <p class="lead">Call, book online or send us a note. A real person on our front desk will look after you, not a call centre.</p>
+            <p class="status" data-open-status><i aria-hidden="true"></i><span data-status-text>Mon–Fri 9am–6pm · Sat 9am–3pm</span></p>
+          </div>
+
+          <div class="actions">
+            <a class="action action--call" href="tel:+61291586334">
+              <span class="action__top">
+                <span class="action__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11.5 11.5 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8C10.4 20.3 3.7 13.6 3.2 5.4A1.8 1.8 0 0 1 5 3.5Z"/></svg></span>
+                <svg class="action__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+              <span><span class="action__label">Call us, fastest for bookings</span><span class="action__value" style="display:block">(02) 9158 6334</span></span>
+            </a>
+            <a class="action action--book" href="#enquire">
+              <span class="action__top">
+                <span class="action__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+                <svg class="action__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+              <span><span class="action__label">Pick a time that suits you</span><span class="action__value" style="display:block">Book online</span></span>
+            </a>
+            <a class="action" href="mailto:hello@beyond32dental.com.au">
+              <span class="action__top">
+                <span class="action__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+                <svg class="action__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+              <span><span class="action__label">Email, we reply within a business day</span><span class="action__value" style="display:block;font-size:clamp(18px,1.6vw,21px)">hello@beyond32dental.com.au</span></span>
+            </a>
+            <a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120" target="_blank" rel="noopener">
+              <span class="action__top">
+                <span class="action__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <svg class="action__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </span>
+              <span><span class="action__label">1st Floor, 114 Yarrara Rd</span><span class="action__value" style="display:block">Get directions</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="urgent" role="note">
+          <span class="urgent__dot" aria-hidden="true"><i></i></span>
+          <p><b>In pain, or had an accident?</b> Please don’t use the form. Call us on (02) 9158 6334 and we’ll do everything we can to see you today.</p>
+          <a class="text-link" href="emergency-dental-care.html">Emergency advice <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORM + VISIT ============ -->
+    <section class="section bg-mint" aria-label="Send an enquiry and plan your visit">
+      <div class="container c-main">
+        <div class="form-card" id="enquire">
+          <h2 class="h2">Send us <span class="it">a note</span></h2>
+          <p class="lead">Tell us a little about what you need and when suits you. We’ll call back to confirm a time.</p>
+
+          <form novalidate data-form>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <p class="err" id="f-name-err">Please tell us your name so we know who to ask for.</p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="04xx xxx xxx" required pattern="[0-9 +()\-]{8,}">
+              <p class="err" id="f-phone-err">We need a phone number to confirm your booking, e.g. 0412 345 678.</p>
+            </div>
+            <div class="field field--full">
+              <label for="f-email">Email <span class="opt">(optional)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+              <p class="err" id="f-email-err">That email doesn’t look quite right. Check for a missing @ or full stop.</p>
+            </div>
+
+            <fieldset class="field--full">
+              <legend>Have you been to us before?</legend>
+              <div class="seg">
+                <input type="radio" id="p-new" name="patient" value="new" checked><label for="p-new">I’m a new patient</label>
+                <input type="radio" id="p-ex" name="patient" value="existing"><label for="p-ex">I’ve been before</label>
+              </div>
+            </fieldset>
+
+            <div class="field field--full">
+              <label for="f-reason">What can we help with?</label>
+              <select id="f-reason" name="reason" required>
+                <option value="">Choose one</option>
+                <option>Check-up &amp; clean</option>
+                <option>Children’s check-up</option>
+                <option>A specific concern or discomfort</option>
+                <option>Cosmetic consult (veneers, whitening)</option>
+                <option>Invisalign or braces consult</option>
+                <option>Dental implants or All-on-X consult</option>
+                <option>Something else</option>
+              </select>
+              <p class="err" id="f-reason-err">Choose the closest option so we can book the right amount of time.</p>
+            </div>
+
+            <fieldset class="field--full">
+              <legend>When suits you? <span class="opt">(choose any)</span></legend>
+              <div class="seg">
+                <input type="checkbox" id="t-am" name="time" value="weekday-morning"><label for="t-am">Weekday morning</label>
+                <input type="checkbox" id="t-pm" name="time" value="weekday-afternoon"><label for="t-pm">Weekday afternoon</label>
+                <input type="checkbox" id="t-sat" name="time" value="saturday"><label for="t-sat">Saturday</label>
+                <input type="checkbox" id="t-any" name="time" value="any"><label for="t-any">I’m flexible</label>
+              </div>
+            </fieldset>
+
+            <div class="field field--full">
+              <label for="f-msg">Anything we should know? <span class="opt">(optional)</span></label>
+              <textarea id="f-msg" name="message" placeholder="e.g. I get nervous at the dentist, or I’d like to book the whole family together."></textarea>
+            </div>
+
+            <div class="consent">
+              <input type="checkbox" id="f-consent" name="consent" required>
+              <label for="f-consent">I’m happy for Beyond 32 Dental to contact me about this enquiry. See our <a href="https://beyond32dental.com.au/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>.</label>
+            </div>
+            <p class="err" id="f-consent-err" style="grid-column:1/-1;margin-top:-12px">Please tick the box so we’re allowed to get back to you.</p>
+
+            <div class="form-foot">
+              <button class="btn btn--gold" type="submit" data-submit>Send Enquiry</button>
+              <p>Please don’t include detailed medical history here. We’ll go through that together, privately.</p>
+            </div>
+          </form>
+
+          <div class="success" role="status" aria-live="polite">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="21"/><path d="m15 24.5 6 6 12-13"/></svg>
+            <h3 class="h3">Thanks<span data-thanks-name></span>, we’ve got it.</h3>
+            <p>Someone from our front desk will call you to confirm a time, usually within one business day. If it’s urgent, please call us on <a href="tel:+61291586334">(02) 9158 6334</a>.</p>
+          </div>
+        </div>
+
+        <aside class="visit" aria-labelledby="visit-h">
+          <a class="map" href="https://www.google.com/maps/dir/?api=1&amp;destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120" target="_blank" rel="noopener" aria-label="Open directions in Google Maps">
+            <img src="assets/map-opt.jpg" alt="Map showing Beyond 32 Dental on Yarrara Road, Pennant Hills" loading="lazy">
+            <span class="btn btn--gold btn--sm">Open in Google Maps →</span>
+          </a>
+          <div class="visit-card">
+            <h2 class="h4" id="visit-h">Visit us</h2>
+            <address>1st Floor, 114 Yarrara Road<br>Pennant Hills NSW 2120</address>
+            <hr>
+            <p class="kicker-sm" style="margin-bottom:10px">Opening hours</p>
+            <dl class="hours" data-hours>
+              <dt data-day="1,2,3,4,5">Monday – Friday</dt><dd data-day="1,2,3,4,5">9am – 6pm</dd>
+              <dt data-day="6">Saturday</dt><dd data-day="6">9am – 3pm</dd>
+              <dt data-day="0">Sunday</dt><dd data-day="0">Closed</dd>
+            </dl>
+            <hr>
+            <ul class="getting">
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5M5 16h14M5 16v2.5M19 16v2.5M7.5 13h.01M16.5 13h.01"/></svg></span><div><b>By car</b><span>Free parking close by. Ask us for the easiest spot when you book.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 14h.01M15 14h.01M8 21l2-4M16 21l-2-4"/></svg></span><div><b>By train</b><span>A short walk from Pennant Hills station on the T9 Northern Line.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="2.5"/><path d="M5 10h14M8.5 14.5h.01M15.5 14.5h.01M7 18v2.5M17 18v2.5"/></svg></span><div><b>By bus</b><span>Several Hills District routes stop at Pennant Hills interchange.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v6h5l2 5M12 11H8M9.5 14a5 5 0 1 0 5.5 5"/></svg></span><div><b>Access</b><span>We’re on level 1. Let us know if you need a hand and we’ll be ready for you.</span></div></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE YOU VISIT ============ -->
+    <section class="section bg-cream" aria-labelledby="know-h">
+      <div class="container">
+        <h2 class="h2" id="know-h">Good to know <span class="it">before you come</span></h2>
+        <div class="know">
+          <div>
+            <h3 class="h4">No referral needed</h3>
+            <p>Just call or book online. New patients are always welcome, including the whole family in back-to-back appointments.</p>
+          </div>
+          <div>
+            <h3 class="h4">Claim on the spot</h3>
+            <p>We accept all major health funds, including Medibank, Bupa, HCF, NIB and CBHS, so you only pay the gap on the day.</p>
+          </div>
+          <div>
+            <h3 class="h4">Bring your health fund card</h3>
+            <p>Plus a list of any medications. Arrive about ten minutes early for your first visit so there’s no rush.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script>
+    (function () {
+      const card = document.querySelector(".form-card");
+      const form = document.querySelector("[data-form]");
+      const checks = {
+        name: (f) => f.value.trim().length > 1,
+        phone: (f) => /^[0-9 +()\-]{8,}$/.test(f.value.trim()),
+        email: (f) => !f.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()),
+        reason: (f) => !!f.value,
+        consent: (f) => f.checked,
+      };
+      function validate(input) {
+        const ok = checks[input.name](input);
+        const field = input.closest(".field") || input.closest(".consent");
+        const err = document.getElementById(input.id + "-err");
+        if (field) field.toggleAttribute("data-invalid", !ok);
+        if (err) err.style.display = ok ? "" : "block";
+        input.setAttribute("aria-invalid", String(!ok));
+        if (err) input.setAttribute("aria-describedby", err.id);
+        return ok;
+      }
+      Object.keys(checks).forEach((n) => {
+        const el = form.elements[n];
+        el.addEventListener("blur", () => { if (el.value || el.type === "checkbox") validate(el); });
+        el.addEventListener("input", () => { if (el.getAttribute("aria-invalid") === "true") validate(el); });
+        el.addEventListener("change", () => { if (el.getAttribute("aria-invalid") === "true") validate(el); });
+      });
+      // "I'm flexible" clears specific times and vice versa
+      const any = form.querySelector("#t-any");
+      form.querySelectorAll("[name=time]").forEach((c) => c.addEventListener("change", () => {
+        if (c === any && any.checked) form.querySelectorAll("[name=time]").forEach((o) => { if (o !== any) o.checked = false; });
+        else if (c !== any && c.checked) any.checked = false;
+      }));
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const results = Object.keys(checks).map((n) => validate(form.elements[n]));
+        if (results.includes(false)) {
+          const first = form.querySelector("[aria-invalid=true]");
+          first && first.focus();
+          return;
+        }
+        const btn = form.querySelector("[data-submit]");
+        btn.setAttribute("aria-busy", "true");
+        btn.textContent = "Sending…";
+        // Front-end only: connect to the practice's form handler / practice-management system here.
+        setTimeout(() => {
+          const first = form.elements.name.value.trim().split(" ")[0];
+          card.querySelector("[data-thanks-name]").textContent = first ? `, ${first}` : "";
+          card.setAttribute("data-sent", "");
+          card.querySelector(".success").setAttribute("tabindex", "-1");
+          card.querySelector(".success").focus();
+        }, 900);
+      });
+    })();
+  </script>
+</body>
+</html>

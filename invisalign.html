@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/invisalign/ (existing URL kept). Copy: existing live page copy. -->
+  <title>Invisalign in Pennant Hills | Gold+ Invisalign Provider | Beyond 32 Dental</title>
+  <meta name="description" content="Looking into Invisalign in Pennant Hills to improve alignment and function? Call us on (02) 9158 6334 to discuss care tailored to your needs.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/invisalign/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334", "foundingDate": "2013",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" } ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "360" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/invisalign/", "name": "Invisalign in Pennant Hills", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" },
+        "about": { "@type": "MedicalTherapy", "name": "Invisalign", "alternateName": "Clear aligner treatment" } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Teeth Straightening" },
+          { "@type": "ListItem", "position": 3, "name": "Invisalign" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==================== Hero: statement + digital scan preview ==================== */
+    .iv-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+    .iv-hero .h1 { max-width: 8.5em; }
+    .iv-hero .lede { margin-top: 26px; max-width: 32ch; }
+    .iv-badge { display: inline-flex; align-items: center; gap: 12px; margin-top: 32px; padding: 8px 18px 8px 10px; border-radius: 99px; background: rgba(255,255,255,.7); border: 1px solid var(--mint-line); font-size: 14px; color: var(--teal); }
+    .iv-badge img { width: 28px; height: 33px; object-fit: contain; }
+    .iv-badge b { color: var(--ink); font-weight: 600; }
+
+    .scan { margin: 0; }
+    .scan__screen { position: relative; border-radius: var(--r-lg); background: radial-gradient(120% 90% at 50% 0%, #1c5250 0%, var(--ink) 70%); padding: 18px 20px 14px; color: #fff; box-shadow: 0 40px 70px -40px rgba(20,64,62,.7); overflow: hidden; }
+    .scan__top { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--foot-text); }
+    .scan__top i { width: 8px; height: 8px; border-radius: 50%; background: #8fd0ca; box-shadow: 0 0 0 4px rgba(143,208,202,.18); }
+    .scan__stage { margin-left: auto; padding: 4px 12px; border-radius: 99px; background: rgba(255,255,255,.1); color: #fff; font-variant-numeric: tabular-nums; }
+    .arch { display: block; width: 100%; height: auto; margin: 6px 0 0; }
+    .arch__ghost rect { fill: none; stroke: rgba(240,219,176,.55); stroke-width: 1.2; stroke-dasharray: 3 4; }
+    .arch__teeth rect { fill: rgba(216,238,237,.94); stroke: #8fd0ca; stroke-width: 1.4; }
+    .arch__teeth path { fill: none; stroke: #8fbfbb; stroke-width: 1.2; stroke-linecap: round; }
+    .arch__gum { fill: none; stroke: rgba(143,208,202,.1); stroke-width: 58; stroke-linecap: round; stroke-linejoin: round; }
+    .arch__sweep { fill: url(#sweep); }
+    .scan__ctl { display: flex; align-items: center; gap: 14px; margin-top: 4px; font-size: 13px; font-weight: 600; color: var(--foot-text); }
+    .scan__ctl input { --p: 0%; flex: 1; min-width: 0; height: 44px; margin: 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: ew-resize; }
+    .scan__ctl input::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(90deg, #f0dbb0 var(--p), rgba(255,255,255,.2) var(--p)); }
+    .scan__ctl input::-moz-range-track { height: 4px; border-radius: 2px; background: rgba(255,255,255,.2); }
+    .scan__ctl input::-moz-range-progress { height: 4px; border-radius: 2px; background: #f0dbb0; }
+    .scan__ctl input::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -12px; border-radius: 50%; background-image: var(--gold); border: 1px solid var(--gold-line); box-shadow: 0 6px 14px -4px rgba(0,0,0,.4); }
+    .scan__ctl input::-moz-range-thumb { width: 28px; height: 28px; border-radius: 50%; background-image: var(--gold); border: 1px solid var(--gold-line); }
+    .scan__ctl input:focus-visible { outline: 2px solid #f0dbb0; outline-offset: 2px; }
+    .scan figcaption { margin-top: 12px; font-size: 13px; color: var(--teal); }
+    @media (max-width: 960px) { .iv-hero__grid { grid-template-columns: minmax(0, 1fr); } .iv-hero .h1 { max-width: 10em; } }
+
+    /* ==================== Intro: why alignment matters ==================== */
+    .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: clamp(48px, 5vw, 72px); }
+    .why li { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: var(--r); background: var(--cream); color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.35; }
+    .why svg { width: 26px; height: 26px; flex: none; color: var(--teal); }
+    @media (max-width: 860px) { .why { grid-template-columns: 1fr; } }
+
+    /* ==================== Journey ==================== */
+    .journey { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: j; }
+    .journey li { counter-increment: j; display: flex; flex-direction: column; border-radius: var(--r-lg); background: rgba(216,238,237,.07); border: 1px solid rgba(216,238,237,.14); overflow: hidden; }
+    .journey__art { position: relative; aspect-ratio: 5 / 4; display: grid; place-items: center; background: radial-gradient(90% 80% at 50% 30%, rgba(216,238,237,.12), rgba(216,238,237,0)); border-bottom: 1px solid rgba(216,238,237,.12); }
+    .journey__art svg { width: 78%; height: auto; max-height: 82%; }
+    .journey__art::before { content: counter(j); position: absolute; left: 18px; top: 12px; font-family: var(--serif); font-style: italic; font-size: 36px; line-height: 1; color: #f0dbb0; }
+    .journey__body { padding: 22px 22px 26px; }
+    .journey b { display: block; font-size: 20px; font-weight: 500; color: #fff; line-height: 1.25; }
+    .journey .p { margin-top: 10px; font-size: 16px; line-height: 1.6; }
+    @media (max-width: 1080px) { .journey { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .journey { grid-template-columns: 1fr; } .journey__art { aspect-ratio: 16 / 9; } .journey__art svg { width: 56%; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .dial__arc { transition: stroke-dashoffset 1.8s var(--ease-out); }
+      .js .journey:not(.is-in) .dial__arc { stroke-dashoffset: 276.5; }
+    }
+
+    /* ==================== Trust ==================== */
+    .trust-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 104px); align-items: center; }
+    .trust-photo { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 4 / 3.3; }
+    .trust-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; }
+    .badge-card { position: absolute; left: 18px; bottom: 18px; display: flex; align-items: center; gap: 14px; padding: 14px 20px 14px 14px; border-radius: var(--r); background: rgba(255,247,242,.92); backdrop-filter: blur(8px); }
+    .badge-card img { width: 52px; height: 62px; object-fit: contain; }
+    .badge-card b { display: block; font-size: 16px; color: var(--ink); }
+    .badge-card span { display: block; font-size: 13px; color: var(--teal); margin-top: 2px; letter-spacing: .04em; }
+    @media (max-width: 860px) { .trust-split { grid-template-columns: 1fr; } }
+
+    /* ==================== Result ==================== */
+    .iv-result { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px; border-radius: var(--r-lg); background: var(--mint); border: 1px solid var(--mint-line); }
+    .iv-result figure { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 2 / 1; }
+    .iv-result img { width: 100%; height: 100%; object-fit: cover; }
+    .iv-result figcaption { position: absolute; left: 10px; top: 10px; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: rgba(0,0,0,.3); color: #fff; border: 1px solid rgba(255,255,255,.4); }
+    @media (max-width: 600px) { .iv-result { grid-template-columns: 1fr; } }
+
+    /* ==================== Orthodontics family strip (shared look across the four orthodontic pages) ==================== */
+    .ofam { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .ofam a { display: flex; flex-direction: column; gap: 10px; min-height: 210px; padding: 22px; border-radius: var(--r); background: var(--white); color: var(--ink); text-decoration: none; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+    .ofam a:hover { transform: translateY(-4px); box-shadow: 0 18px 30px -18px rgba(20,64,62,.45); }
+    .ofam svg { width: 44px; height: 44px; color: var(--teal); margin-bottom: 8px; }
+    .ofam b { font-size: 20px; font-weight: 500; line-height: 1.2; letter-spacing: -0.005em; }
+    .ofam span { font-size: 15px; line-height: 1.45; color: var(--teal); }
+    .ofam em { margin-top: auto; padding-top: 8px; font-style: normal; font-size: 15px; font-weight: 600; }
+    .ofam a:hover em { text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    .ofam-band { padding-bottom: calc(clamp(80px, 9vw, 136px) + 60px); }
+    @media (max-width: 1000px) { .ofam { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .ofam { grid-template-columns: 1fr; } .ofam a { min-height: 0; } }
+    /* Closing photo moment on phones: photo first, panel below, so the face is not covered */
+    @media (max-width: 760px) { .moment { display: block; min-height: 0; } .moment > img { position: relative; height: 320px; } .moment::after { display: none; } .moment__panel { margin: -48px 0 0; } .moment + .band { padding-top: clamp(80px, 9vw, 136px); } .moment { background: var(--mint); padding-bottom: 0; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO: statement + scan preview ============ -->
+    <section class="ihero iv-hero" aria-labelledby="iv-h1" data-hero>
+      <div class="container iv-hero__grid">
+        <div>
+          <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Teeth Straightening</li><li aria-current="page">Invisalign</li></ol></nav>
+          <h1 class="h1" id="iv-h1">Invisalign in <span class="it">Pennant Hills</span></h1>
+          <p class="lede">Invisalign is a clear aligner system that moves teeth gradually using a series of custom-made, removable trays instead of fixed brackets and wires.</p>
+          <div class="btn-row" style="margin-top:34px">
+            <a class="btn btn--gold btn--lg" href="contact.html#enquire">Book a Free Consultation</a>
+            <a class="btn btn--outline btn--lg" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+          <p class="iv-badge"><img src="assets/invisalign.png" alt=""><span><b>Gold+ Invisalign provider</b> · 2022</span></p>
+        </div>
+
+        <figure class="scan" aria-labelledby="scan-cap">
+          <div class="scan__screen">
+            <div class="scan__top"><i aria-hidden="true"></i>Digital scan preview<span class="scan__stage" data-stage aria-hidden="true">Today</span></div>
+            <svg class="arch" viewBox="96 124 408 204" role="img" aria-labelledby="arch-t">
+              <title id="arch-t">Illustration of an upper arch of teeth moving from crowded to straight, as shown in a treatment preview</title>
+              <path class="arch__gum" d="M127.5 166.5 L148.6 203.3 L172.3 232.4 L194.9 252.7 L221.3 269.8 L249.8 282 L282 289 L318 289 L350.2 282 L378.7 269.8 L405.1 252.7 L427.7 232.4 L451.4 203.3 L472.5 166.5" aria-hidden="true"/>
+              <g class="arch__ghost"><rect transform="translate(318 289) rotate(-6.4)" x="-17" y="-13.5" width="34" height="27" rx="9"/><rect transform="translate(350.2 282) rotate(-18)" x="-13.5" y="-12" width="27" height="24" rx="9"/><rect transform="translate(378.7 269.8) rotate(-28.1)" x="-15" y="-15" width="30" height="30" rx="13"/><rect transform="translate(405.1 252.7) rotate(-37.7)" x="-14" y="-16" width="28" height="32" rx="12"/><rect transform="translate(427.7 232.4) rotate(-46.1)" x="-14" y="-16.5" width="28" height="33" rx="12"/><rect transform="translate(451.4 203.3) rotate(-55.4)" x="-21" y="-21" width="42" height="42" rx="13"/><rect transform="translate(472.5 166.5) rotate(-64.9)" x="-19" y="-20" width="38" height="40" rx="13"/><rect transform="translate(282 289) rotate(6.4)" x="-17" y="-13.5" width="34" height="27" rx="9"/><rect transform="translate(249.8 282) rotate(18)" x="-13.5" y="-12" width="27" height="24" rx="9"/><rect transform="translate(221.3 269.8) rotate(28.1)" x="-15" y="-15" width="30" height="30" rx="13"/><rect transform="translate(194.9 252.7) rotate(37.7)" x="-14" y="-16" width="28" height="32" rx="12"/><rect transform="translate(172.3 232.4) rotate(46.1)" x="-14" y="-16.5" width="28" height="33" rx="12"/><rect transform="translate(148.6 203.3) rotate(55.4)" x="-21" y="-21" width="42" height="42" rx="13"/><rect transform="translate(127.5 166.5) rotate(64.9)" x="-19" y="-20" width="38" height="40" rx="13"/></g>
+              <g class="arch__teeth" data-arch><g transform="translate(318 289) rotate(-6.4)"><g class="tc" data-c="3 7 16" transform="translate(3 7) rotate(16)"><rect x="-17" y="-13.5" width="34" height="27" rx="9"/></g></g><g transform="translate(350.2 282) rotate(-18)"><g class="tc" data-c="-2 -11 24" transform="translate(-2 -11) rotate(24)"><rect x="-13.5" y="-12" width="27" height="24" rx="9"/></g></g><g transform="translate(378.7 269.8) rotate(-28.1)"><g class="tc" data-c="0 9 -6" transform="translate(0 9) rotate(-6)"><rect x="-15" y="-15" width="30" height="30" rx="13"/></g></g><g transform="translate(405.1 252.7) rotate(-37.7)"><g class="tc" data-c="0 2 4" transform="translate(0 2) rotate(4)"><rect x="-14" y="-16" width="28" height="32" rx="12"/><path d="M-5.6 0h11.20"/></g></g><g transform="translate(427.7 232.4) rotate(-46.1)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-14" y="-16.5" width="28" height="33" rx="12"/><path d="M-5.6 0h11.20"/></g></g><g transform="translate(451.4 203.3) rotate(-55.4)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-21" y="-21" width="42" height="42" rx="13"/><path d="M-10.5 -10.5q10.5 8.4 21 0M-10.5 8.4q10.5 -8.4 21 0"/></g></g><g transform="translate(472.5 166.5) rotate(-64.9)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-19" y="-20" width="38" height="40" rx="13"/><path d="M-9.5 -10q9.5 8 19 0M-9.5 8q9.5 -8 19 0"/></g></g><g transform="translate(282 289) rotate(6.4)"><g class="tc" data-c="-2 -5 -12" transform="translate(-2 -5) rotate(-12)"><rect x="-17" y="-13.5" width="34" height="27" rx="9"/></g></g><g transform="translate(249.8 282) rotate(18)"><g class="tc" data-c="4 -9 -20" transform="translate(4 -9) rotate(-20)"><rect x="-13.5" y="-12" width="27" height="24" rx="9"/></g></g><g transform="translate(221.3 269.8) rotate(28.1)"><g class="tc" data-c="0 11 10" transform="translate(0 11) rotate(10)"><rect x="-15" y="-15" width="30" height="30" rx="13"/></g></g><g transform="translate(194.9 252.7) rotate(37.7)"><g class="tc" data-c="0 3 -5" transform="translate(0 3) rotate(-5)"><rect x="-14" y="-16" width="28" height="32" rx="12"/><path d="M-5.6 0h11.20"/></g></g><g transform="translate(172.3 232.4) rotate(46.1)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-14" y="-16.5" width="28" height="33" rx="12"/><path d="M-5.6 0h11.20"/></g></g><g transform="translate(148.6 203.3) rotate(55.4)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-21" y="-21" width="42" height="42" rx="13"/><path d="M-10.5 -10.5q10.5 8.4 21 0M-10.5 8.4q10.5 -8.4 21 0"/></g></g><g transform="translate(127.5 166.5) rotate(64.9)"><g class="tc" data-c="0 0 0" transform="translate(0 0) rotate(0)"><rect x="-19" y="-20" width="38" height="40" rx="13"/><path d="M-9.5 -10q9.5 8 19 0M-9.5 8q9.5 -8 19 0"/></g></g></g>
+            </svg>
+            <label class="scan__ctl"><span aria-hidden="true">Today</span><input type="range" min="0" max="100" value="0" data-preview aria-label="Preview tooth movement, from today to the projected result" aria-valuetext="Today"><span aria-hidden="true">Projected</span></label>
+          </div>
+          <figcaption id="scan-cap">Drag to preview. An illustration only: your own projection is made from your scan.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ INTRO ============ -->
+    <section class="band band--white band--tight" aria-label="Why alignment matters">
+      <div class="container">
+        <div class="intro-grid">
+          <p class="statement">Crooked, crowded or gappy teeth affect <em>more than appearance.</em></p>
+          <div class="prose">
+            <p>Misalignment can make teeth harder to clean, place an uneven load on the jaw joint, and wear down enamel over time.</p>
+            <p>Invisalign straightens teeth with clear, removable trays, each one made for you, <strong>so there are no fixed brackets or wires.</strong></p>
+          </div>
+        </div>
+        <ul class="why" aria-label="What misalignment can do">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 14 10M14 10l2.5-2.5a2.1 2.1 0 0 1 3 3L17 13M9 4.5l1 2M5 8l2 .6M13.2 3.6l-.2 2.2"/></svg>Teeth that are harder to clean</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0L5 8ZM19 8l-2.5 6a3 3 0 0 0 5 0L19 8ZM8 20h8"/></svg>An uneven load on the jaw joint</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.2 3.5c-2.6 0-4.4 2-4.4 4.7 0 2.3.9 3.6 1.5 5.6.7 2.5.8 6.7 2.6 6.7 1.6 0 1.4-4.4 4.1-4.4s2.5 4.4 4.1 4.4c1.8 0 1.9-4.2 2.6-6.7.6-2 1.5-3.3 1.5-5.6 0-2.7-1.8-4.7-4.4-4.7-1.6 0-2.5.9-3.8.9s-2.2-.9-3.8-.9Z"/><path d="M9 7.5c1 .6 2 .8 3 .8"/></svg>Enamel worn down over time</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY (authored moment) ============ -->
+    <section class="band band--ink on-ink" id="journey" aria-labelledby="h-journey">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-journey">How the aligner journey <span class="it">works</span></h2>
+          <p class="lede lede--wide">From the first scan to the last set of trays, you can see where you are going before you start.</p>
+        </div>
+        <ol class="journey" data-journey>
+          <li>
+            <div class="journey__art" aria-hidden="true">
+              <svg viewBox="0 0 200 150" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 120 C 40 70, 160 70, 170 120" stroke="rgba(143,208,202,.16)" stroke-width="22"/>
+                <g fill="#d8eeed" stroke="#8fd0ca" stroke-width="2">
+                  <rect x="46" y="84" width="22" height="26" rx="9" transform="rotate(-24 57 97)"/><rect x="70" y="72" width="22" height="26" rx="9" transform="rotate(-10 81 85)"/>
+                  <rect x="94" y="68" width="22" height="26" rx="9"/><rect x="118" y="72" width="22" height="26" rx="9" transform="rotate(10 129 85)"/>
+                  <rect x="140" y="84" width="22" height="26" rx="9" transform="rotate(24 151 97)"/>
+                </g>
+                <rect x="96" y="14" width="22" height="66" rx="10" transform="rotate(28 107 47)" fill="#fff7f2" stroke="#f0dbb0" stroke-width="2"/>
+                <g stroke="#8fd0ca" stroke-width="1.5" stroke-dasharray="2 4"><path d="M84 70 L60 108M90 72 L84 116M96 72 L108 114M102 70 L130 106"/></g>
+              </svg>
+            </div>
+            <div class="journey__body"><b>A digital scan, not a mould</b><p class="p">Treatment starts with a digital intraoral scan rather than a physical mould.</p></div>
+          </li>
+          <li>
+            <div class="journey__art" aria-hidden="true">
+              <svg viewBox="0 0 200 150" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="30" y="20" width="140" height="94" rx="10" stroke="#8fd0ca" stroke-width="2"/>
+                <path d="M86 114 l-6 18h40l-6-18M70 132h60" stroke="#8fd0ca" stroke-width="2"/>
+                <g stroke="rgba(240,219,176,.7)" stroke-width="1.5" stroke-dasharray="3 3"><path d="M56 56 C 70 92, 130 92, 144 56"/></g>
+                <g fill="#d8eeed" stroke="#8fd0ca" stroke-width="1.5">
+                  <circle cx="60" cy="62" r="7"/><circle cx="76" cy="80" r="7"/><circle cx="96" cy="78" r="7"/><circle cx="106" cy="88" r="7"/><circle cx="124" cy="80" r="7"/><circle cx="140" cy="62" r="7"/>
+                </g>
+                <path d="M150 34 l-14 0 m14 0 l0 14" stroke="#f0dbb0" stroke-width="2"/><path d="M150 34 L128 56" stroke="#f0dbb0" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="journey__body"><b>See the projection first</b><p class="p">You can see a projection of your expected tooth movement before you commit to anything.</p></div>
+          </li>
+          <li>
+            <div class="journey__art" aria-hidden="true">
+              <svg viewBox="0 0 200 150" fill="none">
+                <g transform="rotate(-90 100 75)">
+                  <circle cx="100" cy="75" r="44" stroke="rgba(216,238,237,.16)" stroke-width="12"/>
+                  <circle class="dial__arc" cx="100" cy="75" r="44" stroke="rgba(240,219,176,.45)" stroke-width="12" stroke-dasharray="276.5" stroke-dashoffset="23"/>
+                  <circle class="dial__arc" cx="100" cy="75" r="44" stroke="#f0dbb0" stroke-width="12" stroke-dasharray="276.5" stroke-dashoffset="46.1"/>
+                </g>
+                <text x="100" y="76" text-anchor="middle" font-family="Host Grotesk, sans-serif" font-size="22" font-weight="600" fill="#fff">20–22</text>
+                <text x="100" y="94" text-anchor="middle" font-family="Host Grotesk, sans-serif" font-size="11" fill="#cce0de">hours a day</text>
+              </svg>
+            </div>
+            <div class="journey__body"><b>Wear them 20 to 22 hours a day</b><p class="p">Aligners are worn 20 to 22 hours a day, so they are in for most of the day and night.</p></div>
+          </li>
+          <li>
+            <div class="journey__art" aria-hidden="true">
+              <svg viewBox="0 0 200 150" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <g stroke-width="2">
+                  <path d="M40 104 C 46 54, 94 54, 100 104" stroke="rgba(143,208,202,.45)"/><path d="M50 104 C 55 66, 90 66, 94 104" stroke="rgba(143,208,202,.3)"/>
+                  <path d="M70 104 C 76 50, 124 50, 130 104" stroke="rgba(143,208,202,.7)"/><path d="M80 104 C 85 62, 120 62, 124 104" stroke="rgba(143,208,202,.5)"/>
+                  <path d="M100 104 C 106 46, 154 46, 160 104" stroke="#d8eeed"/><path d="M110 104 C 115 58, 150 58, 154 104" stroke="rgba(216,238,237,.7)"/>
+                </g>
+                <g font-family="Host Grotesk, sans-serif" font-size="12" font-weight="600" text-anchor="middle"><text x="70" y="124" fill="rgba(204,224,222,.6)">1</text><text x="100" y="124" fill="rgba(204,224,222,.8)">2</text><text x="130" y="124" fill="#fff">3</text></g>
+                <path d="M150 28 C 168 32, 176 46, 172 62 M172 62 l-8 -6 M172 62 l6 -8" stroke="#f0dbb0" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="journey__body"><b>A new set every 1 to 2 weeks</b><p class="p">Each set is swapped for the next roughly every one to two weeks, moving your teeth a little at a time.</p></div>
+          </li>
+        </ol>
+        <div class="inline-cta" style="margin-top:clamp(48px,5vw,72px)">
+          <p>Curious what your own projection would show?</p>
+          <a href="contact.html#enquire">Book a free Invisalign consultation <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="band band--cream" aria-labelledby="h-trust">
+      <div class="container trust-split">
+        <figure class="trust-photo">
+          <img src="assets/live/invisalign/Invisalign.webp" alt="Smiling patient holding a clear Invisalign aligner at Beyond 32 Dental" loading="lazy">
+          <figcaption class="badge-card"><img src="assets/invisalign.png" alt=""><span><b>Gold+ Invisalign provider</b><span>2022 AWARD</span></span></figcaption>
+        </figure>
+        <div>
+          <h2 class="h2" id="h-trust">Invisalign here <span class="it">since 2013</span></h2>
+          <p class="lede" style="margin-top:24px">At Beyond 32 Dental, we’ve been providing Invisalign treatment since the practice opened in 2013.</p>
+          <ul class="ticks" style="margin-top:32px">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Gold+ Invisalign provider, 2022</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>5.0 Google rating from 360+ reviews</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>All health funds accepted, with on-the-spot claiming</li>
+          </ul>
+          <div class="btn-row" style="margin-top:36px">
+            <a class="btn btn--ink" href="about.html#team">Meet the Team</a>
+            <a class="btn btn--outline" href="gallery.html">View the Smile Gallery</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULT ============ -->
+    <section class="band band--white" aria-labelledby="h-result">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-result">Before and after <span class="it">Invisalign</span></h2>
+          <p class="p" style="max-width:48ch">One of our patients, photographed at the start of treatment and after their final set of aligners.</p>
+        </div>
+        <div class="iv-result">
+          <figure><img src="assets/live/invisalign/beyond32-Invisalign-before1.webp" alt="Before Invisalign: uneven, slightly crowded upper and lower teeth" loading="lazy" width="500" height="250"><figcaption>Before</figcaption></figure>
+          <figure><img src="assets/live/invisalign/beyond32-Invisalign-after1.webp" alt="After Invisalign: straighter, evenly aligned smile" loading="lazy" width="500" height="250"><figcaption>After</figcaption></figure>
+        </div>
+        <p class="disclaimer-sm">Patient images are published with consent and are intended for educational purposes only. Results vary between individuals, and all dental procedures carry risks.</p>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING MOMENT ============ -->
+    <aside class="moment" aria-labelledby="h-close">
+      <img src="assets/practice-opt.jpg" alt="" loading="lazy" style="object-position:40% 50%">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="moment__panel">
+          <h2 class="h2" id="h-close" style="font-size:clamp(30px,2.8vw,40px)">Book your free <span class="it">Invisalign consultation</span></h2>
+          <p class="p">We’re a five-minute drive from West Pennant Hills and Cherrybrook, with three hours of free parking on site.</p>
+          <p class="p" style="margin-top:12px">To book your free Invisalign consultation, call us now on (02) 9158 6334.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="tel:+61291586334">Call (02) 9158 6334</a>
+            <a class="btn btn--outline" href="contact.html#enquire">Book Online</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============ ORTHODONTICS FAMILY ============ -->
+    <section class="band band--mint ofam-band" aria-labelledby="h-ofam">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-ofam">Other ways we <span class="it">straighten teeth</span></h2>
+          <p class="p" style="max-width:46ch">Not sure which suits you? We’ll talk you through the options at your consultation.</p>
+        </div>
+        <nav class="ofam" aria-label="Teeth straightening treatments">
+          <a href="damon-braces.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="15" width="18" height="18" rx="4"/><path d="M4 24h11M33 24h11M19 15v-3h10v3M19 33v3h10v-3"/></svg>
+            <b>Damon Braces</b><span>A low-friction, low force system that moves teeth in a more biologically sensitive way.</span><em>Damon braces →</em></a>
+          <a href="inman-aligner.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18c4 14 28 14 32 0M13 18c3 9 19 9 22 0"/><path d="M6 14l4 2M42 14l-4 2M24 31v-5M24 21v-4"/></svg>
+            <b>Inman Aligner</b><span>A simple removable appliance used to align front teeth quickly and safely.</span><em>Inman Aligner →</em></a>
+          <a href="early-interceptive-orthodontics.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 12c-4 0-7 3-7 7 0 3.5 1.4 5.5 2.3 8.6 1 3.8 1.2 10.4 4 10.4 2.4 0 2.2-6.8 6.2-6.8"/><path d="M34 8v14M28 14l6-6 6 6"/></svg>
+            <b>Early Interceptive Orthodontics</b><span>For children, guiding jaw development early to make straightening easier later.</span><em>For children →</em></a>
+          <a href="crooked-teeth.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="16" width="10" height="16" rx="4" transform="rotate(-10 12 24)"/><rect x="19" y="14" width="10" height="18" rx="4"/><rect x="31" y="16" width="10" height="16" rx="4" transform="rotate(14 36 24)"/></svg>
+            <b>Crooked Teeth</b><span>Compare every option side by side, from Invisalign to lingual braces.</span><em>Compare options →</em></a>
+        </nav>
+        <p class="final-note">The information on this page is general in nature and is not a substitute for an examination. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+  <script>
+    (function () {
+      /* Scan preview: interpolate each tooth from its crowded offset (data-c) to its place on the arch */
+      const input = document.querySelector("[data-preview]");
+      const stage = document.querySelector("[data-stage]");
+      const teeth = [...document.querySelectorAll("[data-arch] .tc")].map((g) => ({ g, c: g.dataset.c.split(" ").map(Number) }));
+      function render(v) {
+        const k = 1 - v / 100;
+        teeth.forEach(({ g, c }) => g.setAttribute("transform", `translate(${(c[0] * k).toFixed(2)} ${(c[1] * k).toFixed(2)}) rotate(${(c[2] * k).toFixed(2)})`));
+        input.style.setProperty("--p", v + "%");
+        const label = v < 5 ? "Today" : v > 95 ? "Projected result" : "Preview " + Math.round(v) + "%";
+        stage.textContent = label; input.setAttribute("aria-valuetext", label);
+      }
+      let auto = null;
+      input.addEventListener("input", () => { if (auto) { cancelAnimationFrame(auto); auto = null; } render(+input.value); });
+      render(0);
+      // Play the preview once when it first comes into view (skipped for reduced motion)
+      const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!still && "IntersectionObserver" in window) {
+        const io = new IntersectionObserver((es) => {
+          if (!es[0].isIntersecting) return; io.disconnect();
+          const t0 = performance.now() + 700, dur = 2600;
+          const step = (t) => { const p = Math.min(1, Math.max(0, (t - t0) / dur)); const e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2; input.value = Math.round(e * 100); render(e * 100); if (p < 1) auto = requestAnimationFrame(step); else auto = null; };
+          auto = requestAnimationFrame(step);
+        }, { threshold: .5 });
+        io.observe(input.closest(".scan"));
+      }
+      // Wear dial fills when the journey scrolls into view
+      const j = document.querySelector("[data-journey]"), dial = j.querySelector(".dial__arc");
+      if ("IntersectionObserver" in window) {
+        const jo = new IntersectionObserver((es) => { if (es[0].isIntersecting) { j.classList.add("is-in"); jo.disconnect(); } }, { threshold: 1 });
+        jo.observe(dial.closest("svg"));
+      } else j.classList.add("is-in");
+    })();
+  </script>
+</body>
+</html>

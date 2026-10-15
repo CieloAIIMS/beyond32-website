@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/fixing-my-smile/ (existing URL kept). Copy: existing live page copy. -->
+  <title>Fixing My Smile | Stained Teeth &amp; Smile Makeovers Pennant Hills | Beyond 32 Dental</title>
+  <meta name="description" content="Achieve your dream smile with personalised treatment options and expert care. Learn how we fix stained, discoloured and crooked teeth with whitening, veneers and straightening.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/fixing-my-smile/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334", "foundingDate": "2013",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "360" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/fixing-my-smile/", "name": "Fixing My Smile", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" },
+        "about": { "@type": "MedicalCondition", "name": "Tooth discolouration", "alternateName": ["Stained teeth", "Tooth staining"],
+          "possibleTreatment": [ { "@type": "MedicalProcedure", "name": "Teeth whitening" }, { "@type": "MedicalProcedure", "name": "Dental veneers" } ] } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Cosmetic Dentistry", "item": "https://www.beyond32dental.com.au/cosmetic-dentistry/" },
+          { "@type": "ListItem", "position": 3, "name": "Fixing My Smile" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ---------- Hero: arch photo with floating stain swatches ---------- */
+    .fm-hero__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; }
+    .fm-hero .h1 { font-size: clamp(52px, 6.6vw, 104px); line-height: .95; letter-spacing: -0.035em; }
+    .fm-hero .lede { margin-top: 28px; max-width: 30ch; }
+    .arch { position: relative; max-width: 480px; margin-left: auto; }
+    .arch__img { aspect-ratio: 4 / 5; border-radius: 999px 999px var(--r) var(--r); overflow: hidden; box-shadow: 0 30px 60px -32px rgba(20,64,62,.5); }
+    .arch__img img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+    .arch__sw { position: absolute; display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 99px; background: rgba(255,247,242,.94); backdrop-filter: blur(8px); box-shadow: 0 14px 30px -18px rgba(20,64,62,.55); font-size: 14px; font-weight: 600; color: var(--ink); }
+    .arch__sw i { width: 26px; height: 26px; border-radius: 50%; }
+    .arch__sw:nth-of-type(1) { left: -36px; top: 18%; }
+    .arch__sw:nth-of-type(2) { right: -24px; top: 42%; }
+    .arch__sw:nth-of-type(3) { left: -20px; bottom: 14%; }
+    @media (prefers-reduced-motion: no-preference) {
+      .js .arch__sw { animation: swIn 1s var(--ease-out) both; }
+      .js .arch__sw:nth-of-type(2) { animation-delay: .15s; }
+      .js .arch__sw:nth-of-type(3) { animation-delay: .3s; }
+      @keyframes swIn { from { opacity: 0; transform: translateY(10px); } }
+    }
+    @media (max-width: 900px) {
+      .fm-hero__grid { grid-template-columns: 1fr; }
+      .arch { margin: 0 auto; max-width: 340px; }
+      .arch__sw:nth-of-type(1) { left: -8px; } .arch__sw:nth-of-type(2) { right: -8px; } .arch__sw:nth-of-type(3) { left: -8px; }
+    }
+
+    /* ---------- Stain lab ---------- */
+    .lab { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 16px; align-items: stretch; }
+    .lab__art { background: radial-gradient(120% 90% at 50% 10%, rgba(255,255,255,.1), rgba(255,255,255,.02)); border: 1px solid rgba(216,238,237,.14); border-radius: var(--r-lg); padding: clamp(20px, 3vw, 40px); display: flex; flex-direction: column; justify-content: center; }
+    .lab__art svg { display: block; width: 100%; height: auto; }
+    .lab__art .tooth { transition: fill .35s linear; }
+    .lab__ctrl { border-radius: var(--r-lg); background: rgba(216,238,237,.08); border: 1px solid rgba(216,238,237,.14); padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; }
+    .lab__ctrl h3 { font-size: 15px; font-weight: 600; color: var(--foot-text); }
+    .src { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+    .src button { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 14px; border-radius: var(--r); border: 1px solid rgba(216,238,237,.2); background: transparent; color: #fff; font-size: 15px; font-weight: 500; text-align: left; transition: background .2s, border-color .2s, color .2s; }
+    .src button:hover { border-color: rgba(255,255,255,.6); }
+    .src button svg { width: 22px; height: 22px; flex: none; color: #f0dbb0; }
+    .src button[aria-checked="true"] { background: #f0dbb0; border-color: #f0dbb0; color: var(--ink); }
+    .src button[aria-checked="true"] svg { color: var(--ink); }
+    .time { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(216,238,237,.14); }
+    .time label { display: flex; justify-content: space-between; font-size: 15px; font-weight: 600; color: #fff; }
+    .time label span { font-weight: 400; color: var(--foot-text); }
+    .time input { width: 100%; margin-top: 14px; accent-color: #f0dbb0; height: 32px; }
+    .time .ends { display: flex; justify-content: space-between; font-size: 13px; color: var(--foot-text); }
+    .lab__note { margin-top: auto; padding-top: 24px; font-size: 13px; color: var(--foot-text); line-height: 1.5; }
+    @media (max-width: 900px) { .lab { grid-template-columns: 1fr; } }
+
+    /* ---------- Two routes ---------- */
+    .routes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+    .route { position: relative; display: flex; flex-direction: column; border-radius: var(--r-lg); padding: clamp(28px, 3vw, 40px); background: var(--white); text-decoration: none; color: var(--ink); transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+    .route:hover { transform: translateY(-3px); box-shadow: 0 20px 36px -26px rgba(20,64,62,.6); }
+    .route--chair { background: var(--ink); color: #fff; }
+    .route__icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--mint); color: var(--ink); }
+    .route--chair .route__icon { background: rgba(240,219,176,.16); color: #f0dbb0; }
+    .route__icon svg { width: 26px; height: 26px; }
+    .route b { margin-top: 26px; font-size: clamp(26px, 2.4vw, 34px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
+    .route span { margin-top: 10px; font-size: 16px; line-height: 1.55; color: var(--teal); }
+    .route--chair span { color: var(--foot-text); }
+    .route i { margin-top: auto; padding-top: 28px; font-style: normal; font-weight: 700; font-size: 16px; }
+    .route--chair i { color: #f0dbb0; }
+    @media (max-width: 760px) { .routes { grid-template-columns: 1fr; } }
+
+    /* ---------- Other ways ---------- */
+    .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .way { display: flex; flex-direction: column; border-radius: var(--r-lg); overflow: hidden; background: var(--cream); text-decoration: none; color: var(--ink); transition: transform .45s var(--ease-out); }
+    .way:hover { transform: translateY(-3px); }
+    .way figure { aspect-ratio: 16 / 10; overflow: hidden; }
+    .way img { width: 100%; height: 100%; object-fit: cover; }
+    .way div { padding: 22px 24px 26px; }
+    .way b { display: block; font-size: 22px; font-weight: 500; }
+    .way span { display: block; margin-top: 8px; font-size: 15px; color: var(--teal); line-height: 1.5; }
+    @media (max-width: 860px) { .ways { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ihero fm-hero" aria-labelledby="s-h1" data-hero>
+      <div class="container fm-hero__grid">
+        <div>
+          <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li><li aria-current="page">Fixing My Smile</li></ol></nav>
+          <h1 class="h1" id="s-h1">Fixing <span class="it">my smile</span></h1>
+          <p class="lede">Apart from fixing crooked teeth, another way to fix your smile is to remove staining and discolouration through teeth whitening or veneers.</p>
+          <div class="btn-row" style="margin-top:36px">
+            <a class="btn btn--gold" href="contact.html#enquire">Book a Consultation</a>
+            <a class="btn btn--outline" href="#stains">What causes stains?</a>
+          </div>
+        </div>
+        <div class="arch">
+          <figure class="arch__img"><img src="assets/live/fixing-my-smile/Fixing-my-smile-Beyond-32-Dental.webp" alt="Smiling patient relaxing in the dental chair at Beyond 32 Dental" width="540" height="345"></figure>
+          <span class="arch__sw" aria-hidden="true"><i style="background:#6e1f2b"></i>Wine</span>
+          <span class="arch__sw" aria-hidden="true"><i style="background:#4a2c1d"></i>Coffee</span>
+          <span class="arch__sw" aria-hidden="true"><i style="background:#a5652a"></i>Tea</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAIN LAB (ink) ============ -->
+    <section class="band band--ink on-ink" id="stains" aria-labelledby="h-stains">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-stains">What stains <span class="it">your teeth?</span></h2>
+          <div class="prose">
+            <p>There is a whole range of foods and drinks that can cause staining on your teeth over an extended period.</p>
+            <p><strong>Common causes include wine, tea, coffee and soft drinks (particularly cola drinks). Smoking is another cause of stained teeth.</strong></p>
+          </div>
+        </div>
+        <div class="lab">
+          <div class="lab__art">
+            <svg viewBox="30 50 540 200" role="img" aria-labelledby="lab-t">
+              <title id="lab-t" data-lab-title>Illustration of front teeth with light staining from coffee</title>
+              <defs>
+                <linearGradient id="fm-lip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9786e"/><stop offset="1" stop-color="#c25a52"/></linearGradient>
+                <linearGradient id="fm-shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path d="M40 150 Q300 20 560 150 Q300 300 40 150 Z" fill="url(#fm-lip)"/>
+              <path d="M78 152 Q300 66 522 152 Q300 262 78 152 Z" fill="#4a1a1d"/>
+              <path d="M110 150 Q300 118 490 150 L490 156 Q300 140 110 156 Z" fill="#e58f86"/>
+              <g stroke="#9c8a74" stroke-opacity=".5" stroke-width="1.4" data-teeth>
+                <path class="tooth" d="M118 150 Q126 128 152 124 L158 184 Q132 182 118 150 Z"/>
+                <path class="tooth" d="M154 124 Q176 114 202 112 L204 196 Q178 194 158 184 Z"/>
+                <path class="tooth" d="M202 112 Q228 106 254 106 L254 206 Q226 204 204 196 Z"/>
+                <path class="tooth" d="M254 106 Q278 104 300 104 L300 210 Q276 210 254 206 Z"/>
+                <path class="tooth" d="M300 104 Q322 104 346 106 L346 206 Q324 210 300 210 Z"/>
+                <path class="tooth" d="M346 106 Q372 106 398 112 L396 196 Q374 204 346 206 Z"/>
+                <path class="tooth" d="M398 112 Q424 114 446 124 L442 184 Q422 194 396 196 Z"/>
+                <path class="tooth" d="M446 124 Q474 128 482 150 Q468 182 442 184 Z"/>
+              </g>
+              <g fill="url(#fm-shine)" opacity=".8"><path d="M206 116 Q228 110 250 110 L250 150 Q228 148 206 150 Z"/><path d="M304 108 Q324 108 342 110 L342 150 Q324 148 304 150 Z"/></g>
+            </svg>
+          </div>
+          <div class="lab__ctrl">
+            <h3 id="src-q">Pick a common cause</h3>
+            <div class="src" role="radiogroup" aria-labelledby="src-q">
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-s="wine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l-.5 6a4.5 4.5 0 0 1-9 0L7 3ZM12 13.5V21M8.5 21h7"/></svg>Wine</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-s="tea"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9ZM16 11h1.5a2.5 2.5 0 0 1 0 5H16M10 9V5l2-2"/></svg>Tea</button>
+              <button type="button" role="radio" aria-checked="true" data-s="coffee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h12l-1.2 10.2A2 2 0 0 1 13.8 20H8.2a2 2 0 0 1-2-1.8L5 8ZM4 8h14M8 4.5c0 1 1 1 1 2M12 4.5c0 1 1 1 1 2"/></svg>Coffee</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-s="cola"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v2l1 3v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V8l1-3V3ZM7 11h10"/></svg>Cola &amp; soft drinks</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-s="smoking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15h14v4H3zM19 15v4M21 15v4M17 11c0-2 2-2 2-4s-2-2-2-4"/></svg>Smoking</button>
+            </div>
+            <div class="time">
+              <label for="lab-time">Over time <span data-time-label>Months</span></label>
+              <input id="lab-time" type="range" min="0" max="100" value="55" aria-valuetext="Months">
+              <div class="ends" aria-hidden="true"><span>Day one</span><span>Years</span></div>
+            </div>
+            <p class="lab__note">An illustration of how staining builds up, not a prediction for your teeth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOOD NEWS: two routes ============ -->
+    <section class="band band--mint" id="good-news" aria-labelledby="h-good">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-good">Good news. <span class="it">We can help.</span></h2>
+          <div><p class="lede lede--wide">At Beyond 32 Dental, we have a range of teeth whitening treatments to suit your needs and budget.</p><p class="p" style="margin-top:16px">These extend from at-home treatments to specific treatments in the chair for quicker results.</p></div>
+        </div>
+        <div class="routes">
+          <a class="route" href="teeth-whitening.html#options">
+            <span class="route__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9M10 19v-5h4v5"/></svg></span>
+            <b>At home</b>
+            <span>Custom trays and professional gel, used at your own pace.</span>
+            <i>Take-home whitening →</i>
+          </a>
+          <a class="route route--chair" href="zoom-teeth-whitening.html">
+            <span class="route__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M18.4 5.6l-2.1 2.1M3 12h3M18 12h3M8 15a4 4 0 1 1 8 0v2H8v-2ZM7 20h10"/></svg></span>
+            <b>In the chair</b>
+            <span>Specific treatments in the chair, for quicker results.</span>
+            <i>Zoom in-chair whitening →</i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OTHER WAYS ============ -->
+    <section class="band band--white" id="other-ways" aria-labelledby="h-ways">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2" id="h-ways">Other ways to <span class="it">fix your smile</span></h2>
+        </div>
+        <div class="ways">
+          <a class="way" href="veneers.html">
+            <figure><img src="assets/live/veneers/Veneers-1.webp" alt="" loading="lazy" style="object-position:40% 45%"></figure>
+            <div><b>Veneers</b><span>For discolouration that whitening can’t shift, as well as chips and gaps.</span></div>
+          </a>
+          <a class="way" href="crooked-teeth.html">
+            <figure><img src="assets/kid-mirror-opt.jpg" alt="" loading="lazy" style="object-position:45% 40%"></figure>
+            <div><b>Crooked teeth</b><span>Invisalign, clear aligners and braces to straighten your smile.</span></div>
+          </a>
+          <a class="way" href="cosmetic-dentistry.html">
+            <figure><img src="assets/hero-cosmetic.jpg" alt="" loading="lazy" style="object-position:62% 40%"></figure>
+            <div><b>Cosmetic dentistry</b><span>Whitening, veneers, bonding and smile makeovers, all in one guide.</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING MOMENT ============ -->
+    <aside class="moment" aria-labelledby="h-close">
+      <img src="assets/emergency-opt.jpg" alt="" loading="lazy" style="object-position:60% 40%">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="moment__panel">
+          <h2 class="h2" id="h-close" style="font-size:clamp(30px,2.8vw,40px)">Let’s talk about <span class="it">your smile</span></h2>
+          <p class="p">Tell us what you would like to change. We will look at your teeth and talk you through the options that suit your needs and budget.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
+            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="bg-cream" style="padding-block:28px 88px">
+      <div class="container"><p class="final-note">Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p></div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+  <script>
+    (function () {
+      /* Stain lab: tooth colour = enamel mixed toward the chosen stain by the time slider */
+      const BASE = [251, 248, 241];
+      const S = { wine: [176, 128, 128], tea: [205, 160, 96], coffee: [176, 132, 84], cola: [168, 118, 70], smoking: [164, 146, 96] };
+      const NAMES = { wine: "wine", tea: "tea", coffee: "coffee", cola: "cola and soft drinks", smoking: "smoking" };
+      const teeth = [...document.querySelectorAll("[data-teeth] .tooth")];
+      const range = document.getElementById("lab-time");
+      const tLabel = document.querySelector("[data-time-label]");
+      const title = document.querySelector("[data-lab-title]");
+      const btns = [...document.querySelectorAll(".src [role=radio]")];
+      let src = "coffee";
+      const when = (v) => v < 15 ? "Day one" : v < 45 ? "Weeks" : v < 75 ? "Months" : "Years";
+      function paint() {
+        const t = range.value / 100 * .78, c = S[src];
+        const mix = BASE.map((b, i) => Math.round(b + (c[i] - b) * t));
+        teeth.forEach((p, n) => {
+          const k = 1 - Math.abs(n - 3.5) * .025; /* outer teeth a touch darker */
+          p.setAttribute("fill", `rgb(${mix.map((v) => Math.round(v * k)).join(",")})`);
+        });
+        const w = when(+range.value);
+        tLabel.textContent = w; range.setAttribute("aria-valuetext", w);
+        title.textContent = `Illustration of front teeth with ${t < .2 ? "little" : t < .5 ? "light" : "heavier"} staining from ${NAMES[src]}`;
+      }
+      function pick(b, focus) {
+        btns.forEach((x) => { const on = x === b; x.setAttribute("aria-checked", String(on)); x.tabIndex = on ? 0 : -1; });
+        src = b.dataset.s; if (focus) b.focus(); paint();
+      }
+      btns.forEach((b, i) => {
+        b.addEventListener("click", () => pick(b));
+        b.addEventListener("keydown", (e) => {
+          const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+          if (d) { e.preventDefault(); pick(btns[(i + d + btns.length) % btns.length], true); }
+        });
+      });
+      range.addEventListener("input", paint);
+      paint();
+    })();
+  </script>
+</body>
+</html>

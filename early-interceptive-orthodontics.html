@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- URL: https://www.beyond32dental.com.au/early-interceptive-orthodontics/ (existing URL kept). Copy: existing live page copy, lightly corrected. -->
+  <title>Early Interceptive Orthodontics for Children | Pennant Hills | Beyond 32 Dental</title>
+  <meta name="description" content="Start early with interceptive orthodontics to guide your child’s smile development. Learn how timely care prevents future issues and boosts confidence.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/early-interceptive-orthodontics/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Dentist", "@id": "https://www.beyond32dental.com.au/#practice", "name": "Beyond 32 Dental", "url": "https://www.beyond32dental.com.au/", "telephone": "+61291586334", "foundingDate": "2013",
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" } ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "360" } },
+      { "@type": "MedicalWebPage", "url": "https://www.beyond32dental.com.au/early-interceptive-orthodontics/", "name": "Early Interceptive Orthodontics", "inLanguage": "en-AU",
+        "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" },
+        "audience": { "@type": "PeopleAudience", "audienceType": "Parents of children" },
+        "about": { "@type": "MedicalTherapy", "name": "Early interceptive orthodontics", "alternateName": "Interceptive orthodontic treatment for children" } },
+      { "@type": "BreadcrumbList", "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Teeth Straightening" },
+          { "@type": "ListItem", "position": 3, "name": "Early Interceptive Orthodontics" } ] }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==================== Hero ==================== */
+    .eo-hero .s-hero__img { aspect-ratio: 5 / 5.2; }
+    .eo-hero .s-hero__img img { object-position: 40% 50%; }
+    .eo-hero .lede { max-width: 34ch; }
+
+    /* ==================== Effects of the jaw ==================== */
+    .effects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: clamp(48px, 5vw, 72px); }
+    .effects li { padding: 26px; border-radius: var(--r-lg); background: var(--white); }
+    .effects svg { width: 64px; height: 64px; color: var(--ink); }
+    .effects b { display: block; margin-top: 16px; font-size: 20px; font-weight: 500; color: var(--ink); }
+    @media (max-width: 760px) { .effects { grid-template-columns: 1fr; } .effects li { display: flex; align-items: center; gap: 18px; padding: 18px 20px; } .effects svg { width: 48px; height: 48px; flex: none; } .effects b { margin: 0; } }
+    .signs { margin-top: clamp(48px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+    .signs .chips li { background: var(--cream); border-color: transparent; }
+    @media (max-width: 860px) { .signs { grid-template-columns: 1fr; } }
+
+    /* ==================== Growth timeline ==================== */
+    .grow-wrap { position: relative; }
+    .grow { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: start; }
+    .grow__curve { position: absolute; left: 0; top: 0; width: 100%; height: 210px; overflow: visible; pointer-events: none; }
+    .grow li { position: relative; padding: 26px 24px 28px; border-radius: var(--r-lg); background: var(--cream); }
+    .grow li:nth-child(1) { margin-top: 210px; } .grow li:nth-child(2) { margin-top: 140px; } .grow li:nth-child(3) { margin-top: 70px; }
+    .grow li.is-key { background: var(--ink); }
+    .grow__age { display: block; font-family: var(--serif); font-style: italic; font-size: clamp(40px, 3.6vw, 54px); line-height: 1; color: var(--ink); }
+    .grow__age small { font-size: .5em; }
+    .grow b { display: block; margin-top: 14px; font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .grow .p { margin-top: 8px; font-size: 16px; line-height: 1.6; }
+    .grow li.is-key .grow__age { color: #f0dbb0; }
+    .grow li.is-key b { color: #fff; }
+    .grow li.is-key .p { color: var(--foot-text); }
+    .grow__dot { position: absolute; left: 24px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold-line); box-shadow: 0 0 0 5px var(--white); }
+    @media (max-width: 960px) {
+      .grow { grid-template-columns: 1fr; gap: 12px; padding-left: 28px; }
+      .grow::before { content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 2px; background: var(--mint-line); }
+      .grow__curve { display: none; }
+      .grow li:nth-child(n) { margin-top: 0; }
+      .grow__dot { left: -29px; top: 30px; }
+    }
+
+    /* ==================== Statement band ==================== */
+    .over { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(36px, 6vw, 104px); align-items: center; }
+    .over .pull-quote { max-width: 16ch; font-size: clamp(38px, 4.6vw, 68px); }
+    .over__img { border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 4.4; }
+    .over__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+    @media (max-width: 860px) { .over { grid-template-columns: 1fr; } .over__img { aspect-ratio: 4 / 3; } }
+
+    /* ==================== Orthodontics family strip (shared look across the four orthodontic pages) ==================== */
+    .ofam { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .ofam a { display: flex; flex-direction: column; gap: 10px; min-height: 210px; padding: 22px; border-radius: var(--r); background: var(--white); color: var(--ink); text-decoration: none; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+    .ofam a:hover { transform: translateY(-4px); box-shadow: 0 18px 30px -18px rgba(20,64,62,.45); }
+    .ofam svg { width: 44px; height: 44px; color: var(--teal); margin-bottom: 8px; }
+    .ofam b { font-size: 20px; font-weight: 500; line-height: 1.2; letter-spacing: -0.005em; }
+    .ofam span { font-size: 15px; line-height: 1.45; color: var(--teal); }
+    .ofam em { margin-top: auto; padding-top: 8px; font-style: normal; font-size: 15px; font-weight: 600; }
+    .ofam a:hover em { text-decoration: underline; text-decoration-color: var(--gold-line); text-underline-offset: 3px; }
+    .ofam-band { padding-bottom: calc(clamp(80px, 9vw, 136px) + 60px); }
+    @media (max-width: 1000px) { .ofam { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .ofam { grid-template-columns: 1fr; } .ofam a { min-height: 0; } }
+  </style>
+</head>
+<body data-page="service" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ihero s-hero eo-hero" aria-labelledby="eo-h1" data-hero>
+      <div class="container">
+        <div class="s-hero__grid">
+          <div>
+            <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li>Teeth Straightening</li><li aria-current="page">Early Interceptive Orthodontics</li></ol></nav>
+            <h1 class="h1" id="eo-h1">Early interceptive <span class="it">orthodontics</span></h1>
+            <p class="lede">At Beyond 32 Dental, our child-friendly team strives to give your child a positive dental experience by making visits both interactive and fun.</p>
+            <div class="btn-row" style="margin-top:36px">
+              <a class="btn btn--gold btn--lg" href="contact.html#enquire">Book Online</a>
+              <a class="btn btn--outline btn--lg" href="tel:+61291586334">Call (02) 9158 6334</a>
+            </div>
+          </div>
+          <figure class="s-hero__img">
+            <img src="assets/live/early-interceptive-orthodontics/eio-hero.webp" alt="Our dentist showing two young sisters how to brush on a model of teeth, in a Beyond 32 Dental treatment room" width="1920" height="800">
+            <figcaption class="s-hero__badge"><img src="assets/google.svg" alt="">5.0 from 360+ Google reviews</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREVENTION ============ -->
+    <section class="band band--white" aria-labelledby="h-prevent">
+      <div class="container split split--center">
+        <figure class="photo photo--tall" style="max-width:460px">
+          <img src="assets/live/early-interceptive-orthodontics/eio-b32.webp" alt="A young patient in heart-shaped sunglasses smiling in the chair while our dentist paints on fluoride" loading="lazy" width="496" height="620">
+          <figcaption>Interactive, and fun</figcaption>
+        </figure>
+        <div>
+          <h2 class="h2" id="h-prevent">Prevention is better <span class="it">than cure</span></h2>
+          <p class="lede lede--wide" style="margin-top:24px">That’s why we recommend children visit us for regular 6-monthly check-ups from as early as 2 years of age.</p>
+          <div class="prose" style="margin-top:20px">
+            <p>Not only will this help foster a positive attitude towards coming to the dentist, regular attendance will help your child develop good oral hygiene habits that they can continue into adulthood.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE JAW ============ -->
+    <section class="band band--mint" id="jaw" aria-labelledby="h-jaw">
+      <div class="container">
+        <div class="intro-grid">
+          <h2 class="statement" id="h-jaw">Orthodontics means moving teeth. But what’s more important is the jaws, <em>the foundation of all teeth.</em></h2>
+          <div class="prose">
+            <p>Why? If the position, shape and size of the jaw is wrong, it will not only cause crooked teeth, but also have a significant adverse effect on the airway and jaw joints.</p>
+          </div>
+        </div>
+        <ul class="effects" aria-label="What jaw development affects">
+          <li>
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="20" width="13" height="24" rx="6" transform="rotate(-12 15.5 32)"/><rect x="25.5" y="18" width="13" height="26" rx="6"/><rect x="42" y="20" width="13" height="24" rx="6" transform="rotate(16 48.5 32)"/><path d="M6 52h52" stroke-dasharray="2 4"/></svg>
+            <b>Crooked teeth</b>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 22c8-6 16-6 22 0s14 6 22 0M10 34c8-6 16-6 22 0s14 6 22 0M10 46c8-6 16-6 22 0s14 6 22 0"/></svg>
+            <b>The airway</b>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14c-4 10-4 22 2 30 5 7 14 10 24 10h10"/><circle cx="18" cy="16" r="6"/><path d="M28 50c2-8 10-12 22-12"/></svg>
+            <b>The jaw joints</b>
+          </li>
+        </ul>
+        <div class="signs">
+          <h3 class="h3x">Signs that can come with an obstructed airway</h3>
+          <div>
+            <p class="p" style="max-width:56ch">It is not uncommon to find kids (or even adults!) with an obstructed airway who experience excessive daytime sleepiness, poor concentration, decreased learning ability, bed wetting, and the list goes on.</p>
+            <ul class="chips" style="margin-top:22px" aria-label="Signs">
+              <li>Excessive daytime sleepiness</li><li>Poor concentration</li><li>Decreased learning ability</li><li>Bed wetting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHEN TO BRING THEM IN (authored moment) ============ -->
+    <section class="band band--white" id="when" aria-labelledby="h-when">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-when">When to <span class="it">bring them in</span></h2>
+          <p class="lede lede--wide">We encourage all parents to bring their kids to our surgery as early as possible, to identify any functional problems that affect jaw development.</p>
+        </div>
+        <div class="grow-wrap" data-reveal>
+          <svg class="grow__curve" viewBox="0 0 1000 210" preserveAspectRatio="none" aria-hidden="true"><path d="M0 218 L30 210 L280 140 L530 70 L780 0 L1000 -62" fill="none" stroke="#b8e8e6" stroke-width="2" stroke-dasharray="4 8" vector-effect="non-scaling-stroke"/></svg>
+          <ol class="grow">
+          <li><span class="grow__dot" aria-hidden="true"></span><span class="grow__age">2<small> yrs</small></span><b>First check-ups</b><p class="p">Regular 6-monthly check-ups, from as early as 2 years of age.</p></li>
+          <li class="is-key"><span class="grow__dot" aria-hidden="true"></span><span class="grow__age">7<small> yrs</small></span><b>The golden time</b><p class="p">Age 7 is the golden time for an orthodontic assessment.</p></li>
+          <li><span class="grow__dot" aria-hidden="true"></span><span class="grow__age">Before</span><b>The growth spurt</b><p class="p">If treatment is required and started before the growth spurt, we can guide jaw development with oral appliances.</p></li>
+          <li><span class="grow__dot" aria-hidden="true"></span><span class="grow__age">Later</span><b>Straightening, made easier</b><p class="p">That makes teeth straightening (if required) much easier later down the track.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="band band--ink on-ink" aria-labelledby="h-over">
+      <div class="container over">
+        <div>
+          <h2 class="pull-quote" id="h-over">The days of “wait till all the adult teeth come out” are over!</h2>
+          <p class="p" style="margin-top:28px;max-width:44ch">Call us on (02) 9158 6334 for further information. For a professional and friendly dental experience, book an appointment today.</p>
+          <div class="btn-row" style="margin-top:32px">
+            <a class="btn btn--gold" href="contact.html#enquire">Book Online Today</a>
+            <a class="btn btn--ghost" href="tel:+61291586334">Call (02) 9158 6334</a>
+          </div>
+        </div>
+        <figure class="over__img"><img src="assets/girl-smile-opt.jpg" alt="Young girl holding a photo frame up to her big smile" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- ============ ORTHODONTICS FAMILY ============ -->
+    <section class="band band--mint ofam-band" aria-labelledby="h-ofam">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-ofam">Straightening options <span class="it">for later on</span></h2>
+          <p class="p" style="max-width:46ch">For older children, teens and adults, these are the ways we straighten teeth.</p>
+        </div>
+        <nav class="ofam" aria-label="Teeth straightening treatments">
+          <a href="invisalign.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14c2 22 30 22 32 0"/><path d="M13 14c2 14 20 14 22 0"/><path d="M8 14h5M35 14h5"/></svg>
+            <b>Invisalign</b><span>Clear, removable aligners, from a Gold+ Invisalign provider.</span><em>Invisalign →</em></a>
+          <a href="damon-braces.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="15" width="18" height="18" rx="4"/><path d="M4 24h11M33 24h11M19 15v-3h10v3M19 33v3h10v-3"/></svg>
+            <b>Damon Braces</b><span>A low-friction, low force system that moves teeth in a more biologically sensitive way.</span><em>Damon braces →</em></a>
+          <a href="inman-aligner.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18c4 14 28 14 32 0M13 18c3 9 19 9 22 0"/><path d="M6 14l4 2M42 14l-4 2M24 31v-5M24 21v-4"/></svg>
+            <b>Inman Aligner</b><span>A simple removable appliance used to align front teeth quickly and safely.</span><em>Inman Aligner →</em></a>
+          <a href="crooked-teeth.html">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="16" width="10" height="16" rx="4" transform="rotate(-10 12 24)"/><rect x="19" y="14" width="10" height="18" rx="4"/><rect x="31" y="16" width="10" height="16" rx="4" transform="rotate(14 36 24)"/></svg>
+            <b>Crooked Teeth</b><span>Compare every option side by side, from Invisalign to lingual braces.</span><em>Compare options →</em></a>
+        </nav>
+        <p class="final-note">The information on this page is general in nature and is not a substitute for an examination. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-14T04:02:22.481Z",
+        "reason": "agent decision: homepage Figma specifies Natural Comforts Italic (not on Google Fonts); Instrument Serif is only its web fallback in the font stack"
+      },
+      {
+        "rule": "marketing-buzzword",
+        "value": "cutting-edge",
+        "createdAt": "2026-10-15T03:43:51.387Z",
+        "reason": "agent decision: phrase is the client's own live copy on /dental-implant/ (pages reuse existing copy verbatim); flag for the client's SEO writer instead"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "dental-implant.html"
+        ],
+        "createdAt": "2026-10-15T03:44:38.407Z",
+        "reason": "agent decision: L55 is the design system's standard offset elevation shadow (0 40px 80px -48px, ink-tinted) on a cream panel, used site-wide; not a zero-offset glow"
+      }
+    ]
+  }
+}
