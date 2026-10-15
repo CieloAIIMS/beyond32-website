@@ -3,56 +3,638 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inner Pages | Beyond 32 Dental</title>
+  <!-- Homepage, built from Figma "Website (2026)" node 4379:179 -->
+  <title>Dentist Pennant Hills | Warm, Unhurried Family Dental Care | Beyond 32 Dental</title>
+  <meta name="description" content="Your Pennant Hills dentist for warm, unhurried care. A husband and wife team looking after Hills District smiles since 2013. General, cosmetic, teeth straightening and implants. Call (02) 9158 6334.">
+  <link rel="canonical" href="https://www.beyond32dental.com.au/">
+  <meta property="og:title" content="Beyond 32 Dental | Your Pennant Hills Dentist">
+  <meta property="og:description" content="A husband and wife team who's been looking after Hills District smiles for over a decade.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/service.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Dentist",
+        "@id": "https://www.beyond32dental.com.au/#practice",
+        "name": "Beyond 32 Dental",
+        "url": "https://www.beyond32dental.com.au/",
+        "telephone": "+61291586334",
+        "foundingDate": "2013",
+        "founder": [{ "@type": "Person", "name": "Dr Jeff Lin" }, { "@type": "Person", "name": "Dr Jennifer Chung" }],
+        "address": { "@type": "PostalAddress", "streetAddress": "1st Floor, 114 Yarrara Road", "addressLocality": "Pennant Hills", "addressRegion": "NSW", "postalCode": "2120", "addressCountry": "AU" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
+        ],
+        "areaServed": ["Pennant Hills", "Cherrybrook", "Castle Hill", "Glenhaven", "Thornleigh", "Dural", "Westleigh", "Beecroft"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "360" }
+      },
+      { "@type": "WebSite", "url": "https://www.beyond32dental.com.au/", "name": "Beyond 32 Dental", "publisher": { "@id": "https://www.beyond32dental.com.au/#practice" } }
+    ]
+  }
+  </script>
+
   <style>
-    .hub { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
-    .hub a { display: flex; flex-direction: column; gap: 14px; text-decoration: none; background: var(--white); border-radius: var(--r); padding: 16px; transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out); }
-    .hub a:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -28px rgba(20,64,62,.6); }
-    .hub .media { aspect-ratio: 4/3; }
-    .hub p { color: var(--teal); font-size: 15px; }
-    @media (max-width: 900px) { .hub { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 520px) { .hub { grid-template-columns: 1fr; } }
-      .hub-index { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; margin-top: 64px; }
-    .hub-group ul { margin-top: 14px; border-top: 1px solid var(--hairline); }
-    .hub-group a { display: flex; justify-content: space-between; padding: 12px 2px; border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
-    .hub-group a:hover { color: var(--teal); }
-    .hub-group a span { transition: transform .3s var(--ease-out); }
-    .hub-group a:hover span { transform: translateX(4px); }
-    @media (max-width: 900px) { .hub-index { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .hub-index { grid-template-columns: 1fr; } }
+    /* ==================== Hero ==================== */
+    .home-hero { position: relative; min-height: clamp(640px, calc(100svh - var(--hh)), 820px); overflow: hidden; isolation: isolate; display: flex; align-items: center; background: linear-gradient(189deg, #d8eeed 14%, #14403e 89%); }
+    .home-hero__photo { position: absolute; inset: 0; z-index: -2; }
+    .home-hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 32%; }
+    .home-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(255,247,242,.78) 0%, rgba(255,247,242,.5) 34%, rgba(255,247,242,0) 58%); }
+    .home-hero__inner { position: relative; padding-block: clamp(64px, 7vw, 104px); }
+    .home-hero .subtitle { font-size: 17px; }
+    .home-hero h1 { margin-top: 10px; font-size: clamp(48px, 5vw, 72px); font-weight: 500; line-height: 1; letter-spacing: -0.028em; color: var(--ink); }
+    .home-hero__shine { position: absolute; right: clamp(16px, 13vw, 200px); top: calc(clamp(64px, 7vw, 104px) + 34px); font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(56px, 5.4vw, 80px); color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+    .home-hero__desc { margin-top: 22px; max-width: 22em; font-size: 17px; line-height: 1.6; color: var(--ink); }
+    .home-hero__pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; max-width: 520px; }
+    .home-hero__pills .btn { --_bd: rgba(255,255,255,.4); }
+    .award-chip { display: inline-flex; align-items: center; gap: 10px; margin-top: clamp(48px, 7vw, 72px); padding: 10px 16px 10px 12px; background: rgba(255,255,255,.4); backdrop-filter: blur(6px); border-radius: var(--r-sm); color: var(--ink); font-size: 14px; line-height: 1.15; }
+    .award-chip img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .award-chip b { display: block; font-weight: 600; }
+    @media (max-width: 860px) {
+      .home-hero { align-items: flex-start; min-height: 0; }
+      .home-hero__photo img { object-position: 66% 30%; }
+      .home-hero::before { background: linear-gradient(180deg, rgba(255,247,242,.85) 0%, rgba(255,247,242,.6) 48%, rgba(255,247,242,.1) 80%); }
+      .home-hero__shine { position: static; display: inline; font-size: inherit; }
+      .home-hero__inner { padding-bottom: 260px; }
+    }
+
+    /* ==================== About intro ==================== */
+    .intro2 { display: grid; grid-template-columns: minmax(0, 540fr) minmax(0, 560fr); gap: clamp(32px, 5vw, 60px); align-items: start; }
+    .intro2__img { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 540 / 375; }
+    .intro2__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+    .intro2__img .btn { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); }
+    .intro2__img .btn:hover { transform: translateX(-50%) translateY(-1px); }
+    .intro2 h2 { font-size: clamp(26px, 2.2vw, 30px); font-weight: 500; line-height: 1.2; color: var(--ink); max-width: 18em; }
+    .intro2 .prose { margin-top: 22px; }
+    .intro2 .prose p { font-size: 15.5px; color: var(--ink); }
+    @media (max-width: 860px) { .intro2 { grid-template-columns: minmax(0, 1fr); } }
+
+    /* ==================== Horizontal card rails ==================== */
+    .rail-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+    .rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; --pad: calc((100% - min(var(--container), 100% - 2 * var(--gutter))) / 2); padding: 4px var(--pad) 12px; scroll-padding-inline: var(--pad); }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail > * { flex: 0 0 auto; scroll-snap-align: start; }
+    .rail-ctrl { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .round { width: 47px; height: 47px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; color: var(--ink); display: grid; place-items: center; transition: background .25s, color .25s; }
+    .round:hover { background: var(--ink); color: #fff; }
+    .round svg { width: 18px; height: 18px; }
+
+    /* Why choose */
+    .why-card { width: min(457px, 84vw); min-height: 490px; border-radius: var(--r); background: var(--cream); padding: 20px; display: flex; flex-direction: column; justify-content: flex-end; gap: 28px; position: relative; overflow: hidden; }
+    .why-card--photo { background: var(--cream-2); justify-content: flex-start; }
+    .why-card--photo img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 62%; object-fit: cover; object-position: 50% 20%; }
+    .why-card--photo h3 { position: relative; z-index: 1; font-size: clamp(30px, 2.8vw, 40px); font-weight: 500; line-height: 1; max-width: 8em; padding: 26px 26px 0; color: var(--ink); }
+    .why-card__icon { position: absolute; left: 20px; top: 22px; width: 141px; height: 143px; display: grid; place-items: start; }
+    .why-card__icon img { width: 88px; height: auto; }
+    .why-card h3.t { font-size: 30px; font-weight: 500; line-height: 1.15; color: var(--ink); max-width: 10em; }
+    .why-card p { margin-top: 10px; color: var(--teal); font-size: 17px; line-height: 1.55; }
+    .why-card .btn { align-self: flex-start; }
+
+    /* ==================== First visit ==================== */
+    .fv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+    .fv__img { position: relative; border-radius: var(--r-sm); overflow: hidden; min-height: 520px; background: var(--mint-2); }
+    .fv__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+    .fv__steps { display: grid; gap: 20px; }
+    .fv__step { background: var(--mint-2); border-radius: var(--r-sm); padding: 28px; }
+    .fv__step h3 { font-size: clamp(21px, 1.8vw, 25px); font-weight: 500; line-height: 1.2; color: var(--ink); }
+    .fv__step p { margin-top: 14px; color: var(--ink); line-height: 1.6; }
+    @media (max-width: 900px) { .fv { grid-template-columns: minmax(0, 1fr); } .fv__img { min-height: 340px; } }
+
+    /* ==================== Nervous ==================== */
+    .nerv { position: relative; overflow: hidden; isolation: isolate; padding: clamp(80px, 7vw, 96px) 0 clamp(64px, 6vw, 96px); min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; }
+    .nerv > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
+    .nerv::before { content: ""; position: absolute; z-index: -1; left: -20%; top: -25%; width: 85%; height: 95%; background: radial-gradient(closest-side, rgba(255,247,242,.95), rgba(255,247,242,.75) 55%, rgba(255,247,242,0)); }
+    .nerv h2 { max-width: 11.5em; }
+    .nerv .lead { margin-top: 14px; max-width: 24em; color: var(--teal); }
+    .nerv .btn { margin-top: 32px; }
+    .nerv__cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; }
+    .nerv__cards div { background: var(--mint); border: 1px solid var(--mint-line); border-radius: var(--r); padding: 20px; min-height: 246px; }
+    .nerv__cards h3 { font-size: 25px; font-weight: 500; line-height: 1.15; color: var(--ink); max-width: 7em; }
+    .nerv__cards p { margin-top: 10px; color: var(--teal); line-height: 1.55; }
+    @media (max-width: 960px) { .nerv__cards { grid-template-columns: 1fr 1fr; } .nerv { min-height: 0; } }
+    @media (max-width: 600px) {
+      .nerv__cards { grid-template-columns: 1fr; margin-top: 260px; }
+      .nerv__cards div { min-height: 0; }
+      .nerv::before { left: -40%; width: 180%; height: 70%; }
+    }
+
+    /* ==================== Services ==================== */
+    .svc-panel { background: var(--mint); border-radius: var(--r-lg); padding: clamp(28px, 4.5vw, 53px) clamp(20px, 4.5vw, 65px) clamp(28px, 4.5vw, 64px); }
+    .svc-panel + .svc-panel { margin-top: 20px; }
+    .svc-panel__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 52px); }
+    .svc-panel__head h3 { font-size: clamp(32px, 3.1vw, 44px); font-weight: 400; letter-spacing: -0.034em; line-height: 1; color: var(--ink); }
+    .svc-panel__head p { margin-top: 12px; font-size: clamp(17px, 1.4vw, 20px); color: var(--teal); max-width: 28em; }
+    .svc-grid { display: grid; gap: 20px; }
+    .svc-grid--4 { grid-template-columns: repeat(4, 1fr); }
+    .svc-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .svc-grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .svc-grid--cos { grid-template-columns: 3fr 1fr; }
+    .svc-card { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 317px; padding: 22px; background: #fff; border-radius: var(--r); text-decoration: none; color: var(--ink); overflow: hidden; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+    .svc-grid--2 .svc-card { min-height: 253px; }
+    a.svc-card:hover { transform: translateY(-4px); box-shadow: 0 20px 34px -24px rgba(20,64,62,.5); }
+    .svc-card__img { position: absolute; left: 16px; top: 20px; height: 98px; width: auto; max-width: 150px; object-fit: contain; mix-blend-mode: multiply; }
+    .svc-card h4 { font-size: 25px; font-weight: 500; line-height: 1.2; max-width: 9em; }
+    .svc-card p { margin-top: 12px; color: var(--teal); font-size: 17px; line-height: 1.55; max-width: 16em; }
+    .svc-card .go { position: absolute; right: 18px; top: 18px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(20,64,62,.25); display: grid; place-items: center; transition: background .25s, color .25s; }
+    .svc-card .go svg { width: 14px; height: 14px; }
+    a.svc-card:hover .go { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .ven { display: grid; grid-template-columns: 250px 1fr; padding: 0; }
+    .ven__main { padding: 22px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; }
+    .ven__types { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 32px 36px 30px; align-items: end; }
+    .ven__types figure img { width: 100%; max-width: 160px; height: 80px; object-fit: cover; border-radius: 8px; }
+    .ven__types b { display: block; margin-top: 16px; font-weight: 700; color: var(--teal); }
+    .ven__types span { display: block; color: var(--teal); font-size: 16px; line-height: 1.5; }
+    .aligner-img { position: absolute; left: 0; top: -10px; width: 214px; }
+    @media (max-width: 1060px) { .svc-grid--4 { grid-template-columns: 1fr 1fr; } .svc-grid--cos { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .svc-grid--3, .svc-grid--2 { grid-template-columns: 1fr; } .ven { grid-template-columns: 1fr; } .ven__main { min-height: 260px; } }
+    @media (max-width: 560px) { .svc-grid--4 { grid-template-columns: 1fr; } .ven__types { grid-template-columns: 1fr 1fr; padding: 22px; } }
+
+    .concerns-panel { margin-top: 20px; border-radius: 24px; background: linear-gradient(180deg, #d8eeed 32%, #14403e 100%); padding: clamp(48px, 5vw, 68px) 24px clamp(48px, 5vw, 72px); text-align: center; }
+    .concerns-panel h3 { font-size: clamp(36px, 3.4vw, 48px); font-weight: 400; letter-spacing: -0.04em; color: var(--ink); }
+    .concerns-panel ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 480px; margin: 32px auto 0; }
+    .concerns-panel a { display: inline-flex; align-items: center; height: 54px; padding: 0 27px; border-radius: 48px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(20px); color: #fff; font-size: 18px; text-decoration: none; transition: background .25s; }
+    .concerns-panel li:nth-child(-n+3) a { color: var(--ink); background: rgba(255,255,255,.5); border-color: rgba(255,255,255,.7); }
+    .concerns-panel a:hover { background: rgba(255,255,255,.28); }
+
+    /* ==================== Gallery rail ==================== */
+    .ba-card { width: 360px; background: var(--mint); border: 1px solid var(--mint-line); border-radius: var(--r); padding: 22px; text-decoration: none; color: var(--ink); }
+    .ba-card__pair { border-radius: 12px; overflow: hidden; }
+    .ba-card__pair figure { position: relative; aspect-ratio: 311 / 144; overflow: hidden; background: #fff; }
+    .ba-card__pair img { width: 100%; height: 100%; object-fit: cover; }
+    .ba-card__pair figcaption { position: absolute; left: 10px; top: 10px; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: rgba(0,0,0,.28); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .ba-card h3 { margin-top: 20px; font-size: 20px; font-weight: 500; }
+    .ba-card p { margin-top: 6px; }
+    .ba-card small { display: block; margin-top: 4px; font-size: 15px; font-weight: 300; }
+    @media (max-width: 560px) { .ba-card { width: 82vw; } }
+
+    /* ==================== Emergency spotlight ==================== */
+    .spot { position: relative; overflow: hidden; isolation: isolate; padding: clamp(120px, 12vw, 183px) 16px; display: grid; place-items: center; }
+    .spot > img { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+    .spot__panel { width: min(800px, 100%); background: rgba(255,247,242,.82); backdrop-filter: blur(6px); border-radius: var(--r-lg); padding: clamp(36px, 4vw, 52px) clamp(24px, 4.5vw, 64px); text-align: center; }
+    .spot__panel p { margin: 22px auto 0; max-width: 36em; color: var(--teal); line-height: 1.6; }
+    .spot__panel .btn-row { justify-content: center; margin-top: 36px; }
+
+    /* ==================== Health funds ==================== */
+    .funds { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
+    .fund { width: 148px; height: 103px; border-radius: 8px; overflow: hidden; background: #d5d5d5; }
+    .fund img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ==================== Reviews ==================== */
+    .g-sum { display: inline-flex; align-items: center; gap: 12px; padding: 16px 20px; border: 1px solid rgba(20,64,62,.5); border-radius: 8px; color: var(--ink); text-decoration: none; }
+    .g-sum img { width: 27px; height: 27px; }
+    .g-sum b { font-size: 20px; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 2px; }
+    .g-sum b svg { width: 16px; height: 16px; fill: var(--star); }
+    .g-sum i { width: 1px; height: 25px; background: rgba(20,64,62,.5); }
+    .rv-feat { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .rv { background: var(--mint-2); border-radius: var(--r-sm); padding: 28px; display: flex; flex-direction: column; gap: 14px; color: var(--ink); }
+    .rv h3 { font-size: clamp(21px, 1.8vw, 25px); font-weight: 500; line-height: 1.2; max-width: 19em; }
+    .rv p { font-size: 15px; line-height: 1.6; }
+    .rv p + p { margin-top: 0; }
+    .rv .stars { display: flex; gap: 2px; margin-top: auto; }
+    .rv .stars svg { width: 16px; height: 16px; fill: var(--star); }
+    .rv cite { font-style: normal; font-weight: 700; font-size: 17px; }
+    .rv--sm { width: 360px; padding: 20px 24px; }
+    .rv--sm img.q { width: 32px; height: 32px; }
+    .rv--sm cite { font-size: 14px; }
+    .videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 60px; }
+    .video { position: relative; aspect-ratio: 592 / 334; border-radius: var(--r); overflow: hidden; background: #000; border: 0; padding: 0; cursor: pointer; }
+    .video img, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+    .video:focus-visible { outline: 2px solid var(--gold-line); outline-offset: 4px; }
+    @media (max-width: 860px) { .rv-feat, .videos { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) { .rv--sm { width: 82vw; } }
+
+    /* ==================== Team ==================== */
+    .members { position: relative; display: flex; align-items: center; gap: 24px; }
+    .members p { font-size: 18px; color: var(--ink); }
+    .deck { position: relative; width: 160px; height: 100px; }
+    .deck span { position: absolute; left: 0; top: 0; width: 125px; height: 87px; border-radius: 7px; display: grid; place-items: center; box-shadow: 0 6px 14px -8px rgba(0,0,0,.4); transition: transform .5s var(--ease-out); }
+    .deck span img { max-width: 72%; max-height: 50%; }
+    .deck span:nth-child(1) { transform: translate(6px, 0); }
+    .deck span:nth-child(2) { transform: translate(4.5px, 1.7px); }
+    .deck span:nth-child(3) { transform: translate(3px, 3.4px); }
+    .deck span:nth-child(4) { transform: translate(1.5px, 5px); }
+    .deck span:nth-child(5) { transform: translate(0, 6.7px); }
+    .deck:hover span:nth-child(1), .deck:focus-within span:nth-child(1) { transform: translate(-120px, -10px) rotate(-8deg); }
+    .deck:hover span:nth-child(2), .deck:focus-within span:nth-child(2) { transform: translate(-60px, -4px) rotate(-4deg); }
+    .deck:hover span:nth-child(4), .deck:focus-within span:nth-child(4) { transform: translate(60px, 8px) rotate(4deg); }
+    .deck:hover span:nth-child(5), .deck:focus-within span:nth-child(5) { transform: translate(120px, 14px) rotate(8deg); }
+    .doc { width: min(457px, 84vw); background: #fff; border-radius: var(--r); padding: 20px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--ink); }
+    .doc__img { position: relative; height: 257px; border-radius: var(--r); overflow: hidden; background: linear-gradient(to bottom, #fff, var(--cream-2) 73%); }
+    .doc__img img { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); height: 92%; width: auto; max-width: none; transition: transform .7s var(--ease-out); }
+    .doc:hover .doc__img img { transform: translateX(-50%) scale(1.03); transform-origin: bottom; }
+    .doc h3 { font-size: 25px; font-weight: 500; }
+    .doc p { color: var(--teal); line-height: 1.55; }
+    .doc .more { margin-top: auto; padding-top: 12px; font-weight: 600; color: var(--teal); }
+    .doc--local { background: linear-gradient(124deg, #f8ffff 22%, var(--mint) 86%); padding: 36px; justify-content: space-between; }
+    .doc--local h3 { max-width: 9em; }
+    .doc--local p { font-size: 18px; margin-top: 18px; }
+
+    /* ==================== FAQ ==================== */
+    .home-faq { background: #fff; border-radius: var(--r-lg); padding: clamp(28px, 3vw, 40px) clamp(24px, 4.6vw, 66px); display: grid; grid-template-columns: minmax(0, 386px) minmax(0, 1fr); gap: clamp(32px, 10vw, 152px); }
+    .home-faq h2 { font-size: clamp(34px, 3.1vw, 44px); font-weight: 400; line-height: 1.04; letter-spacing: -0.034em; }
+    .home-faq .lead { margin-top: 14px; font-size: 18px; }
+    .home-faq .faq summary { padding: 12px; font-size: 17px; }
+    .home-faq .faq details > div { padding: 0 40px 18px 12px; }
+    .home-faq .faq details { border-bottom: 1px solid var(--hairline); }
+    @media (max-width: 860px) { .home-faq { grid-template-columns: minmax(0, 1fr); } }
+
+    /* ==================== Family close ==================== */
+    .family { position: relative; text-align: center; padding-top: clamp(96px, 9vw, 132px); background: #f2ece6; overflow: hidden; }
+    .family .h2 { max-width: 12em; margin-inline: auto; }
+    .family .lead { margin: 12px auto 0; max-width: 17em; }
+    .family .btn { margin-top: 28px; }
+    .family__img { display: block; width: min(760px, 100%); margin: 40px auto 0; height: auto; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); transform: rotate(-2.6deg); margin-bottom: -60px; }
   </style>
 </head>
-<body data-page="home" data-footer="compact">
+<body data-page="home" data-footer="full" class="svc">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header data-site-header></header>
-  <main class="ihero" style="min-height:70vh">
-    <div class="container">
-      <h1 class="h1">Inner pages, <span class="it">ready for review</span></h1>
-      <p class="lead">The homepage lives in Figma. These 31 pages extend its design system.</p>
-      <div class="hub">
-        <a href="about.html"><div class="media"><img src="assets/founders-opt.jpg" alt="" style="object-position:50% 30%"></div><h2 class="h4">About Us</h2><p>Story, approach, team and trust.</p></a>
-        <a href="gallery.html"><div class="media"><img src="assets/ba-2-after.jpg" alt=""></div><h2 class="h4">Smile Gallery</h2><p>Before &amp; after cases and the practice.</p></a>
-        <a href="contact.html"><div class="media"><img src="assets/practice-opt.jpg" alt=""></div><h2 class="h4">Contact Us</h2><p>Call, book, email, visit.</p></a>
-        <a href="emergency-dental-care.html"><div class="media"><img src="assets/emergency-opt.jpg" alt=""></div><h2 class="h4">Emergency Dental Care</h2><p>Fast, calm, action-first.</p></a>
-        <a href="general-dentistry-check-up-and-clean.html"><div class="media"><img src="assets/kid-mirror-opt.jpg" alt=""></div><h2 class="h4">Check Up &amp; Clean</h2><p>First service page: General Dentistry.</p></a>
-        <a href="cosmetic-dentistry.html"><div class="media"><img src="assets/hero-woman-opt.jpg" alt="" style="object-position:62% 30%"></div><h2 class="h4">Cosmetic Dentistry</h2><p>Whitening, veneers, bonding, makeovers.</p></a>
-        <a href="broken-teeth.html"><div class="media"><img src="assets/ba-4-before.jpg" alt=""></div><h2 class="h4">Broken Teeth</h2><p>What to do now, how urgent, how we fix it.</p></a>
-        <a href="crooked-teeth.html"><div class="media"><img src="assets/hero-woman-opt.jpg" alt="" style="object-position:55% 30%"></div><h2 class="h4">Crooked Teeth</h2><p>Spotlight hero and treatment explorer.</p></a>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="home-hero" data-hero aria-labelledby="home-h1">
+      <div class="home-hero__photo" aria-hidden="true"><img src="assets/hero-woman-opt.jpg" alt=""></div>
+      <div class="container home-hero__inner">
+        <p class="subtitle">Your Pennant Hills Dentist for Warm, Unhurried Care</p>
+        <h1 id="home-h1">Let your smile <span class="home-hero__shine">shine</span></h1>
+        <p class="home-hero__desc">A husband and wife team who’s been looking after Hills District smiles for over a decade.</p>
+        <nav class="home-hero__pills" aria-label="Our services">
+          <a class="btn btn--teal" href="general-dentistry-check-up-and-clean.html">General Dentistry</a>
+          <a class="btn btn--ink" href="cosmetic-dentistry.html">Cosmetic Dentistry</a>
+          <a class="btn btn--ink" href="crooked-teeth.html">Teeth Straightening</a>
+          <a class="btn btn--ink" href="dental-implant.html">Dental Implant and All-On-X</a>
+        </nav>
+        <p class="award-chip"><img src="assets/award-local.png" alt=""><span><b>Award-winning</b>Recognised across Hornsby &amp; Ku-ring-gai</span></p>
       </div>
-      <div class="hub-index">
-        <section class="hub-group"><h2 class="h4">Core pages</h2><ul><li><a href="about.html">About Us<span aria-hidden="true">→</span></a></li><li><a href="gallery.html">Smile Gallery<span aria-hidden="true">→</span></a></li><li><a href="contact.html">Contact Us<span aria-hidden="true">→</span></a></li><li><a href="emergency-dental-care.html">Emergency Dental Care<span aria-hidden="true">→</span></a></li><li><a href="first-visit.html">New Patients<span aria-hidden="true">→</span></a></li><li><a href="special-offers.html">Special Offers<span aria-hidden="true">→</span></a></li><li><a href="blog.html">Blog<span aria-hidden="true">→</span></a></li><li><a href="blog-post.html">Blog article (template)<span aria-hidden="true">→</span></a></li></ul></section>
-        <section class="hub-group"><h2 class="h4">General & restorative</h2><ul><li><a href="general-dentistry-check-up-and-clean.html">Check Up & Clean<span aria-hidden="true">→</span></a></li><li><a href="dental-implant.html">Dental Implants<span aria-hidden="true">→</span></a></li><li><a href="crown-and-bridges.html">Crowns & Bridges<span aria-hidden="true">→</span></a></li><li><a href="root-canal-therapy.html">Root Canal Therapy<span aria-hidden="true">→</span></a></li><li><a href="in-house-sedation.html">In-House Sedation<span aria-hidden="true">→</span></a></li></ul></section>
-        <section class="hub-group"><h2 class="h4">I need help with</h2><ul><li><a href="toothache.html">Toothache<span aria-hidden="true">→</span></a></li><li><a href="broken-teeth.html">Broken Teeth<span aria-hidden="true">→</span></a></li><li><a href="crooked-teeth.html">Crooked Teeth<span aria-hidden="true">→</span></a></li></ul></section>
-        <section class="hub-group"><h2 class="h4">Cosmetic</h2><ul><li><a href="cosmetic-dentistry.html">Cosmetic Dentistry<span aria-hidden="true">→</span></a></li><li><a href="veneers.html">Veneers<span aria-hidden="true">→</span></a></li><li><a href="teeth-whitening.html">Teeth Whitening<span aria-hidden="true">→</span></a></li><li><a href="zoom-teeth-whitening.html">Zoom Whitening<span aria-hidden="true">→</span></a></li><li><a href="fixing-my-smile.html">Fixing My Smile<span aria-hidden="true">→</span></a></li><li><a href="anti-wrinkle-treatment.html">Anti-Wrinkle Treatment<span aria-hidden="true">→</span></a></li></ul></section>
-        <section class="hub-group"><h2 class="h4">Teeth straightening</h2><ul><li><a href="invisalign.html">Invisalign<span aria-hidden="true">→</span></a></li><li><a href="damon-braces.html">Damon Braces<span aria-hidden="true">→</span></a></li><li><a href="inman-aligner.html">Inman Aligner<span aria-hidden="true">→</span></a></li><li><a href="early-interceptive-orthodontics.html">Early Interceptive Orthodontics<span aria-hidden="true">→</span></a></li></ul></section>
-        <section class="hub-group"><h2 class="h4">Local pages</h2><ul><li><a href="beecroft-dentist.html">Beecroft<span aria-hidden="true">→</span></a></li><li><a href="cherrybrook-dentist.html">Cherrybrook<span aria-hidden="true">→</span></a></li><li><a href="dentist-glenhaven.html">Glenhaven<span aria-hidden="true">→</span></a></li><li><a href="dural-dentist.html">Dural<span aria-hidden="true">→</span></a></li><li><a href="westleigh-dentist.html">Westleigh<span aria-hidden="true">→</span></a></li></ul></section>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <div class="bg-cream">
+      <ul class="container stats" aria-label="At a glance">
+        <li class="stat"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">5<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></span></span><span class="stat__label">360+ happy customers</span></li>
+        <li class="stat"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">13+</span></span><span class="stat__label">Years caring for the Hills District</span></li>
+        <li class="stat"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">30+</span></span><span class="stat__label">Years combined clinical experience</span></li>
+        <li class="stat"><span class="stat__tooth"><img src="assets/tooth-outline.svg" alt=""><span class="stat__num">5</span></span><span class="stat__label">Dentists in one dedicated team</span></li>
+      </ul>
+    </div>
+
+    <!-- ============ INTRO ============ -->
+    <section class="bg-cream" aria-labelledby="h-intro" style="padding: clamp(24px,3vw,37px) 0 clamp(48px,5vw,75px)">
+      <div class="container intro2">
+        <figure class="intro2__img">
+          <img src="assets/founders-opt.jpg" alt="Dr Jennifer Chung and Dr Jeff Lin at the Beyond 32 Dental reception">
+          <a class="btn btn--glass" href="about.html#team">Meet The Team</a>
+        </figure>
+        <div>
+          <h2 id="h-intro">A dental home for the whole family, <span class="it">right here in Pennant Hills.</span></h2>
+          <div class="prose">
+            <p>Beyond 32 Dental was started in 2013 by Dr Jeff Lin and Dr Jennifer Chung, a husband-and-wife team who wanted to build the kind of dental practice they’d want their own family to visit. That’s still the standard we hold ourselves to today.</p>
+            <p>We look after patients from Pennant Hills, Cherrybrook, Castle Hill, Glenhaven, Thornleigh, Dural, Westleigh, Beecroft and right across the Hills District, from toddlers having their first check-up to grandparents needing a new set of implants. Whatever brings you in, whether it’s a routine clean, a toothache that won’t quit, or a smile you’ve been putting off fixing, you’ll be treated like a neighbour, not a number.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Pennant Hills</span><span>·</span><span>Cherrybrook</span><span>·</span><span>Castle Hill</span><span>·</span><span>Glenhaven</span><span>·</span><span>Thornleigh</span><span>·</span><span>Dural</span><span>·</span><span>Westleigh</span><span>·</span><span>Beecroft</span><span>·</span><span>Hills District</span><span>·</span>
+        <span>Pennant Hills</span><span>·</span><span>Cherrybrook</span><span>·</span><span>Castle Hill</span><span>·</span><span>Glenhaven</span><span>·</span><span>Thornleigh</span><span>·</span><span>Dural</span><span>·</span><span>Westleigh</span><span>·</span><span>Beecroft</span><span>·</span><span>Hills District</span><span>·</span>
       </div>
     </div>
+
+    <!-- ============ WHY CHOOSE ============ -->
+    <section class="bg-white" aria-labelledby="h-why" style="padding: clamp(56px,5vw,59px) 0 clamp(64px,6vw,96px)">
+      <div class="container rail-head">
+        <h2 class="h2" id="h-why">Why choose<br><span class="it">Beyond 32 Dental</span></h2>
+        <div class="rail-ctrl">
+          <button class="round" type="button" data-rail-prev="why" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+          <button class="round" type="button" data-rail-next="why" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="rail" data-rail="why">
+        <article class="why-card why-card--photo"><h3>The little things that make a big difference</h3><img src="assets/girl-smile-opt.jpg" alt="A young girl holding up a photo of a big smile in front of her mouth" loading="lazy"></article>
+        <article class="why-card">
+          <span class="why-card__icon"><img src="assets/ic-heart.svg" alt=""></span>
+          <div><h3 class="t">A team that actually knows you</h3><p>Because we’re locally owned and not part of a corporate chain, you’ll see familiar faces every visit and a dentist who remembers your history, not just your file number.</p></div>
+          <a class="btn btn--gold" href="about.html">About Us</a>
+        </article>
+        <article class="why-card">
+          <span class="why-card__icon"><img src="assets/ic-headphones.svg" alt=""></span>
+          <div><h3 class="t">Comfort built into every visit</h3><p>Lounge-style dental chairs with TV, gentle techniques designed to minimise discomfort, and a full comfort menu you can ask for on the day, from noise-cancelling headphones to a warm blanket.</p></div>
+          <a class="btn btn--gold" href="https://www.beyond32dental.com.au/wp-content/uploads/2020/06/Comfort_menu_6.pdf" target="_blank" rel="noopener">See Comfort Menu</a>
+        </article>
+        <article class="why-card">
+          <span class="why-card__icon"><img src="assets/ic-chair.svg" alt=""></span>
+          <div><h3 class="t">Technology that gets it right the first time</h3><p>3D X-rays, digital scanning instead of old-fashioned gooey impressions, and happy gas or in-house sedation for anyone who needs a little extra help getting through the chair.</p></div>
+          <a class="btn btn--gold" href="in-house-sedation.html">See Sedation Options</a>
+        </article>
+        <article class="why-card">
+          <span class="why-card__icon"><img src="assets/ic-tooth.svg" alt=""></span>
+          <div><h3 class="t">Here for the emergencies</h3><p>Knocked-out tooth, sudden swelling, pain that won’t let up. Call us and we’ll get you seen with same-day appointments wherever possible.</p></div>
+          <a class="btn btn--gold" href="tel:+61291586334">Call (02) 9158 6334</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FIRST VISIT ============ -->
+    <section class="bg-mint section" aria-labelledby="h-fv">
+      <div class="container">
+        <div class="rail-head">
+          <div>
+            <h2 class="h2" id="h-fv">Your <span class="it">first visit</span></h2>
+            <p class="lead" style="margin-top:12px;font-size:16px">We know new patient nerves are real, so here’s exactly what happens.</p>
+          </div>
+          <a class="btn btn--gold" href="first-visit.html">Book Your First Visit</a>
+        </div>
+        <div class="fv">
+          <figure class="fv__img"><img src="assets/first-visit-opt.jpg" alt="A patient talking with her dentist before her first examination" loading="lazy"></figure>
+          <ol class="fv__steps">
+            <li class="fv__step"><h3>01. A proper conversation first</h3><p>Before anything else, we sit down and talk through your history, your concerns, and what “a healthy smile” actually means to you.</p></li>
+            <li class="fv__step"><h3>02. A thorough exam, not a rushed glance</h3><p>3D X-rays where needed, a full check of your teeth, gums, bite and jaw, and an honest run-through of what we find.</p></li>
+            <li class="fv__step"><h3>03. A plan you actually understand</h3><p>No jargon, no pressure. We’ll explain your options in plain English and let you decide what’s next, on your timeline and your budget.</p></li>
+            <li class="fv__step"><h3>04. Comfort, from the first minute</h3><p>If dental visits make you anxious, tell us. We’ll adjust the pace, the chair, the sedation options, whatever helps you get through it.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NERVOUS ============ -->
+    <section class="nerv" aria-labelledby="h-nerv">
+      <img src="assets/sedation-opt.jpg" alt="" loading="lazy">
+      <div class="container">
+        <h2 class="h2" id="h-nerv">If the dentist makes you nervous, you’re not alone, and <span class="it">we’ve got you</span></h2>
+        <p class="lead">A lot of our patients tell us they put off booking for years because of a bad experience somewhere else. We hear that a lot, and we’ve built our whole practice around changing that story.</p>
+        <a class="btn btn--gold" href="in-house-sedation.html">Ask Us About Sedation Options</a>
+      </div>
+      <div class="container">
+        <div class="nerv__cards">
+          <div><h3>Nervous about pain?</h3><p>Gentle technique and modern pain management mean most patients are surprised by how little they feel.</p></div>
+          <div><h3>Scared of needles?</h3><p>We use topical numbing first and take injections slowly, with the finest needles available.</p></div>
+          <div><h3>Just generally anxious?</h3><p>Happy gas and in-house sedation are available for any procedure, so you can stay relaxed from the moment you sit down.</p></div>
+          <div><h3>Haven’t been in years?</h3><p>No judgement, ever. We’ll start wherever you’re comfortable starting.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="bg-cream section" aria-labelledby="h-svc">
+      <div class="container">
+        <div class="head head--center" style="text-align:center">
+          <h2 class="h2" id="h-svc">Everything your smile needs, <span class="it">under one roof</span></h2>
+          <p class="lead" style="margin:12px auto 0;max-width:25em">We’ve organised our care into three simple categories, so it’s easy to find exactly what you’re after.</p>
+        </div>
+
+        <div class="svc-panel">
+          <div class="svc-panel__head">
+            <div><h3>General Dentistry</h3><p>The everyday care that keeps small problems from becoming big, expensive ones.</p></div>
+            <a class="btn btn--gold" href="general-dentistry-check-up-and-clean.html">Explore General Dentistry</a>
+          </div>
+          <div class="svc-grid svc-grid--4">
+            <a class="svc-card" href="crown-and-bridges.html"><img class="svc-card__img" src="assets/home/svc-crowns.jpg" alt=""><h4>Crowns and Bridges</h4><p>Restoring strength and shape to teeth that are cracked, worn or missing.</p></a>
+            <a class="svc-card" href="root-canal-therapy.html"><img class="svc-card__img" src="assets/home/svc-rootcanal.jpg" alt=""><h4>Root Canal Treatment</h4><p>Saving damaged or infected teeth, so you keep your natural smile.</p></a>
+            <a class="svc-card" href="general-dentistry-check-up-and-clean.html"><img class="svc-card__img" src="assets/home/svc-checkup.jpg" alt=""><h4>Checkups and Cleaning</h4><p>Regular exams and professional cleans that catch issues early.</p></a>
+            <a class="svc-card" href="in-house-sedation.html"><img class="svc-card__img" src="assets/home/svc-sedation.jpg" alt=""><h4>Sedation Dentistry</h4><p>Sedation and happy gas for anxious patients or longer procedures.</p></a>
+          </div>
+        </div>
+
+        <div class="svc-panel">
+          <div class="svc-panel__head">
+            <div><h3>Cosmetic Dentistry</h3><p>For patients who want to feel as good as they look.</p></div>
+            <a class="btn btn--gold" href="cosmetic-dentistry.html">Explore Cosmetic Dentistry</a>
+          </div>
+          <div class="svc-grid svc-grid--cos">
+            <a class="svc-card ven" href="veneers.html">
+              <div class="ven__main"><img class="svc-card__img" src="assets/home/svc-veneer.jpg" alt=""><h4>Veneers</h4><p>Custom-shaped and shaded to cover chips, gaps and discolouration.</p></div>
+              <div class="ven__types">
+                <figure><img src="assets/home/svc-veneers-porcelain.jpg" alt=""><b>Porcelain Veneers</b><span>Our longest-lasting, most natural-looking option.</span></figure>
+                <figure><img src="assets/home/svc-veneers-composite.jpg" alt=""><b>Composite Resin Veneers</b><span>A faster, more affordable way to reshape your smile.</span></figure>
+              </div>
+            </a>
+            <a class="svc-card" href="teeth-whitening.html"><img class="svc-card__img" src="assets/home/svc-whitening.jpg" alt=""><h4>Tooth Whitening</h4><p>Safe, effective brightening for a smile that feels like you again.</p></a>
+          </div>
+        </div>
+
+        <div class="svc-panel">
+          <div class="svc-panel__head">
+            <div><h3>Teeth Straightening</h3><p>Straightening options for every age and every lifestyle.</p></div>
+            <a class="btn btn--gold" href="crooked-teeth.html">Explore Teeth Straightening</a>
+          </div>
+          <div class="svc-grid svc-grid--3">
+            <a class="svc-card" href="damon-braces.html"><img class="svc-card__img" src="assets/home/svc-braces.jpg" alt=""><h4>Braces</h4><p>Traditional, reliable straightening for more complex cases.</p></a>
+            <a class="svc-card" href="early-interceptive-orthodontics.html"><img class="svc-card__img" src="assets/home/svc-eio.jpg" alt=""><h4>Early Interceptive Orthodontics</h4><p>Catching alignment and jaw issues in kids while they’re easiest to correct.</p></a>
+            <a class="svc-card" href="invisalign.html"><img class="aligner-img" src="assets/home/svc-aligner.png" alt=""><h4>Clear Aligners</h4><p>Discreet, removable aligners for straightening teeth without anyone noticing.</p></a>
+          </div>
+        </div>
+
+        <div class="svc-panel">
+          <div class="svc-panel__head">
+            <div><h3>Dental Implants and All-On-X</h3><p>A permanent, natural-feeling way to replace missing teeth.</p></div>
+            <a class="btn btn--gold" href="dental-implant.html">Explore Dental Implants</a>
+          </div>
+          <div class="svc-grid svc-grid--2">
+            <a class="svc-card" href="dental-implant.html"><img class="svc-card__img" src="assets/home/svc-implant.jpg" alt=""><h4>Dental Implants</h4><p style="max-width:none">A permanent, natural-feeling replacement for missing teeth.</p></a>
+            <a class="svc-card" href="dental-implant.html"><img class="svc-card__img" src="assets/home/svc-allonx.png" alt="" style="left:0"><h4>All-On-X</h4><p style="max-width:none">A permanent, modern alternative to traditional dentures.</p></a>
+          </div>
+        </div>
+
+        <div class="concerns-panel">
+          <h3>Your Concerns</h3>
+          <ul>
+            <li><a href="first-visit.html">First Visit</a></li>
+            <li><a href="toothache.html">Toothache</a></li>
+            <li><a href="broken-teeth.html">Broken Teeth</a></li>
+            <li><a href="in-house-sedation.html">Dental Phobia / Anxiety</a></li>
+            <li><a href="crooked-teeth.html">Crooked Teeth</a></li>
+            <li><a href="fixing-my-smile.html">Fixing My Smile</a></li>
+            <li><a href="emergency-dental-care.html">Emergency Dental Care</a></li>
+            <li><a href="dental-implant.html">Chewing Difficulty</a></li>
+            <li><a href="dental-implant.html">Missing Teeth</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="bg-cream" aria-labelledby="h-gal" style="padding: clamp(40px,4vw,59px) 0 clamp(72px,7vw,104px)">
+      <div class="container" style="margin-bottom:40px">
+        <!-- Figma heading is "Over XX+ smiles cared for": the number is a placeholder awaiting the practice's figure. -->
+        <h2 class="h2" id="h-gal">Smiles <span class="it">cared for</span></h2>
+        <p class="lead" style="margin-top:12px;max-width:28em">From a confident new smile later in life, to your child’s first tooth – we’re here for all of it.</p>
+      </div>
+      <div class="rail" data-rail="gal">
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-2-before.jpg" alt="Before porcelain veneers" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-2-after.jpg" alt="After porcelain veneers" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Porcelain Veneers</h3><p>6 teeth · 3 appointments · 4 weeks</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-3-before.jpg" alt="Before crowns and bridgework" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-3-after.jpg" alt="After crowns and bridgework" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Crowns &amp; Bridgework</h3><p>4 teeth · 2 appointments · 3 weeks</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-4-before.jpg" alt="Before composite veneers" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-4-after.jpg" alt="After composite veneers" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Composite Veneers</h3><p>4 teeth · 1 appointment · same day</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-1.jpg" alt="Before" loading="lazy" style="transform:scaleX(-1)"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-2-after.jpg" alt="After" loading="lazy" style="transform:scaleX(-1)"><figcaption>After</figcaption></figure></div><h3>Smile Makeover</h3><p>See more cases in the Smile Gallery</p></a>
+      </div>
+      <div class="container rail-ctrl" style="margin-top:28px">
+        <button class="round" type="button" data-rail-prev="gal" aria-label="Previous cases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+        <button class="round" type="button" data-rail-next="gal" aria-label="Next cases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+        <a class="btn btn--gold" href="gallery.html" style="margin-left:14px">View Full Gallery</a>
+      </div>
+      <p class="container" style="margin-top:20px;font-size:13px;color:var(--teal)">Results vary between individuals. Patient images are shown with consent.</p>
+    </section>
+
+    <!-- ============ EMERGENCY ============ -->
+    <section class="spot" aria-labelledby="h-spot">
+      <img src="assets/emergency-opt.jpg" alt="" loading="lazy">
+      <div class="spot__panel">
+        <h2 class="h2" id="h-spot"><span class="it">Emergency</span> dental care</h2>
+        <p>Same-day care for knocked-out teeth, sudden swelling and pain that won’t wait. Call us the moment something goes wrong and we’ll get you seen fast.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold" href="tel:+61291586334">Call (02) 9158 6334 Now</a>
+          <a class="btn btn--outline" href="emergency-dental-care.html">Emergency Advice</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HEALTH FUNDS ============ -->
+    <section style="background:var(--cream-2);padding:96px 0" aria-labelledby="h-funds">
+      <div class="container" style="text-align:center">
+        <h2 class="h2" id="h-funds" style="max-width:11em;margin-inline:auto">Dental care that <span class="it">works with your cover</span></h2>
+        <p class="lead" style="margin-top:12px;font-size:18px">We accept all major health funds, so you can make the most of your extras cover.</p>
+        <ul class="funds" aria-label="Health funds accepted">
+          <li class="fund"><img src="assets/home/fund-cbhs.svg" alt="CBHS Health Fund" loading="lazy"></li>
+          <li class="fund"><img src="assets/home/fund-nib.svg" alt="nib" loading="lazy"></li>
+          <li class="fund"><img src="assets/home/fund-medibank.jpg" alt="Medibank" loading="lazy"></li>
+          <li class="fund"><img src="assets/home/fund-hcf.jpg" alt="HCF" loading="lazy"></li>
+          <li class="fund"><img src="assets/home/fund-bupa.jpg" alt="Bupa" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="bg-mint section" aria-labelledby="h-rv">
+      <div class="container">
+        <div class="rail-head">
+          <div>
+            <h2 class="h2" id="h-rv">Our <span class="it">happy</span> patients</h2>
+            <p class="lead" style="margin-top:12px;font-size:16px">From the families we care for</p>
+          </div>
+          <a class="g-sum" href="https://www.google.com/search?q=Beyond+32+Dental+Pennant+Hills+reviews" target="_blank" rel="noopener" aria-label="5.0 stars from 360+ Google reviews"><img src="assets/google.svg" alt=""><b>5.0<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg></b><i></i><b>360+</b><span>Reviews</span></a>
+        </div>
+        <div class="rv-feat">
+          <figure class="rv">
+            <h3>“I am so happy to have found a place where I feel heard and supported.”</h3>
+            <blockquote><p>I can see why this practice has 5 stars.. because they 100% deserves every single one of them and more!</p><p style="margin-top:1em">I am so happy to have found a place where I feel heard and supported. Everyone is so kind and actually genuinely cares. The receptionist is just so lovely and Dr Jennifer Chung is incredible. She really listens to your concerns and cares. And also does an amazing job too.</p><p style="margin-top:1em">Highly recommend!</p></blockquote>
+            <span class="stars" aria-label="5 stars" data-stars></span>
+            <cite>Carmen G.</cite>
+          </figure>
+          <figure class="rv">
+            <h3>“My daughter actually enjoys coming to the dentist because they take the time to make her feel safe...”</h3>
+            <blockquote><p>I have been seeing this amazing dental team since their days in Cherry brook and have happily followed them to their new practice. The dentists and staff are absolutely incredible – so caring, patient, and professional.</p><p style="margin-top:1em">They go above and beyond to make sure every visit is comfortable and positive, especially for children. My daughter actually enjoys coming to the dentist because they take the time to make her feel safe, happy, and cared for. Not every clinic shows this level of genuine compassion, and it really makes a difference.</p></blockquote>
+            <span class="stars" aria-label="5 stars" data-stars></span>
+            <cite>Ghazal T.</cite>
+          </figure>
+        </div>
+      </div>
+      <div class="rail" style="margin-top:40px" aria-label="More reviews">
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>I recently completed a Sparks clear aligner treatment with Beyond 32 Dental in West Pennant Hills and am beyond happy with my results. Dr Jen and her team make every visit go smoothly and friendly customer service that provides professional and high quality dental care. Thank you!!</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Jennifer</cite></figure>
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>Beyond dentist are absolutely fabulous. We have been coming here for 10 years and they have looked after our family. They are extremely professional and friendly. Would not look at going anywhere else.</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Mrs Fishpool</cite></figure>
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>Had an emergency appointment for a broken tooth for my 6 yrs old boy. He was nervous and Dr Jennifer did such amazing job, painless exp. Would recommend anyone out there in Pennant Hills area.</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Kevin W.</cite></figure>
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>Best dentist experience ever. The staff are all nice, the dentist chair is soo comfortable! The service, they explained everything, did not pushed service that I don’t need. Clean clinic and calm ambient. I almost felt asleep during my appointment. Definitely a worth to try if you haven’t been there</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Leticia N.</cite></figure>
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>Beyond 32 dental is exceptional. I had braces done here, and from start to finish, Dr Jennifer and her team were incredibly patient and attentive. They took the time to explain every detail and ensured every visit was comfortable. The results are amazing, and I couldn’t be happier with my experience!</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Eric T.</cite></figure>
+        <figure class="rv rv--sm"><img class="q" src="assets/home/quote.svg" alt=""><blockquote><p>Such a lovely dentistry, I have anxiety going to the dentist but the team are amazing and very gentle. cannot recommend a better dentistry, tje whole family comes to Beyond dental now.</p></blockquote><span class="stars" aria-label="5 stars" data-stars></span><cite>Aaliy H.</cite></figure>
+      </div>
+      <div class="container videos">
+        <button class="video" type="button" data-yt="9SEAYzMi1HQ" aria-label="Play video: Beyond 32 Dental"><img src="assets/home/video-1.jpg" alt="" loading="lazy"></button>
+        <button class="video" type="button" data-yt="Jg3sc6D0k9Q" aria-label="Play video: Veneers at Beyond 32 Dental"><img src="assets/home/video-2.jpg" alt="" loading="lazy"></button>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="bg-cream section" aria-labelledby="h-team">
+      <div class="container rail-head">
+        <h2 class="h2" id="h-team">Meet the team<br><span class="it">behind your smile</span></h2>
+        <div class="members">
+          <p>Proud member of</p>
+          <div class="deck" tabindex="0" aria-label="Professional memberships">
+            <span style="background:#00abd4"><img src="assets/ada.svg" alt="Australian Dental Association"></span>
+            <span style="background:#31308e"><img src="assets/home/member-2.svg" alt="Professional association"></span>
+            <span style="background:linear-gradient(to left,#00589d,#20aa97)"><img src="assets/home/member-3.svg" alt="Professional association"></span>
+            <span style="background:#553b96"><img src="assets/home/member-4.svg" alt="Professional association"></span>
+            <span style="background:#00529c"><img src="assets/home/member-5.svg" alt="Professional association"></span>
+          </div>
+        </div>
+      </div>
+      <div class="rail" data-rail="team">
+        <a class="doc" href="about.html#team"><div class="doc__img"><img src="assets/dr-jeff.png" alt="Dr Jeff Lin" loading="lazy"></div><h3>Dr Jeff Lin</h3><p>16 years’ experience, BDSc (Qld). Grew up in Dunedin, New Zealand, before training in dentistry.</p><span class="more">Read Full Bio →</span></a>
+        <a class="doc" href="about.html#team"><div class="doc__img"><img src="assets/dr-jennifer.png" alt="Dr Jennifer Chung" loading="lazy"></div><h3>Dr Jennifer Chung</h3><p>16 years’ experience, BDSc (Qld). Moved from Malaysia to study dentistry in Australia, where she met her now-husband and practice partner, Dr Jeff.</p><span class="more">Read Full Bio →</span></a>
+        <a class="doc" href="about.html#team"><div class="doc__img"><img src="assets/dr-ashleigh.png" alt="Dr Ashleigh Wong" loading="lazy"></div><h3>Dr Ashleigh Wong</h3><p>10 years’ experience. Born and raised in the Hills District, and thrilled to be caring for her own community.</p><span class="more">Read Full Bio →</span></a>
+        <a class="doc" href="about.html#team"><div class="doc__img"><img src="assets/dr-leazelle.png" alt="Dr Leazelle Graham" loading="lazy"></div><h3>Dr Leazelle Graham</h3><p>6 years’ experience. Trained in Sydney with a background in pharmacology before completing her Doctor of Dental Medicine.</p><span class="more">Read Full Bio →</span></a>
+        <a class="doc" href="about.html#team"><div class="doc__img"><img src="assets/dr-kim.png" alt="Dr Kim" loading="lazy"></div><h3>Dr Kim</h3><p>A warm, down-to-earth general dentist who takes the time to listen to her patients and loves helping children and anxious patients feel at ease.</p><span class="more">Read Full Bio →</span></a>
+        <div class="doc doc--local">
+          <div><h3>Proudly part of the Hills District</h3><p>Our clinic sits centrally in Pennant Hills with easy parking and public transport access, making it simple to fit dental care around a busy family life. We’re proud to serve patients across Cherrybrook, West Pennant Hills, Dural, Westleigh, Glenhaven and Beecroft, and we accept all major health funds including Medibank, Bupa, HCF, NIB and CBHS.</p></div>
+          <a class="btn btn--silver" href="https://www.google.com/maps/dir/?api=1&amp;destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120" target="_blank" rel="noopener" style="align-self:flex-start">Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <!-- Figma shows questions only; answers are drafted from the inner pages' approved copy. Review before launch. -->
+    <section class="bg-mint section" aria-labelledby="h-faq">
+      <div class="container">
+        <div class="home-faq">
+          <div>
+            <h2 id="h-faq">The more you know, <span class="it">the more comfortable you’ll feel.</span></h2>
+            <p class="lead">We’re here to answer your questions, ease your concerns and help you feel confident about your care.</p>
+          </div>
+          <div class="faq">
+            <details><summary>How much do dental implants cost? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>It depends on how many teeth are being replaced and what’s needed to prepare the area. We give you a written quote at your consultation. See our <a href="special-offers.html">current dental implant offer</a> and <a href="dental-implant.html">dental implants</a>.</p></div></details>
+            <details><summary>How much are veneers? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>It depends on the material and how many teeth are involved. Composite veneers cost less than porcelain. You’ll get an itemised, written quote at your cosmetic consultation. More on <a href="veneers.html">veneers</a>.</p></div></details>
+            <details><summary>How much does Invisalign cost? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>It depends on how much your teeth need to move. Your Invisalign consultation includes a digital scan, so you can see the projected result and the cost before you commit, and payment plans are available. See <a href="special-offers.html">Special Offers</a>.</p></div></details>
+            <details><summary>Is root canal treatment painful? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>The tooth is numbed before we begin, so you should feel pressure rather than pain. Root canal treatment is usually done to relieve the pain an inflamed or infected nerve is causing. More on <a href="root-canal-therapy.html">root canal therapy</a>.</p></div></details>
+            <details><summary>How long does teeth whitening last? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Anywhere from several months to a couple of years. Coffee, tea, red wine and smoking bring the stain back faster, and occasional top-ups with take-home trays keep it where you want it. More on <a href="teeth-whitening.html">teeth whitening</a>.</p></div></details>
+            <details><summary>How much are braces? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>It depends on the type of braces and how long treatment takes. We’ll explain your options, give you a written quote, and payment plans are available. See <a href="crooked-teeth.html">teeth straightening options</a>.</p></div></details>
+            <details><summary>Do you offer emergency dental appointments? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Yes. Call us on <a href="tel:+61291586334">(02) 9158 6334</a> and we’ll get you seen with same-day appointments wherever possible. See <a href="emergency-dental-care.html">what to do right now</a>.</p></div></details>
+            <details><summary>What if I’m nervous about the dentist? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Tell us. We’ll adjust the pace, the chair and the sedation options, with happy gas and in-house sedation available for any procedure. More on <a href="in-house-sedation.html">in-house sedation</a>.</p></div></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAMILY ============ -->
+    <section class="family" aria-labelledby="h-family">
+      <div class="container">
+        <h2 class="h2" id="h-family">From our family <span class="it">to yours.</span></h2>
+        <p class="lead">Personal, comfortable dental care for the whole family.</p>
+        <a class="btn btn--gold" href="contact.html#enquire">Book Online →</a>
+      </div>
+      <img class="family__img" src="assets/family.png" alt="Three generations of a family smiling together" loading="lazy">
+    </section>
   </main>
+
   <div data-site-footer></div>
+
   <script src="js/site.js"></script>
+  <script src="js/service.js"></script>
+  <script>
+    (function () {
+      /* Stars */
+      const star = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7z"/></svg>';
+      document.querySelectorAll("[data-stars]").forEach((s) => (s.innerHTML = star.repeat(5)));
+      /* Rails */
+      document.querySelectorAll("[data-rail-prev],[data-rail-next]").forEach((b) => {
+        const key = b.dataset.railPrev || b.dataset.railNext;
+        const rail = document.querySelector(`[data-rail="${key}"]`);
+        const dir = b.dataset.railPrev ? -1 : 1;
+        b.addEventListener("click", () => { const card = rail.firstElementChild; rail.scrollBy({ left: dir * ((card ? card.offsetWidth : 300) + 16), behavior: "smooth" }); });
+      });
+      /* Click-to-play YouTube (no third-party load until the visitor asks) */
+      document.querySelectorAll("[data-yt]").forEach((btn) => btn.addEventListener("click", () => {
+        const f = document.createElement("iframe");
+        f.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0`;
+        f.title = btn.getAttribute("aria-label").replace("Play video: ", "");
+        f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullscreen = true;
+        btn.replaceChildren(f); btn.removeAttribute("aria-label");
+      }, { once: true }));
+    })();
+  </script>
 </body>
 </html>
