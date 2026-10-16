@@ -40,7 +40,7 @@
       id: "cosmetic", href: "cosmetic-dentistry.html", name: "Cosmetic Dentistry", desc: "For patients who want to feel as good as they look.",
       img: "assets/kid-mirror-opt.jpg", pos: "45% 40%",
       icon: svg('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2 2M15.5 15.5l2 2M17.5 6.5l-2 2M8.5 15.5l-2 2"/>'),
-      items: ["Veneers", "Teeth Whitening", "Zoom Whitening", "Fixing My Smile", "Anti-Wrinkle Treatment"],
+      items: ["Veneers", "Teeth Whitening", "Zoom Whitening", "Fixing My Smile"],
     },
     {
       id: "straight", href: "crooked-teeth.html", name: "Teeth Straightening", desc: "Options for every age and every lifestyle.",
@@ -60,7 +60,7 @@
     "Check-ups & Cleaning": "general-dentistry-check-up-and-clean.html", "Crowns & Bridges": "crown-and-bridges.html",
     "Root Canal Treatment": "root-canal-therapy.html", "In-House Sedation": "in-house-sedation.html", "Toothache": "toothache.html",
     "Veneers": "veneers.html", "Teeth Whitening": "teeth-whitening.html", "Zoom Whitening": "zoom-teeth-whitening.html",
-    "Fixing My Smile": "fixing-my-smile.html", "Anti-Wrinkle Treatment": "anti-wrinkle-treatment.html",
+    "Fixing My Smile": "fixing-my-smile.html",
     "Invisalign": "invisalign.html", "Damon Braces": "damon-braces.html", "Inman Aligner": "inman-aligner.html",
     "Early Interceptive Orthodontics": "early-interceptive-orthodontics.html", "Crooked Teeth": "crooked-teeth.html",
     "Dental Implants": "dental-implant.html", "Missing Teeth": "dental-implant.html", "Dental Anxiety": "in-house-sedation.html",
