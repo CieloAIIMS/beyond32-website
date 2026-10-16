@@ -77,25 +77,25 @@
   const ABOUT_MEGA = [
     {
       id: "story", href: "about.html", name: "Our Story", desc: ABOUT[0].desc,
-      img: "assets/founders-opt.jpg", pos: "62% 40%",
+      img: "assets/nav/about-story.jpg", pos: "50% 50%",
       icon: svg('<path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z"/><path d="M10 20v-5h4v5"/>'),
       items: [["A small practice, on purpose", "about.html#story-h"], ["How we look after you", "about.html#approach-h"], ["Less clinic, more living room", "about.html#inside-h"]],
     },
     {
       id: "team", href: "about.html#team", name: "Meet the Team", desc: ABOUT[1].desc,
-      img: "assets/practice-opt.jpg", pos: "50% 45%",
+      img: "assets/nav/about-team.jpg", pos: "50% 50%",
       icon: svg('<circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.3c2.6-.4 4.6 1.3 5 4.2"/>'),
       items: [["Dr Jeff Lin", "about.html#team"], ["Dr Jennifer Chung", "about.html#team"], ["Dr Ashleigh Wong", "about.html#team"], ["Dr Leazelle Graham", "about.html#team"], ["Dr Kim", "about.html#team"]],
     },
     {
       id: "gallery", href: "gallery.html", name: "Smile Gallery", desc: ABOUT[2].desc,
-      img: "assets/hero-cosmetic.jpg", pos: "58% 45%",
+      img: "assets/nav/about-gallery.jpg", pos: "50% 50%",
       icon: svg('<rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 15-4.5-4.5L6 19"/>'),
       items: [["Browse all cases", "gallery.html#cases"], ["Before & after results", "gallery.html"]],
     },
     {
       id: "blog", href: "blog.html", name: "Blog", desc: ABOUT[3].desc,
-      img: "assets/kid-mirror-opt.jpg", pos: "45% 40%",
+      img: "assets/nav/about-blog.jpg", pos: "50% 50%",
       icon: svg('<path d="M6 4h9l3 3v13H6V4Z"/><path d="M15 4v3h3M9 11h6M9 14h6M9 17h4"/>'),
       items: [["All articles", "blog.html"], ["How to stop mouth breathing", "https://www.beyond32dental.com.au/how-to-stop-mouth-breathing/"], ["Tooth wear", "https://www.beyond32dental.com.au/tooth-wear/"], ["Dental bonding for gaps", "https://www.beyond32dental.com.au/dental-bonding-for-gaps/"], ["Dental sealants for kids", "https://www.beyond32dental.com.au/dental-sealants-for-kids/"]],
     },
