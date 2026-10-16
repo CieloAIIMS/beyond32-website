@@ -575,3 +575,6 @@ body[data-menu-open] .callbar { display: none; }
 
 /* Smooth anchor targets don't hide under the sticky header */
 :target { scroll-margin-top: calc(var(--hh, 80px) + 16px); }
+.img-ph--sm { padding: 12px; gap: 6px; }
+.img-ph--sm > svg { width: 28px !important; height: 28px !important; }
+svg[hidden] { display: none !important; }
