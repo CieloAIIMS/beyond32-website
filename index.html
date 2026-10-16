@@ -156,6 +156,19 @@
     @media (max-width: 760px) { .svc-grid--3, .svc-grid--2 { grid-template-columns: 1fr; } .ven { grid-template-columns: 1fr; } .ven__main { min-height: 260px; } }
     @media (max-width: 560px) { .svc-grid--4 { grid-template-columns: 1fr; } .ven__types { grid-template-columns: 1fr 1fr; padding: 22px; } }
 
+    /* Figma fixes: full-bleed photo card, nervous section framing, veneer renders */
+    .why-card--photo img { top: 0; height: 100%; object-position: 50% 30%; }
+    .why-card--photo h3 { padding: 30px 26px 0; }
+    .nerv > img { left: -4.5%; right: auto; width: 125%; max-width: none; object-position: 50% 25%; }
+    .nerv::before { left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(232,244,243,.97) 0%, rgba(232,244,243,.9) 26%, rgba(232,244,243,.35) 44%, rgba(232,244,243,0) 56%); }
+    .nerv h2 { max-width: 13.2em; }
+    .nerv__cards div { background: rgba(216,238,237,.94); border-color: rgba(184,232,230,.8); }
+    .ven__single { width: auto; height: 79px; mix-blend-mode: normal; left: 8px; top: 34px; }
+    .ven__types { align-items: stretch; padding-top: 32px; }
+    .ven__types figure { display: flex; flex-direction: column; margin: 0; }
+    .ven__types figure img { width: auto; max-width: none; height: 80px; object-fit: contain; border-radius: 0; mix-blend-mode: multiply; align-self: flex-start; margin-bottom: auto; padding-bottom: 56px; box-sizing: content-box; }
+    @media (max-width: 960px) { .nerv > img { left: 0; width: 100%; } .nerv::before { background: linear-gradient(180deg, rgba(232,244,243,.94) 0%, rgba(232,244,243,.82) 30%, rgba(232,244,243,0) 52%); } .nerv > img { object-position: 62% 30%; } }
+
     .concerns-panel { margin-top: 20px; border-radius: 24px; background: linear-gradient(180deg, #d8eeed 32%, #14403e 100%); padding: clamp(48px, 5vw, 68px) 24px clamp(48px, 5vw, 72px); text-align: center; }
     .concerns-panel h3 { font-size: clamp(36px, 3.4vw, 48px); font-weight: 400; letter-spacing: -0.04em; color: var(--ink); }
     .concerns-panel ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 480px; margin: 32px auto 0; }
@@ -410,10 +423,10 @@
           </div>
           <div class="svc-grid svc-grid--cos">
             <a class="svc-card ven" href="veneers.html">
-              <div class="ven__main"><img class="svc-card__img" src="assets/home/svc-veneer.jpg" alt=""><h4>Veneers</h4><p>Custom-shaped and shaded to cover chips, gaps and discolouration.</p></div>
+              <div class="ven__main"><img class="svc-card__img ven__single" src="assets/home/ven-single.png" alt=""><h4>Veneers</h4><p>Custom-shaped and shaded to cover chips, gaps and discolouration.</p></div>
               <div class="ven__types">
-                <figure><img src="assets/home/svc-veneers-porcelain.jpg" alt=""><b>Porcelain Veneers</b><span>Our longest-lasting, most natural-looking option.</span></figure>
-                <figure><img src="assets/home/svc-veneers-composite.jpg" alt=""><b>Composite Resin Veneers</b><span>A faster, more affordable way to reshape your smile.</span></figure>
+                <figure><img src="assets/home/ven-porcelain.png" alt=""><b>Porcelain Veneers</b><span>Our longest-lasting, most natural-looking option.</span></figure>
+                <figure><img src="assets/home/ven-composite.png" alt=""><b>Composite Resin Veneers</b><span>A faster, more affordable way to reshape your smile.</span></figure>
               </div>
             </a>
             <a class="svc-card" href="teeth-whitening.html"><img class="svc-card__img" src="assets/home/svc-whitening.jpg" alt=""><h4>Tooth Whitening</h4><p>Safe, effective brightening for a smile that feels like you again.</p></a>
