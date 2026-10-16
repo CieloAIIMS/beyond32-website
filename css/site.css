@@ -781,3 +781,22 @@ body[data-page="home"] { --section: clamp(72px, 6.7vw, 96px); }
   .phero__inner { padding-top: 300px; }
 }
 .gen-img { display: block; width: 100%; height: auto; object-fit: cover; border-radius: var(--r); background: var(--mint); }
+/* Mega menu keeps one height: every list shares the same grid cell, so the
+   panel is always as tall as the longest list and nothing shifts on hover */
+.mega__side { display: grid; grid-template-rows: auto 1fr; align-content: start; }
+.mega__list { display: block; grid-area: 2 / 1; visibility: hidden; }
+.mega__list[data-active] { visibility: visible; }
+.ldiag { display: block; width: 100%; height: auto; border-radius: var(--r); background: #D8EEED; }
+
+/* 3D render diagrams with pinned labels; on phones the labels become a list */
+.rdiag { position: relative; margin: 0; border-radius: var(--r); overflow: hidden; background: #a9c3b5; }
+.rdiag img { display: block; width: 100%; height: auto; }
+.rdiag__ov { position: absolute; inset: 0; width: 100%; height: 100%; font-family: var(--sans); }
+.rdiag figcaption { display: none; }
+@media (max-width: 640px) {
+  .rdiag .rdiag__ov { display: none !important; }
+  .rdiag figcaption { display: block; padding: 12px 14px 14px; background: var(--white); }
+  .rdiag figcaption ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14px; color: var(--teal); }
+  .rdiag figcaption b { color: var(--ink); font-weight: 600; }
+}
+.rdiag--step { background: transparent; }
