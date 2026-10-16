@@ -39,19 +39,19 @@
     {
       id: "cosmetic", href: "cosmetic-dentistry.html", name: "Cosmetic Dentistry", desc: "For patients who want to feel as good as they look.",
       img: "assets/nav/cosmetic.jpg", pos: "50% 50%",
-      icon: svg('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2 2M15.5 15.5l2 2M17.5 6.5l-2 2M8.5 15.5l-2 2"/>'),
+      icon: svg('<g transform="translate(-.6 2.6) scale(.82)" stroke-width="1.95"><path d="M8.2 3.5c-2.6 0-4.4 2-4.4 4.7 0 2.3.9 3.6 1.5 5.6.7 2.5.8 6.7 2.6 6.7 1.6 0 1.4-4.4 4.1-4.4s2.5 4.4 4.1 4.4c1.8 0 1.9-4.2 2.6-6.7.6-2 1.5-3.3 1.5-5.6 0-2.7-1.8-4.7-4.4-4.7-1.6 0-2.5.9-3.8.9s-2.2-.9-3.8-.9Z"/></g><path d="M19 2v4.5M16.75 4.25h4.5M20.6 8.6v2.2M19.5 9.7h2.2"/>'),
       items: ["Veneers", "Teeth Whitening", "Zoom Whitening", "Fixing My Smile"],
     },
     {
       id: "straight", href: "crooked-teeth.html", name: "Teeth Straightening", desc: "Options for every age and every lifestyle.",
       img: "assets/nav/straightening.jpg", pos: "50% 50%",
-      icon: svg('<path d="M3 10c3-3 6-3 9 0s6 3 9 0M3 15c3-3 6-3 9 0s6 3 9 0"/>'),
+      icon: svg('<path d="M4.5 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6ZM10.2 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6ZM15.9 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6Z"/><path d="M5.4 9.1h1.8v1.8H5.4zM11.1 9.1h1.8v1.8h-1.8zM16.8 9.1h1.8v1.8h-1.8z"/><path d="M2.5 10h19"/>'),
       items: ["Invisalign", "Damon Braces", "Inman Aligner", "Early Interceptive Orthodontics", "Crooked Teeth"],
     },
     {
       id: "implants", href: "dental-implant.html", name: "Implants & All-on-X", desc: "Permanent, natural-feeling replacement teeth.",
       img: "assets/nav/implants.jpg", pos: "50% 50%",
-      icon: svg('<path d="M7 4h10l-1 5H8L7 4ZM9 9v2h6V9M10 11l.5 9h3l.5-9M10.2 14h3.6M10.4 17h3.2"/>'),
+      icon: svg('<path d="M7.5 3.5h9c.6 0 1 .5.9 1.1l-.6 3.3c-.2 1.2-1.2 2.1-2.4 2.1H9.6c-1.2 0-2.2-.9-2.4-2.1l-.6-3.3c-.1-.6.3-1.1.9-1.1Z"/><path d="M10 10v2h4v-2"/><path d="M10.4 12l.6 8.5h2l.6-8.5M10.2 14.5h3.6M10.4 17h3.2"/>'),
       items: ["Dental Implants", "Crowns & Bridges"],
     },
   ];
