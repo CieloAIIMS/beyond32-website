@@ -747,3 +747,36 @@ body[data-page="home"] { --section: clamp(72px, 6.7vw, 96px); }
 .cat .cat__icon { display: grid; place-items: center; margin-top: 0; }
 .sheet .cat__icon { display: grid; place-items: center; margin: 0; padding: 0; flex: none; }
 .sheet .cat__icon svg { display: block; }
+
+/* --------------------------------------------------------------------------
+   Photo hero (Figma "section" frames): full-bleed photo, ink gradient from the
+   left and the bottom, headline + two buttons, a hairline and three stats.
+   -------------------------------------------------------------------------- */
+.phero { position: relative; isolation: isolate; overflow: hidden; color: #fff; background: var(--ink); min-height: min(824px, calc(100svh - var(--hh, 80px))); display: flex; flex-direction: column; justify-content: flex-end; }
+.phero__img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 70% 35%); }
+.phero::before { content: ""; position: absolute; inset: 0; z-index: -1; background:
+  linear-gradient(90deg, rgba(20, 64, 62, .97) 0%, rgba(20, 64, 62, .9) 30%, rgba(20, 64, 62, .45) 58%, rgba(20, 64, 62, 0) 86%),
+  linear-gradient(0deg, rgba(20, 64, 62, .9) 0%, rgba(20, 64, 62, .55) 26%, rgba(20, 64, 62, 0) 52%); }
+.phero__inner { padding-top: clamp(88px, 12vh, 160px); }
+.phero .crumbs { margin-bottom: 22px; }
+.phero .crumbs, .phero .crumbs a { color: rgba(255, 255, 255, .78); }
+.phero h1 { max-width: 9.5em; font-size: clamp(40px, 4.1vw, 56px); font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; color: #fff; }
+.phero h1 .it { display: block; margin-top: 6px; font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.phero__lede { margin-top: 26px; max-width: 30em; font-size: clamp(16px, 1.2vw, 17px); line-height: 1.6; color: rgba(255, 255, 255, .92); }
+.phero .btn-row { margin-top: 30px; }
+.phero .btn--ghost { --_bd: rgba(255, 255, 255, .45); }
+.phero__stats { list-style: none; margin: clamp(56px, 7vh, 88px) 0 0; padding: clamp(28px, 4vh, 44px) 0 clamp(36px, 5vh, 56px); border-top: 1px solid rgba(255, 255, 255, .55); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: center; }
+.phero__stats b { display: block; font-size: clamp(32px, 3.2vw, 46px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; }
+.phero__stats span { display: block; margin-top: 8px; font-size: clamp(15px, 1.2vw, 18px); color: rgba(255, 255, 255, .9); }
+@media (max-width: 760px) {
+  .phero { min-height: 0; }
+  .phero__img { object-position: var(--pos-m, 72% 30%); }
+  .phero::before { background: linear-gradient(180deg, rgba(20, 64, 62, .55) 0%, rgba(20, 64, 62, .82) 45%, rgba(20, 64, 62, .97) 75%); }
+  .phero__inner { padding-top: 220px; }
+  .phero__stats { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 760px) {
+  .phero__img { height: 380px; bottom: auto; }
+  .phero::before { background: linear-gradient(180deg, rgba(20, 64, 62, 0) 0, rgba(20, 64, 62, .15) 180px, rgba(20, 64, 62, .95) 360px, var(--ink) 380px); }
+  .phero__inner { padding-top: 300px; }
+}
