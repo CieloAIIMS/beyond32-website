@@ -95,7 +95,7 @@
                     <span class="cat__icon">${s.icon}</span>
                     <span><b>${s.name}</b><span>${s.desc}</span></span>
                   </a>`).join("")}
-                <a class="text-link mega__all" href="#">Explore all services <span>→</span></a>
+                <a class="text-link mega__all" href="index.html#h-svc">Explore all services <span>→</span></a>
               </div>
               <div class="mega__side">
                 <div class="mega__img"><img src="${SERVICES[0].img}" alt="" style="object-position:${SERVICES[0].pos}" loading="lazy"></div>
@@ -332,7 +332,7 @@
             <div class="socials">
               <a href="#" aria-label="Facebook"><img src="assets/social-1.svg" alt=""></a>
               <a href="#" aria-label="Instagram"><img src="assets/social-2.svg" alt=""></a>
-              <a href="#" aria-label="Google reviews"><img src="assets/social-3.svg" alt=""></a>
+              <a href="https://www.google.com/search?q=Beyond+32+Dental+Pennant+Hills+reviews" target="_blank" rel="noopener" aria-label="Google reviews"><img src="assets/social-3.svg" alt=""></a>
             </div>
           </div>
           <p class="site-footer__tag">A confident smile starts with <span class="it">true comfort &amp; care</span></p>
@@ -377,4 +377,154 @@
     const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -10% 0px" });
     rev.forEach((el) => io.observe(el));
   } else rev.forEach((el) => el.classList.add("is-in"));
+
+  /* ---------- Motion layer ---------- */
+  const calm = matchMedia("(prefers-reduced-motion: reduce)");
+  const hh = () => (document.querySelector("[data-site-header]") || {}).offsetHeight || 80;
+
+  // Reading progress along the bottom of the sticky header
+  const siteHeader = document.querySelector("[data-site-header]");
+  if (siteHeader) {
+    const bar = document.createElement("span");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    siteHeader.appendChild(bar);
+    const setP = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.setProperty("--p", max > 0 ? Math.min(1, scrollY / max).toFixed(4) : 0);
+    };
+    addEventListener("scroll", setP, { passive: true });
+    addEventListener("resize", setP);
+    setP();
+  }
+
+  // Pinned rails: on desktop the section holds still and vertical scrolling
+  // walks the cards sideways, then the page carries on below.
+  const pinMQ = matchMedia("(min-width: 900px) and (hover: hover) and (pointer: fine)");
+  const pins = [];
+  document.querySelectorAll("[data-rail], [data-pin-rail]").forEach((rail) => {
+    const section = rail.closest("section");
+    // Never pin the opening hero, or a section holding more than one rail
+    if (!section || section === document.querySelector("main section") || section.querySelectorAll("[data-rail], [data-pin-rail]").length > 1) return;
+    const stage = document.createElement("div");
+    stage.className = "pin__stage";
+    while (section.firstChild) stage.appendChild(section.firstChild);
+    const spacer = document.createElement("div");
+    spacer.setAttribute("aria-hidden", "true");
+    section.append(stage, spacer);
+    pins.push({ section, stage, rail, spacer, on: false, dist: 0, top: 0, h: 0 });
+  });
+
+  const layoutPins = () => {
+    pins.forEach((p) => {
+      p.on = false; p.section.classList.remove("pin"); p.spacer.style.height = "";
+      p.rail.style.overflowX = "";
+      if (!pinMQ.matches || calm.matches) return;
+      const dist = p.rail.scrollWidth - p.rail.clientWidth;
+      const h = p.stage.offsetHeight, avail = innerHeight - hh();
+      if (dist < 40 || h > avail) return;
+      p.on = true; p.dist = dist; p.h = h;
+      p.top = hh() + Math.max(0, (avail - h) / 2);
+      p.section.classList.add("pin");
+      p.stage.style.setProperty("--pin-top", `${p.top}px`);
+      p.spacer.style.height = `${dist}px`;
+      p.rail.style.overflowX = "hidden";
+    });
+    drivePins();
+  };
+  const drivePins = () => {
+    pins.forEach((p) => {
+      if (!p.on) return;
+      const spacerTop = p.spacer.getBoundingClientRect().top;
+      const t = Math.min(1, Math.max(0, (p.top + p.h - spacerTop) / p.dist));
+      p.rail.scrollLeft = t * p.dist;
+    });
+  };
+  if (pins.length) {
+    addEventListener("scroll", drivePins, { passive: true });
+    let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(layoutPins, 120); });
+    pinMQ.addEventListener("change", layoutPins);
+    calm.addEventListener("change", layoutPins);
+    addEventListener("load", layoutPins);
+    layoutPins();
+
+    // Arrow buttons and keyboard focus move the page, which moves the rail
+    const pageOffsetFor = (p, left) => {
+      const spacerDocTop = p.spacer.getBoundingClientRect().top + scrollY;
+      return spacerDocTop - p.top - p.h + Math.min(p.dist, Math.max(0, left));
+    };
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-rail-prev],[data-rail-next],[data-scroll]");
+      if (!b) return;
+      const key = b.dataset.railPrev || b.dataset.railNext;
+      const p = pins.find((x) => x.on && (key ? x.rail.dataset.rail === key : x.section.contains(b)));
+      if (!p) return;
+      e.stopImmediatePropagation();
+      const step = (p.rail.firstElementChild?.offsetWidth || 300) + 16;
+      const dir = b.dataset.railPrev || b.dataset.scroll === "-1" ? -1 : 1;
+      scrollTo({ top: pageOffsetFor(p, p.rail.scrollLeft + dir * step), behavior: "smooth" });
+    }, true);
+    pins.forEach((p) => p.rail.addEventListener("focusin", (e) => {
+      if (!p.on) return;
+      const card = [...p.rail.children].find((c) => c.contains(e.target));
+      if (card) scrollTo({ top: pageOffsetFor(p, card.offsetLeft - p.rail.firstElementChild.offsetLeft) });
+    }));
+  }
+
+  // Staggered reveals for headings, leads, cards and feature images
+  if (!calm.matches && "IntersectionObserver" in window) {
+    const main = document.querySelector("main") || document.body;
+    const firstSection = main.querySelector("section");
+    const textSel = "h2, .lead, .section-head > p, .rail-head > div > p";
+    const cardSel = [
+      ".why-card", ".fv__step", ".nerv__cards > div", ".svc-card", ".ba-card", ".rv-feat > *", ".doc", ".fund", ".stat",
+      ".lp-team article", ".member", ".tip", ".np > *", ".answers > *", ".ticks > li", ".cost-grid > *", ".prog > *",
+      ".hsteps > *", ".know > div", ".case", ".faq details", ".gum-cards > *", ".order > *", ".tips > *", ".cases > *",
+    ].join(",");
+    const imgSel = ".intro2__img, .fv__img, main figure.photo";
+    const vis = (el) => el.getBoundingClientRect().top < innerHeight * 0.95;
+    // A scroll check rather than IntersectionObserver: a fast jump (anchor link,
+    // End key) can skip straight past an element, which must never leave it hidden.
+    let pending = [];
+    const check = () => {
+      pending = pending.filter((el) => {
+        if (el.getBoundingClientRect().top < innerHeight * 0.92) { el.classList.add("is-in"); return false; }
+        return true;
+      });
+      if (!pending.length) removeEventListener("scroll", onRevealScroll);
+    };
+    const onRevealScroll = () => check();
+    const mark = (el, cls, delay) => {
+      if (!el || el.closest("[data-reveal], .pin__stage .rail, header, .home-hero, .ihero, [data-hero]") || (firstSection && firstSection.contains(el)) || vis(el)) return;
+      el.classList.add(cls);
+      if (delay) el.style.setProperty("--d", `${delay}ms`);
+      pending.push(el);
+    };
+    main.querySelectorAll(textSel).forEach((el) => mark(el, "rvl", 0));
+    main.querySelectorAll(cardSel).forEach((el) => {
+      const sibs = [...el.parentElement.children].filter((s) => s.matches(cardSel));
+      mark(el, "rvl", Math.min(sibs.indexOf(el), 5) * 70);
+    });
+    main.querySelectorAll(imgSel).forEach((el) => mark(el, "rv-img", 0));
+    if (pending.length) { addEventListener("scroll", onRevealScroll, { passive: true }); addEventListener("resize", onRevealScroll); }
+  }
+
+  // Count-up on the stat strip ("360+", "13+", "5")
+  if (!calm.matches && "IntersectionObserver" in window) {
+    const nums = document.querySelectorAll(".stat__num, [data-count]");
+    const cio = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target, m = el.textContent.trim().match(/^(\d+)(.*)$/);
+      if (!m || el.children.length) return; // leave icon-bearing numbers alone
+      const end = Number(m[1]), tail = m[2], t0 = performance.now(), dur = 1400;
+      const tick = (now) => {
+        const k = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - k, 3);
+        el.textContent = Math.round(end * eased) + tail;
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.6 });
+    nums.forEach((n) => cio.observe(n));
+  }
 })();
