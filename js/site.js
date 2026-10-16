@@ -8,7 +8,7 @@
     email: "hello@beyond32dental.com.au", // placeholder — confirm with practice
     address: "1st Floor, 114 Yarrara Rd, Pennant Hills NSW 2120",
     maps: "https://www.google.com/maps/dir/?api=1&destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120",
-    book: "contact.html#enquire",
+    book: "https://appointments.praktika.net.au/online-booking/step1?Apikey=813eba7e-66c5-4560-8ca0-530328e754a8",
     // [open, close] in 24h, index 0 = Sunday
     hours: [null, [9, 18], [9, 18], [9, 18], [9, 18], [9, 18], [9, 15]],
   };
@@ -153,7 +153,7 @@
 
         <div class="nav__actions">
           <a class="btn btn--ink" href="${PRACTICE.tel}">${I.phone}<span class="label">${PRACTICE.phone}</span></a>
-          <a class="btn btn--gold" href="${PRACTICE.book}">Book Online</a>
+          <a class="btn btn--gold" href="${PRACTICE.book}" target="_blank" rel="noopener">Book Online</a>
           <a class="nav__burger nav__call-icon" href="${PRACTICE.tel}" aria-label="Call ${PRACTICE.phone}">${I.phone}</a>
           <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Open menu" data-burger>${I.menu}</button>
         </div>
@@ -181,7 +181,7 @@
         <a href="contact.html"${cur("contact")}>Contact</a>
         <div class="sheet__cta">
           <a class="btn btn--ink" href="${PRACTICE.tel}">${I.phone} Call us</a>
-          <a class="btn btn--gold" href="${PRACTICE.book}">Book Online</a>
+          <a class="btn btn--gold" href="${PRACTICE.book}" target="_blank" rel="noopener">Book Online</a>
         </div>
       </div>`;
 
@@ -295,11 +295,11 @@
       checkup: {
         h: 'Book your <span class="it">check up and clean</span>',
         p: "Whether you are due for your six month visit or it has been longer than you would like to admit, book in and we will take a look. No lecture, no pressure, and a clear picture of where things stand.",
-        a: `<a class="btn btn--gold" href="${PRACTICE.book}">Book Online Now</a><a class="btn btn--ghost" href="${PRACTICE.tel}">Call ${PRACTICE.phone}</a>`,
+        a: `<a class="btn btn--gold" href="${PRACTICE.book}" target="_blank" rel="noopener">Book Online Now</a><a class="btn btn--ghost" href="${PRACTICE.tel}">Call ${PRACTICE.phone}</a>`,
       },
       full: {
         h: 'Ready for a dentist that feels like <span class="it">part of the family?</span>',
-        a: `<a class="btn btn--gold" href="${PRACTICE.book}">Book Online →</a><a class="btn btn--ghost" href="${PRACTICE.tel}">Call ${PRACTICE.phone}</a>`,
+        a: `<a class="btn btn--gold" href="${PRACTICE.book}" target="_blank" rel="noopener">Book Online →</a><a class="btn btn--ghost" href="${PRACTICE.tel}">Call ${PRACTICE.phone}</a>`,
       },
       emergency: {
         h: 'Don’t wait it out. <span class="it">Call us now.</span>',
@@ -384,7 +384,7 @@
       </footer>
       <div class="callbar" data-callbar>
         <a class="btn btn--gold" href="${PRACTICE.tel}">${I.phone} Call now</a>
-        <a class="btn btn--ink" href="${variant === "emergency" ? PRACTICE.maps : PRACTICE.book}">${variant === "emergency" ? "Directions" : "Book online"}</a>
+        <a class="btn btn--ink" href="${variant === "emergency" ? PRACTICE.maps : PRACTICE.book}" target="_blank" rel="noopener">${variant === "emergency" ? "Directions" : "Book online"}</a>
       </div>`;
 
     // re-run hours highlight for injected footer
