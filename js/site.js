@@ -509,6 +509,25 @@
     if (pending.length) { addEventListener("scroll", onRevealScroll, { passive: true }); addEventListener("resize", onRevealScroll); }
   }
 
+  // Scroll-led steps: the step nearest the middle of the screen lights up
+  document.querySelectorAll("[data-mz-steps]").forEach((wrap) => {
+    const steps = [...wrap.querySelectorAll(".mz-step")];
+    if (!steps.length) return;
+    wrap.setAttribute("data-live", "");
+    const pick = () => {
+      const mid = innerHeight * 0.45;
+      let best = steps[0], bestD = Infinity;
+      steps.forEach((s) => {
+        const r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid);
+        if (d < bestD) { bestD = d; best = s; }
+      });
+      steps.forEach((s) => s.classList.toggle("is-active", s === best));
+    };
+    addEventListener("scroll", pick, { passive: true });
+    addEventListener("resize", pick);
+    pick();
+  });
+
   // Count-up on the stat strip ("360+", "13+", "5")
   if (!calm.matches && "IntersectionObserver" in window) {
     const nums = document.querySelectorAll(".stat__num, [data-count]");

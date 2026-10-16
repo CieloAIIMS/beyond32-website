@@ -420,3 +420,44 @@
 @media (max-width: 860px) { .intro-grid, .pull-wrap { grid-template-columns: minmax(0, 1fr); } }
 @media (min-width: 981px) { .hsteps--3 { grid-template-columns: repeat(3, 1fr); } .hsteps--4 { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 760px) { .inline-cta { border-radius: var(--r-lg); } }
+
+/* ==========================================================================
+   Skim layer — the page should make sense to someone who only reads the
+   bold bits. Detail stays on the page (for the curious, and for search)
+   but sits one tap away.
+   ========================================================================== */
+
+/* How it works: three numbered beats, one line each */
+.how3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: how; margin: 0; padding: 0; list-style: none; }
+.how3 li { position: relative; padding: 28px 24px 26px; border-radius: var(--r); background: var(--white); border: 1px solid var(--hairline); counter-increment: how; }
+.band--white .how3 li { background: var(--cream); border-color: transparent; }
+.how3 li::before { content: counter(how, decimal-leading-zero); display: block; font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: var(--teal); opacity: .55; }
+.how3 h3 { margin-top: 18px; font-size: clamp(21px, 1.7vw, 24px); font-weight: 500; line-height: 1.2; color: var(--ink); }
+.how3 p { margin-top: 8px; color: var(--teal); line-height: 1.5; }
+.how3 .chip { display: inline-block; margin-top: 16px; padding: 5px 12px; border-radius: var(--pill); background: var(--mint); color: var(--ink); font-size: 13px; font-weight: 600; }
+.how3 li:not(:last-child)::after { content: ""; position: absolute; top: 46px; right: -12px; width: 8px; height: 8px; border-top: 2px solid var(--teal); border-right: 2px solid var(--teal); transform: rotate(45deg); opacity: .4; }
+@media (max-width: 860px) { .how3 { grid-template-columns: minmax(0, 1fr); } .how3 li::after { display: none; } }
+
+/* The one-line takeaway that leads a card */
+.gist { margin-top: 10px; font-size: 18px; line-height: 1.45; font-weight: 500; color: var(--ink); }
+.on-ink .gist { color: #fff; }
+
+/* "Read more" fold */
+details.more { margin-top: 12px; }
+details.more > summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; font-size: 15px; font-weight: 600; color: var(--teal); }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .3s var(--ease-out); }
+details.more[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+details.more > summary .less { display: none; }
+details.more[open] > summary .less { display: inline; }
+details.more[open] > summary .mo { display: none; }
+details.more > :not(summary) { margin-top: 10px; }
+.on-ink details.more > summary { color: #f0dbb0; }
+
+/* "Best for" line on option cards */
+.bestfor { margin-top: 14px; font-size: 15px; color: var(--teal); }
+.bestfor b { color: var(--ink); font-weight: 600; }
+/* Light text on the dark featured option card */
+.option--feature .gist, .option--feature .bestfor b { color: #fff; }
+.option--feature .bestfor { color: var(--foot-text); }
+.option--feature details.more > summary { color: #f0dbb0; }

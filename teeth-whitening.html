@@ -142,12 +142,23 @@
     </section>
 
     <!-- ============ INTRO ============ -->
-    <section class="band band--white band--tight" aria-label="Introduction">
-      <div class="container intro-grid">
-        <p class="statement">At Beyond 32 Dental, we’ve supported the Hills community for more than 12 years, <em>completing thousands of whitening cases along the way.</em></p>
-        <div class="prose">
-          <p>When you choose our dental practice for teeth whitening in Pennant Hills, <strong>you’ll be cared for by experienced dentists with more than 15 years of experience in cosmetic dentistry.</strong></p>
+    <section class="band band--white band--tight" aria-labelledby="h-how">
+      <div class="container">
+        <div class="mz-head">
+          <h2 class="h2" id="h-how">How it <span class="it">works</span></h2>
+          <p class="lead">Three steps, guided by dentists with more than 15 years in cosmetic dentistry.</p>
         </div>
+      </div>
+      <div class="container mz-steps" data-mz-steps>
+        <ol>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>1</b></span><h3>Check-up and shade match</h3><p>We make sure your teeth and gums are healthy, then record your starting shade.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>2</b></span><h3>Whiten your way</h3><p>About 90 minutes in the chair, or custom trays you wear at home.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>3</b></span><h3>Keep it bright</h3><p>A touch-up kit and a few simple habits keep your new shade for longer.</p></li>
+        </ol>
+        <figure class="mz-steps__media">
+          <img src="assets/live/teeth-whitening/teeth-whitening-Cherrybrook-2-compressed.webp" alt="A smiling patient in the dental chair before whitening" loading="lazy" style="object-position:42% 30%">
+          <div class="mz-chip"><small>Thousands of whitening cases</small><b>Results that last months to years</b></div>
+        </figure>
       </div>
     </section>
 
@@ -220,24 +231,36 @@
     <!-- ============ 2. OPTIONS ============ -->
     <section class="band band--white" id="options" aria-labelledby="h-options">
       <div class="container">
-        <div class="split split--center head">
-          <h2 class="h2" id="h-options">Our teeth whitening <span class="it">options</span></h2>
-          <p class="lede lede--wide">At our dental clinic in Pennant Hills, we provide two types of professional teeth whitening, so you can choose the option that suits your lifestyle.</p>
+        <div class="mz-head">
+          <h2 class="h2" id="h-options">Two ways to <span class="it">whiten</span></h2>
+          <p class="lead">Two types of professional whitening, so you can choose what suits your lifestyle.</p>
         </div>
-        <div class="options">
-          <article class="option option--feature">
-            <span class="option__tag">One visit</span>
+        <div class="mz-grid">
+          <article class="mz-card">
+            <figure class="mz-card__media">
+              <img src="assets/live/teeth-whitening/Our-Teeth-Whitening-Options.webp" alt="Dentist positioning the whitening light during an in-chair Zoom whitening appointment" loading="lazy" style="object-position:50% 30%">
+              <div class="mz-chip"><small>In the chair</small><b>$850</b><span class="mz-chip__tag">One visit · about 90 min</span></div>
+            </figure>
             <h3><a href="zoom-teeth-whitening.html">In-chair Zoom whitening</a></h3>
-            <p class="price">$850</p>
-            <p class="p">This treatment uses the latest dental technology to brighten your teeth in a single visit, usually taking about 90 minutes. It also includes a complimentary mini take-home kit, so you have the flexibility to manage touch-ups at home.</p>
-            <p class="p" style="margin-top:12px">For patients with sensitivity, a relief gel is provided to make the appointment more comfortable.</p>
+            <p class="gist">Noticeably brighter teeth in a single visit.</p>
+            <p class="bestfor"><b>Best for:</b> an event coming up, or results today.</p>
+            <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary>
+              <p class="p">This treatment uses the latest dental technology to brighten your teeth in a single visit, usually taking about 90 minutes. It also includes a complimentary mini take-home kit, so you have the flexibility to manage touch-ups at home.</p>
+              <p class="p" style="margin-top:12px">For patients with sensitivity, a relief gel is provided to make the appointment more comfortable.</p>
+            </details>
             <dl><dt>Time</dt><dd>About 90 minutes</dd><dt>Includes</dt><dd>Mini take-home kit</dd></dl>
           </article>
-          <article class="option">
-            <span class="option__tag">At your pace</span>
+          <article class="mz-card">
+            <figure class="mz-card__media">
+              <img src="assets/live/zoom-teeth-whitening/zoom-teeth-whitening-beyond32-cherrybrook-compressed.jpg" alt="Three friends smiling together" loading="lazy" style="object-position:50% 30%">
+              <div class="mz-chip"><small>At home</small><b>$450</b><span class="mz-chip__tag">At your pace</span></div>
+            </figure>
             <h3>Take-home whitening kit</h3>
-            <p class="price">$450</p>
-            <p class="p">This full-sized kit comes with whitening gel and custom trays designed for an accurate fit. The tailored design allows for more predictable whitening results in the comfort of your home.</p>
+            <p class="gist">Gradual whitening at home, with trays made for your teeth.</p>
+            <p class="bestfor"><b>Best for:</b> busy routines, or a gentler build-up.</p>
+            <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary>
+              <p class="p">This full-sized kit comes with whitening gel and custom trays designed for an accurate fit. The tailored design allows for more predictable whitening results in the comfort of your home.</p>
+            </details>
             <dl><dt>Where</dt><dd>At home</dd><dt>Includes</dt><dd>Gel and custom trays</dd></dl>
           </article>
         </div>
@@ -290,12 +313,12 @@
           </div>
         </div>
         <ul class="safe-grid">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg><h3>The science behind whitening agents</h3><p class="p">The main ingredient used in whitening gels is a form of peroxide. This compound works by breaking down stains into smaller particles, which lightens the appearance of the tooth surface. Under professional supervision, the concentration is carefully chosen to balance effectiveness with safety. The gel is applied in a controlled way to reduce risks while still producing noticeable results.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.4 7.5 9.5 4.3-1.1 7.5-5 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Why dentist supervision matters</h3><p class="p">Store-bought kits often use trays or strips that don’t fit properly, which can cause uneven coverage or gel leakage. In contrast, professional whitening involves custom trays or in-chair application by trained hands. This supervision means your gums are protected, the gel is used in the right amount, and treatment is stopped if any problems occur.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4 8l16 8M20 8 4 16"/></svg><h3>Managing sensitivity with care</h3><p class="p">Sensitivity is one of the most common side effects patients worry about. While some temporary discomfort may occur, our clinic provides protective measures such as desensitising gels and careful monitoring during treatment. Most patients find that any sensitivity is short-lived and manageable. This extra care helps you feel at ease during and after the appointment, knowing your comfort is always a priority.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v4.5M12 15.5h.01"/></svg><h3>The risks of DIY whitening products</h3><p class="p">It can be tempting to try whitening toothpaste or over-the-counter kits first. While these products can sometimes help with surface stains, they don’t offer the same predictability as professional whitening. Some online kits may even contain ingredients that are too harsh, leading to gum irritation or damage to enamel. By choosing professional treatments, you avoid these unnecessary risks and gain the reassurance that comes with proper guidance.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><h3>Linking whitening to overall dental health</h3><p class="p">Before any whitening treatment, a dental check-up is recommended. This allows us to look for issues such as tooth decay, gum inflammation, or existing restorations that could affect results. For example, fillings or crowns do not respond to whitening gel in the same way natural teeth do.</p></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.6a5 5 0 0 0-8.8-2.1 5 5 0 0 0-8.8 2.1C2.6 11 7 15.4 12 20c5-4.6 9.4-9 8.8-13.4Z"/></svg><h3>Reassurance from professional dental care</h3><p class="p">Safety is the foundation of any treatment we provide. From the initial consultation to the final application, every step is designed to protect your teeth and gums while delivering a brighter appearance. With professional whitening, you’re not only improving the way your smile looks, but also starting a whitening journey that respects your comfort and long-term oral health.</p></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg><h3>The science behind whitening agents</h3><p class="gist">A carefully measured peroxide gel lifts stains from the tooth surface.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">The main ingredient used in whitening gels is a form of peroxide. This compound works by breaking down stains into smaller particles, which lightens the appearance of the tooth surface. Under professional supervision, the concentration is carefully chosen to balance effectiveness with safety. The gel is applied in a controlled way to reduce risks while still producing noticeable results.</p></details></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.4 7.5 9.5 4.3-1.1 7.5-5 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Why dentist supervision matters</h3><p class="gist">Custom trays and trained hands keep the gel off your gums.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">Store-bought kits often use trays or strips that don’t fit properly, which can cause uneven coverage or gel leakage. In contrast, professional whitening involves custom trays or in-chair application by trained hands. This supervision means your gums are protected, the gel is used in the right amount, and treatment is stopped if any problems occur.</p></details></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4 8l16 8M20 8 4 16"/></svg><h3>Managing sensitivity with care</h3><p class="gist">Any sensitivity is usually short-lived, and we have gels to ease it.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">Sensitivity is one of the most common side effects patients worry about. While some temporary discomfort may occur, our clinic provides protective measures such as desensitising gels and careful monitoring during treatment. Most patients find that any sensitivity is short-lived and manageable. This extra care helps you feel at ease during and after the appointment, knowing your comfort is always a priority.</p></details></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v4.5M12 15.5h.01"/></svg><h3>The risks of DIY whitening products</h3><p class="gist">Some online kits are harsh on gums and enamel. Ours aren’t.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">It can be tempting to try whitening toothpaste or over-the-counter kits first. While these products can sometimes help with surface stains, they don’t offer the same predictability as professional whitening. Some online kits may even contain ingredients that are too harsh, leading to gum irritation or damage to enamel. By choosing professional treatments, you avoid these unnecessary risks and gain the reassurance that comes with proper guidance.</p></details></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><h3>Linking whitening to overall dental health</h3><p class="gist">A check-up first catches anything that could affect your results.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">Before any whitening treatment, a dental check-up is recommended. This allows us to look for issues such as tooth decay, gum inflammation, or existing restorations that could affect results. For example, fillings or crowns do not respond to whitening gel in the same way natural teeth do.</p></details></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.6a5 5 0 0 0-8.8-2.1 5 5 0 0 0-8.8 2.1C2.6 11 7 15.4 12 20c5-4.6 9.4-9 8.8-13.4Z"/></svg><h3>Reassurance from professional dental care</h3><p class="gist">Every step is designed to protect your teeth and gums.</p><details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">Safety is the foundation of any treatment we provide. From the initial consultation to the final application, every step is designed to protect your teeth and gums while delivering a brighter appearance. With professional whitening, you’re not only improving the way your smile looks, but also starting a whitening journey that respects your comfort and long-term oral health.</p></details></li>
         </ul>
         <div class="pull-wrap" style="margin-top:clamp(64px,7vw,104px)">
           <p class="pull-quote">Supervision is one of the key reasons professional whitening is considered far safer than trying it on your own.</p>
@@ -367,19 +390,21 @@
     </section>
 
     <!-- ============ MOMENT ============ -->
-    <aside class="moment" aria-labelledby="h-moment">
-      <img src="assets/hero-cosmetic.jpg" alt="" loading="lazy" style="object-position:62% 40%">
-      <div class="container" style="position:relative;z-index:1">
-        <div class="moment__panel">
-          <h2 class="h2" id="h-moment" style="font-size:clamp(30px,2.8vw,40px)">Ready to begin? <span class="it">We’ll walk you through it.</span></h2>
-          <p class="p">Our trusted dental professionals in Pennant Hills will walk you through your options, explain what suits your lifestyle, and provide support beyond the appointment.</p>
-          <div class="btn-row">
-            <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
-            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+    <section class="band band--white band--tight" aria-labelledby="h-moment">
+      <div class="container">
+        <div class="mz-banner">
+          <figure class="mz-banner__media"><img src="assets/hero-cosmetic.jpg" alt="A patient smiling at her reflection in a hand mirror" loading="lazy" style="object-position:58% 45%"></figure>
+          <div>
+            <h2 class="h2" id="h-moment">Ready to begin? <span class="it">We’ll walk you through it.</span></h2>
+            <p>We’ll talk through your options, explain what suits your lifestyle, and support you beyond the appointment.</p>
+            <div class="btn-row">
+              <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
+              <a class="btn btn--ghost" href="tel:+61291586334">Call (02) 9158 6334</a>
+            </div>
           </div>
         </div>
       </div>
-    </aside>
+    </section>
 
     <!-- ============ 6. HOW LONG IT LASTS ============ -->
     <section class="band band--mint" id="last" aria-labelledby="h-last">
@@ -399,9 +424,11 @@
             <h3>Can veneers be whitened?</h3>
             <p class="answer__big">Not the veneers themselves.</p>
             <p class="p">Many people wonder if veneers can be whitened like natural teeth. The truth is that whitening gel has no effect on porcelain or composite materials. Unlike enamel, which responds to bleaching agents, veneers keep the same shade they were made in.</p>
+            <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary>
             <p class="p">If your veneers look darker compared with nearby teeth, the colour change usually comes from the natural teeth around them, not the veneers themselves. This can create an uneven look. In such cases, whitening the surrounding teeth may restore a more even appearance, but the veneers themselves will remain the same.</p>
             <p class="p">When veneers no longer match your natural shade or have surface wear, the only option is to replace them. Regular dental visits and proper cleaning help you maintain a healthy smile and delay the need for replacement. Good oral care also prevents staining of natural teeth, reducing contrast with existing veneers.</p>
             <p class="p">If you’re considering <a class="inline" href="veneers.html">veneers</a> in the future, it’s often recommended to complete whitening first. This allows veneers to be created in a colour that blends well and supports a whiter smile overall. With good care and planning, veneers can remain consistent and natural-looking for many years.</p>
+            </details>
           </div>
         </div>
       </div>
