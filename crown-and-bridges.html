@@ -42,12 +42,12 @@
 
     /* Why teeth break down */
     .causes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .cause { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; background: var(--cream); border-radius: var(--r-lg); padding: clamp(22px, 2.6vw, 32px); }
+    .cause { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: center; background: var(--cream); border-radius: var(--r-lg); padding: clamp(22px, 2.6vw, 32px); }
     .cause svg { width: 120px; height: 120px; display: block; }
     .cause i { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--gold-line); }
     .cause b { display: block; margin-top: 8px; font-size: clamp(20px, 1.7vw, 24px); font-weight: 500; line-height: 1.25; color: var(--ink); }
     @media (max-width: 860px) { .causes { grid-template-columns: 1fr; } }
-    @media (max-width: 420px) { .cause { grid-template-columns: 84px 1fr; gap: 16px; } .cause svg { width: 84px; height: 84px; } }
+    
 
     /* Crown vs bridge explorer (authored moment) */
     .cb { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); background: var(--white); border-radius: var(--r-lg); overflow: hidden; }
@@ -134,20 +134,9 @@
         </div>
         <ol class="causes">
           <li class="cause">
-            <svg viewBox="0 0 120 120" aria-hidden="true">
-              <rect width="120" height="120" rx="20" fill="#d8eeed"/>
-              <path d="M30 40 C28 18 92 18 90 40 L88 70 C86 86 80 96 76 108 L68 108 L64 84 L56 84 L52 108 L44 108 C40 96 34 86 32 70 Z" fill="#fff" stroke="#14403e" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M62 30 C74 28 80 38 76 48 C72 58 58 56 56 46 C54 38 56 31 62 30 Z" fill="#8a6420" opacity=".85"/>
-              <circle cx="46" cy="40" r="4" fill="#8a6420" opacity=".6"/>
-            </svg>
             <div><i aria-hidden="true">1</i><b>Tooth decay that causes destruction of tooth structure</b></div>
           </li>
           <li class="cause">
-            <svg viewBox="0 0 120 120" aria-hidden="true">
-              <rect width="120" height="120" rx="20" fill="#d8eeed"/>
-              <path d="M30 40 C28 18 92 18 90 40 L88 70 C86 86 80 96 76 108 L68 108 L64 84 L56 84 L52 108 L44 108 C40 96 34 86 32 70 Z" fill="#fff" stroke="#14403e" stroke-width="2.2" stroke-linejoin="round"/>
-              <path d="M66 22 L58 38 L66 46 L56 62 L62 72" fill="none" stroke="#b3321f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
             <div><i aria-hidden="true">2</i><b>Accidents that cause a tooth to crack or fracture</b></div>
           </li>
         </ol>

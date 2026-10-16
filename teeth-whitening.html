@@ -178,52 +178,44 @@
     </nav>
 
     <!-- ============ 1. RIGHT FOR YOU (shade explorer) ============ -->
-    <section class="band band--cream" id="right" aria-labelledby="h-right">
-      <div class="container">
-        <div class="split split--center head">
+    <section class="feat" id="right" aria-labelledby="h-right">
+      <div class="container feat__grid">
+        <div class="feat__copy">
           <h2 class="h2" id="h-right">Is whitening <span class="it">right for you?</span></h2>
-          <div>
-            <p class="lede lede--wide">Professional treatments are particularly useful for surface stains caused by tea, coffee, or red wine.</p>
-            <p class="p" style="margin-top:16px;max-width:54ch">They can also address general discolouration that affects your confidence. Using a carefully controlled whitening agent, our dental professionals provide results that are safe and reliable compared with store-bought products.</p>
+          <ol class="feat__list">
+            <li>Works best on surface stains from tea, coffee, red wine and ageing</li>
+            <li>Fillings, crowns and veneers keep the colour they were made in</li>
+            <li>A check-up first makes sure your teeth and gums are ready</li>
+          </ol>
+          <div class="btn-row">
+            <a class="btn btn--light" href="contact.html#enquire">Book Teeth Whitening</a>
+            <a class="btn btn--ghost" href="general-dentistry-check-up-and-clean.html">Check up and clean</a>
           </div>
+          <p class="feat__small">Results vary between individuals. Using a carefully controlled whitening agent, our dental professionals provide results that are safe and reliable.</p>
         </div>
 
-        <div class="shade" data-shade>
-          <div class="shade__pick">
-            <h3 id="shade-q">What is affecting the colour of your teeth?</h3>
-            <div class="shade__chips" role="radiogroup" aria-labelledby="shade-q">
-              <button type="button" role="radio" aria-checked="true" data-k="drinks"><span>Tea, coffee or red wine</span><i style="background:#c99a5b"></i></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="ageing"><span>Food, drinks or ageing</span><i style="background:#e3c48e"></i></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="general"><span>General discolouration</span><i style="background:#dcc49a"></i></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="intrinsic"><span>Staining from within the tooth</span><i style="background:#b9ad98"></i></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="restorations"><span>Fillings, crowns or veneers</span><i style="background:#f3efe6"></i></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="health"><span>Decay, gum disease or sensitivity</span><i style="background:#ec9d93"></i></button>
+        <div class="feat__art">
+          <div class="feat__checker" data-shade>
+            <p class="feat__checker-h" id="shade-q">What’s affecting the colour of your teeth?</p>
+            <div class="feat__rows" role="radiogroup" aria-labelledby="shade-q">
+              <button type="button" role="radio" aria-checked="true" data-k="drinks">Tea, coffee or red wine</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="ageing">Food, drinks or ageing</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="general">General discolouration</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="intrinsic">Staining from within the tooth</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="restorations">Fillings, crowns or veneers</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-k="health">Decay, gum disease or sensitivity</button>
             </div>
-          </div>
-          <div class="shade__view">
-            <svg viewBox="0 -34 520 244" role="img" aria-labelledby="shade-t">
-              <title id="shade-t">Shade guide, from lighter on the left to darker on the right, with the likely direction for your stain</title>
-              <defs><linearGradient id="tw-handle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d3dadc"/><stop offset="1" stop-color="#9aa6aa"/></linearGradient></defs>
-              <g id="tabs"></g>
-              <g class="shade-arrow" data-arrow>
-                <path d="" fill="none" stroke="#14403e" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 7" data-arrow-line/>
-                <path d="" fill="#14403e" data-arrow-head/>
-              </g>
-              <g font-family="Host Grotesk, sans-serif" font-size="16" fill="#3d7774">
-                <text x="20" y="200">Lighter</text>
-                <text x="500" y="200" text-anchor="end">Darker</text>
-              </g>
-            </svg>
-            <div class="verdict" aria-live="polite" data-verdict>
-              <span class="tag tag--ok" data-v="tag"><i style="background:#2f9b6b"></i>Whitening works well</span>
+            <div class="feat__verdict" aria-live="polite" data-verdict>
+              <span class="feat__tag" data-v="tag"><i></i>Whitening works well</span>
               <p data-v="text">Professional treatments are particularly useful for surface stains caused by tea, coffee, or red wine.</p>
             </div>
           </div>
-        </div>
-
-        <div class="inline-cta" style="margin-top:24px;border-radius:var(--r-lg)">
-          <p>We may recommend a professional cleaning and dental check-up before starting, so your teeth are in good condition for whitening.</p>
-          <a href="general-dentistry-check-up-and-clean.html">Check up and clean <span>→</span></a>
+          <figure class="feat__phone"><img src="assets/hero-woman-opt.jpg" alt="A woman laughing outdoors with a bright, natural smile" loading="lazy" style="object-position:60% 30%"></figure>
+          <div class="feat__stack" aria-label="Whitening results">
+            <figure><img src="assets/live/teeth-whitening/Teeth-Whitening-Case-1-e1764645824216.webp" alt="Whitening case 1: before and after, each with a shade tab beside the teeth" loading="lazy"></figure>
+            <figure><img src="assets/live/teeth-whitening/Beyond-32-Dental-Teeth-Whitening-Before-and-after-case-2-e1764645770114.webp" alt="Whitening case 2: before and after, each with a shade tab beside the teeth" loading="lazy"></figure>
+            <figure><img src="assets/live/teeth-whitening/Beyond-32-Dental-Teeth-Whitening-Before-and-after-case-3-e1764645517383.webp" alt="Whitening case 3: before and after, each with a shade tab beside the teeth" loading="lazy"></figure>
+          </div>
         </div>
       </div>
     </section>
@@ -468,7 +460,6 @@
   <script>
     (function () {
       /* Shade explorer. Wording is the live page's; the arrow only shows direction, not a promised number of shades. */
-      const SHADES = ["#fbf8f1", "#f7f0e1", "#f2e6cd", "#ecdab8", "#e4cc9f", "#dbbd88", "#cfad74", "#c19a5d"];
       const V = {
         drinks:       { from: 6, to: 2, tag: "Whitening works well", dot: "#2f9b6b", cls: "tag--ok", text: "Professional treatments are particularly useful for surface stains caused by tea, coffee, or red wine." },
         ageing:       { from: 5, to: 2, tag: "Often a good candidate", dot: "#2f9b6b", cls: "tag--ok", text: "You may be a good candidate for teeth whitening if you have healthy teeth and gums with stains from food, drinks or ageing." },
@@ -477,36 +468,15 @@
         restorations: { from: 3, to: null, tag: "No change", dot: "#9aa9a8", cls: "tag--ok", text: "Old fillings, crowns and veneers don’t change colour with whitening gel, so we may discuss other cosmetic options if needed." },
         health:       { from: 4, to: null, tag: "Treat this first", dot: "#c19a3a", cls: "tag--ok", text: "Teeth whitening may not be suitable if you have untreated decay, gum disease or severe sensitivity. We’ll usually recommend a check-up and clean first." }
       };
-      const svgNS = "http://www.w3.org/2000/svg";
-      const g = document.getElementById("tabs");
-      const x0 = 30, step = 60, tw = 40;
-      const tabs = SHADES.map((c, i) => {
-        const t = document.createElementNS(svgNS, "g");
-        t.setAttribute("class", "shade-tab");
-        t.style.transformOrigin = (x0 + i * step + tw / 2) + "px 120px";
-        t.innerHTML = `<rect x="${x0 + i * step + tw / 2 - 5}" y="34" width="10" height="40" rx="3" fill="url(#tw-handle)"/>` +
-          `<path d="M${x0 + i * step} 78 h${tw} v52 q0 34 -${tw / 2} 34 q-${tw / 2} 0 -${tw / 2} -34 Z" fill="${c}" stroke="#14403e" stroke-opacity=".35" stroke-width="1.4"/>`;
-        g.appendChild(t); return t;
-      });
-      const cx = (i) => x0 + i * step + tw / 2;
-      const line = document.querySelector("[data-arrow-line]"), head = document.querySelector("[data-arrow-head]"), arrow = document.querySelector("[data-arrow]");
       const verdict = document.querySelector("[data-verdict]");
       const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
       function show(k) {
         const v = V[k];
-        tabs.forEach((t, i) => { t.style.transform = (i === v.from) ? "translateY(-14px)" : (i === v.to ? "translateY(-8px)" : "none"); t.style.opacity = (i === v.from || i === v.to) ? 1 : .55; });
-        if (v.to === null) { arrow.style.opacity = 0; }
-        else {
-          const a = cx(v.from), b = cx(v.to);
-          line.setAttribute("d", `M${a} 12 Q${(a + b) / 2} -34 ${b} 8`);
-          head.setAttribute("d", `M${b - 7} 2 L${b} 16 L${b + 7} 2 Z`);
-          arrow.style.opacity = 1;
-        }
         verdict.querySelector('[data-v="tag"]').innerHTML = `<i style="background:${v.dot}"></i>${v.tag}`;
         verdict.querySelector('[data-v="text"]').textContent = v.text;
         if (!reduce) { verdict.classList.remove("is-swapping"); void verdict.offsetWidth; verdict.classList.add("is-swapping"); }
       }
-      const btns = [...document.querySelectorAll(".shade__chips [role=radio]")];
+      const btns = [...document.querySelectorAll(".feat__rows [role=radio]")];
       function pick(b, focus) {
         btns.forEach((x) => { const on = x === b; x.setAttribute("aria-checked", String(on)); x.tabIndex = on ? 0 : -1; });
         if (focus) b.focus();

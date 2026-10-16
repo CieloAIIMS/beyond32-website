@@ -82,7 +82,7 @@
 
     /* ==================== Advantages ==================== */
     .adv { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; counter-reset: a; }
-    .adv li { counter-increment: a; display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 24px; align-items: center; padding: clamp(24px, 3vw, 36px); border-radius: var(--r-lg); background: var(--cream); }
+    .adv li { counter-increment: a; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: center; padding: clamp(24px, 3vw, 36px); border-radius: var(--r-lg); background: var(--cream); }
     .adv li::before { content: counter(a); grid-column: 1 / -1; font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--gold-line); }
     .adv h3 { font-size: clamp(22px, 2vw, 28px); font-weight: 500; line-height: 1.15; color: var(--ink); }
     .adv .p { margin-top: 10px; font-size: 16px; }
@@ -219,14 +219,6 @@
         <ol class="adv">
           <li>
             <div><h3>Appearance</h3><p class="p">The brackets are a lot smaller than traditional, unsightly, bulky brackets. The best part is that they now come in a clear form.</p></div>
-            <div class="adv__art" aria-hidden="true">
-              <div class="img-ph img-ph--sm" role="img" aria-label="Image placeholder: Illustration to be replaced with a photo" style="--ph-ratio:160 / 100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="m21 15.5-5-5L5 19.5"/></svg><b>Image</b></div><svg hidden viewBox="0 0 160 100" fill="none" stroke-linejoin="round">
-                <rect x="14" y="22" width="60" height="56" rx="8" fill="#e2e7e8" stroke="#5f6c70" stroke-width="2"/>
-                <rect x="100" y="36" width="34" height="30" rx="7" fill="rgba(216,238,237,.6)" stroke="#8fbfbb" stroke-width="2"/>
-                <path d="M0 50h160" stroke="#8a979b" stroke-width="3"/>
-                <g font-family="Host Grotesk, sans-serif" font-size="11" fill="#3d7774" text-anchor="middle" stroke="none"><text x="44" y="94">Traditional</text><text x="117" y="94">Damon</text></g>
-              </svg>
-            </div>
           </li>
           <li>
             <div><h3>Time</h3><p class="p">A study showed that, on average, the treatment time is 6 months shorter than with traditional braces.</p></div>
@@ -234,24 +226,9 @@
           </li>
           <li>
             <div><h3>Minimum discomfort</h3><p class="p">Unlike traditional braces, which tie the wire to the brackets with elastic rings, the new brackets have small gates that hold the wire in place. This automatically reduces the forces applied to the teeth, and so reduces discomfort.</p></div>
-            <div class="adv__art" aria-hidden="true">
-              <svg viewBox="0 0 160 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="52" y="22" width="56" height="56" rx="10" fill="#e2e7e8" stroke="#5f6c70" stroke-width="2"/>
-                <path d="M0 50h160" stroke="#8a979b" stroke-width="3"/>
-                <rect x="58" y="38" width="44" height="24" rx="5" fill="#f3f6f6" stroke="#5f6c70" stroke-width="2"/>
-                <path d="M20 26c6 6 6 42 0 48M140 26c-6 6-6 42 0 48" stroke="#8fbfbb" stroke-width="2" stroke-dasharray="3 5"/>
-              </svg>
-            </div>
           </li>
           <li>
             <div><h3>Wider smile</h3><p class="p">The Damon System is famous for creating wider arches, which means a wider smile. It also gives more support to upper lips that have flattened as a result of ageing.</p></div>
-            <div class="adv__art" aria-hidden="true">
-              <svg viewBox="0 0 160 100" fill="none" stroke-linecap="round">
-                <path d="M46 14 C 48 92, 112 92, 114 14" stroke="#9fb3b1" stroke-width="2" stroke-dasharray="4 5"/>
-                <path d="M22 14 C 26 104, 134 104, 138 14" stroke="#c19a3a" stroke-width="3"/>
-                <path d="M40 40l-12 0M120 40l12 0" stroke="#3d7774" stroke-width="2"/><path d="M32 36l-4 4 4 4M128 36l4 4-4 4" stroke="#3d7774" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
           </li>
         </ol>
       </div>
