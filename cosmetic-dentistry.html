@@ -85,7 +85,7 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hx" data-hx data-hero aria-labelledby="s-h1" style="--px:-477.75px;--py:-193.92px;--pw:1988.5px;--ph:1016.92px;--blur:2px;--hx-img:url(assets/hero-cosmetic.jpg);--lede-w:42em">
-      <div class="hx__base" aria-hidden="true"></div>
+      <div class="hx__base" aria-hidden="true" style="background-image:url(assets/hero-cosmetic.jpg)"></div>
       <div class="hx__canvas" aria-hidden="true">
         <div class="hx__photo hx__bg"><img src="assets/hero-cosmetic.jpg" alt=""></div>
         <div class="hx__win"><div class="hx__photo "><img src="assets/hero-cosmetic.jpg" alt=""></div></div>
@@ -188,24 +188,30 @@
     <!-- ============ 2. WHITENING ============ -->
     <section class="band band--white" id="whitening" aria-labelledby="h-whitening">
       <div class="container">
-        <div class="split split--center head">
+        <div class="mz-head">
           <h2 class="h2" id="h-whitening">Professional <span class="it">teeth whitening</span></h2>
-          <div>
-            <p class="lede lede--wide">Teeth whitening is the simplest cosmetic treatment and often the right place to start.</p>
-            <p class="p" style="margin-top:16px;max-width:54ch">A peroxide gel breaks down the stain molecules inside the enamel, lightening the tooth from within rather than just polishing the surface. We offer two options:</p>
-          </div>
+          <p class="lead">Teeth whitening is the simplest cosmetic treatment and often the right place to start.</p>
         </div>
-        <div class="options">
-          <article class="option option--feature">
-            <span class="option__tag">One visit</span>
+        <p class="p" style="max-width:62ch;margin:0 auto 32px;text-align:center">A peroxide gel breaks down the stain molecules inside the enamel, lightening the tooth from within rather than just polishing the surface. We offer two options:</p>
+        <div class="mz-grid">
+          <article class="mz-card">
+            <figure class="mz-card__media">
+              <img src="assets/live/teeth-whitening/Our-Teeth-Whitening-Options.webp" alt="Dentist positioning the whitening light during an in-chair Zoom whitening appointment" loading="lazy" style="object-position:50% 40%">
+              <div class="mz-chip"><small>One visit</small><b>About 90 minutes</b><span class="mz-chip__tag">Same-day result</span></div>
+            </figure>
             <h3><a href="https://www.beyond32dental.com.au/zoom-teeth-whitening/">In-chair Zoom whitening</a></h3>
-            <p class="p">Done in one visit of about ninety minutes. A stronger gel is applied under supervision and activated with a light. You leave with noticeably whiter teeth and a mini take-home kit for touch-ups.</p>
+            <p class="gist">Noticeably whiter teeth in a single visit.</p>
+            <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">Done in one visit of about ninety minutes. A stronger gel is applied under supervision and activated with a light. You leave with noticeably whiter teeth and a mini take-home kit for touch-ups.</p></details>
             <dl><dt>Time</dt><dd>About ninety minutes</dd><dt>Result</dt><dd>Same day</dd></dl>
           </article>
-          <article class="option">
-            <span class="option__tag">At your pace</span>
+          <article class="mz-card">
+            <figure class="mz-card__media">
+              <img src="assets/live/zoom-teeth-whitening/zoom-teeth-whitening-beyond32-cherrybrook-compressed.jpg" alt="Three friends smiling together" loading="lazy" style="object-position:50% 30%">
+              <div class="mz-chip"><small>At your pace</small><b>Custom trays</b><span class="mz-chip__tag">Builds over a couple of weeks</span></div>
+            </figure>
             <h3><a href="https://www.beyond32dental.com.au/teeth-whitening/">Take-home whitening</a></h3>
-            <p class="p">We scan your teeth and make custom trays that fit precisely. You wear them with a professional gel for a set time each day, and the colour builds gradually over a couple of weeks.</p>
+            <p class="gist">Gradual whitening at home, with trays made for your teeth.</p>
+            <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary><p class="p">We scan your teeth and make custom trays that fit precisely. You wear them with a professional gel for a set time each day, and the colour builds gradually over a couple of weeks.</p></details>
             <dl><dt>Time</dt><dd>A set time each day</dd><dt>Result</dt><dd>Over a couple of weeks</dd></dl>
           </article>
         </div>
@@ -279,14 +285,25 @@
           </article>
         </div>
 
-        <h3 class="h3x" style="margin:clamp(80px,9vw,128px) 0 36px">What happens when you get veneers?</h3>
-        <ol class="hsteps">
-          <li><b>Consultation</b><p class="p">We check your teeth and gums, talk about what you want changed, and take photos and a digital scan.</p></li>
-          <li><b>Planning</b><p class="p">We show you how the finished shape and shade could look before any tooth is touched. For porcelain, a trial smile can be placed on your teeth so you can see it in your own face.</p></li>
-          <li><b>Preparation</b><p class="p">For porcelain, a small amount of enamel is reshaped under local anaesthetic and temporary veneers are fitted. For composite, the teeth are cleaned and lightly roughened.</p></li>
-          <li><b>Fitting</b><p class="p">Porcelain veneers are bonded in place once they return from the lab. Composite is built up, shaped and polished on the day.</p></li>
-          <li><b>Review</b><p class="p">We check your bite and how the veneers sit with your gums a few weeks later.</p></li>
+        <div class="mz-head" style="margin-top:clamp(80px,9vw,128px)">
+          <h2 class="h2" style="font-size:clamp(28px,2.6vw,38px)">What happens when you get veneers?</h2>
+          <p class="lead">Five steps, from first chat to final check.</p>
+        </div>
+      </div>
+      <div class="container mz-steps" data-mz-steps>
+        <ol>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>1</b></span><h3>Consultation</h3><p>We check your teeth and gums, talk about what you want changed, and take photos and a digital scan.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>2</b></span><h3>Planning</h3><p>We show you how the finished shape and shade could look before any tooth is touched. For porcelain, a trial smile can be placed on your teeth so you can see it in your own face.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>3</b></span><h3>Preparation</h3><p>For porcelain, a small amount of enamel is reshaped under local anaesthetic and temporary veneers are fitted. For composite, the teeth are cleaned and lightly roughened.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>4</b></span><h3>Fitting</h3><p>Porcelain veneers are bonded in place once they return from the lab. Composite is built up, shaped and polished on the day.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>5</b></span><h3>Review</h3><p>We check your bite and how the veneers sit with your gums a few weeks later.</p></li>
         </ol>
+        <figure class="mz-steps__media">
+          <img src="assets/first-visit-opt.jpg" alt="A patient smiling while she talks with her dentist during a cosmetic consultation" loading="lazy" style="object-position:55% 35%">
+          <div class="mz-chip"><small>Before any tooth is touched</small><b>See your planned shape and shade</b></div>
+        </figure>
+      </div>
+      <div class="container">
 
         <div class="acc" style="margin-top:72px">
           <details>
@@ -372,9 +389,9 @@
     <!-- ============ 5. OTHER TREATMENTS ============ -->
     <section class="band band--cream" id="other" aria-labelledby="h-other">
       <div class="container">
-        <div class="split split--center head">
+        <div class="mz-head">
           <h2 class="h2" id="h-other">Other cosmetic <span class="it">treatments</span></h2>
-          <p class="lede lede--wide">Whitening, veneers and bonding cover most cosmetic concerns, but some problems are better solved another way.</p>
+          <p class="lead">Whitening, veneers and bonding cover most cosmetic concerns, but some problems are better solved another way.</p>
         </div>
         <div class="answers answers--3">
           <article class="tile-card">
@@ -422,19 +439,18 @@
     </section>
 
     <!-- ============ CTA 3: FULL-BLEED MOMENT ============ -->
-    <aside class="moment" aria-labelledby="h-not-sure">
-      <img src="assets/emergency-opt.jpg" alt="" loading="lazy" style="object-position:60% 40%">
-      <div class="container" style="position:relative;z-index:1">
-        <div class="moment__panel">
-          <h2 class="h2" id="h-not-sure" style="font-size:clamp(30px,2.8vw,40px)">Not sure what you need? <span class="it">That is what the consultation is for.</span></h2>
-          <p class="p">You do not need to arrive knowing the treatment names. Tell us what bothers you about your smile, and we will show you the options, what each involves, and what it costs, with no pressure to go ahead.</p>
-          <div class="btn-row">
-            <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
-            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+    <section class="band band--white band--tight" aria-labelledby="h-not-sure">
+      <div class="container">
+        <div class="mz-banner">
+          <figure class="mz-banner__media"><img src="assets/hero-woman-opt.jpg" alt="A woman smiling broadly outdoors on a sunny day" loading="lazy" style="object-position:55% 30%"></figure>
+          <div>
+            <h2 class="h2" id="h-not-sure">Not sure what you need? <span class="it">That is what the consultation is for.</span></h2>
+            <p>You do not need to arrive knowing the treatment names. Tell us what bothers you about your smile, and we will show you the options, what each involves, and what it costs, with no pressure to go ahead.</p>
+            <div class="btn-row"><a class="btn btn--gold" href="contact.html#enquire">Book Online</a><a class="btn btn--ghost" href="tel:+61291586334">Call (02) 9158 6334</a></div>
           </div>
         </div>
       </div>
-    </aside>
+    </section>
 
     <!-- ============ 7. RIGHT FOR ME ============ -->
     <section class="band band--white" id="right" aria-labelledby="h-right">

@@ -88,7 +88,7 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hx hx--flip" data-hx data-hero aria-labelledby="s-h1" style="--px:-272.79px;--py:-293.11px;--pw:1774.5px;--ph:1183.15px;--blur:5px;--hx-img:url(assets/hero-checkup.jpg);--lede-w:30em">
-      <div class="hx__base" aria-hidden="true"></div>
+      <div class="hx__base" aria-hidden="true" style="background-image:url(assets/hero-checkup.jpg)"></div>
       <div class="hx__canvas" aria-hidden="true">
         <div class="hx__photo hx__bg"><img src="assets/hero-checkup.jpg" alt=""></div>
         <div class="hx__win"><div class="hx__photo "><img src="assets/hero-checkup.jpg" alt=""></div></div>
@@ -188,9 +188,9 @@
     <!-- ============ 2. SCALE AND CLEAN ============ -->
     <section class="band band--white" id="scale-and-clean" aria-labelledby="h-scale">
       <div class="container">
-        <div class="split split--center head">
+        <div class="mz-head">
           <h2 class="h2" id="h-scale">What is a <span class="it">scale and clean?</span></h2>
-          <p class="lede lede--wide">A dental scale and clean is the professional removal of plaque and hardened tartar from your teeth, above and just below the gum line, followed by a polish.</p>
+          <p class="lead">A dental scale and clean is the professional removal of plaque and hardened tartar from your teeth, above and just below the gum line, followed by a polish.</p>
         </div>
 
         <div class="photo-pair">
@@ -199,14 +199,22 @@
           <figure class="ph"><div><img src="assets/tooth-outline.svg" alt=""><b>ultrasonic-scaler-teeth-cleaning.webp</b><span>Alt: Ultrasonic scaler removing tartar during professional teeth cleaning</span></div></figure>
         </div>
 
-        <h3 class="h3x" style="margin:clamp(56px,6vw,80px) 0 36px">Here is what happens:</h3>
-        <ol class="hsteps">
-          <li><b>Assessment</b><p class="p">We check where the build-up is and how your gums are responding to it.</p></li>
-          <li><b>Scaling</b><p class="p">An ultrasonic scaler uses high-frequency vibration and a water spray to break tartar away from the tooth surface. Hand instruments finish the areas the scaler cannot reach neatly.</p></li>
-          <li><b>Polishing</b><p class="p">A soft rubber cup and a mildly abrasive paste smooth the tooth surfaces and lift surface staining from tea, coffee, red wine and smoking.</p></li>
-          <li><b>Fluoride</b><p class="p">A fluoride varnish or gel is applied to strengthen the enamel and reduce sensitivity.</p></li>
-          <li><b>Advice</b><p class="p">We show you the specific spots you are missing at home, which is usually more useful than general advice about brushing.</p></li>
+        <h3 class="h3x" style="margin-top:clamp(56px,6vw,80px);text-align:center">Here is what happens:</h3>
+      </div>
+      <div class="container mz-steps" data-mz-steps style="margin-top:32px">
+        <ol>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>1</b></span><h3>Assessment</h3><p>We check where the build-up is and how your gums are responding to it.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>2</b></span><h3>Scaling</h3><p>An ultrasonic scaler uses high-frequency vibration and a water spray to break tartar away from the tooth surface. Hand instruments finish the areas the scaler cannot reach neatly.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>3</b></span><h3>Polishing</h3><p>A soft rubber cup and a mildly abrasive paste smooth the tooth surfaces and lift surface staining from tea, coffee, red wine and smoking.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>4</b></span><h3>Fluoride</h3><p>A fluoride varnish or gel is applied to strengthen the enamel and reduce sensitivity.</p></li>
+          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>5</b></span><h3>Advice</h3><p>We show you the specific spots you are missing at home, which is usually more useful than general advice about brushing.</p></li>
         </ol>
+        <figure class="mz-steps__media">
+          <img src="assets/kid-mirror-opt.jpg" alt="A patient smiling at her clean teeth in a hand mirror while her dentist looks on" loading="lazy" style="object-position:55% 40%">
+          <div class="mz-chip"><small>Check up and clean</small><b>Usually 30–60 minutes</b></div>
+        </figure>
+      </div>
+      <div class="container">
 
         <div class="split split--even split--center" style="margin-top:clamp(88px,9vw,136px)">
           <div>
@@ -287,11 +295,14 @@
       <div class="container split split--center">
         <div>
           <h2 class="h2" id="h-deep">What is a deep clean, <span class="it">and do I need one?</span></h2>
-          <div class="prose" style="margin-top:24px">
+          <p class="gist" style="margin-top:24px">A deeper clean of the root surfaces, for gum pockets. Most people do not need one.</p>
+          <details class="more"><summary><span class="mo">Read more</span><span class="less">Show less</span></summary>
+          <div class="prose">
             <p>Deep cleaning teeth is a different and more thorough procedure than a routine scale and clean. The clinical terms are periodontal debridement or root planing.</p>
             <p>A routine clean deals with build-up on the crowns of the teeth and just under the gum edge. A deep clean goes further down, cleaning the root surfaces inside the pockets that form when gum disease has caused the gum to detach from the tooth. Because it reaches deeper, it is usually done under local anaesthetic and often split across two or more appointments, one section of the mouth at a time.</p>
             <p>You need one if we measure pocket depths beyond the normal range and see bone loss on your X-rays. Most people do not need one.</p>
           </div>
+          </details>
           <p class="pull-quote" style="margin-top:40px;font-size:clamp(26px,2.4vw,34px)">If you do, we will show you the measurements rather than just telling you.</p>
         </div>
         <div class="table-card scroll-x">
@@ -350,19 +361,21 @@
     </section>
 
     <!-- ============ CTA 3: FULL-BLEED MOMENT ============ -->
-    <aside class="moment" aria-labelledby="h-been-a-while">
-      <img src="assets/first-visit-opt.jpg" alt="" loading="lazy" style="object-position:50% 26%">
-      <div class="container" style="position:relative;z-index:1">
-        <div class="moment__panel">
-          <h2 class="h2" id="h-been-a-while" style="font-size:clamp(30px,2.8vw,40px)">Been a while? That is fine, <span class="it">and we have heard it all.</span></h2>
-          <p class="p">Plenty of our patients come back after years away. There is no lecture waiting for you. We take a look, tell you where things stand, and work out a plan you are comfortable with.</p>
-          <div class="btn-row">
-            <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
-            <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
+    <section class="band band--white band--tight" aria-labelledby="h-been-a-while">
+      <div class="container">
+        <div class="mz-banner">
+          <figure class="mz-banner__media"><img src="assets/first-visit-opt.jpg" alt="A patient smiling as she chats with her dentist in the dental chair" loading="lazy" style="object-position:55% 35%"></figure>
+          <div>
+            <h2 class="h2" id="h-been-a-while">Been a while? That is fine, <span class="it">and we have heard it all.</span></h2>
+            <p>Plenty of our patients come back after years away. There is no lecture waiting for you. We take a look, tell you where things stand, and work out a plan you are comfortable with.</p>
+            <div class="btn-row">
+              <a class="btn btn--gold" href="contact.html#enquire">Book Online</a>
+              <a class="btn btn--ghost" href="tel:+61291586334">Call (02) 9158 6334</a>
+            </div>
           </div>
         </div>
       </div>
-    </aside>
+    </section>
 
     <!-- ============ 5. WHAT HAPPENS WHEN YOU DON'T CLEAN (dark) ============ -->
     <section class="band band--ink on-ink" id="skip" aria-labelledby="h-skip">
