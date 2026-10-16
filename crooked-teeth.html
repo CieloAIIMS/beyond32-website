@@ -206,7 +206,7 @@
           <article class="ex__panel" id="ex-panel" role="tabpanel" aria-labelledby="t-invisalign" aria-live="polite">
             <div class="ex__art">
               <span class="tag-chip" data-f="chip">Removable</span>
-              <div class="img-ph" role="img" aria-label="Image placeholder: Illustration of front teeth wearing a clear aligner" style="--ph-ratio:600 / 240"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="m21 15.5-5-5L5 19.5"/></svg><b>Image placeholder</b><span>Illustration of front teeth wearing a clear aligner</span></div><svg hidden class="smile" data-mode="aligner" viewBox="0 0 600 240" role="img" aria-labelledby="smile-t">
+              <img class="gen-img" data-ex-img src="assets/gen/aligner-fingertips.jpg" alt="A clear aligner held between fingertips" loading="lazy" style="aspect-ratio:600 / 240"><svg hidden class="smile" data-mode="aligner" viewBox="0 0 600 240" role="img" aria-labelledby="smile-t">
                 <title id="smile-t" data-f="svgtitle">Illustration of front teeth wearing a clear aligner</title>
                 <defs>
                   <linearGradient id="enamel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f4efe6"/></linearGradient>
@@ -359,6 +359,27 @@
       // Hero card arrows
       const row = document.querySelector("[data-cards]");
       document.querySelectorAll("[data-scroll]").forEach((b) => b.addEventListener("click", () => row.scrollBy({ left: Number(b.dataset.scroll) * 260, behavior: "smooth" })));
+    })();
+  </script>
+  <script>
+    /* Treatment explorer photo follows the selected option */
+    (function () {
+      const img = document.querySelector("[data-ex-img]");
+      if (!img) return;
+      const P = {
+        "invisalign": ["assets/gen/aligner-fingertips.jpg", "A clear aligner held between fingertips"],
+        "clear-aligners": ["assets/gen/aligner-fingertips.jpg", "A clear aligner held between fingertips"],
+        "fast-braces": ["assets/gen/braces-macro.jpg", "A close-up smile with clear braces brackets on the front teeth"],
+        "traditional": ["assets/gen/braces-macro.jpg", "A close-up smile with braces brackets on the front teeth"],
+        "lingual": ["assets/gen/coffee-smile.jpg", "A woman smiling naturally, with no visible braces"],
+      };
+      const sync = () => {
+        const t = document.querySelector(".ex__tab[aria-selected=\"true\"]");
+        const p = t && P[t.dataset.opt]; if (!p || img.getAttribute("src") === p[0]) return;
+        img.src = p[0]; img.alt = p[1];
+      };
+      new MutationObserver(sync).observe(document.querySelector(".ex__tabs"), { attributes: true, subtree: true, attributeFilter: ["aria-selected"] });
+      sync();
     })();
   </script>
 </body>

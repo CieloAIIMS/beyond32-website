@@ -780,3 +780,4 @@ body[data-page="home"] { --section: clamp(72px, 6.7vw, 96px); }
   .phero::before { background: linear-gradient(180deg, rgba(20, 64, 62, 0) 0, rgba(20, 64, 62, .15) 180px, rgba(20, 64, 62, .95) 360px, var(--ink) 380px); }
   .phero__inner { padding-top: 300px; }
 }
+.gen-img { display: block; width: 100%; height: auto; object-fit: cover; border-radius: var(--r); background: var(--mint); }
