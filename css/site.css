@@ -729,3 +729,17 @@ body[data-page="home"] { --section: clamp(72px, 6.7vw, 96px); }
   .feat__art { grid-template-columns: minmax(0, 1fr) 84px; }
   .feat__phone { height: auto; width: 100%; max-height: 440px; }
 }
+
+/* --------------------------------------------------------------------------
+   Mega menus (Services + About): wider, centred on the page, pills on one line
+   -------------------------------------------------------------------------- */
+.nav__item:has(> .mega) { position: static; }
+.nav { position: relative; }
+.mega { width: min(1060px, calc(100vw - 48px)); grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+.mega__img { height: auto; aspect-ratio: 429 / 166; }
+.mega__help { flex-wrap: nowrap; white-space: nowrap; }
+.mega__help a { flex: none; }
+@media (max-width: 1140px) { .mega__help { flex-wrap: wrap; white-space: normal; } }
+/* Icons sit dead centre in their tiles */
+.cat__icon svg { display: block; margin: auto; }
+.cat__icon { align-self: center; }

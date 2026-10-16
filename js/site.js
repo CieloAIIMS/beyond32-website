@@ -32,25 +32,25 @@
   const SERVICES = [
     {
       id: "general", href: "general-dentistry-check-up-and-clean.html", name: "General Dentistry", desc: "Everyday care that keeps small problems small.",
-      img: "assets/first-visit-opt.jpg", pos: "50% 30%",
+      img: "assets/nav/general.jpg", pos: "50% 50%",
       icon: svg('<path d="M8.2 3.5c-2.6 0-4.4 2-4.4 4.7 0 2.3.9 3.6 1.5 5.6.7 2.5.8 6.7 2.6 6.7 1.6 0 1.4-4.4 4.1-4.4s2.5 4.4 4.1 4.4c1.8 0 1.9-4.2 2.6-6.7.6-2 1.5-3.3 1.5-5.6 0-2.7-1.8-4.7-4.4-4.7-1.6 0-2.5.9-3.8.9s-2.2-.9-3.8-.9Z"/>'),
       items: ["Check-ups & Cleaning", "Crowns & Bridges", "Root Canal Treatment", "In-House Sedation", "Toothache"],
     },
     {
       id: "cosmetic", href: "cosmetic-dentistry.html", name: "Cosmetic Dentistry", desc: "For patients who want to feel as good as they look.",
-      img: "assets/kid-mirror-opt.jpg", pos: "45% 40%",
+      img: "assets/nav/cosmetic.jpg", pos: "50% 50%",
       icon: svg('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2 2M15.5 15.5l2 2M17.5 6.5l-2 2M8.5 15.5l-2 2"/>'),
       items: ["Veneers", "Teeth Whitening", "Zoom Whitening", "Fixing My Smile"],
     },
     {
       id: "straight", href: "crooked-teeth.html", name: "Teeth Straightening", desc: "Options for every age and every lifestyle.",
-      img: "assets/girl-smile-opt.jpg", pos: "50% 35%",
+      img: "assets/nav/straightening.jpg", pos: "50% 50%",
       icon: svg('<path d="M3 10c3-3 6-3 9 0s6 3 9 0M3 15c3-3 6-3 9 0s6 3 9 0"/>'),
       items: ["Invisalign", "Damon Braces", "Inman Aligner", "Early Interceptive Orthodontics", "Crooked Teeth"],
     },
     {
       id: "implants", href: "dental-implant.html", name: "Implants & All-on-X", desc: "Permanent, natural-feeling replacement teeth.",
-      img: "assets/family.png", pos: "50% 25%",
+      img: "assets/nav/implants.jpg", pos: "50% 50%",
       icon: svg('<path d="M7 4h10l-1 5H8L7 4ZM9 9v2h6V9M10 11l.5 9h3l.5-9M10.2 14h3.6M10.4 17h3.2"/>'),
       items: ["Dental Implants", "Crowns & Bridges"],
     },
@@ -73,6 +73,59 @@
     { href: "gallery.html", name: "Smile Gallery", desc: "Real before & after results", key: "gallery" },
     { href: "blog.html", name: "Blog", desc: "Plain-English advice for healthy smiles", key: "blog" },
   ];
+  // About mega menu: same shape as SERVICES (category → photo + list)
+  const ABOUT_MEGA = [
+    {
+      id: "story", href: "about.html", name: "Our Story", desc: ABOUT[0].desc,
+      img: "assets/founders-opt.jpg", pos: "62% 40%",
+      icon: svg('<path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z"/><path d="M10 20v-5h4v5"/>'),
+      items: [["A small practice, on purpose", "about.html#story-h"], ["How we look after you", "about.html#approach-h"], ["Less clinic, more living room", "about.html#inside-h"]],
+    },
+    {
+      id: "team", href: "about.html#team", name: "Meet the Team", desc: ABOUT[1].desc,
+      img: "assets/practice-opt.jpg", pos: "50% 45%",
+      icon: svg('<circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.3c2.6-.4 4.6 1.3 5 4.2"/>'),
+      items: [["Dr Jeff Lin", "about.html#team"], ["Dr Jennifer Chung", "about.html#team"], ["Dr Ashleigh Wong", "about.html#team"], ["Dr Leazelle Graham", "about.html#team"], ["Dr Kim", "about.html#team"]],
+    },
+    {
+      id: "gallery", href: "gallery.html", name: "Smile Gallery", desc: ABOUT[2].desc,
+      img: "assets/hero-cosmetic.jpg", pos: "58% 45%",
+      icon: svg('<rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 15-4.5-4.5L6 19"/>'),
+      items: [["Browse all cases", "gallery.html#cases"], ["Before & after results", "gallery.html"]],
+    },
+    {
+      id: "blog", href: "blog.html", name: "Blog", desc: ABOUT[3].desc,
+      img: "assets/kid-mirror-opt.jpg", pos: "45% 40%",
+      icon: svg('<path d="M6 4h9l3 3v13H6V4Z"/><path d="M15 4v3h3M9 11h6M9 14h6M9 17h4"/>'),
+      items: [["All articles", "blog.html"], ["How to stop mouth breathing", "https://www.beyond32dental.com.au/how-to-stop-mouth-breathing/"], ["Tooth wear", "https://www.beyond32dental.com.au/tooth-wear/"], ["Dental bonding for gaps", "https://www.beyond32dental.com.au/dental-bonding-for-gaps/"], ["Dental sealants for kids", "https://www.beyond32dental.com.au/dental-sealants-for-kids/"]],
+    },
+  ];
+  const ABOUT_QUICK = [["New Patients", "first-visit.html"], ["Special Offers", "special-offers.html"], ["Contact Us", "contact.html"]];
+
+  // One template for both mega menus: categories left, photo + list right, a pill row below
+  const megaPanel = (key, title, groups, all, helpLabel, helpHTML) => `
+            <div class="panel-menu mega" id="menu-${key}">
+              <div class="mega__cats">
+                <h2>${title}</h2>
+                ${groups.map((s, i) => `
+                  <a class="cat" href="${s.href || "#"}" data-cat="${s.id}"${i === 0 ? " data-active" : ""}>
+                    <span class="cat__icon">${s.icon}</span>
+                    <span><b>${s.name}</b><span>${s.desc}</span></span>
+                  </a>`).join("")}
+                <a class="text-link mega__all" href="${all[1]}">${all[0]} <span>→</span></a>
+              </div>
+              <div class="mega__side">
+                <div class="mega__img"><img src="${groups[0].img}" alt="" style="object-position:${groups[0].pos}" loading="lazy"></div>
+                ${groups.map((s, i) => `
+                  <div class="mega__list" data-list="${s.id}"${i === 0 ? " data-active" : ""}>
+                    ${s.items.map((t) => { const [label, href] = Array.isArray(t) ? t : [t, LINKS[t] || "#"]; const ext = /^https?:/.test(href); return `<a href="${href}"${ext ? ' target="_blank" rel="noopener"' : ""}${!ext && href === location.pathname.split("/").pop() ? ' aria-current="page"' : ""}>${label}</a>`; }).join("")}
+                  </div>`).join("")}
+              </div>
+              <div class="mega__help">
+                <p>${helpLabel}</p>
+                ${helpHTML}
+              </div>
+            </div>`;
   const here = location.pathname.split("/").pop() || "index.html";
   const notService = /^(first-visit|special-offers|blog|[a-z]+-dentist|dentist-[a-z]+)/.test(here);
   const aboutActive = page === "about" || page === "gallery" || /^blog/.test(here);
@@ -87,37 +140,13 @@
         <ul class="nav__links" role="list">
           <li class="nav__item" data-menu>
             <button class="nav__link" type="button" aria-expanded="false" aria-controls="menu-services"${(page === "emergency" || page === "service") && !notService ? " data-current" : ""}>Services ${I.chev}</button>
-            <div class="panel-menu mega" id="menu-services">
-              <div class="mega__cats">
-                <h2>Services</h2>
-                ${SERVICES.map((s, i) => `
-                  <a class="cat" href="${s.href || "#"}" data-cat="${s.id}"${i === 0 ? " data-active" : ""}>
-                    <span class="cat__icon">${s.icon}</span>
-                    <span><b>${s.name}</b><span>${s.desc}</span></span>
-                  </a>`).join("")}
-                <a class="text-link mega__all" href="index.html#h-svc">Explore all services <span>→</span></a>
-              </div>
-              <div class="mega__side">
-                <div class="mega__img"><img src="${SERVICES[0].img}" alt="" style="object-position:${SERVICES[0].pos}" loading="lazy"></div>
-                ${SERVICES.map((s, i) => `
-                  <div class="mega__list" data-list="${s.id}"${i === 0 ? " data-active" : ""}>
-                    ${s.items.map((t) => `<a href="${LINKS[t] || "#"}"${LINKS[t] && LINKS[t] === location.pathname.split("/").pop() ? ' aria-current="page"' : ""}>${t}</a>`).join("")}
-                  </div>`).join("")}
-              </div>
-              <div class="mega__help">
-                <p>I need help with</p>
-                <a class="is-urgent" href="emergency-dental-care.html">Emergency Dental Care</a>
-                ${CONCERNS.map((c) => `<a href="${LINKS[c] || "#"}">${c}</a>`).join("")}
-              </div>
-            </div>
+            ${megaPanel("services", "Services", SERVICES, ["Explore all services", "index.html#h-svc"], "I need help with", `<a class="is-urgent" href="emergency-dental-care.html">Emergency Dental Care</a>${CONCERNS.map((c) => `<a href="${LINKS[c] || "#"}">${c}</a>`).join("")}`)}
           </li>
           <li class="nav__item"><a class="nav__link" href="first-visit.html"${here === "first-visit.html" ? ' aria-current="page"' : ""}>New Patients <span class="nav__dot" aria-hidden="true"></span></a></li>
           <li class="nav__item"><a class="nav__link" href="special-offers.html"${here === "special-offers.html" ? ' aria-current="page"' : ""}>Special Offers</a></li>
           <li class="nav__item" data-menu>
             <button class="nav__link" type="button" aria-expanded="false" aria-controls="menu-about"${aboutActive ? " data-current" : ""}>About ${I.chev}</button>
-            <div class="panel-menu mini" id="menu-about">
-              ${ABOUT.map((a) => `<a href="${a.href}"${a.key && a.key === page ? ' aria-current="page"' : ""}><b>${a.name}</b><span>${a.desc}</span></a>`).join("")}
-            </div>
+            ${megaPanel("about", "About", ABOUT_MEGA, ["About Beyond 32", "about.html"], "Quick links", ABOUT_QUICK.map(([t, h]) => `<a href="${h}"${h === here ? ' aria-current="page"' : ""}>${t}</a>`).join("") + `<a href="${PRACTICE.tel}">Call ${PRACTICE.phone}</a>`)}
           </li>
           <li class="nav__item"><a class="nav__link" href="contact.html"${cur("contact")}>Contact</a></li>
         </ul>
@@ -203,17 +232,19 @@
     document.addEventListener("click", (e) => { if (!header.contains(e.target)) closeAll(); });
 
     // Mega menu: hovering or focusing a category swaps the treatment list and photo
-    const mega = header.querySelector(".mega");
-    const img = mega.querySelector(".mega__img img");
-    mega.querySelectorAll(".cat").forEach((cat) => {
-      const activate = () => {
-        const s = SERVICES.find((x) => x.id === cat.dataset.cat);
-        mega.querySelectorAll(".cat").forEach((c) => c.toggleAttribute("data-active", c === cat));
-        mega.querySelectorAll(".mega__list").forEach((l) => l.toggleAttribute("data-active", l.dataset.list === s.id));
-        if (!img.src.endsWith(s.img)) { img.style.opacity = 0; setTimeout(() => { img.src = s.img; img.style.objectPosition = s.pos; img.style.opacity = 1; }, 150); }
-      };
-      cat.addEventListener("mouseenter", activate);
-      cat.addEventListener("focus", activate);
+    header.querySelectorAll(".mega").forEach((mega) => {
+      const data = mega.id === "menu-about" ? ABOUT_MEGA : SERVICES;
+      const img = mega.querySelector(".mega__img img");
+      mega.querySelectorAll(".cat").forEach((cat) => {
+        const activate = () => {
+          const s = data.find((x) => x.id === cat.dataset.cat);
+          mega.querySelectorAll(".cat").forEach((c) => c.toggleAttribute("data-active", c === cat));
+          mega.querySelectorAll(".mega__list").forEach((l) => l.toggleAttribute("data-active", l.dataset.list === s.id));
+          if (!img.src.endsWith(s.img)) { img.style.opacity = 0; setTimeout(() => { img.src = s.img; img.style.objectPosition = s.pos; img.style.opacity = 1; }, 150); }
+        };
+        cat.addEventListener("mouseenter", activate);
+        cat.addEventListener("focus", activate);
+      });
     });
   }
 
