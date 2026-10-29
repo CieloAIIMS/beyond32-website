@@ -41,3 +41,37 @@ document.querySelectorAll("[data-hx]").forEach((hero) => {
   document.fonts && document.fonts.ready.then(place);
   place();
 });
+
+/* Chapters hide on scroll down, come back on a small scroll up */
+(function () {
+  const nav = document.querySelector(".chapters");
+  if (!nav) return;
+  const side = nav.hasAttribute("data-side") && matchMedia("(min-width: 1200px)");
+  const isSide = () => !!(side && side.matches);
+  const start = () => (document.querySelector("[data-hero]") || nav).getBoundingClientRect().bottom + scrollY;
+  let lastY = scrollY, acc = 0, hovering = false;
+  // Side menu introduces itself after the hero and stays for 3 more downward scrolls (the first counted gesture is the one that leaves the hero)
+  let intro = 0, lastDown = 0;
+  const update = () => {
+    const y = scrollY, dy = y - lastY; lastY = y;
+    if (hovering) return;
+    if (y < start() - 80) { nav.classList.toggle("is-hidden", isSide()); acc = 0; intro = 0; return; }
+    if (isSide() && intro < 4) {
+      nav.classList.remove("is-hidden");
+      const now = Date.now();
+      if (dy > 0 && now - lastDown > 250) intro++; // a new scroll gesture
+      if (dy > 0) lastDown = now;
+      if (intro < 4) { acc = 0; return; }
+    }
+    acc = Math.sign(dy) === Math.sign(acc) ? acc + dy : dy;
+    if (acc > 24) nav.classList.add("is-hidden");
+    else if (acc < -12) nav.classList.remove("is-hidden");
+  };
+  addEventListener("scroll", update, { passive: true }); update();
+  // Side menu: bring it back when the pointer reaches the far left edge
+  addEventListener("mousemove", (e) => {
+    if (isSide() && e.clientX <= 24 && e.clientY > 80) nav.classList.remove("is-hidden");
+  }, { passive: true });
+  nav.addEventListener("mouseenter", () => { hovering = true; nav.classList.remove("is-hidden"); });
+  nav.addEventListener("mouseleave", () => { hovering = false; acc = 0; });
+})();
