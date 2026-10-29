@@ -213,8 +213,13 @@
     items.forEach((item) => {
       const btn = item.querySelector(":scope > button");
       let t;
-      item.addEventListener("mouseenter", () => { clearTimeout(t); closeAll(item); if (!item.hasAttribute("data-open")) { setOpen(item, true); item.dataset.hoverAt = Date.now(); } });
-      item.addEventListener("mouseleave", () => { t = setTimeout(() => setOpen(item, false), 160); });
+      // Hover intent: only open if the pointer rests on the item, so passing over it on the way elsewhere does nothing
+      item.addEventListener("mouseenter", () => {
+        clearTimeout(t);
+        const delay = items.some((it) => it !== item && it.hasAttribute("data-open")) ? 0 : 220;
+        t = setTimeout(() => { closeAll(item); if (!item.hasAttribute("data-open")) { setOpen(item, true); item.dataset.hoverAt = Date.now(); } }, delay);
+      });
+      item.addEventListener("mouseleave", () => { clearTimeout(t); t = setTimeout(() => setOpen(item, false), 160); });
       btn.addEventListener("click", () => {
         // A click right after hover-open confirms the panel rather than closing it
         const justHovered = Date.now() - Number(item.dataset.hoverAt || 0) < 600;
@@ -374,7 +379,7 @@
           </ul>
         </div>
         <div class="site-footer__rule"></div>
-        <div class="container site-footer__areas"><span>Your local dentist for</span><a href="beecroft-dentist.html">Beecroft</a><a href="cherrybrook-dentist.html">Cherrybrook</a><a href="dentist-glenhaven.html">Glenhaven</a><a href="dural-dentist.html">Dural</a><a href="westleigh-dentist.html">Westleigh</a></div>
+        <div class="container site-footer__areas"><span>Your local dentist for</span><a href="beecroft-dentist.html">Beecroft</a><a href="cherrybrook-dentist.html">Cherrybrook</a><a href="dentist-glenhaven.html">Glenhaven</a><a href="dural-dentist.html">Dural</a><a href="contact.html">Epping</a><a href="contact.html">Thornleigh</a><a href="westleigh-dentist.html">Westleigh</a></div>
         <div class="site-footer__rule"></div>
         <div class="container site-footer__bottom">
           <p>© Beyond 32 Dental. All rights reserved.</p>
