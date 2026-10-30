@@ -69,6 +69,11 @@
     .ch-cards::-webkit-scrollbar { display: none; }
     .ch-card { flex: 0 0 auto; width: clamp(214px, 15.6vw, 240px); scroll-snap-align: start; background: var(--cream); color: var(--ink); border-radius: 8px; padding: 16px 18px 18px; text-decoration: none; display: flex; flex-direction: column; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
     .ch-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px -18px rgba(0,0,0,.5); }
+    /* Hero option cards: three side by side, each a clear link to its option below */
+    .ch-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: min(var(--container), 100% - 2 * var(--gutter)); margin-inline: auto; padding: 4px 0 8px; }
+    .ch-card { width: auto; }
+    .ch-card::after { content: "See this option \2192"; margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; color: var(--ink); }
+    @media (max-width: 760px) { .ch-cards { grid-template-columns: 1fr; } }
     .ch-card b { font-size: clamp(18px, 1.4vw, 20px); font-weight: 500; line-height: 1.25; letter-spacing: -0.005em; }
     .ch-card span { display: block; margin-top: 12px; font-size: 14px; line-height: 1.45; color: var(--teal); }
     @media (max-width: 760px) {
@@ -168,10 +173,6 @@
         <div>
           <div class="container ch__label-row">
             <p class="ch__label">These include:</p>
-            <div class="ch__arrows">
-              <button type="button" data-scroll="-1" aria-label="Previous treatments"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
-              <button type="button" data-scroll="1" aria-label="More treatments"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
-            </div>
           </div>
           <div class="ch-cards" data-cards>
             <a class="ch-card" href="#treatments" data-pick="invisalign"><b>Clear aligners, e.g. Invisalign</b><span>Almost invisible, removable aligners. Straighten your teeth without anyone knowing!</span></a>
@@ -364,7 +365,7 @@
         "invisalign": ["assets/gen/aligner-fingertips.jpg", "A clear aligner held between fingertips"],
         "clear-aligners": ["assets/gen/aligner-fingertips.jpg", "A clear aligner held between fingertips"],
         "fast-braces": ["assets/gen/braces-macro.jpg", "A close-up smile with clear braces brackets on the front teeth"],
-        "traditional": ["assets/gen/braces-macro.jpg", "A close-up smile with braces brackets on the front teeth"],
+        "traditional": ["assets/gen/braces-metal.jpg", "A natural smile with metal braces on the upper and lower teeth"],
         "lingual": ["assets/gen/coffee-smile.jpg", "A woman smiling naturally, with no visible braces"],
       };
       const sync = () => {
