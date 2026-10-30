@@ -785,7 +785,9 @@ body[data-page="home"] { --section: clamp(72px, 6.7vw, 96px); }
    panel is always as tall as the longest list and nothing shifts on hover */
 .mega__side { display: grid; grid-template-rows: auto 1fr; align-content: start; }
 .mega__list { display: block; grid-area: 2 / 1; visibility: hidden; }
-.mega__list[data-active] { visibility: visible; }
+/* Only inside an open menu, so a closed menu's links never catch the pointer */
+.nav__item[data-open] .mega__list[data-active] { visibility: visible; }
+.nav__item:not([data-open]) > .panel-menu { pointer-events: none; }
 .ldiag { display: block; width: 100%; height: auto; border-radius: var(--r); background: #D8EEED; }
 
 /* 3D render diagrams with pinned labels; on phones the labels become a list */

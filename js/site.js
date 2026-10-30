@@ -216,7 +216,8 @@
       // Hover intent: only open if the pointer rests on the item, so passing over it on the way elsewhere does nothing
       item.addEventListener("mouseenter", () => {
         clearTimeout(t);
-        const delay = items.some((it) => it !== item && it.hasAttribute("data-open")) ? 0 : 220;
+        // Switching from an open menu waits a little longer, so cutting across About on the way into the Services panel does not swap menus
+        const delay = items.some((it) => it !== item && it.hasAttribute("data-open")) ? 320 : 220;
         t = setTimeout(() => { closeAll(item); if (!item.hasAttribute("data-open")) { setOpen(item, true); item.dataset.hoverAt = Date.now(); } }, delay);
       });
       item.addEventListener("mouseleave", () => { clearTimeout(t); t = setTimeout(() => setOpen(item, false), 160); });
@@ -247,7 +248,12 @@
           mega.querySelectorAll(".mega__list").forEach((l) => l.toggleAttribute("data-active", l.dataset.list === s.id));
           if (!img.src.endsWith(s.img)) { img.style.opacity = 0; setTimeout(() => { img.src = s.img; img.style.objectPosition = s.pos; img.style.opacity = 1; }, 150); }
         };
-        cat.addEventListener("mouseenter", activate);
+        // Hover intent: only switch if the pointer rests on a category, so a diagonal move
+        // towards the treatment list does not flip it to the category passed on the way
+        let t;
+        cat.addEventListener("mouseenter", () => { clearTimeout(t); t = setTimeout(activate, 220); });
+        cat.addEventListener("mouseleave", () => clearTimeout(t));
+        cat.addEventListener("click", activate);
         cat.addEventListener("focus", activate);
       });
     });

@@ -74,11 +74,12 @@
     .case__pair figcaption { position: absolute; left: 10px; top: 10px; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: rgba(0,0,0,.28); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(4px); }
     .case__pair .flip img { transform: scaleX(-1); }
     .case:hover .case__pair .flip img { transform: scaleX(-1) scale(1.04); }
-    .case h3 { margin-top: 20px; font-size: 20px; font-weight: 500; line-height: 1.2; }
-    .case__meta { margin-top: 8px; color: var(--ink); }
-    .case__note { margin-top: 4px; font-size: 15px; font-weight: 300; color: var(--ink); }
+    /* Card text: title, then key facts, then a quiet footnote; the arrow gets its own lane */
+    .case h3 { margin-top: 20px; padding-right: 56px; font-size: 22px; font-weight: 500; line-height: 1.2; color: var(--ink); }
+    .case__meta { margin-top: 8px; padding-right: 56px; font-size: 15px; font-weight: 500; color: var(--teal); }
+    .case__note { margin-top: 14px; padding: 12px 56px 0 0; border-top: 1px solid var(--mint-line); font-size: 13px; line-height: 1.45; color: var(--teal); opacity: .85; }
     .case__open { position: absolute; inset: 0; border-radius: inherit; background: none; border: 0; }
-    .case__open span { position: absolute; right: 22px; bottom: 22px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; transition: background .3s, color .3s; }
+    .case__open span { position: absolute; right: 22px; bottom: 18px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; transition: background .3s, color .3s; }
     .case__open svg { width: 16px; height: 16px; }
     .case:hover .case__open span { background: var(--ink); color: #fff; }
 
@@ -154,7 +155,7 @@
             <span class="compare__tag compare__tag--a">After</span>
             <input type="range" min="0" max="100" value="42" aria-label="Before and after comparison, porcelain veneers. Slide to reveal.">
           </div>
-          <p class="feature-meta"><span><b>Porcelain veneers</b></span><span>6 teeth</span><span>3 appointments</span><span>4 weeks</span></p>
+          <p class="feature-meta"><span><b>Clear aligners + composite bonding</b></span><span>Dr Jen</span><span>6 months apart</span></p>
         </div>
       </div>
     </section>
@@ -166,7 +167,9 @@
         <button class="filter" type="button" data-filter="veneers" aria-pressed="false">Veneers</button>
         <button class="filter" type="button" data-filter="crowns" aria-pressed="false">Crowns &amp; Bridges</button>
         <button class="filter" type="button" data-filter="whitening" aria-pressed="false">Whitening</button>
+        <button class="filter" type="button" data-filter="bonding" aria-pressed="false">Bonding</button>
         <button class="filter" type="button" data-filter="aligners" aria-pressed="false">Clear Aligners</button>
+        <button class="filter" type="button" data-filter="braces" aria-pressed="false">Braces</button>
         <button class="filter" type="button" data-filter="implants" aria-pressed="false">Implants</button>
         <button class="filter" type="button" data-filter="practice" aria-pressed="false" id="practice">Our Practice</button>
         <span class="filters__count" aria-live="polite" data-count></span>
@@ -178,26 +181,26 @@
       <div class="container">
         <div class="grid" data-grid>
           <!-- Case slots: images from the homepage carousel. Slots marked data-placeholder reuse an existing pair until real cases are supplied. -->
-          <article class="case" data-cat="veneers" data-case='{"t":"Porcelain veneers","b":"assets/ba-2-before.jpg","a":"assets/ba-2-after.jpg","teeth":"6 teeth","appts":"3 appointments","time":"4 weeks","dr":"Dr Jennifer Chung","note":"Photographed 6 weeks after treatment"}'>
+          <article class="case" data-cat="aligners bonding" data-case='{"t":"Clear aligners + composite bonding","b":"assets/ba-2-before.jpg","a":"assets/ba-2-after.jpg","teeth":"Upper &amp; lower","appts":"Aligners, then bonding","time":"6 months","dr":"Dr Jennifer Chung","note":"Before and after photos taken 6 months apart"}'>
             <div class="case__pair">
               <figure><img src="assets/ba-2-before.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
               <figure><img src="assets/ba-2-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
-            <h3>Porcelain Veneers</h3>
-            <p class="case__meta">6 teeth · 3 appointments · 4 weeks</p>
-            <p class="case__note">Photographed 6 weeks after treatment</p>
-            <button class="case__open" type="button" aria-label="View porcelain veneers case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+            <h3>Clear Aligners + Composite Bonding</h3>
+            <p class="case__meta">Treated by Dr Jen</p>
+            <p class="case__note">Before and after photos taken 6 months apart</p>
+            <button class="case__open" type="button" aria-label="View clear aligners and composite bonding case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
           </article>
 
-          <article class="case" data-cat="crowns" data-case='{"t":"Crowns & bridgework","b":"assets/ba-3-before.jpg","a":"assets/ba-3-after.jpg","teeth":"4 teeth","appts":"2 appointments","time":"3 weeks","dr":"Dr Jeff Lin","note":"Photographed 4 weeks after treatment"}'>
+          <article class="case" data-cat="aligners crowns" data-case='{"t":"Clear aligners + crowns","b":"assets/ba-3-before.jpg","a":"assets/ba-3-after.jpg","teeth":"Upper &amp; lower","appts":"Aligners, then crowns","time":"12 months","dr":"Dr Jeff Lin","note":"Before and after photos taken 12 months apart"}'>
             <div class="case__pair">
               <figure><img src="assets/ba-3-before.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
               <figure><img src="assets/ba-3-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
-            <h3>Crowns &amp; Bridgework</h3>
-            <p class="case__meta">4 teeth · 2 appointments · 3 weeks</p>
-            <p class="case__note">Photographed 4 weeks after treatment</p>
-            <button class="case__open" type="button" aria-label="View crowns and bridgework case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+            <h3>Clear Aligners + Crowns</h3>
+            <p class="case__meta">Treated by Dr Jeff</p>
+            <p class="case__note">Before and after photos taken 12 months apart</p>
+            <button class="case__open" type="button" aria-label="View clear aligners and crowns case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
           </article>
 
           <figure class="tile" data-cat="practice">
@@ -205,15 +208,15 @@
             <figcaption><span>Happy gas, kid-approved</span></figcaption>
           </figure>
 
-          <article class="case" data-cat="veneers" data-case='{"t":"Composite veneers","b":"assets/ba-4-before.jpg","a":"assets/ba-4-after.jpg","teeth":"4 teeth","appts":"1 appointment","time":"Same day","dr":"Dr Ashleigh Wong","note":"Photographed 2 weeks after treatment"}'>
+          <article class="case" data-cat="braces" data-case='{"t":"Braces","b":"assets/ba-4-before.jpg","a":"assets/ba-4-after.jpg","teeth":"Upper &amp; lower","appts":"Regular adjustments","time":"12 months","dr":"Dr Jennifer Chung","note":"Before and after photos taken 12 months apart"}'>
             <div class="case__pair">
               <figure><img src="assets/ba-4-before.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
               <figure><img src="assets/ba-4-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
-            <h3>Composite Veneers</h3>
-            <p class="case__meta">4 teeth · 1 appointment · same day</p>
-            <p class="case__note">Photographed 2 weeks after treatment</p>
-            <button class="case__open" type="button" aria-label="View composite veneers case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+            <h3>Braces</h3>
+            <p class="case__meta">Treated by Dr Jen</p>
+            <p class="case__note">Before and after photos taken 12 months apart</p>
+            <button class="case__open" type="button" aria-label="View braces case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
           </article>
 
           <figure class="tile tile--wide" data-cat="practice">
@@ -221,43 +224,65 @@
             <figcaption><span>Reception, 114 Yarrara Rd</span></figcaption>
           </figure>
 
-          <article class="case" data-cat="whitening" data-placeholder data-case='{"t":"Teeth whitening","b":"assets/ba-1.jpg","a":"assets/ba-2-after.jpg","teeth":"Full smile","appts":"Take-home kit","time":"2 weeks","dr":"Dr Leazelle Graham","note":"Results vary from person to person"}'>
+          <article class="case" data-cat="whitening" data-case='{"t":"Teeth whitening","b":"assets/ba-whitening-before.webp","a":"assets/ba-whitening-after.webp","dr":"Dr Leazelle Graham","note":"Results vary from person to person"}'>
             <div class="case__pair">
-              <figure class="flip"><img src="assets/ba-1.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
-              <figure class="flip"><img src="assets/ba-2-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
+              <figure><img src="assets/ba-whitening-before.webp" alt="Before teeth whitening" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="assets/ba-whitening-after.webp" alt="After teeth whitening, with a B1 shade tab" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
             <h3>Teeth Whitening</h3>
-            <p class="case__meta">Full smile · take-home kit · 2 weeks</p>
+
             <p class="case__note">Results vary from person to person</p>
             <button class="case__open" type="button" aria-label="View teeth whitening case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
           </article>
 
-          <article class="case" data-cat="aligners" data-placeholder data-case='{"t":"Invisalign clear aligners","b":"assets/ba-3-before.jpg","a":"assets/ba-4-after.jpg","teeth":"Upper & lower","appts":"Check-ins every 8 weeks","time":"11 months","dr":"Dr Jennifer Chung","note":"Photographed at end of treatment"}'>
+          <article class="case" data-cat="whitening" data-case='{"t":"Teeth whitening","b":"assets/ba-whitening2-before.webp","a":"assets/ba-whitening2-after.webp","dr":"Dr Leazelle Graham","note":"Results vary from person to person"}'>
             <div class="case__pair">
-              <figure class="flip"><img src="assets/ba-3-before.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
-              <figure class="flip"><img src="assets/ba-4-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
+              <figure><img src="assets/ba-whitening2-before.webp" alt="Before teeth whitening, shade A3" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="assets/ba-whitening2-after.webp" alt="After teeth whitening, shade B1" loading="lazy"><figcaption>After</figcaption></figure>
             </div>
-            <h3>Invisalign Clear Aligners</h3>
-            <p class="case__meta">Upper &amp; lower · 11 months</p>
-            <p class="case__note">Photographed at end of treatment</p>
-            <button class="case__open" type="button" aria-label="View Invisalign case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+            <h3>Teeth Whitening</h3>
+
+            <p class="case__note">Results vary from person to person</p>
+            <button class="case__open" type="button" aria-label="View teeth whitening case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+          </article>
+
+          <article class="case" data-cat="bonding" data-case='{"t":"Composite bonding","b":"assets/ba-bonding-before.webp","a":"assets/ba-bonding-after.webp","note":"Results vary from person to person"}'>
+            <div class="case__pair">
+              <figure><img src="assets/ba-bonding-before.webp" alt="Before composite bonding" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="assets/ba-bonding-after.webp" alt="After composite bonding" loading="lazy"><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Composite Bonding</h3>
+
+            <p class="case__note">Results vary from person to person</p>
+            <button class="case__open" type="button" aria-label="View composite bonding case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+          </article>
+
+          <article class="case" data-cat="bonding" data-case='{"t":"Composite bonding","b":"assets/ba-bonding2-before.webp","a":"assets/ba-bonding2-after.webp","note":"Results vary from person to person"}'>
+            <div class="case__pair">
+              <figure><img src="assets/ba-bonding2-before.webp" alt="Before composite bonding" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="assets/ba-bonding2-after.webp" alt="After composite bonding" loading="lazy"><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Composite Bonding</h3>
+
+            <p class="case__note">Results vary from person to person</p>
+            <button class="case__open" type="button" aria-label="View composite bonding case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+          </article>
+
+          <article class="case" data-cat="bonding" data-case='{"t":"Composite bonding","b":"assets/ba-bonding3-before.webp","a":"assets/ba-bonding3-after.webp","note":"Results vary from person to person"}'>
+            <div class="case__pair">
+              <figure><img src="assets/ba-bonding3-before.webp" alt="Before composite bonding" loading="lazy"><figcaption>Before</figcaption></figure>
+              <figure><img src="assets/ba-bonding3-after.webp" alt="After composite bonding" loading="lazy"><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Composite Bonding</h3>
+
+            <p class="case__note">Results vary from person to person</p>
+            <button class="case__open" type="button" aria-label="View composite bonding case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
           </article>
 
           <figure class="tile" data-cat="practice">
             <img src="assets/first-visit-opt.jpg" alt="A patient chatting with her dentist in one of our treatment rooms" loading="lazy" style="object-position:50% 30%">
             <figcaption><span>Talk first, treat second</span></figcaption>
           </figure>
-
-          <article class="case" data-cat="implants" data-placeholder data-case='{"t":"Single dental implant","b":"assets/ba-4-before.jpg","a":"assets/ba-3-after.jpg","teeth":"1 tooth","appts":"4 appointments","time":"4 months","dr":"Dr Jeff Lin","note":"Photographed 3 months after final crown"}'>
-            <div class="case__pair">
-              <figure class="flip"><img src="assets/ba-4-before.jpg" alt="Before" loading="lazy"><figcaption>Before</figcaption></figure>
-              <figure class="flip"><img src="assets/ba-3-after.jpg" alt="After" loading="lazy"><figcaption>After</figcaption></figure>
-            </div>
-            <h3>Single Dental Implant</h3>
-            <p class="case__meta">1 tooth · 4 appointments · 4 months</p>
-            <p class="case__note">Photographed 3 months after final crown</p>
-            <button class="case__open" type="button" aria-label="View dental implant case"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
-          </article>
 
           <figure class="tile tile--wide" data-cat="practice">
             <img src="assets/founders-opt.jpg" alt="Dr Jennifer Chung and Dr Jeff Lin at the front desk" loading="lazy" style="object-position:50% 35%">
@@ -366,7 +391,7 @@
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === cat)));
       let n = 0;
       items.forEach((it) => {
-        const show = cat === "all" || it.dataset.cat === cat;
+        const show = cat === "all" || it.dataset.cat.split(" ").includes(cat);
         it.toggleAttribute("data-hidden", !show);
         if (show && it.classList.contains("case")) n++;
       });
@@ -397,10 +422,11 @@
       lb.querySelector("[data-lb-before]").alt = `${d.t}, before`;
       lb.querySelector("[data-lb-after]").src = d.a;
       lb.querySelector("[data-lb-after]").alt = `${d.t}, after`;
-      lb.querySelector("[data-lb-teeth]").textContent = d.teeth;
-      lb.querySelector("[data-lb-appts]").textContent = d.appts;
-      lb.querySelector("[data-lb-time]").textContent = d.time;
-      lb.querySelector("[data-lb-dr]").textContent = d.dr;
+      // Fill each detail row, hiding any the case does not have
+      [["teeth", d.teeth], ["appts", d.appts], ["time", d.time], ["dr", d.dr]].forEach(([k, v]) => {
+        const dd = lb.querySelector(`[data-lb-${k}]`);
+        dd.innerHTML = v || ""; dd.hidden = !v; dd.previousElementSibling.hidden = !v;
+      });
       lb.querySelector("[data-lb-note]").textContent = d.note;
       lb.querySelector("[data-lb-cta]").textContent = `Ask About ${d.t.replace(/^(Single |Invisalign )/, "")}`;
       const c = lb.querySelector("[data-lb-compare]");
