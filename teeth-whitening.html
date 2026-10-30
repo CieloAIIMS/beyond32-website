@@ -106,6 +106,23 @@
     @media (max-width: 760px) { .hrs { grid-template-columns: 1fr; } }
 
     .rel-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    /* How it works: three steps on a line, no photo */
+    .hw3 { list-style: none; margin: clamp(32px, 4vw, 56px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; position: relative; }
+    .hw3::before { content: ""; position: absolute; left: 16.6%; right: 16.6%; top: 36px; border-top: 1px dashed var(--mint-line); }
+    .hw3 li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 clamp(8px, 2vw, 28px); }
+    .hw3__n { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: var(--mint); color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 34px; line-height: 1; box-shadow: 0 0 0 8px var(--white); }
+    .hw3 h3 { margin-top: 22px; font-size: clamp(19px, 1.6vw, 22px); font-weight: 500; color: var(--ink); }
+    .hw3 p { margin-top: 8px; max-width: 30ch; font-size: 16px; line-height: 1.6; color: var(--teal); }
+    .hw3__proof { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; margin: clamp(36px, 4vw, 52px) auto 0; padding: 12px 22px; width: fit-content; max-width: 100%; border-radius: 99px; background: var(--cream); font-size: 15px; color: var(--teal); }
+    .hw3__proof b { font-weight: 600; color: var(--ink); }
+    @media (max-width: 760px) {
+      .hw3 { grid-template-columns: 1fr; gap: 28px; }
+      .hw3::before { left: 36px; right: auto; top: 36px; bottom: 36px; border-top: 0; border-left: 1px dashed var(--mint-line); }
+      .hw3 li { display: grid; grid-template-columns: 72px 1fr; column-gap: 18px; text-align: left; align-items: start; padding: 0; }
+      .hw3__n { grid-row: 1 / 3; }
+      .hw3 h3 { margin-top: 10px; }
+      .hw3__proof { border-radius: var(--r); }
+    }
   </style>
 </head>
 <body data-page="service" data-footer="full" class="svc">
@@ -149,16 +166,13 @@
           <p class="lead">Three steps, guided by dentists with more than 15 years in cosmetic dentistry.</p>
         </div>
       </div>
-      <div class="container mz-steps" data-mz-steps>
-        <ol>
-          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>1</b></span><h3>Check-up and shade match</h3><p>We make sure your teeth and gums are healthy, then record your starting shade.</p></li>
-          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>2</b></span><h3>Whiten your way</h3><p>About 90 minutes in the chair, or custom trays you wear at home.</p></li>
-          <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>3</b></span><h3>Keep it bright</h3><p>A touch-up kit and a few simple habits keep your new shade for longer.</p></li>
+      <div class="container">
+        <ol class="hw3">
+          <li><span class="hw3__n" aria-hidden="true">1</span><h3>Check-up and shade match</h3><p>We make sure your teeth and gums are healthy, then record your starting shade.</p></li>
+          <li><span class="hw3__n" aria-hidden="true">2</span><h3>Whiten your way</h3><p>About 90 minutes in the chair, or custom trays you wear at home.</p></li>
+          <li><span class="hw3__n" aria-hidden="true">3</span><h3>Keep it bright</h3><p>A touch-up kit and a few simple habits keep your new shade for longer.</p></li>
         </ol>
-        <figure class="mz-steps__media">
-          <img src="assets/live/teeth-whitening/teeth-whitening-Cherrybrook-2-compressed.webp" alt="A smiling patient in the dental chair before whitening" loading="lazy" style="object-position:42% 30%">
-          <div class="mz-chip"><small>Thousands of whitening cases</small><b>Results that last months to years</b></div>
-        </figure>
+        <p class="hw3__proof"><b>Thousands of whitening cases</b><span aria-hidden="true">·</span>Results that last months to years</p>
       </div>
     </section>
 
