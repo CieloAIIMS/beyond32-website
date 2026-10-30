@@ -66,6 +66,11 @@
       .home-hero::before { display: none; }
     }
 
+    /* Local areas, folded into the intro */
+    .areas { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--hairline); }
+    .areas__label { margin-right: 6px; font-size: 14px; font-weight: 600; color: var(--teal); }
+    .areas a { padding: 6px 14px; border-radius: 99px; background: var(--white); border: 1px solid var(--hairline); font-size: 14px; color: var(--ink); text-decoration: none; transition: background .2s, border-color .2s; }
+    .areas a:hover { background: var(--mint); border-color: var(--mint-line); }
     /* ==================== About intro ==================== */
     .intro2 { display: grid; grid-template-columns: minmax(0, 540fr) minmax(0, 560fr); gap: clamp(32px, 5vw, 60px); align-items: start; }
     .intro2__img { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 540 / 375; }
@@ -109,7 +114,7 @@
     @media (max-width: 900px) { .fv { grid-template-columns: minmax(0, 1fr); } .fv__img { min-height: 340px; } }
 
     /* ==================== Nervous ==================== */
-    .nerv { position: relative; overflow: hidden; isolation: isolate; padding: clamp(80px, 7vw, 96px) 0 clamp(64px, 6vw, 96px); min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; }
+    .nerv { position: relative; overflow: hidden; isolation: isolate; padding: clamp(80px, 7vw, 96px) 0 clamp(64px, 6vw, 96px); min-height: 1180px; display: flex; flex-direction: column; justify-content: space-between; }
     .nerv > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
     .nerv::before { content: ""; position: absolute; z-index: -1; left: -20%; top: -25%; width: 85%; height: 95%; background: radial-gradient(closest-side, rgba(255,247,242,.95), rgba(255,247,242,.75) 55%, rgba(255,247,242,0)); }
     .nerv h2 { max-width: 11.5em; }
@@ -260,11 +265,13 @@
     @media (max-width: 860px) { .home-faq { grid-template-columns: minmax(0, 1fr); } }
 
     /* ==================== Family close ==================== */
-    .family { position: relative; text-align: center; padding-top: clamp(96px, 9vw, 132px); background: #f2ece6; overflow: hidden; }
+    .family { position: relative; text-align: center; padding-top: clamp(64px, 6vw, 88px); background: #f2ece6; overflow: hidden; }
     .family .h2 { max-width: 12em; margin-inline: auto; }
     .family .lead { margin: 12px auto 0; max-width: 17em; }
     .family .btn { margin-top: 28px; }
-    .family__img { display: block; width: min(760px, 100%); margin: 40px auto 0; height: auto; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); transform: rotate(-2.6deg); margin-bottom: -60px; }
+    /* Photo melts into a background matched to its own studio backdrop: no tilt, soft edges all round, gentler tones */
+    .family { background: linear-gradient(180deg, #f3e9df 0%, #f6eee6 55%, #fbf4f0 100%); }
+    .family__img { display: block; width: min(640px, 100%); margin: 16px auto 0; height: auto; aspect-ratio: 702 / 600; object-fit: cover; object-position: 50% 30%; filter: saturate(.78) contrast(.84) brightness(1.06) sepia(.06); -webkit-mask-image: radial-gradient(ellipse 52% 62% at 50% 56%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 52% 62% at 50% 56%, #000 62%, transparent 100%); margin-bottom: -40px; }
   </style>
 </head>
 <body data-page="home" data-footer="full" class="svc">
@@ -312,15 +319,13 @@
             <p>Beyond 32 Dental was started in 2013 by Dr Jeff Lin and Dr Jennifer Chung, a husband-and-wife team who wanted to build the kind of dental practice they’d want their own family to visit. That’s still the standard we hold ourselves to today.</p>
             <p>We look after patients from Pennant Hills, Cherrybrook, Castle Hill, Glenhaven, Thornleigh, Dural, Westleigh, Beecroft and right across the Hills District, from toddlers having their first check-up to grandparents needing a new set of implants. Whatever brings you in, whether it’s a routine clean, a toothache that won’t quit, or a smile you’ve been putting off fixing, you’ll be treated like a neighbour, not a number.</p>
           </div>
+          <nav class="areas" aria-label="Areas we look after">
+            <span class="areas__label">Your local dentist for</span>
+            <a href="beecroft-dentist.html">Beecroft</a><a href="cherrybrook-dentist.html">Cherrybrook</a><a href="dentist-glenhaven.html">Glenhaven</a><a href="dural-dentist.html">Dural</a><a href="contact.html">Epping</a><a href="contact.html">Thornleigh</a><a href="westleigh-dentist.html">Westleigh</a>
+          </nav>
         </div>
       </div>
     </section>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Pennant Hills</span><span>·</span><span>Cherrybrook</span><span>·</span><span>Castle Hill</span><span>·</span><span>Glenhaven</span><span>·</span><span>Thornleigh</span><span>·</span><span>Dural</span><span>·</span><span>Westleigh</span><span>·</span><span>Beecroft</span><span>·</span><span>Hills District</span><span>·</span>
-        <span>Pennant Hills</span><span>·</span><span>Cherrybrook</span><span>·</span><span>Castle Hill</span><span>·</span><span>Glenhaven</span><span>·</span><span>Thornleigh</span><span>·</span><span>Dural</span><span>·</span><span>Westleigh</span><span>·</span><span>Beecroft</span><span>·</span><span>Hills District</span><span>·</span>
-      </div>
-    </div>
 
     <!-- ============ WHY CHOOSE ============ -->
     <section class="bg-white" aria-labelledby="h-why" style="padding: clamp(56px,5vw,59px) 0 clamp(64px,6vw,96px)">
@@ -380,7 +385,7 @@
 
     <!-- ============ NERVOUS ============ -->
     <section class="nerv" aria-labelledby="h-nerv">
-      <img src="assets/sedation-opt.jpg" alt="" loading="lazy">
+      <img src="assets/sedation-2x.jpg" alt="" loading="lazy">
       <div class="container">
         <h2 class="h2" id="h-nerv">If the dentist makes you nervous, you’re not alone, and <span class="it">we’ve got you</span></h2>
         <p class="lead">A lot of our patients tell us they put off booking for years because of a bad experience somewhere else. We hear that a lot, and we’ve built our whole practice around changing that story.</p>
@@ -482,10 +487,12 @@
         <p class="lead" style="margin-top:12px;max-width:28em">From a confident new smile later in life, to your child’s first tooth – we’re here for all of it.</p>
       </div>
       <div class="rail" data-rail="gal">
-        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-2-before.jpg" alt="Before porcelain veneers" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-2-after.jpg" alt="After porcelain veneers" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Porcelain Veneers</h3><p>6 teeth · 3 appointments · 4 weeks</p></a>
-        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-3-before.jpg" alt="Before crowns and bridgework" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-3-after.jpg" alt="After crowns and bridgework" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Crowns &amp; Bridgework</h3><p>4 teeth · 2 appointments · 3 weeks</p></a>
-        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-4-before.jpg" alt="Before composite veneers" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-4-after.jpg" alt="After composite veneers" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Composite Veneers</h3><p>4 teeth · 1 appointment · same day</p></a>
-        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-1.jpg" alt="Before" loading="lazy" style="transform:scaleX(-1)"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-2-after.jpg" alt="After" loading="lazy" style="transform:scaleX(-1)"><figcaption>After</figcaption></figure></div><h3>Smile Makeover</h3><p>See more cases in the Smile Gallery</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-2-before.jpg" alt="Before clear aligners and composite bonding" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-2-after.jpg" alt="After clear aligners and composite bonding" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Clear Aligners + Composite Bonding</h3><p>Treated by Dr Jen</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-3-before.jpg" alt="Before clear aligners and crowns" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-3-after.jpg" alt="After clear aligners and crowns" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Clear Aligners + Crowns</h3><p>Treated by Dr Jeff</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-4-before.jpg" alt="Before braces" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-4-after.jpg" alt="After braces" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Braces</h3><p>Treated by Dr Jen</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-invisalign-before.webp" alt="Before Invisalign" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-invisalign-after.webp" alt="After Invisalign" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Invisalign Clear Aligners</h3><p>Straighter, more even teeth</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-bonding-before.webp" alt="Before composite bonding" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-bonding-after.webp" alt="After composite bonding" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Composite Bonding</h3><p>A brighter, more even smile</p></a>
+        <a class="ba-card" href="gallery.html"><div class="ba-card__pair"><figure><img src="assets/ba-whitening-before.webp" alt="Before teeth whitening" loading="lazy"><figcaption>Before</figcaption></figure><figure><img src="assets/ba-whitening-after.webp" alt="After teeth whitening" loading="lazy"><figcaption>After</figcaption></figure></div><h3>Teeth Whitening</h3><p>Results vary from person to person</p></a>
       </div>
       <div class="container rail-ctrl" style="margin-top:28px">
         <button class="round" type="button" data-rail-prev="gal" aria-label="Previous cases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
