@@ -123,6 +123,9 @@
     .kids-intro__links span { font-size: 14px; color: var(--teal); }
     @media (max-width: 900px) { .kids-intro__inner, .kids-intro__links { grid-template-columns: 1fr; } }
 
+    /* Fun section photo: shorter frame so there is less empty wall above her head */
+    @media (min-width: 901px) { #fun .mz-steps__media { aspect-ratio: 1 / 1; width: min(100%, 420px); justify-self: center; } }
+
     /* ==================== New patients strip ==================== */
     .np { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .np a, .np div { display: flex; flex-direction: column; background: var(--cream); border-radius: var(--r-lg); padding: clamp(24px, 2.6vw, 32px); text-decoration: none; color: var(--ink); }
@@ -284,8 +287,7 @@
           <li class="mz-step"><span class="mz-step__n"><small>Step</small><b>3</b></span><h3>Digital films, when the time is right</h3><p>We usually start taking digital films (x-rays) from around 6 years old, unless we feel they’re needed earlier.</p></li>
         </ol>
         <figure class="mz-steps__media">
-          <img src="assets/girl-smile-opt.jpg" alt="A young girl grinning behind a paper photo frame held over her smile" loading="lazy" style="object-position:50% 75%">
-          <div class="mz-chip"><small>First check-up from</small><b>Age 2</b><span class="mz-chip__tag">Then every 6 months</span></div>
+          <img src="assets/girl-smile-opt.jpg" alt="A young girl grinning behind a paper photo frame held over her smile" loading="lazy" style="object-position:50% 100%">
         </figure>
       </div>
       <div class="container split split--even split--center" style="margin-top:clamp(56px,6vw,88px)">
