@@ -102,6 +102,27 @@
     @media (max-width: 960px) { .fv-prep { grid-template-columns: 1fr; } .fv-prep__photo { aspect-ratio: 4 / 3; } }
     @media (max-width: 600px) { .fv-prep .tips { grid-template-columns: 1fr 1fr; gap: 10px; } .fv-prep .tip { padding: 18px; } .fv-prep .tip b { font-size: 16px; } }
 
+    /* ==================== What to expect (all ages) ==================== */
+    .fx { list-style: none; margin: clamp(36px, 4vw, 56px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; counter-reset: fx; }
+    .fx li { counter-increment: fx; display: flex; flex-direction: column; gap: 8px; padding: 24px 22px; border-radius: var(--r); background: var(--cream); }
+    .fx li::before { content: counter(fx); font-family: var(--serif); font-style: italic; font-size: 36px; line-height: 1; color: var(--teal); margin-bottom: 8px; }
+    .fx b { font-size: 18px; font-weight: 500; line-height: 1.3; color: var(--ink); }
+    .fx span { font-size: 15px; line-height: 1.55; color: var(--teal); }
+    .fx__offer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; padding: 18px 18px 18px 26px; border-radius: 99px; background: var(--mint); }
+    .fx__offer p { font-size: 16px; color: var(--ink); }
+    @media (max-width: 1100px) { .fx { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 700px) { .fx { grid-template-columns: 1fr; } .fx li::before { font-size: 30px; } .fx__offer { border-radius: var(--r); padding: 20px; } }
+
+    /* ==================== For children divider ==================== */
+    .kids-intro { padding-block: clamp(48px, 5vw, 72px); }
+    .kids-intro__inner { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+    .kids-intro__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .kids-intro__links a { display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: var(--r); background: var(--white); color: var(--ink); text-decoration: none; transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out); }
+    .kids-intro__links a:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -22px rgba(20,64,62,.5); }
+    .kids-intro__links b { font-size: 17px; font-weight: 500; }
+    .kids-intro__links span { font-size: 14px; color: var(--teal); }
+    @media (max-width: 900px) { .kids-intro__inner, .kids-intro__links { grid-template-columns: 1fr; } }
+
     /* ==================== New patients strip ==================== */
     .np { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .np a, .np div { display: flex; flex-direction: column; background: var(--cream); border-radius: var(--r-lg); padding: clamp(24px, 2.6vw, 32px); text-decoration: none; color: var(--ink); }
@@ -135,8 +156,8 @@
           </div>
           <div class="fv-collage">
             <figure class="fv-collage__main">
-              <img src="assets/live/first-visit/first-visit-kids.jpg" alt="A Beyond 32 Dental dentist chatting with three young sisters around the dental chair" width="1600" height="1070">
-              <figcaption class="fv-movie"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></i>Their favourite movie, on screen</figcaption>
+              <img src="assets/live/first-visit/family-generations.webp" alt="Three generations of one family smiling together" width="1719" height="915" style="object-position:50% 40%">
+              <figcaption class="fv-movie"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></i>Every age, every smile</figcaption>
             </figure>
             <figure class="fv-polaroid">
               <img src="assets/live/first-visit/new-project-28.webp" alt="Young patient in heart-shaped sunglasses giving two thumbs up from the dental chair" width="515" height="390" loading="lazy">
@@ -145,11 +166,75 @@
           </div>
         </div>
         <ul class="facts" aria-label="At a glance">
-          <li class="fact"><b>From age 2</b><span>when we recommend the first check-up</span></li>
-          <li class="fact"><b>Every 6 months</b><span>regular check-ups after that</span></li>
+          <li class="fact"><b>Every age</b><span>from toddlers to grandparents</span></li>
+          <li class="fact"><b>From $110</b><span>new patient welcome package</span></li>
           <li class="fact"><b>Claim on the spot</b><span>All health funds accepted with HICAPS</span></li>
           <li class="fact"><b>Saturdays</b><span>Open 9am–3pm, as well as weekdays 9am–6pm</span></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============ WHAT TO EXPECT (all ages) ============ -->
+    <section class="band band--white" id="expect" aria-labelledby="h-expect">
+      <div class="container">
+        <div class="split split--center head">
+          <h2 class="h2" id="h-expect">What happens at <span class="it">your first visit</span></h2>
+          <p class="lede lede--wide">Whether you’re 2 or 82, new to the area or just overdue for a check-up, your first visit follows the same unhurried steps.</p>
+        </div>
+        <ol class="fx">
+          <li><b>A relaxed chat</b><span>We start by listening: your dental history, any worries, and what you’d like from your smile.</span></li>
+          <li><b>A full comprehensive examination</b><span>A thorough check of your teeth, gums and bite, looking for anything early.</span></li>
+          <li><b>Any X-rays you need</b><span>Only the ones that are necessary, taken digitally.</span></li>
+          <li><b>A scale, clean and fluoride</b><span>A full mouth clean to leave your teeth feeling fresh, plus fluoride to strengthen them.</span></li>
+          <li><b>A clear plan</b><span>If anything needs attention, we explain your options and costs before anything is done.</span></li>
+        </ol>
+        <div class="fx__offer">
+          <p><b>New patient welcome package, from $110.</b> Price depends on age. T&amp;Cs apply.</p>
+          <a class="btn btn--gold" href="special-offers.html#new-patient">See the new patient offer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEW PATIENTS ============ -->
+    <section class="band band--white band--tight" id="new-patients" aria-labelledby="h-np">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2" id="h-np">New to <span class="it">Beyond 32?</span></h2>
+        </div>
+        <div class="np">
+          <a href="special-offers.html#new-patient">
+            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3.5-5-1.5S10 7 12 7Zm0 0c1.5-3 5-3.5 5-1.5S14 7 12 7Z"/></svg></span>
+            <b>A welcome package for the whole family</b>
+            <p>See what our new patient package includes, with pricing for every age.</p>
+            <span class="text-link">See the welcome package <span>→</span></span>
+          </a>
+          <div>
+            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span>
+            <b>All health funds accepted</b>
+            <p>We claim your rebate on the spot with HICAPS, so you only pay the gap on the day.</p>
+          </div>
+          <a href="in-house-sedation.html">
+            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></span>
+            <b>A little nervous?</b>
+            <p>Happy gas and in-house sedation are available for children and adults.</p>
+            <span class="text-link">About in-house sedation <span>→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOR CHILDREN (divider) ============ -->
+    <section class="band band--cream kids-intro" id="children" aria-labelledby="h-kids">
+      <div class="container kids-intro__inner">
+        <div>
+          <p class="subtitle">For parents</p>
+          <h2 class="h2" id="h-kids" style="margin-top:8px">Bringing your <span class="it">little one?</span></h2>
+        </div>
+        <nav class="kids-intro__links" aria-label="For children">
+          <a href="#when"><b>When to start</b><span>First check-up and how often</span></a>
+          <a href="#fun"><b>What happens in the chair</b><span>Step by step, made fun</span></a>
+          <a href="#prepare"><b>Getting ready at home</b><span>Simple ways to prepare them</span></a>
+        </nav>
       </div>
     </section>
 
@@ -189,7 +274,7 @@
       <div class="container">
         <div class="mz-head">
           <h2 class="h2" id="h-fun">A visit to the dentist <span class="it">can be fun!</span></h2>
-          <p class="lead">For children, here’s what happens in the chair, step by step.</p>
+          <p class="lead">Here’s what happens in the chair, step by step.</p>
         </div>
       </div>
       <div class="container mz-steps" data-mz-steps>
@@ -231,34 +316,6 @@
             <div class="tip"><span class="tip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m10 9 5 2.5-5 2.5Z"/><path d="M8 21h8"/></svg></span><b>Watch movies</b></div>
             <div class="tip"><span class="tip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="7" r="2.5"/><circle cx="16.5" cy="9" r="2"/><path d="M3.5 20c.4-4 2.2-6.5 4.5-6.5s4.1 2.5 4.5 6.5M13 20c.3-3 1.6-5 3.5-5s3.2 2 3.5 5"/></svg></span><b>Role play at home</b></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ NEW PATIENTS ============ -->
-    <section class="band band--white band--tight" id="new-patients" aria-labelledby="h-np">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2" id="h-np">New to <span class="it">Beyond 32?</span></h2>
-        </div>
-        <div class="np">
-          <a href="special-offers.html#new-patient">
-            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3.5-5-1.5S10 7 12 7Zm0 0c1.5-3 5-3.5 5-1.5S14 7 12 7Z"/></svg></span>
-            <b>A welcome package for the whole family</b>
-            <p>See what our new patient package includes, with pricing for every age.</p>
-            <span class="text-link">See the welcome package <span>→</span></span>
-          </a>
-          <div>
-            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span>
-            <b>All health funds accepted</b>
-            <p>We claim your rebate on the spot with HICAPS, so you only pay the gap on the day.</p>
-          </div>
-          <a href="in-house-sedation.html">
-            <span class="tip__icon" style="margin:0;background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></span>
-            <b>A little nervous?</b>
-            <p>Happy gas and in-house sedation are available for children and adults.</p>
-            <span class="text-link">About in-house sedation <span>→</span></span>
-          </a>
         </div>
       </div>
     </section>
