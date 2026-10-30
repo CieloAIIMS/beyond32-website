@@ -95,7 +95,7 @@
     },
     {
       id: "blog", href: "blog.html", name: "Blog", desc: ABOUT[3].desc,
-      img: "assets/nav/about-blog.jpg", pos: "50% 50%",
+      img: "assets/nav/about-blog.webp", pos: "60% 35%",
       icon: svg('<path d="M6 4h9l3 3v13H6V4Z"/><path d="M15 4v3h3M9 11h6M9 14h6M9 17h4"/>'),
       items: [["All articles", "blog.html"], ["How to stop mouth breathing", "https://www.beyond32dental.com.au/how-to-stop-mouth-breathing/"], ["Tooth wear", "https://www.beyond32dental.com.au/tooth-wear/"], ["Dental bonding for gaps", "https://www.beyond32dental.com.au/dental-bonding-for-gaps/"], ["Dental sealants for kids", "https://www.beyond32dental.com.au/dental-sealants-for-kids/"]],
     },

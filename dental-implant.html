@@ -102,18 +102,27 @@
     @media (max-width: 960px) { .uses { grid-template-columns: 1fr 1fr; } }
 
     /* ==================== Keyhole (ink) ==================== */
-    .key-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 0.8fr); gap: 16px; align-items: stretch; margin-top: clamp(48px, 5vw, 72px); }
-    .key-photo { position: relative; border-radius: var(--r); overflow: hidden; min-height: 380px; background: #1c5250; }
-    .key-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
-    .key-photo figcaption { position: absolute; left: 14px; bottom: 14px; right: 14px; background: rgba(255,247,242,.92); color: var(--ink); border-radius: 12px; padding: 10px 14px; font-size: 14px; font-weight: 600; }
-    .key-benefits { display: grid; gap: 12px; counter-reset: kb; }
-    .key-benefits li { counter-increment: kb; display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: center; padding: 22px 24px; border-radius: var(--r); background: rgba(216,238,237,.08); border: 1px solid rgba(216,238,237,.14); }
-    .key-benefits li::before { content: counter(kb); font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: #f0dbb0; }
-    .key-benefits b { font-size: clamp(19px, 1.6vw, 22px); font-weight: 500; color: #fff; }
-    .key-graphic { border-radius: var(--r); overflow: hidden; background: #75c8c2; display: grid; place-items: center; }
-    .key-graphic img { width: 100%; height: 100%; object-fit: cover; }
-    @media (max-width: 1000px) { .key-grid { grid-template-columns: 1fr 1fr; } .key-benefits { grid-column: 1 / -1; order: -1; } }
-    @media (max-width: 600px) { .key-grid { grid-template-columns: 1fr; } .key-photo { min-height: 420px; } }
+    /* Keyhole implants: copy and CTA on the left, a plain comparison on the right */
+    .kh { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
+    .kh__eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #f0dbb0; }
+    .kh .h2 { margin-top: 14px; }
+    .kh__lede { margin-top: 24px; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.45; color: #fff; max-width: 30ch; }
+    .kh__body { margin-top: 16px; font-size: 16px; line-height: 1.65; color: rgba(255,255,255,.72); max-width: 44ch; }
+    .kh__ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 32px; }
+    .kh__call { color: #fff; text-decoration: none; font-weight: 500; }
+    .kh__call:hover { text-decoration: underline; }
+    .kh__compare { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: var(--r-lg); padding: clamp(20px, 2.4vw, 32px); }
+    .kh__listhead { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #f0dbb0; }
+    .kh__list { list-style: none; margin: 8px 0 0; padding: 0; }
+    .kh__list li { display: grid; grid-template-columns: 22px 1fr; column-gap: 14px; padding: 20px 0; align-items: center; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .kh__list li::before { content: ""; width: 22px; height: 22px; margin-top: 1px; border-radius: 50%; background: #f0dbb0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314403e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 14px no-repeat; }
+    .kh__list b { font-size: clamp(18px, 1.6vw, 21px); font-weight: 500; color: #fff; }
+    .kh__list span { margin-top: 4px; font-size: 15px; line-height: 1.5; color: rgba(255,255,255,.68); }
+    .kh__list li:last-child { border-bottom: 0; }
+    .kh__note { display: flex; gap: 10px; margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); font-size: 14px; line-height: 1.55; color: rgba(255,255,255,.65); }
+    .kh__note svg { flex: none; width: 18px; height: 18px; margin-top: 2px; color: #f0dbb0; }
+    @media (max-width: 900px) { .kh { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .kh__table th, .kh__table td { padding: 14px 6px; font-size: 14px; } .kh__table td.kh__us { font-size: 14px; } }
 
     /* ==================== Results ==================== */
     .bcases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -375,45 +384,25 @@
 
     <!-- ============ 3. KEYHOLE (ink) ============ -->
     <section class="band band--ink on-ink" id="keyhole" aria-labelledby="h-key">
-      <div class="container">
-        <div class="split split--center head">
+      <div class="container kh">
+        <div class="kh__intro">
           <h2 class="h2" id="h-key">Digital <span class="it">keyhole implants</span></h2>
-          <p class="lede lede--wide">At Beyond 32 Dental, Dr Jeff is well trained in digital keyhole implants.</p>
-        </div>
-
-        <div class="split">
-          <div>
-            <h3 class="h3x">What are “digital keyhole implants”?</h3>
-          </div>
-          <div class="prose">
-            <p>Digital keyhole implants are a modern implant approach that Dr Jeff is trained in. The term “keyhole” typically refers to a more minimally invasive, guided technique, often supported by digital planning to improve accuracy and predictability.</p>
+          <p class="kh__lede">A more minimally invasive, guided way to place an implant, planned digitally for accuracy and predictability.</p>
+          <p class="kh__body">At Beyond 32 Dental, Dr Jeff is well trained in digital keyhole implants.</p>
+          <div class="kh__ctas">
+            <a class="btn btn--gold" href="https://appointments.praktika.net.au/online-booking/step1?Apikey=813eba7e-66c5-4560-8ca0-530328e754a8" target="_blank" rel="noopener">Book a Consultation</a>
+            <a class="kh__call" href="tel:+61291586334">or call (02) 9158 6334 <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
-        <div class="key-grid">
-          <figure class="key-photo">
-            <img src="assets/live/dental-implant/dr-jeff-with-patient.webp" alt="Dr Jeff Lin with a smiling implant patient at Beyond 32 Dental" loading="lazy" width="700" height="933">
-            <figcaption>Dr Jeff Lin, co-founder</figcaption>
-          </figure>
-          <div>
-            <p class="p" style="margin-bottom:16px;color:#fff;font-weight:500">Benefits of keyhole implants include:</p>
-            <ol class="key-benefits">
-              <li><b>Less chair time</b></li>
-              <li><b>Faster recovery</b></li>
-              <li><b>Minimal discomfort after surgery</b></li>
-            </ol>
-          </div>
-          <figure class="key-graphic">
-            <img src="assets/live/dental-implant/traditional-vs-keyhole.webp" alt="Comparison: traditional implant surgery with a stitched incision in the gum, and keyhole surgery with two small round openings" loading="lazy" width="558" height="600">
-          </figure>
-        </div>
-
-        <div class="note-card" style="margin-top:16px">
-          <p class="p">It’s important to note that not every patient is suitable for this approach. Whether “digital keyhole” implant placement is appropriate is best determined during your consultation, based on your oral health, bone levels, and treatment goals.</p>
-        </div>
-        <div class="inline-cta" style="margin-top:40px">
-          <p>Call us today to find out if this is the right treatment for you.</p>
-          <a href="tel:+61291586334">(02) 9158 6334 <span>→</span></a>
+        <div class="kh__compare">
+          <p class="kh__listhead">Dr Jeff&rsquo;s approach</p>
+          <ul class="kh__list">
+            <li><b>Less chair time</b></li>
+            <li><b>Faster recovery</b></li>
+            <li><b>Minimal discomfort after surgery</b></li>
+          </ul>
+          <p class="kh__note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Not every patient is suitable for keyhole placement. We’ll confirm at your consultation, based on your oral health, bone levels and treatment goals.</span></p>
         </div>
       </div>
     </section>
