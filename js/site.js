@@ -5,7 +5,7 @@
   const PRACTICE = {
     phone: "(02) 9158 6334",
     tel: "tel:+61291586334",
-    email: "hello@beyond32dental.com.au", // placeholder — confirm with practice
+    email: "info@beyond32.com",
     address: "1st Floor, 114 Yarrara Rd, Pennant Hills NSW 2120",
     maps: "https://www.google.com/maps/dir/?api=1&destination=114+Yarrara+Rd+Pennant+Hills+NSW+2120",
     book: "https://appointments.praktika.net.au/online-booking/step1?Apikey=813eba7e-66c5-4560-8ca0-530328e754a8",
@@ -46,7 +46,7 @@
       id: "straight", href: "crooked-teeth.html", name: "Teeth Straightening", desc: "Options for every age and every lifestyle.",
       img: "assets/nav/straightening.jpg", pos: "50% 50%",
       icon: svg('<path d="M4.5 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6ZM10.2 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6ZM15.9 6h3.6v9.7a1.8 1.8 0 0 1-3.6 0V6Z"/><path d="M5.4 9.1h1.8v1.8H5.4zM11.1 9.1h1.8v1.8h-1.8zM16.8 9.1h1.8v1.8h-1.8z"/><path d="M2.5 10h19"/>'),
-      items: ["Invisalign", "Damon Braces", "Inman Aligner", "Early Interceptive Orthodontics", "Crooked Teeth"],
+      items: ["Early Interceptive Orthodontics", "Clear Aligners incl. Invisalign", "Braces, Metal or Clear"],
     },
     {
       id: "implants", href: "dental-implant.html", name: "Implants & All-on-X", desc: "Permanent, natural-feeling replacement teeth.",
@@ -61,7 +61,7 @@
     "Root Canal Treatment": "root-canal-therapy.html", "In-House Sedation": "in-house-sedation.html", "Toothache": "toothache.html",
     "Veneers": "veneers.html", "Teeth Whitening": "teeth-whitening.html", "Zoom Whitening": "zoom-teeth-whitening.html",
     "Fixing My Smile": "fixing-my-smile.html",
-    "Invisalign": "invisalign.html", "Damon Braces": "damon-braces.html", "Inman Aligner": "inman-aligner.html",
+    "Invisalign": "invisalign.html", "Clear Aligners incl. Invisalign": "invisalign.html", "Braces, Metal or Clear": "damon-braces.html", "Inman Aligner": "inman-aligner.html",
     "Early Interceptive Orthodontics": "early-interceptive-orthodontics.html", "Crooked Teeth": "crooked-teeth.html",
     "Dental Implants": "dental-implant.html", "Missing Teeth": "dental-implant.html", "Dental Anxiety": "in-house-sedation.html",
     "Broken Teeth": "broken-teeth.html",

@@ -24,10 +24,8 @@
         "about": { "@type": "MedicalCondition", "name": "Crooked teeth", "alternateName": "Malocclusion",
           "possibleTreatment": [
             { "@type": "MedicalTherapy", "name": "Invisalign" },
-            { "@type": "MedicalTherapy", "name": "Clear aligners" },
             { "@type": "MedicalTherapy", "name": "Clear braces" },
-            { "@type": "MedicalTherapy", "name": "Traditional braces" },
-            { "@type": "MedicalTherapy", "name": "Lingual braces" } ] } },
+            { "@type": "MedicalTherapy", "name": "Traditional braces" } ] } },
       { "@type": "BreadcrumbList", "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.beyond32dental.com.au/" },
           { "@type": "ListItem", "position": 2, "name": "Crooked Teeth" } ] }
@@ -176,11 +174,9 @@
             </div>
           </div>
           <div class="ch-cards" data-cards>
-            <a class="ch-card" href="#treatments" data-pick="invisalign"><b>Invisalign</b><span>Align your teeth without anyone knowing!</span></a>
-            <a class="ch-card" href="#treatments" data-pick="clear-aligners"><b>Braces that are almost invisible</b><span>This includes a range of clear aligners such as Invisalign</span></a>
+            <a class="ch-card" href="#treatments" data-pick="invisalign"><b>Clear aligners, e.g. Invisalign</b><span>Almost invisible, removable aligners. Straighten your teeth without anyone knowing!</span></a>
             <a class="ch-card" href="#treatments" data-pick="fast-braces"><b>Fast working braces</b><span>Produces noticeably straighter teeth within 6–9 months using clear brackets and wires</span></a>
             <a class="ch-card" href="#treatments" data-pick="traditional"><b>Traditional braces</b><span>When there’s real work to be done, and a great outcome just waiting</span></a>
-            <a class="ch-card" href="#treatments" data-pick="lingual"><b>Lingual braces</b><span>Brackets and wires on the inside of the teeth, without the obvious look of metal braces</span></a>
           </div>
         </div>
       </div>
@@ -196,11 +192,9 @@
 
         <div class="ex">
           <div class="ex__tabs" role="tablist" aria-label="Teeth straightening options">
-            <button class="ex__tab" role="tab" id="t-invisalign" aria-controls="ex-panel" aria-selected="true" data-opt="invisalign"><i>1</i><span><b>Invisalign</b><small>Virtually invisible</small></span></button>
-            <button class="ex__tab" role="tab" id="t-clear-aligners" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="clear-aligners"><i>2</i><span><b>Almost invisible braces</b><small>Clear aligners</small></span></button>
-            <button class="ex__tab" role="tab" id="t-fast-braces" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="fast-braces"><i>3</i><span><b>Fast working braces</b><small>Clear brackets and wires</small></span></button>
-            <button class="ex__tab" role="tab" id="t-traditional" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="traditional"><i>4</i><span><b>Traditional braces</b><small>Metal brackets and wires</small></span></button>
-            <button class="ex__tab" role="tab" id="t-lingual" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="lingual"><i>5</i><span><b>Lingual braces</b><small>Hidden behind the teeth</small></span></button>
+            <button class="ex__tab" role="tab" id="t-invisalign" aria-controls="ex-panel" aria-selected="true" data-opt="invisalign"><i>1</i><span><b>Clear aligners</b><small>e.g. Invisalign</small></span></button>
+            <button class="ex__tab" role="tab" id="t-fast-braces" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="fast-braces"><i>2</i><span><b>Fast working braces</b><small>Clear brackets and wires</small></span></button>
+            <button class="ex__tab" role="tab" id="t-traditional" aria-controls="ex-panel" aria-selected="false" tabindex="-1" data-opt="traditional"><i>3</i><span><b>Traditional braces</b><small>Metal or clear brackets</small></span></button>
           </div>
 
           <article class="ex__panel" id="ex-panel" role="tabpanel" aria-labelledby="t-invisalign" aria-live="polite">
@@ -260,15 +254,15 @@
             </div>
             <div class="ex__body">
               <div>
-                <h3 data-f="name">Invisalign</h3>
-                <p class="p" data-f="line">Align your teeth without anyone knowing!</p>
+                <h3 data-f="name">Clear aligners, e.g. Invisalign</h3>
+                <p class="p" data-f="line">Align your teeth without anyone knowing! A range of almost invisible, removable clear aligners, including Invisalign.</p>
               </div>
               <dl class="ex__meta">
                 <div><dt>How visible</dt><dd><span data-f="vis">Virtually invisible</span><span class="meter" data-f="meter" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span></dd></div>
                 <div><dt>Removable</dt><dd data-f="rem">Yes</dd></div>
               </dl>
               <div class="ex__foot">
-                <a class="btn btn--gold" href="contact.html#enquire" data-f="cta">Ask About Invisalign</a>
+                <a class="btn btn--gold" href="contact.html#enquire" data-f="cta">Ask About Clear Aligners</a>
                 <a class="btn btn--outline" href="tel:+61291586334">Call (02) 9158 6334</a>
               </div>
             </div>
@@ -327,10 +321,10 @@
     (function () {
       /* Copy below is the live page's wording; meta values describe each option. */
       const OPTS = {
-        "invisalign":     { name: "Invisalign", line: "Align your teeth without anyone knowing!", mode: "aligner", vis: "Virtually invisible", lvl: 1, rem: "Yes", chip: "Removable", cta: "Ask About Invisalign", title: "Illustration of front teeth wearing a clear aligner" },
+        "invisalign":     { name: "Clear aligners, e.g. Invisalign", line: "Align your teeth without anyone knowing! A range of almost invisible, removable clear aligners, including Invisalign.", mode: "aligner", vis: "Virtually invisible", lvl: 1, rem: "Yes", chip: "Removable", cta: "Ask About Clear Aligners", title: "Illustration of front teeth wearing a clear aligner" },
         "clear-aligners": { name: "Braces that are almost invisible", line: "This includes a range of clear aligners such as Invisalign.", mode: "aligner", vis: "Almost invisible", lvl: 1, rem: "Yes", chip: "Removable", cta: "Ask About Clear Aligners", title: "Illustration of front teeth wearing a clear aligner" },
         "fast-braces":    { name: "Fast working braces", line: "Fast working braces can produce noticeably straighter teeth within 6–9 months using clear brackets and wires.", mode: "clear", vis: "Clear brackets", lvl: 2, rem: "No, fixed", chip: "6–9 months", cta: "Ask About Fast Braces", title: "Illustration of front teeth with clear brackets and a thin wire" },
-        "traditional":    { name: "Traditional braces", line: "Traditional braces, when there’s real work to be done, and a great outcome just waiting.", mode: "metal", vis: "Visible metal", lvl: 4, rem: "No, fixed", chip: "Fixed", cta: "Ask About Braces", title: "Illustration of front teeth with metal brackets and wire" },
+        "traditional":    { name: "Traditional braces", line: "Traditional braces, when there’s real work to be done, and a great outcome just waiting. Choose metal or clear brackets.", mode: "metal", vis: "Metal or clear", lvl: 4, rem: "No, fixed", chip: "Fixed", cta: "Ask About Braces", title: "Illustration of front teeth with metal brackets and wire" },
         "lingual":        { name: "Lingual braces", line: "Lingual braces, where the brackets and wires are placed on the inside of the teeth. This allows the result without the obvious look of metal braces.", mode: "lingual", vis: "Hidden behind the teeth", lvl: 1, rem: "No, fixed", chip: "Out of sight", cta: "Ask About Lingual Braces", title: "Illustration of front teeth with braces hidden on the inside" }
       };
       const panel = document.getElementById("ex-panel");
